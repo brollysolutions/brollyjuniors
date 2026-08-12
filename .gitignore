@@ -1,0 +1,11 @@
+node_modules/
+dist/
+dist-ssr/
+
+# Analytics and Search Console credentials — never commit these.
+.env
+.env.local
+.env.*.local
+
+*.log
+.DS_Store

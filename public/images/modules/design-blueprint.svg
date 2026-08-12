@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="A blueprint of connected class boxes with a ruler and compass">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFDF6"/><stop offset="1" stop-color="#FBEFD0"/></linearGradient></defs>
+  <rect width="480" height="360" rx="28" fill="url(#bg)"/>
+
+  <circle cx="58" cy="286" r="40" fill="#FFE9A3" opacity=".8"/>
+  <circle cx="426" cy="72" r="36" fill="#FFD4D4" opacity=".7"/>
+  <g transform="translate(240 168)">
+    <rect x="-186" y="-118" width="372" height="236" rx="20" fill="#2B6CB0"/>
+    <g stroke="#FFFFFF" stroke-width="1.5" opacity=".22">
+      <path d="M-150 -118v236"/><path d="M-110 -118v236"/><path d="M-70 -118v236"/><path d="M-30 -118v236"/><path d="M10 -118v236"/><path d="M50 -118v236"/><path d="M90 -118v236"/><path d="M130 -118v236"/>
+      <path d="M-186 -80h372"/><path d="M-186 -40h372"/><path d="M-186 0h372"/><path d="M-186 40h372"/><path d="M-186 80h372"/>
+    </g>
+    <g fill="#FFFFFF" stroke="#FFF8E7" stroke-width="3">
+      <rect x="-56" y="-96" width="112" height="56" rx="10"/>
+      <rect x="-152" y="26" width="112" height="56" rx="10"/>
+      <rect x="40" y="26" width="112" height="56" rx="10"/>
+    </g>
+    <g stroke="#FFC93C" stroke-width="4" fill="none">
+      <path d="M-24 -40v34h-72v32M24 -40v34h72v32"/>
+    </g>
+    <g fill="#2B6CB0" font-family="Consolas, Menlo, monospace" font-size="13" text-anchor="middle">
+      <text x="0" y="-62">Club</text>
+      <text x="-96" y="60">Member</text>
+      <text x="96" y="60">Schedule</text>
+    </g>
+  </g>
+  <g transform="translate(400 288)">
+    <path d="M-26 26L0-30l26 56Z" fill="#FFF8E7" stroke="#1E293B" stroke-width="4" stroke-linejoin="round"/>
+    <circle cx="0" cy="-30" r="7" fill="#FF6B6B" stroke="#1E293B" stroke-width="3"/>
+  </g>
+</svg>

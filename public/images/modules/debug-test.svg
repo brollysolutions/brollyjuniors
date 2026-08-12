@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="A magnifying glass over code finding a bug, beside a passing test">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFDF6"/><stop offset="1" stop-color="#FBEFD0"/></linearGradient></defs>
+  <rect width="480" height="360" rx="28" fill="url(#bg)"/>
+
+  <circle cx="60" cy="290" r="40" fill="#DCD0FB" opacity=".7"/>
+  <circle cx="424" cy="70" r="36" fill="#C5F1ED" opacity=".65"/>
+  <g transform="translate(206 166)">
+    <rect x="-150" y="-104" width="300" height="208" rx="20" fill="#1E293B"/>
+    <g font-family="Consolas, Menlo, monospace" font-size="15">
+      <text x="-126" y="-58" fill="#C5F1ED">total = 0</text>
+      <text x="-126" y="-24" fill="#FFC93C">for</text>
+      <text x="-90" y="-24" fill="#C5F1ED">i in data:</text>
+      <text x="-104" y="10" fill="#FF6B6B">total = i</text>
+      <text x="-126" y="44" fill="#FFF8E7">print(total)</text>
+    </g>
+    <path d="M-108 18h74" stroke="#FF6B6B" stroke-width="3" stroke-dasharray="6 5"/>
+  </g>
+  <g transform="translate(300 232)">
+    <circle cx="0" cy="0" r="54" fill="#FFF8E7" fill-opacity=".92" stroke="#1E293B" stroke-width="6"/>
+    <path d="M38 38l34 34" stroke="#1E293B" stroke-width="12" stroke-linecap="round"/>
+    <ellipse cx="0" cy="2" rx="15" ry="19" fill="#FF6B6B"/>
+    <circle cx="0" cy="-17" r="8" fill="#1E293B"/>
+    <path d="M-15 -8l-14-10M15 -8l14-10M-18 4h-16M18 4h16M-15 14l-14 12M15 14l14 12" stroke="#1E293B" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(92 288)">
+    <rect x="-52" y="-26" width="104" height="52" rx="20" fill="#C5F1ED" stroke="#1E293B" stroke-width="4"/>
+    <path d="M-24 0l12 13 24-27" stroke="#1E293B" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

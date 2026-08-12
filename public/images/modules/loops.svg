@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="A circular repeat arrow around a repeating pattern and a counter">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFDF6"/><stop offset="1" stop-color="#FBEFD0"/></linearGradient></defs>
+  <rect width="480" height="360" rx="28" fill="url(#bg)"/>
+
+  <circle cx="62" cy="290" r="40" fill="#FFD4D4" opacity=".7"/>
+  <circle cx="424" cy="70" r="36" fill="#DCD0FB" opacity=".7"/>
+  <g transform="translate(240 172)">
+    <path d="M-84 0a84 84 0 1 1 30 64" fill="none" stroke="#4ECDC4" stroke-width="14" stroke-linecap="round"/>
+    <path d="M-70 66l-16-46 46 10Z" fill="#4ECDC4"/>
+    <rect x="-52" y="-52" width="104" height="104" rx="20" fill="#FFFFFF" stroke="#1E293B" stroke-width="4"/>
+    <circle cx="-22" cy="-22" r="11" fill="#FFC93C"/>
+    <circle cx="22" cy="-22" r="11" fill="#FF6B6B"/>
+    <circle cx="-22" cy="22" r="11" fill="#FF6B6B"/>
+    <circle cx="22" cy="22" r="11" fill="#FFC93C"/>
+  </g>
+  <g transform="translate(240 300)">
+    <rect x="-104" y="-24" width="208" height="48" rx="16" fill="#1E293B"/>
+    <text x="-84" y="8" font-family="Consolas, Menlo, monospace" font-size="17" fill="#FFC93C">for</text>
+    <text x="-46" y="8" font-family="Consolas, Menlo, monospace" font-size="17" fill="#C5F1ED">i in range(</text>
+    <text x="60" y="8" font-family="Consolas, Menlo, monospace" font-size="17" fill="#FFC93C">5</text>
+    <text x="74" y="8" font-family="Consolas, Menlo, monospace" font-size="17" fill="#C5F1ED">)</text>
+  </g>
+</svg>

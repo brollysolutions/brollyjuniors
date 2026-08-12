@@ -1,0 +1,25 @@
+{
+  "name": "brollyjuniors",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run build:client && npm run build:ssr && npm run prerender",
+    "build:client": "vite build",
+    "build:ssr": "vite build --ssr src/entry-server.jsx --outDir dist-ssr",
+    "prerender": "node scripts/prerender.mjs",
+    "audit:seo": "node scripts/audit-seo.mjs",
+    "test:worksheet": "node scripts/test-worksheet.mjs",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^5.4.11"
+  }
+}

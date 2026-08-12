@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="A stack of guide books with a bookmark and reading glasses">
+  <defs>
+    <linearGradient id="reBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFDF6"/><stop offset="1" stop-color="#FBEFD0"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="360" rx="28" fill="url(#reBg)"/>
+  <circle cx="66" cy="82" r="42" fill="#FFE9A3" opacity=".8"/>
+  <circle cx="420" cy="286" r="40" fill="#C5F1ED" opacity=".65"/>
+
+  <!-- open book -->
+  <g transform="translate(240 174)">
+    <path d="M-160 -58c48-22 100-22 158 6v112c-58-28-110-28-158-6Z" fill="#FFFFFF" stroke="#E2D9BD" stroke-width="5"/>
+    <path d="M160 -58c-48-22-100-22-158 6v112c58-28 110-28 158-6Z" fill="#FFFFFF" stroke="#E2D9BD" stroke-width="5"/>
+    <path d="M-2 -52v112" stroke="#E2D9BD" stroke-width="6"/>
+    <g stroke="#E2D9BD" stroke-width="7" stroke-linecap="round">
+      <path d="M-136 -30h100M-136 -6h108M-136 18h84M-136 42h100"/>
+      <path d="M36 -30h100M28 -6h108M52 18h84M36 42h100"/>
+    </g>
+    <path d="M-136 -30h56" stroke="#FFC93C" stroke-width="7" stroke-linecap="round"/>
+    <path d="M28 -6h60" stroke="#4ECDC4" stroke-width="7" stroke-linecap="round"/>
+  </g>
+
+  <!-- stacked books -->
+  <g transform="translate(240 292)">
+    <rect x="-142" y="-6" width="284" height="26" rx="10" fill="#FFC93C" stroke="#1E293B" stroke-width="4"/>
+    <rect x="-120" y="18" width="240" height="24" rx="10" fill="#4ECDC4" stroke="#1E293B" stroke-width="4"/>
+    <path d="M-104 -6v26M104 18v24" stroke="#FFF8E7" stroke-width="4"/>
+  </g>
+
+  <!-- bookmark -->
+  <path d="M310 96h44v78l-22-18-22 18Z" fill="#FF6B6B" stroke="#1E293B" stroke-width="4" stroke-linejoin="round"/>
+
+  <!-- magnifier -->
+  <g transform="translate(84 246)">
+    <circle cx="0" cy="0" r="28" fill="#FFFFFF" stroke="#1E293B" stroke-width="6"/>
+    <path d="M20 20 44 44" stroke="#1E293B" stroke-width="9" stroke-linecap="round"/>
+    <path d="M-12 -4a12 12 0 0 1 12-12" fill="none" stroke="#C5F1ED" stroke-width="6" stroke-linecap="round"/>
+  </g>
+</svg>

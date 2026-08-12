@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="Messy data entering a funnel and leaving as clean records">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFDF6"/><stop offset="1" stop-color="#FBEFD0"/></linearGradient></defs>
+  <rect width="480" height="360" rx="28" fill="url(#bg)"/>
+
+  <circle cx="58" cy="76" r="36" fill="#C5F1ED" opacity=".65"/>
+  <circle cx="428" cy="288" r="40" fill="#DCD0FB" opacity=".7"/>
+  <g transform="translate(96 132)">
+    <circle cx="-18" cy="-38" r="12" fill="#FF6B6B"/>
+    <rect x="8" y="-46" width="22" height="22" rx="5" fill="#FFC93C" transform="rotate(18 19 -35)"/>
+    <circle cx="26" cy="4" r="10" fill="#A78BFA"/>
+    <rect x="-40" y="-4" width="20" height="20" rx="5" fill="#4ECDC4" transform="rotate(-14 -30 6)"/>
+    <circle cx="-2" cy="26" r="9" fill="#FF6B6B"/>
+  </g>
+  <g transform="translate(240 186)">
+    <path d="M-124 -78h248l-92 84v58l-64 26v-84Z" fill="#FFFFFF" stroke="#1E293B" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M-124 -78h248l-30 28h-188Z" fill="#4ECDC4"/>
+    <text x="0" y="-58" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-size="15" fill="#1E293B">clean</text>
+  </g>
+  <g transform="translate(392 254)">
+    <g><rect x="-46" y="-52" width="92" height="34" rx="9" fill="#C5F1ED" stroke="#1E293B" stroke-width="4"/><path d="M-30 -35l8 9 16-18" stroke="#1E293B" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="4" y="-40" width="30" height="9" rx="4.5" fill="#FFFFFF"/></g><g><rect x="-46" y="-4" width="92" height="34" rx="9" fill="#C5F1ED" stroke="#1E293B" stroke-width="4"/><path d="M-30 13l8 9 16-18" stroke="#1E293B" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="4" y="8" width="24" height="9" rx="4.5" fill="#FFFFFF"/></g><g><rect x="-46" y="44" width="92" height="34" rx="9" fill="#C5F1ED" stroke="#1E293B" stroke-width="4"/><path d="M-30 61l8 9 16-18" stroke="#1E293B" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="4" y="56" width="18" height="9" rx="4.5" fill="#FFFFFF"/></g>
+  </g>
+</svg>

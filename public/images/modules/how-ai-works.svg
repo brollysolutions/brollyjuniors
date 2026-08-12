@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="A sentence with predicted next words ranked by probability">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFDF6"/><stop offset="1" stop-color="#FBEFD0"/></linearGradient></defs>
+  <rect width="480" height="360" rx="28" fill="url(#bg)"/>
+
+  <circle cx="60" cy="72" r="36" fill="#C5F1ED" opacity=".65"/>
+  <circle cx="424" cy="292" r="40" fill="#FFD4D4" opacity=".7"/>
+  <g transform="translate(240 94)">
+    <rect x="-184" y="-46" width="368" height="92" rx="22" fill="#FFFFFF" stroke="#1E293B" stroke-width="4"/>
+    <text x="-152" y="12" font-family="Consolas, Menlo, monospace" font-size="21" fill="#1E293B">The cat sat on the</text>
+    <rect x="112" y="-16" width="52" height="30" rx="8" fill="#FFE9A3" stroke="#1E293B" stroke-width="3" stroke-dasharray="6 5"/>
+  </g>
+  <g transform="translate(240 152)">
+    <path d="M0 0v18" stroke="#A78BFA" stroke-width="6" stroke-linecap="round"/>
+    <path d="M0 30l-13-18h26Z" fill="#A78BFA"/>
+  </g>
+  <g transform="translate(240 280)">
+    
+    <g transform="translate(0 -66)">
+      <rect x="-176" y="-19" width="86" height="38" rx="12" fill="#FFFFFF" stroke="#1E293B" stroke-width="4"/>
+      <text x="-133" y="7" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-size="17" fill="#1E293B">mat</text>
+      <rect x="-78" y="-13" width="240" height="26" rx="13" fill="#4ECDC4"/>
+    </g>
+    <g transform="translate(0 -14)">
+      <rect x="-176" y="-19" width="86" height="38" rx="12" fill="#FFFFFF" stroke="#1E293B" stroke-width="4"/>
+      <text x="-133" y="7" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-size="17" fill="#1E293B">rug</text>
+      <rect x="-78" y="-13" width="128" height="26" rx="13" fill="#FFC93C"/>
+    </g>
+    <g transform="translate(0 38)">
+      <rect x="-176" y="-19" width="86" height="38" rx="12" fill="#FFFFFF" stroke="#1E293B" stroke-width="4"/>
+      <text x="-133" y="7" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-size="17" fill="#1E293B">sofa</text>
+      <rect x="-78" y="-13" width="62" height="26" rx="13" fill="#FF6B6B"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="A database cylinder beside a table of records">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFDF6"/><stop offset="1" stop-color="#FBEFD0"/></linearGradient></defs>
+  <rect width="480" height="360" rx="28" fill="url(#bg)"/>
+
+  <circle cx="60" cy="288" r="40" fill="#DCD0FB" opacity=".7"/>
+  <circle cx="424" cy="72" r="36" fill="#FFE9A3" opacity=".8"/>
+  <g transform="translate(126 172)">
+    <path d="M-64 -78v156c0 18 29 30 64 30s64-12 64-30V-78Z" fill="#4ECDC4" stroke="#1E293B" stroke-width="4"/>
+    <ellipse cx="0" cy="-78" rx="64" ry="30" fill="#C5F1ED" stroke="#1E293B" stroke-width="4"/>
+    <path d="M-64 -22c0 18 29 30 64 30s64-12 64-30M-64 30c0 18 29 30 64 30s64-12 64-30" fill="none" stroke="#1E293B" stroke-width="4"/>
+  </g>
+  <path d="M212 172h34" stroke="#1E293B" stroke-width="6" stroke-linecap="round" stroke-dasharray="10 8"/>
+  <path d="M258 172l-16-11v22Z" fill="#1E293B"/>
+  <g transform="translate(358 172)">
+    <rect x="-88" y="-92" width="176" height="184" rx="18" fill="#FFFFFF" stroke="#1E293B" stroke-width="4"/>
+    <rect x="-88" y="-92" width="176" height="42" rx="18" fill="#2B6CB0"/>
+    <rect x="-88" y="-71" width="176" height="21" fill="#2B6CB0"/>
+    <text x="-68" y="-62" font-family="Consolas, Menlo, monospace" font-size="14" fill="#FFFFFF">id</text>
+    <text x="-16" y="-62" font-family="Consolas, Menlo, monospace" font-size="14" fill="#FFFFFF">title</text>
+    <g><text x="-68" y="-24" font-family="Consolas, Menlo, monospace" font-size="14" fill="#1E293B">1</text><rect x="-18" y="-34" width="86" height="10" rx="5" fill="#FBEFD0"/><path d="M-88 -8h176" stroke="#E2D9BD" stroke-width="3"/></g><g><text x="-68" y="18" font-family="Consolas, Menlo, monospace" font-size="14" fill="#1E293B">2</text><rect x="-18" y="8" width="72" height="10" rx="5" fill="#FBEFD0"/><path d="M-88 34h176" stroke="#E2D9BD" stroke-width="3"/></g><g><text x="-68" y="60" font-family="Consolas, Menlo, monospace" font-size="14" fill="#1E293B">3</text><rect x="-18" y="50" width="58" height="10" rx="5" fill="#FBEFD0"/><path d="M-88 76h176" stroke="#E2D9BD" stroke-width="3"/></g>
+  </g>
+</svg>

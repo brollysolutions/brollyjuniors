@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="An AI chip connected to a Python code window">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFDF6"/><stop offset="1" stop-color="#FBEFD0"/></linearGradient></defs>
+  <rect width="480" height="360" rx="28" fill="url(#bg)"/>
+
+  <circle cx="60" cy="288" r="40" fill="#FFE9A3" opacity=".8"/>
+  <circle cx="424" cy="70" r="36" fill="#DCD0FB" opacity=".7"/>
+  <g transform="translate(146 178)">
+    <rect x="-108" y="-84" width="216" height="168" rx="20" fill="#1E293B"/>
+    <g font-family="Consolas, Menlo, monospace" font-size="15">
+      <text x="-86" y="-42" fill="#FFC93C">import</text>
+      <text x="-16" y="-42" fill="#C5F1ED">ai</text>
+      <text x="-86" y="-8" fill="#FFF8E7">reply = ai.ask(</text>
+      <text x="-86" y="24" fill="#FFC93C">  "explain this"</text>
+      <text x="-86" y="56" fill="#FFF8E7">)</text>
+    </g>
+  </g>
+  <g stroke="#4ECDC4" stroke-width="5" fill="none" stroke-linecap="round">
+    <path d="M262 178h34"/>
+  </g>
+  <circle cx="300" cy="178" r="7" fill="#4ECDC4"/>
+  <g transform="translate(372 178)">
+    <g stroke="#1E293B" stroke-width="5" stroke-linecap="round">
+      <path d="M-62 -36h-16M62 -36h16"/><path d="M-62 0h-16M62 0h16"/><path d="M-62 36h-16M62 36h16"/>
+      <path d="M-36 -62v-16M-36 62v16"/><path d="M0 -62v-16M0 62v16"/><path d="M36 -62v-16M36 62v16"/>
+    </g>
+    <rect x="-62" y="-62" width="124" height="124" rx="22" fill="#A78BFA" stroke="#1E293B" stroke-width="5"/>
+    <rect x="-36" y="-36" width="72" height="72" rx="14" fill="#FFF8E7"/>
+    <path d="M0-22l7 15 15 7-15 7-7 15-7-15-15-7 15-7Z" fill="#FFC93C"/>
+  </g>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="A commit history line with a branch splitting and merging back">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFDF6"/><stop offset="1" stop-color="#FBEFD0"/></linearGradient></defs>
+  <rect width="480" height="360" rx="28" fill="url(#bg)"/>
+
+  <circle cx="58" cy="76" r="36" fill="#DCD0FB" opacity=".7"/>
+  <circle cx="426" cy="290" r="40" fill="#C5F1ED" opacity=".65"/>
+  <g transform="translate(240 176)">
+    <path d="M-176 0h352" stroke="#1E293B" stroke-width="6" stroke-linecap="round"/>
+    <path d="M-88 0c26 0 26-62 52-62h72c26 0 26 62 52 62" fill="none" stroke="#A78BFA" stroke-width="6" stroke-linecap="round"/>
+    <path d="M-88 0c26 0 26 62 52 62h72c26 0 26-62 52-62" fill="none" stroke="#4ECDC4" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="-176" cy="0" r="15" fill="#FFC93C" stroke="#1E293B" stroke-width="5"/><circle cx="-88" cy="0" r="15" fill="#FFC93C" stroke="#1E293B" stroke-width="5"/><circle cx="0" cy="0" r="15" fill="#FFC93C" stroke="#1E293B" stroke-width="5"/><circle cx="88" cy="0" r="15" fill="#FFC93C" stroke="#1E293B" stroke-width="5"/><circle cx="176" cy="0" r="15" fill="#FFC93C" stroke="#1E293B" stroke-width="5"/>
+    <circle cx="-36" cy="-62" r="13" fill="#A78BFA" stroke="#1E293B" stroke-width="5"/><circle cx="36" cy="-62" r="13" fill="#A78BFA" stroke="#1E293B" stroke-width="5"/>
+    <circle cx="-36" cy="62" r="13" fill="#4ECDC4" stroke="#1E293B" stroke-width="5"/><circle cx="36" cy="62" r="13" fill="#4ECDC4" stroke="#1E293B" stroke-width="5"/>
+  </g>
+  <g transform="translate(240 300)">
+    <rect x="-118" y="-22" width="236" height="44" rx="16" fill="#1E293B"/>
+    <text x="0" y="8" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-size="16" fill="#C5F1ED">git commit -m "fix"</text>
+  </g>
+</svg>

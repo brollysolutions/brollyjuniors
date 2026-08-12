@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="A school building with a flag, calendar and classroom board">
+  <defs>
+    <linearGradient id="scBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFDF6"/><stop offset="1" stop-color="#FBEFD0"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="360" rx="28" fill="url(#scBg)"/>
+  <circle cx="64" cy="80" r="42" fill="#C5F1ED" opacity=".65"/>
+  <circle cx="418" cy="86" r="30" fill="#FFD4D4" opacity=".65"/>
+
+  <!-- school -->
+  <g transform="translate(230 200)">
+    <path d="M0-124 26-112v18h-52v-18Z" fill="#FF6B6B"/>
+    <path d="M0-134v14" stroke="#1E293B" stroke-width="5" stroke-linecap="round"/>
+    <path d="M-140-24 0-96l140 72Z" fill="#1E293B"/>
+    <rect x="-116" y="-24" width="232" height="128" rx="12" fill="#FFFFFF" stroke="#E2D9BD" stroke-width="5"/>
+    <rect x="-116" y="86" width="232" height="18" rx="9" fill="#E2D9BD"/>
+    <!-- door -->
+    <path d="M-24 104V44c0-14 11-24 24-24s24 10 24 24v60Z" fill="#4ECDC4"/>
+    <circle cx="14" cy="66" r="5" fill="#FFC93C"/>
+    <!-- windows -->
+    <g fill="#C5F1ED" stroke="#1E293B" stroke-width="4">
+      <rect x="-96" y="8" width="52" height="46" rx="8"/>
+      <rect x="44" y="8" width="52" height="46" rx="8"/>
+    </g>
+    <path d="M-70 8v46M-96 31h52M70 8v46M44 31h52" stroke="#1E293B" stroke-width="4"/>
+    <!-- clock -->
+    <circle cx="0" cy="-52" r="20" fill="#FFF8E7" stroke="#B07642" stroke-width="4"/>
+    <path d="M0-64v12l9 7" fill="none" stroke="#1E293B" stroke-width="3.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- calendar -->
+  <g transform="translate(76 250)">
+    <rect x="-46" y="-42" width="92" height="88" rx="14" fill="#FFFFFF" stroke="#E2D9BD" stroke-width="4"/>
+    <rect x="-46" y="-42" width="92" height="26" rx="13" fill="#FFC93C"/>
+    <rect x="-46" y="-29" width="92" height="13" fill="#FFC93C"/>
+    <path d="M-26 -50v14M26 -50v14" stroke="#1E293B" stroke-width="6" stroke-linecap="round"/>
+    <g fill="#E2D9BD">
+      <rect x="-32" y="-6" width="16" height="14" rx="4"/><rect x="-8" y="-6" width="16" height="14" rx="4"/><rect x="16" y="-6" width="16" height="14" rx="4"/>
+      <rect x="-32" y="16" width="16" height="14" rx="4"/><rect x="16" y="16" width="16" height="14" rx="4"/>
+    </g>
+    <rect x="-8" y="16" width="16" height="14" rx="4" fill="#4ECDC4"/>
+  </g>
+
+  <!-- graduation cap -->
+  <g transform="translate(398 236)">
+    <path d="M0-24-46-4 0 16 46-4Z" fill="#1E293B"/>
+    <path d="M-26 4v22c0 8 12 14 26 14s26-6 26-14V4L0 20Z" fill="#334155"/>
+    <path d="M46-4v30" stroke="#FFC93C" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="46" cy="30" r="6" fill="#FFC93C"/>
+  </g>
+</svg>

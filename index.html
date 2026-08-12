@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en-IN">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Real icon files, not an emoji data URI. Chrome does not reliably render
+         emoji inside an SVG favicon, and when the declared icon fails to decode
+         the browser silently falls back to requesting /favicon.ico — which used
+         to 404 on every page load. Regenerate with scripts/make-favicons.ps1. -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title, description, canonical, robots, Open Graph and JSON-LD are all
+         written in here per page at build time by scripts/prerender.mjs, and
+         kept in sync on client-side navigation by src/components/Seo.jsx.
+         Do not add any of those tags by hand — they would be duplicated. -->
+    <!--head-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Caveat:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

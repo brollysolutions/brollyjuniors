@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="An idea lightbulb over a map pin surrounded by people">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFDF6"/><stop offset="1" stop-color="#FBEFD0"/></linearGradient></defs>
+  <rect width="480" height="360" rx="28" fill="url(#bg)"/>
+
+  <circle cx="60" cy="70" r="36" fill="#DCD0FB" opacity=".7"/>
+  <circle cx="424" cy="292" r="40" fill="#FFE9A3" opacity=".8"/>
+  <g transform="translate(240 116)">
+    <path d="M0-64c32 0 56 25 56 55 0 20-12 32-19 43-5 8-5 16-5 22H-32c0-6 0-14-5-22-7-11-19-23-19-43 0-30 24-55 56-55Z" fill="#FFC93C" stroke="#1E293B" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M-26 68h52M-19 82h38" stroke="#1E293B" stroke-width="5" stroke-linecap="round"/>
+    <path d="M-18-6l9-16 9 16 9-16 9 16" fill="none" stroke="#1E293B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity=".45"/>
+  </g>
+  <g transform="translate(240 240)">
+    <path d="M0-38c19 0 34 15 34 34 0 24-34 52-34 52s-34-28-34-52c0-19 15-34 34-34Z" fill="#FF6B6B" stroke="#1E293B" stroke-width="5" stroke-linejoin="round"/>
+    <circle cx="0" cy="-4" r="12" fill="#FFF8E7"/>
+  </g>
+  
+  <g transform="translate(100 268)">
+    <circle cx="0" cy="-18" r="15" fill="#4ECDC4" stroke="#1E293B" stroke-width="4"/>
+    <path d="M-19 30v-18a19 19 0 0 1 38 0v18Z" fill="#4ECDC4" stroke="#1E293B" stroke-width="4" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(380 268)">
+    <circle cx="0" cy="-18" r="15" fill="#A78BFA" stroke="#1E293B" stroke-width="4"/>
+    <path d="M-19 30v-18a19 19 0 0 1 38 0v18Z" fill="#A78BFA" stroke="#1E293B" stroke-width="4" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(148 196)">
+    <circle cx="0" cy="-18" r="15" fill="#FFC93C" stroke="#1E293B" stroke-width="4"/>
+    <path d="M-19 30v-18a19 19 0 0 1 38 0v18Z" fill="#FFC93C" stroke="#1E293B" stroke-width="4" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(332 196)">
+    <circle cx="0" cy="-18" r="15" fill="#4ECDC4" stroke="#1E293B" stroke-width="4"/>
+    <path d="M-19 30v-18a19 19 0 0 1 38 0v18Z" fill="#4ECDC4" stroke="#1E293B" stroke-width="4" stroke-linejoin="round"/>
+  </g>
+</svg>

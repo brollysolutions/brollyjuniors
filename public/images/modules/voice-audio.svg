@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="A microphone with a sound wave and headphones">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFDF6"/><stop offset="1" stop-color="#FBEFD0"/></linearGradient></defs>
+  <rect width="480" height="360" rx="28" fill="url(#bg)"/>
+
+  <circle cx="60" cy="76" r="36" fill="#FFD4D4" opacity=".7"/>
+  <circle cx="424" cy="290" r="40" fill="#C5F1ED" opacity=".65"/>
+  <g transform="translate(160 178)">
+    <rect x="-34" y="-108" width="68" height="126" rx="34" fill="#A78BFA" stroke="#1E293B" stroke-width="5"/>
+    <path d="M-60 -20c0 34 26 60 60 60s60-26 60-60" fill="none" stroke="#1E293B" stroke-width="6" stroke-linecap="round"/>
+    <path d="M0 40v40" stroke="#1E293B" stroke-width="6" stroke-linecap="round"/>
+    <rect x="-38" y="80" width="76" height="14" rx="7" fill="#1E293B"/>
+    <g stroke="#FFF8E7" stroke-width="4" opacity=".7">
+      <path d="M-16 -80h32M-16 -60h32M-16 -40h32"/>
+    </g>
+  </g>
+  <g transform="translate(322 172)" stroke-linecap="round" fill="none">
+    <path d="M-30 0v-26M-30 0v26" stroke="#4ECDC4" stroke-width="10"/>
+    <path d="M0 0v-52M0 0v52" stroke="#FFC93C" stroke-width="10"/>
+    <path d="M30 0v-34M30 0v34" stroke="#FF6B6B" stroke-width="10"/>
+    <path d="M60 0v-62M60 0v62" stroke="#4ECDC4" stroke-width="10"/>
+    <path d="M90 0v-22M90 0v22" stroke="#A78BFA" stroke-width="10"/>
+  </g>
+  <g transform="translate(340 288)">
+    <path d="M-46 12v-14a46 46 0 0 1 92 0v14" fill="none" stroke="#1E293B" stroke-width="6" stroke-linecap="round"/>
+    <rect x="-58" y="6" width="26" height="42" rx="12" fill="#FFC93C" stroke="#1E293B" stroke-width="5"/>
+    <rect x="32" y="6" width="26" height="42" rx="12" fill="#FFC93C" stroke="#1E293B" stroke-width="5"/>
+  </g>
+</svg>

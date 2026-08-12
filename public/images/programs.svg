@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="A learning path connecting every Brolly Juniors program">
+  <defs>
+    <linearGradient id="pgBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFDF6"/><stop offset="1" stop-color="#FBEFD0"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="360" rx="28" fill="url(#pgBg)"/>
+  <circle cx="58" cy="70" r="36" fill="#C5F1ED" opacity=".6"/>
+  <circle cx="422" cy="292" r="40" fill="#FFD4D4" opacity=".55"/>
+
+  <!-- path -->
+  <path d="M64 292C120 292 128 208 190 208s70-84 132-84 46-52 94-52" fill="none" stroke="#E2D9BD" stroke-width="14" stroke-linecap="round"/>
+
+  <!-- nodes -->
+  <g font-family="Fredoka, Poppins, sans-serif" font-weight="700" font-size="26" text-anchor="middle">
+    <g>
+      <circle cx="66" cy="292" r="34" fill="#FFC93C" stroke="#1E293B" stroke-width="5"/>
+      <text x="66" y="302" fill="#FFF8E7">Aa</text>
+    </g>
+    <g>
+      <circle cx="164" cy="238" r="34" fill="#FF6B6B" stroke="#1E293B" stroke-width="5"/>
+      <text x="164" y="249" fill="#FFF8E7" font-size="24">123</text>
+    </g>
+    <g>
+      <circle cx="248" cy="176" r="34" fill="#4ECDC4" stroke="#1E293B" stroke-width="5"/>
+      <text x="248" y="187" fill="#C5F1ED" font-size="26">×÷</text>
+    </g>
+    <g>
+      <circle cx="336" cy="124" r="34" fill="#1E293B" stroke="#1E293B" stroke-width="5"/>
+      <text x="336" y="135" fill="#FFF8E7" font-size="24">&lt;/&gt;</text>
+    </g>
+    <g>
+      <circle cx="418" cy="72" r="34" fill="#4ECDC4" stroke="#1E293B" stroke-width="5"/>
+      <circle cx="406" cy="66" r="5" fill="#FFC93C"/><circle cx="430" cy="66" r="5" fill="#FFC93C"/>
+      <path d="M406 82c8 6 18 6 24 0" stroke="#C5F1ED" stroke-width="4" fill="none" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- labels -->
+  <g font-family="Poppins, sans-serif" font-weight="700" font-size="14" fill="#64748B" text-anchor="middle">
+    <text x="66" y="344">Phonics</text>
+    <text x="164" y="290">Abacus</text>
+    <text x="248" y="228">Vedic</text>
+    <text x="336" y="176">Python</text>
+    <text x="418" y="124">AI</text>
+  </g>
+
+  <!-- flag -->
+  <g transform="translate(432 34)">
+    <path d="M0 0v-14" stroke="#1E293B" stroke-width="4" stroke-linecap="round"/>
+    <path d="M0-14h22l-6 8 6 8H0Z" fill="#FF6B6B"/>
+  </g>
+</svg>

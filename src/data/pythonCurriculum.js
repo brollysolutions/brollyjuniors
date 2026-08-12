@@ -1,0 +1,73 @@
+// Class-wise Python curriculum: 9 modules × 8 sessions = 72 guided sessions per class.
+export const pythonCurriculum = {
+  6: {
+    level: 'Beginner',
+    modules: [
+      { title: 'Thinking Like a Programmer', topics: ['Algorithms in daily life', 'Python workspace', 'First print program'], project: 'Interactive introduction card' },
+      { title: 'Values, Variables and Input', topics: ['Strings and numbers', 'Variables', 'User input'], project: 'Personalised quiz' },
+      { title: 'Decisions with Conditions', topics: ['Booleans', 'If and else', 'Comparison operators'], project: 'Choose-your-path story' },
+      { title: 'Loops and Patterns', topics: ['For loops', 'While loops', 'Debugging infinite loops'], project: 'Pattern and times-table generator' },
+      { title: 'Functions as Building Blocks', topics: ['Reusable code', 'Parameters', 'Return values'], project: 'Mini calculator toolkit' },
+      { title: 'Lists and Collections', topics: ['Create and update lists', 'Loop through items', 'Simple searching'], project: 'Classroom task manager' },
+      { title: 'Turtle Graphics', topics: ['Coordinates', 'Angles', 'Procedural drawing'], project: 'Generative geometry art' },
+      { title: 'Game Logic', topics: ['Random values', 'Score and lives', 'Testing'], project: 'Number-guessing game' },
+      { title: 'Young Coder Capstone', topics: ['Plan', 'Build in stages', 'Demo and explain code'], project: 'Original Python game or learning tool' },
+    ],
+  },
+  7: {
+    level: 'Foundation to Intermediate',
+    modules: [
+      { title: 'Python Foundations Refresh', topics: ['Data types', 'Input and output', 'Readable code'], project: 'Profile generator' },
+      { title: 'Logic and Validation', topics: ['Nested conditions', 'Input validation', 'Logical operators'], project: 'Smart eligibility checker' },
+      { title: 'Loops and Simulations', topics: ['Nested loops', 'Counters', 'Random simulation'], project: 'Dice experiment' },
+      { title: 'Functions and Scope', topics: ['Parameters', 'Return patterns', 'Local scope'], project: 'Reusable maths challenge engine' },
+      { title: 'Lists, Tuples and Dictionaries', topics: ['Collection selection', 'Nested data', 'Updates'], project: 'Student score tracker' },
+      { title: 'Text and Files', topics: ['String methods', 'Reading and writing text', 'Simple records'], project: 'Digital journal' },
+      { title: 'Building Better Games', topics: ['Game states', 'Levels', 'Scoring systems'], project: 'Text adventure game' },
+      { title: 'Errors and Testing', topics: ['Tracebacks', 'Exception handling', 'Test cases'], project: 'Bug detective challenge' },
+      { title: 'Class 7 Capstone', topics: ['User stories', 'Building', 'Peer testing'], project: 'Useful console application' },
+    ],
+  },
+  8: {
+    level: 'Foundation to Intermediate',
+    modules: [
+      { title: 'Confident Python', topics: ['Style and naming', 'Types and operators', 'Debugging workflow'], project: 'Code quality makeover' },
+      { title: 'Data Structures', topics: ['Lists and dictionaries', 'Sets', 'Nested structures'], project: 'Library catalogue' },
+      { title: 'Functions and Modules', topics: ['Function design', 'Imports', 'Build a module'], project: 'Personal utility package' },
+      { title: 'Files and Structured Data', topics: ['Text and CSV', 'Parse records', 'Save results'], project: 'Survey analyser' },
+      { title: 'Object-Oriented Thinking', topics: ['Classes and objects', 'Attributes', 'Methods'], project: 'Virtual pet system' },
+      { title: 'Algorithms', topics: ['Search', 'Sort intuition', 'Efficiency basics'], project: 'Leaderboard engine' },
+      { title: 'Data Visualisation', topics: ['Clean data', 'Basic charts', 'Explain findings'], project: 'Student-interest data story' },
+      { title: 'Graphical Game Build', topics: ['Events', 'Collision logic', 'Game loop'], project: 'Playable arcade-style game' },
+      { title: 'Class 8 Capstone', topics: ['Design document', 'Build and test', 'Portfolio presentation'], project: 'Data app or game' },
+    ],
+  },
+  9: {
+    level: 'Intermediate to Applied',
+    modules: [
+      { title: 'Professional Python Foundations', topics: ['Environment and files', 'Style', 'Debugging'], project: 'Command-line productivity tool' },
+      { title: 'Advanced Collections', topics: ['Comprehensions', 'Nested data', 'Transformations'], project: 'Data-cleaning challenge' },
+      { title: 'Functions as Interfaces', topics: ['Arguments', 'Documentation', 'Testing functions'], project: 'Reusable school utility library' },
+      { title: 'Object-Oriented Programming', topics: ['Classes', 'Inheritance intuition', 'Composition'], project: 'School club management model' },
+      { title: 'Files, JSON and APIs', topics: ['JSON', 'Request-response concept', 'Handle missing data'], project: 'Public-data explorer' },
+      { title: 'Databases with Python', topics: ['Tables and records', 'CRUD concepts', 'Safe queries'], project: 'Personal reading database' },
+      { title: 'Web App Foundations', topics: ['Routes and templates', 'Forms', 'Validation'], project: 'Simple interactive web tool' },
+      { title: 'Python and AI Concepts', topics: ['Use a model responsibly', 'Prompt from code concept', 'Evaluate output'], project: 'AI-assisted study prototype' },
+      { title: 'Class 9 Capstone', topics: ['Requirements', 'Implementation', 'Deployment and demo'], project: 'Database-backed Python application' },
+    ],
+  },
+  10: {
+    level: 'Intermediate to Applied',
+    modules: [
+      { title: 'Python Readiness Sprint', topics: ['Core syntax', 'Git concepts', 'Code review'], project: 'Refactored multi-file utility' },
+      { title: 'Algorithms and Complexity', topics: ['Search and sort', 'Big-O intuition', 'Trade-offs'], project: 'Algorithm comparison lab' },
+      { title: 'Object-Oriented Design', topics: ['Responsibilities', 'Composition', 'Design clarity'], project: 'Real-world domain model' },
+      { title: 'Data Engineering Basics', topics: ['CSV and JSON', 'Clean and validate', 'Transform pipeline'], project: 'Reusable data pipeline' },
+      { title: 'Database Applications', topics: ['Schema design', 'CRUD', 'Data integrity'], project: 'Student service database' },
+      { title: 'Web Application Development', topics: ['Server routes', 'Templates', 'Forms and sessions concept'], project: 'Multi-page Python web app' },
+      { title: 'Testing and Security', topics: ['Unit tests', 'Validation', 'Secrets and permissions'], project: 'Application quality audit' },
+      { title: 'AI-enabled Python', topics: ['Model integration concepts', 'Structured outputs', 'Human checks'], project: 'Responsible AI feature prototype' },
+      { title: 'Portfolio and Deployment', topics: ['Complete product', 'Documentation', 'Demo and viva'], project: 'Deployed capstone application' },
+    ],
+  },
+};

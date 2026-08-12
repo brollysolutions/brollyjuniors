@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="A board of mental maths patterns with numbers and a speed spark">
+  <defs>
+    <linearGradient id="vmBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFDF6"/><stop offset="1" stop-color="#FBEFD0"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="360" rx="28" fill="url(#vmBg)"/>
+  <circle cx="426" cy="66" r="36" fill="#C5F1ED" opacity=".75"/>
+  <circle cx="52" cy="300" r="44" fill="#FFD4D4" opacity=".6"/>
+
+  <!-- board -->
+  <rect x="66" y="52" width="330" height="216" rx="18" fill="#4ECDC4" stroke="#1E293B" stroke-width="7"/>
+  <rect x="84" y="70" width="294" height="180" rx="10" fill="#4ECDC4"/>
+  <rect x="150" y="268" width="162" height="14" rx="7" fill="#B07642"/>
+  <path d="M188 282l-16 44M274 282l16 44" stroke="#B07642" stroke-width="10" stroke-linecap="round"/>
+
+  <!-- equations -->
+  <g font-family="Fredoka, Poppins, sans-serif" font-weight="700" fill="#FFF8E7">
+    <text x="106" y="118" font-size="30">98 × 97</text>
+    <text x="106" y="160" font-size="30">= 9506</text>
+    <text x="106" y="216" font-size="24" fill="#C5F1ED" opacity=".95">25² = 625</text>
+    <text x="256" y="216" font-size="24" fill="#FFC93C">7 + 3 = 10</text>
+  </g>
+  <path d="M100 172h132" stroke="#FFC93C" stroke-width="4" stroke-linecap="round"/>
+  <path d="M258 104c26 0 44 16 44 34s-18 32-44 32" fill="none" stroke="#FFC93C" stroke-width="4" stroke-linecap="round" stroke-dasharray="4 12"/>
+
+  <!-- spark -->
+  <g transform="translate(372 208)">
+    <circle cx="0" cy="0" r="42" fill="#FFFFFF" stroke="#E2D9BD" stroke-width="3"/>
+    <path d="M6-24-16 4h14l-6 22 22-30H6l6-20Z" fill="#FFC93C" stroke="#1E293B" stroke-width="3" stroke-linejoin="round"/>
+  </g>
+
+  <!-- floating number chips -->
+  <g font-family="Fredoka, Poppins, sans-serif" font-weight="700" font-size="22" text-anchor="middle">
+    <g transform="rotate(-10 60 122)">
+      <rect x="30" y="96" width="60" height="52" rx="14" fill="#FFFFFF" stroke="#E2D9BD" stroke-width="3"/>
+      <text x="60" y="130" fill="#FF6B6B">×</text>
+    </g>
+    <g transform="rotate(9 428 168)">
+      <rect x="400" y="142" width="56" height="52" rx="14" fill="#FFFFFF" stroke="#E2D9BD" stroke-width="3"/>
+      <text x="428" y="176" fill="#4ECDC4">÷</text>
+    </g>
+    <g transform="rotate(6 130 314)">
+      <rect x="100" y="288" width="60" height="52" rx="14" fill="#FFFFFF" stroke="#E2D9BD" stroke-width="3"/>
+      <text x="130" y="322" fill="#1E293B">+</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="Data feeding a model that produces an output">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFDF6"/><stop offset="1" stop-color="#FBEFD0"/></linearGradient></defs>
+  <rect width="480" height="360" rx="28" fill="url(#bg)"/>
+
+  <circle cx="60" cy="76" r="36" fill="#FFE9A3" opacity=".8"/>
+  <circle cx="424" cy="288" r="40" fill="#DCD0FB" opacity=".7"/>
+  <g stroke="#4ECDC4" stroke-width="4" fill="none" opacity=".85">
+    <path d="M108 106L196 176M108 176L196 176M108 246L196 176M284 176L372 106M284 176L372 176M284 176L372 246"/>
+  </g>
+  <circle cx="108" cy="106" r="20" fill="#FFC93C" stroke="#1E293B" stroke-width="4"/><circle cx="108" cy="176" r="20" fill="#FFC93C" stroke="#1E293B" stroke-width="4"/><circle cx="108" cy="246" r="20" fill="#FFC93C" stroke="#1E293B" stroke-width="4"/>
+  <circle cx="372" cy="106" r="20" fill="#FF6B6B" stroke="#1E293B" stroke-width="4"/><circle cx="372" cy="176" r="20" fill="#FF6B6B" stroke="#1E293B" stroke-width="4"/><circle cx="372" cy="246" r="20" fill="#FF6B6B" stroke="#1E293B" stroke-width="4"/>
+  <g transform="translate(240 176)">
+    <rect x="-56" y="-56" width="112" height="112" rx="26" fill="#A78BFA" stroke="#1E293B" stroke-width="5"/>
+    <path d="M0-26l7 16 16 7-16 7-7 16-7-16-16-7 16-7Z" fill="#FFF8E7"/>
+  </g>
+  <g font-family="Fredoka, Poppins, sans-serif" font-weight="600" font-size="17" fill="#1E293B" text-anchor="middle">
+    <text x="108" y="304">data</text>
+    <text x="240" y="266">model</text>
+    <text x="372" y="304">output</text>
+  </g>
+</svg>

@@ -1,0 +1,34 @@
+User-agent: *
+Allow: /
+
+# The progress dashboard is personalised and stored in the browser —
+# there is nothing there for a crawler to index.
+Disallow: /my-progress
+
+# AI search crawlers are deliberately not blocked. None of them execute
+# JavaScript, so before the site was prerendered they saw an empty page; now
+# they can read every curriculum page, and being the source an assistant cites
+# is worth as much to a Hyderabad parent as a blue link.
+#
+# Named explicitly rather than relying on the wildcard above, so that anyone
+# reading this file can see the choice was made on purpose.
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: Bingbot
+Allow: /
+Disallow: /my-progress
+
+# A curated plain-text map of the site for language models — https://llmstxt.org
+# Generated at build time by scripts/prerender.mjs, from the same route list as
+# the sitemap. There is no standard directive for it yet, hence the comment.
+# https://brollyjuniors.com/llms.txt
+
+Sitemap: https://brollyjuniors.com/sitemap.xml

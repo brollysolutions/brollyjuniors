@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="A laptop with creative tools, a shield for online safety and folders">
+  <defs>
+    <linearGradient id="dlBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFDF6"/><stop offset="1" stop-color="#FBEFD0"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="360" rx="28" fill="url(#dlBg)"/>
+  <circle cx="56" cy="72" r="40" fill="#C5F1ED" opacity=".7"/>
+  <circle cx="428" cy="288" r="44" fill="#FFD4D4" opacity=".6"/>
+
+  <!-- laptop -->
+  <g transform="translate(240 186)">
+    <rect x="-140" y="-108" width="280" height="182" rx="16" fill="#1E293B"/>
+    <rect x="-126" y="-94" width="252" height="152" rx="8" fill="#FFF8E7"/>
+    <path d="M-176 74h352c0 18-12 28-30 28h-292c-18 0-30-10-30-28Z" fill="#334155"/>
+    <rect x="-34" y="80" width="68" height="8" rx="4" fill="#1E293B" opacity=".5"/>
+
+    <!-- screen content -->
+    <rect x="-126" y="-94" width="252" height="30" rx="8" fill="#FBEFD0"/>
+    <circle cx="-108" cy="-79" r="5" fill="#FF6B6B"/><circle cx="-92" cy="-79" r="5" fill="#FFC93C"/><circle cx="-76" cy="-79" r="5" fill="#4ECDC4"/>
+    <rect x="-112" y="-50" width="106" height="86" rx="10" fill="#C5F1ED" stroke="#1E293B" stroke-width="3"/>
+    <path d="M-98 18l26-32 20 22 16-16 22 26Z" fill="#4ECDC4" opacity=".65"/>
+    <circle cx="-78" cy="-28" r="9" fill="#FFC93C"/>
+    <rect x="14" y="-50" width="98" height="18" rx="9" fill="#FBEFD0"/>
+    <rect x="14" y="-22" width="76" height="14" rx="7" fill="#E2D9BD"/>
+    <rect x="14" y="2" width="98" height="14" rx="7" fill="#E2D9BD"/>
+    <rect x="14" y="26" width="58" height="14" rx="7" fill="#E2D9BD"/>
+  </g>
+
+  <!-- safety shield -->
+  <g transform="translate(84 254)">
+    <path d="M0-46 42-30v34C42 26 24 44 0 52-24 44-42 26-42 4v-34Z" fill="#FFFFFF" stroke="#4ECDC4" stroke-width="5"/>
+    <path d="M-18 2 -4 16 20-14" fill="none" stroke="#4ECDC4" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- folder -->
+  <g transform="translate(400 108)">
+    <path d="M-42-30h30l10 12h44v52c0 8-6 14-14 14h-56c-8 0-14-6-14-14v-50c0-8 4-14 14-14Z" fill="#FFC93C" stroke="#1E293B" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M-42 -2h84" stroke="#FFF8E7" stroke-width="4"/>
+  </g>
+
+  <!-- cursor -->
+  <path d="M300 292l6 46 12-16 16 12-6-20 18-4Z" fill="#FFFFFF" stroke="#1E293B" stroke-width="4" stroke-linejoin="round"/>
+</svg>

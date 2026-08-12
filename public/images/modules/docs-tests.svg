@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="A documented function card beside three passing tests">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFDF6"/><stop offset="1" stop-color="#FBEFD0"/></linearGradient></defs>
+  <rect width="480" height="360" rx="28" fill="url(#bg)"/>
+
+  <circle cx="60" cy="286" r="40" fill="#FFE9A3" opacity=".8"/>
+  <circle cx="424" cy="70" r="36" fill="#DCD0FB" opacity=".7"/>
+  <g transform="translate(160 172)">
+    <rect x="-104" y="-116" width="208" height="232" rx="20" fill="#FFFFFF" stroke="#1E293B" stroke-width="4"/>
+    <text x="-78" y="-56" font-family="Fredoka, Poppins, sans-serif" font-weight="600" font-size="66" fill="#C5F1ED">&#8220;</text>
+    <rect x="-76" y="-40" width="150" height="11" rx="5.5" fill="#FBEFD0"/>
+    <rect x="-76" y="-18" width="120" height="11" rx="5.5" fill="#FBEFD0"/>
+    <rect x="-76" y="4" width="140" height="11" rx="5.5" fill="#FBEFD0"/>
+    <text x="-76" y="52" font-family="Consolas, Menlo, monospace" font-size="15" fill="#2B6CB0">Args: items</text>
+    <text x="-76" y="82" font-family="Consolas, Menlo, monospace" font-size="15" fill="#2B6CB0">Returns: total</text>
+  </g>
+  <g transform="translate(358 172)">
+    
+    <g transform="translate(0 -72)">
+      <rect x="-74" y="-27" width="148" height="54" rx="16" fill="#C5F1ED" stroke="#1E293B" stroke-width="4"/>
+      <path d="M-46 0l11 12 22-25" stroke="#1E293B" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="4" y="-6" width="48" height="12" rx="6" fill="#FFFFFF"/>
+    </g>
+    <g transform="translate(0 0)">
+      <rect x="-74" y="-27" width="148" height="54" rx="16" fill="#C5F1ED" stroke="#1E293B" stroke-width="4"/>
+      <path d="M-46 0l11 12 22-25" stroke="#1E293B" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="4" y="-6" width="40" height="12" rx="6" fill="#FFFFFF"/>
+    </g>
+    <g transform="translate(0 72)">
+      <rect x="-74" y="-27" width="148" height="54" rx="16" fill="#C5F1ED" stroke="#1E293B" stroke-width="4"/>
+      <path d="M-46 0l11 12 22-25" stroke="#1E293B" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="4" y="-6" width="32" height="12" rx="6" fill="#FFFFFF"/>
+    </g>
+  </g>
+</svg>

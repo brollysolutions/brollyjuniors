@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="Balance scales beside a signpost of career directions">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFDF6"/><stop offset="1" stop-color="#FBEFD0"/></linearGradient></defs>
+  <rect width="480" height="360" rx="28" fill="url(#bg)"/>
+
+  <circle cx="58" cy="288" r="40" fill="#FFD4D4" opacity=".7"/>
+  <circle cx="426" cy="70" r="36" fill="#C5F1ED" opacity=".65"/>
+  <g transform="translate(128 178)">
+    <path d="M0-104v186" stroke="#1E293B" stroke-width="7" stroke-linecap="round"/>
+    <path d="M-80-94h160" stroke="#1E293B" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="0" cy="-104" r="11" fill="#FFC93C" stroke="#1E293B" stroke-width="4"/>
+    <path d="M-52 92h104" stroke="#1E293B" stroke-width="8" stroke-linecap="round"/>
+    <path d="M-80-94l-26 50a30 18 0 0 0 52 0Z" fill="#C5F1ED" stroke="#1E293B" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M80-94l-26 50a30 18 0 0 0 52 0Z" fill="#FFE9A3" stroke="#1E293B" stroke-width="4" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(366 190)">
+    <path d="M0-118v208" stroke="#1E293B" stroke-width="9" stroke-linecap="round"/>
+    
+    <g transform="translate(0 -96)">
+      <path d="M0-19h68l16 19-16 19H0Z" fill="#4ECDC4" stroke="#1E293B" stroke-width="4" stroke-linejoin="round"/>
+      <rect x="14" y="-5" width="44" height="10" rx="5" fill="#FFFFFF" opacity=".85"/>
+    </g>
+    <g transform="translate(0 -46)">
+      <path d="M0-19h-68l-16 19 16 19H0Z" fill="#FFC93C" stroke="#1E293B" stroke-width="4" stroke-linejoin="round"/>
+      <rect x="-58" y="-5" width="44" height="10" rx="5" fill="#FFFFFF" opacity=".85"/>
+    </g>
+    <g transform="translate(0 4)">
+      <path d="M0-19h68l16 19-16 19H0Z" fill="#FF6B6B" stroke="#1E293B" stroke-width="4" stroke-linejoin="round"/>
+      <rect x="14" y="-5" width="44" height="10" rx="5" fill="#FFFFFF" opacity=".85"/>
+    </g>
+    <path d="M-38 92h76" stroke="#1E293B" stroke-width="8" stroke-linecap="round"/>
+  </g>
+</svg>

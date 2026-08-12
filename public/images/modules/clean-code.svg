@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="A code window being tidied, with a sparkle badge">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFDF6"/><stop offset="1" stop-color="#FBEFD0"/></linearGradient></defs>
+  <rect width="480" height="360" rx="28" fill="url(#bg)"/>
+
+  <circle cx="58" cy="288" r="40" fill="#FFE9A3" opacity=".8"/>
+  <circle cx="426" cy="72" r="36" fill="#C5F1ED" opacity=".65"/>
+  <g transform="translate(230 174)">
+    <rect x="-176" y="-108" width="352" height="216" rx="22" fill="#1E293B"/>
+    <rect x="-176" y="-108" width="352" height="36" rx="22" fill="#334155"/>
+    <rect x="-176" y="-90" width="352" height="18" fill="#334155"/>
+    <circle cx="-150" cy="-90" r="6" fill="#FF6B6B"/><circle cx="-132" cy="-90" r="6" fill="#FFC93C"/><circle cx="-114" cy="-90" r="6" fill="#4ECDC4"/>
+    <g font-family="Consolas, Menlo, monospace" font-size="16">
+      <text x="-152" y="-38" fill="#FFC93C">def</text>
+      <text x="-112" y="-38" fill="#C5F1ED">total_price(items):</text>
+      <text x="-128" y="-8" fill="#FFF8E7">total = </text>
+      <text x="-52" y="-8" fill="#FFC93C">0</text>
+      <text x="-128" y="22" fill="#FFC93C">for</text>
+      <text x="-88" y="22" fill="#C5F1ED">item in items:</text>
+      <text x="-104" y="52" fill="#FFF8E7">total += item</text>
+      <text x="-128" y="82" fill="#FFC93C">return</text>
+      <text x="-64" y="82" fill="#FFF8E7">total</text>
+    </g>
+  </g>
+  <g transform="translate(400 268)">
+    <circle cx="0" cy="0" r="38" fill="#FFFFFF" stroke="#1E293B" stroke-width="4"/>
+    <path d="M0-22l7 15 15 7-15 7-7 15-7-15-15-7 15-7Z" fill="#FFC93C"/>
+  </g>
+</svg>

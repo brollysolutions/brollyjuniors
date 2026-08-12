@@ -1,0 +1,211 @@
+# ============================================================================
+# Brolly Juniors — React (Vite) SPA
+# Deploy target: /public_html on the shared host.
+# This file replaces the old WordPress .htaccess. Keep it at the web root.
+# ============================================================================
+
+# Apache must not "helpfully" resolve /about to about.html — the SPA owns routing.
+Options -MultiViews
+
+# mod_dir sees /junior-skills/abacus, notices a directory of that name, and
+# 301s to /junior-skills/abacus/ before rule 3 below ever runs — observed live
+# on this host, which is LiteSpeed reporting itself as Apache. That breaks
+# every canonical: the sitemap and the canonical tag both name the slashless
+# URL, which then never answers 200. Turning it off lets rule 3 serve
+# .../index.html internally, with no redirect for a crawler to follow.
+#
+# Requires AllowOverride Indexes (cPanel/LiteSpeed hosts set All by default).
+# If the host forbids it the site returns 500 — delete these three lines and
+# re-upload to roll back instantly.
+<IfModule mod_dir.c>
+  DirectorySlash Off
+</IfModule>
+
+# DirectorySlash Off means a directory request that somehow slips past rule 3
+# would otherwise hit mod_autoindex and list its contents. Deny that outright.
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+# ---------------------------------------------------------------------------
+# 1. Force HTTPS  (mirrors conf/apache/forceHttps.conf)
+# ---------------------------------------------------------------------------
+RewriteCond %{HTTPS} !=on
+RewriteRule !^\.well-known($|/) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# ---------------------------------------------------------------------------
+# 2. Legacy static .html URLs -> SPA routes (301, permanent)
+#    These are the pages currently indexed. Drop any line only once the old
+#    URL has fully dropped out of Search Console.
+# ---------------------------------------------------------------------------
+
+# Home
+RewriteRule ^index\.html$ / [R=301,L]
+
+# AI + Python hubs
+RewriteRule ^ai-classes-for-kids-in-hyderabad\.html$      /ai-for-kids     [R=301,L]
+RewriteRule ^python-classes-for-kids-in-hyderabad\.html$  /python-for-kids [R=301,L]
+
+# AI + Python per-class curricula (6-10)
+RewriteRule ^ai-curriculum-class-([6-9]|10)-hyderabad\.html$     /ai-for-kids/class-$1     [R=301,L]
+RewriteRule ^python-curriculum-class-([6-9]|10)-hyderabad\.html$ /python-for-kids/class-$1 [R=301,L]
+
+# Retired combined "AI & Python" pages (was in the old .htaccess — re-pointed
+# at the new SPA URLs so they resolve in one hop instead of chaining to a 404).
+RewriteRule ^ai-python-course-for-class-([6-9]|10)-hyderabad\.html$ /python-for-kids/class-$1 [R=301,L]
+RewriteRule ^ai-python-classes-for-kids-in-hyderabad\.html$         /                         [R=301,L]
+
+# Junior skills
+RewriteRule ^abacus-classes-in-hyderabad\.html$                    /junior-skills/abacus            [R=301,L]
+RewriteRule ^vedic-maths-classes-in-hyderabad\.html$               /junior-skills/vedic-maths       [R=301,L]
+RewriteRule ^public-speaking-classes-1-5-hyderabad\.html$          /junior-skills/public-speaking   [R=301,L]
+RewriteRule ^digital-literacy-classes-for-kids-hyderabad\.html$    /junior-skills/digital-literacy  [R=301,L]
+
+# Class 1-5 curriculum pages -> junior skills hub (no 1:1 successor page)
+RewriteRule ^class-[1-5]-curriculum-hyderabad\.html$      /junior-skills [R=301,L]
+RewriteRule ^classes-1-to-5-curriculum-hyderabad\.html$   /junior-skills [R=301,L]
+
+# ---------------------------------------------------------------------------
+# Retired /programs/<slug> structure.
+#
+# These were indexed under the old site and had no redirect, so Search Console
+# was reporting them as 404s and whatever authority they had accumulated was
+# being thrown away rather than passed to the page that replaced them.
+#
+# Matched on a keyword prefix rather than the exact slug: the old slugs were
+# inconsistent ("abacus-classes-hyderabad", "ai-classes-for-kids-hyderabad"),
+# and any variant that turns up later should still land somewhere sensible.
+# Verified first that no real route lives under /programs/ — only /programs
+# itself — so the catch-all at the end cannot shadow a live page.
+# ---------------------------------------------------------------------------
+RewriteRule ^programs/abacus[^/]*$             /junior-skills/abacus           [R=301,L]
+RewriteRule ^programs/phonics[^/]*$            /junior-skills/phonics          [R=301,L]
+RewriteRule ^programs/vedic[^/]*$              /junior-skills/vedic-maths      [R=301,L]
+RewriteRule ^programs/public-speaking[^/]*$    /junior-skills/public-speaking  [R=301,L]
+RewriteRule ^programs/(digital|creative)[^/]*$ /junior-skills/digital-literacy [R=301,L]
+RewriteRule ^programs/ai[^/]*$                 /ai-for-kids                    [R=301,L]
+RewriteRule ^programs/(python|coding)[^/]*$    /python-for-kids                [R=301,L]
+# Anything else that used to sit under /programs/ reaches the hub, not a 404.
+#
+# The two conditions are load-bearing, not defensive. Rule 3 below rewrites
+# /programs to /programs/index.html, and because that substitution starts with a
+# slash Apache treats it as a new internal request and runs this file again. On
+# that second pass the bare pattern matched "programs/index.html" and 301'd it
+# back to /programs, which made the hub an infinite redirect loop. Skipping
+# anything that resolves to a real file or directory stops the second pass dead.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^programs/.+$                      /programs                       [R=301,L]
+
+# Old WordPress top-level pages that have a clear successor. Everything else
+# from the WordPress install (/wp-admin, /wp-json, /comments/feed, the plugin
+# and upload paths) is correctly left to 404 — there is nothing to send it to,
+# and inventing a destination would create a soft 404 instead.
+RewriteRule ^academics/?$   /programs      [R=301,L]
+RewriteRule ^activities/?$  /junior-skills [R=301,L]
+
+# Schools
+RewriteRule ^schools-hyderabad\.html$                            /schools                            [R=301,L]
+RewriteRule ^schools-partnership-program-hyderabad\.html$        /schools/school-partnership-program  [R=301,L]
+RewriteRule ^schools-annual-academic-program-hyderabad\.html$    /schools/annual-academic-program     [R=301,L]
+RewriteRule ^schools-request-proposal\.html$                     /schools/request-proposal            [R=301,L]
+RewriteRule ^schools-ai-curriculum-hyderabad\.html$              /schools/ai-curriculum               [R=301,L]
+RewriteRule ^schools-python-curriculum-hyderabad\.html$          /schools/python-curriculum           [R=301,L]
+RewriteRule ^schools-ai-coding-clubs-hyderabad\.html$            /schools/ai-and-coding-clubs         [R=301,L]
+RewriteRule ^schools-teacher-training-hyderabad\.html$           /schools/teacher-training            [R=301,L]
+
+# Company / content
+RewriteRule ^about\.html$            /about           [R=301,L]
+RewriteRule ^contact\.html$          /contact         [R=301,L]
+RewriteRule ^book-free-demo\.html$   /book-free-demo  [R=301,L]
+RewriteRule ^student-projects\.html$ /student-projects [R=301,L]
+RewriteRule ^resources\.html$        /resources       [R=301,L]
+
+# ---------------------------------------------------------------------------
+# 3. Prerendered pages.
+#    The build now writes a real HTML file per route: /about becomes
+#    /about/index.html. Serving it internally here means Apache does not issue
+#    its usual "add a trailing slash" 301 first — every URL in the sitemap
+#    resolves in one hop, with no redirect for a crawler to follow.
+#    MUST come before the fallback below.
+# ---------------------------------------------------------------------------
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}/index.html -f
+RewriteRule ^(.*[^/])/?$ /$1/index.html [L]
+
+# ---------------------------------------------------------------------------
+# 4. Everything else that does not exist is genuinely missing.
+#    Returning a real 404 rather than quietly serving the home page matters:
+#    a fallback that answers 200 for every mistyped URL is a "soft 404", and
+#    Google treats a site full of them as a site it cannot trust. ErrorDocument
+#    then serves the prerendered 404 page, which carries a noindex tag.
+#
+#    The one exception is module URLs. Any slug beginning "module-3" resolves
+#    to module 3 client-side, so a shortened or older module link must still
+#    reach the app shell rather than 404.
+#    MUST stay last: every rule above needs to match first.
+# ---------------------------------------------------------------------------
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(ai|python)-for-kids/class-[0-9]+/. /index.html [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ - [L,R=404]
+</IfModule>
+
+ErrorDocument 404 /404.html
+
+# ============================================================================
+# Caching
+# ============================================================================
+<IfModule mod_headers.c>
+  # Vite emits content-hashed filenames in /assets, e.g. index-BhsITwUB.css.
+  # The hash is 8 base64url chars after a dash — safe to cache forever.
+  <FilesMatch "-[0-9A-Za-z_-]{8}\.(js|mjs|css|woff2?|png|jpe?g|gif|svg|webp|avif)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+
+  # index.html is the SPA entry point — it must never go stale, or users keep
+  # loading references to deleted asset hashes after a deploy.
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html                  "access plus 0 seconds"
+  ExpiresByType image/svg+xml              "access plus 7 days"
+  ExpiresByType text/css                   "access plus 7 days"
+  ExpiresByType application/javascript     "access plus 7 days"
+</IfModule>
+
+# ============================================================================
+# Compression
+# ============================================================================
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml \
+    application/javascript application/json application/xml image/svg+xml
+</IfModule>
+
+# ============================================================================
+# Misc
+# ============================================================================
+AddType image/svg+xml .svg
+DirectoryIndex index.html
+
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# Block dotfiles from being served (this file included).
+# Guarded so it degrades quietly rather than 500-ing on pre-2.4 Apache.
+<IfModule mod_authz_core.c>
+  <FilesMatch "^\.">
+    Require all denied
+  </FilesMatch>
+</IfModule>

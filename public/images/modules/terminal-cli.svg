@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="A terminal window running a Python command">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFDF6"/><stop offset="1" stop-color="#FBEFD0"/></linearGradient></defs>
+  <rect width="480" height="360" rx="28" fill="url(#bg)"/>
+
+  <circle cx="58" cy="74" r="36" fill="#C5F1ED" opacity=".65"/>
+  <circle cx="426" cy="290" r="40" fill="#FFD4D4" opacity=".7"/>
+  <g transform="translate(240 178)">
+    <rect x="-186" y="-124" width="372" height="248" rx="24" fill="#1E293B"/>
+    <rect x="-186" y="-124" width="372" height="40" rx="24" fill="#334155"/>
+    <rect x="-186" y="-104" width="372" height="20" fill="#334155"/>
+    <circle cx="-158" cy="-104" r="7" fill="#FF6B6B"/><circle cx="-136" cy="-104" r="7" fill="#FFC93C"/><circle cx="-114" cy="-104" r="7" fill="#4ECDC4"/>
+    <g font-family="Consolas, Menlo, monospace" font-size="17">
+      <text x="-158" y="-48" fill="#4ECDC4">$</text>
+      <text x="-136" y="-48" fill="#FFF8E7">python report.py</text>
+      <text x="-158" y="-14" fill="#94A3B8">Reading 240 records...</text>
+      <text x="-158" y="20" fill="#94A3B8">Cleaning data...</text>
+      <text x="-158" y="54" fill="#FFC93C">Done in 0.4s</text>
+      <text x="-158" y="92" fill="#4ECDC4">$</text>
+    </g>
+    <rect x="-136" y="78" width="13" height="20" fill="#FFF8E7"/>
+  </g>
+</svg>

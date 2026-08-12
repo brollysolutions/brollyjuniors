@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="A card showing a bar chart with a trend line">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFDF6"/><stop offset="1" stop-color="#FBEFD0"/></linearGradient></defs>
+  <rect width="480" height="360" rx="28" fill="url(#bg)"/>
+
+  <circle cx="58" cy="76" r="36" fill="#FFD4D4" opacity=".7"/>
+  <circle cx="426" cy="290" r="40" fill="#C5F1ED" opacity=".65"/>
+  <g transform="translate(240 176)">
+    <rect x="-180" y="-118" width="360" height="236" rx="22" fill="#FFFFFF" stroke="#1E293B" stroke-width="4"/>
+    <rect x="-150" y="-94" width="120" height="14" rx="7" fill="#FBEFD0"/>
+    <path d="M-150 76h300M-150 -50v126" stroke="#E2D9BD" stroke-width="4" stroke-linecap="round"/>
+    <rect x="-128" y="16" width="40" height="60" rx="6" fill="#C5F1ED"/>
+    <rect x="-70" y="-14" width="40" height="90" rx="6" fill="#4ECDC4"/>
+    <rect x="-12" y="30" width="40" height="46" rx="6" fill="#C5F1ED"/>
+    <rect x="46" y="-34" width="40" height="110" rx="6" fill="#4ECDC4"/>
+    <rect x="104" y="0" width="40" height="76" rx="6" fill="#C5F1ED"/>
+    <path d="M-108 6l58-32 58 22 58-40 58 20" fill="none" stroke="#FF6B6B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <g fill="#FF6B6B" stroke="#FFFFFF" stroke-width="3">
+      <circle cx="-108" cy="6" r="7"/><circle cx="-50" cy="-26" r="7"/><circle cx="8" cy="-4" r="7"/><circle cx="66" cy="-44" r="7"/><circle cx="124" cy="-24" r="7"/>
+    </g>
+  </g>
+</svg>

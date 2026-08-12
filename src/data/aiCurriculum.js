@@ -1,0 +1,73 @@
+// Class-wise AI curriculum: 9 modules × 8 sessions = 72 guided sessions per class.
+export const aiCurriculum = {
+  6: {
+    level: 'Foundation',
+    modules: [
+      { title: 'Meet Artificial Intelligence', topics: ['AI in everyday life', 'Human vs machine strengths', 'Safe sign-in habits'], project: '"My AI Around Me" discovery map' },
+      { title: 'Talking to AI Clearly', topics: ['Prompt purpose', 'Context and constraints', 'Improving weak prompts'], project: 'Personal prompt recipe cards' },
+      { title: 'AI as a Learning Buddy', topics: ['Explain at my level', 'Quiz and revision prompts', 'Checking answers'], project: 'AI-assisted study kit for one school chapter' },
+      { title: 'Writing and Story Worlds', topics: ['Idea generation', 'Character and plot', 'Editing in your own voice'], project: 'Illustrated short story with an authorship note' },
+      { title: 'Images and Visual Thinking', topics: ['Describing scenes', 'Style and composition', 'Image limitations'], project: 'Science or social-studies visual explainer' },
+      { title: 'Voice, Sound and Expression', topics: ['Text-to-speech', 'Pronunciation', 'Consent and voice safety'], project: 'One-minute educational audio story' },
+      { title: 'Presentations and Video', topics: ['Outline to slides', 'Visual hierarchy', 'AI presenter basics'], project: 'Two-minute classroom explainer video' },
+      { title: 'Truth, Safety and Kindness', topics: ['Fact-checking', 'Private information', 'Bias and respectful use'], project: 'Young AI User safety charter' },
+      { title: 'Curiosity Showcase', topics: ['Choose a real problem', 'Combine AI workflows', 'Present and reflect'], project: 'Future Skills Fair portfolio' },
+    ],
+  },
+  7: {
+    level: 'Foundation',
+    modules: [
+      { title: 'How Generative AI Works', topics: ['Patterns and predictions', 'Training data idea', 'Why AI can be wrong'], project: 'Interactive AI myth-vs-fact board' },
+      { title: 'Prompt Design Studio', topics: ['Role, task and audience', 'Examples and formats', 'Prompt iteration'], project: 'Reusable prompt library for schoolwork' },
+      { title: 'Research Without Copying', topics: ['Question planning', 'Source comparison', 'Notes and citations'], project: 'Mini research brief with source trail' },
+      { title: 'Smart Study Systems', topics: ['Concept breakdown', 'Flashcards and quizzes', 'Revision planning'], project: 'Seven-day AI-supported revision system' },
+      { title: 'Design and Digital Art', topics: ['Creative briefs', 'Image prompting', 'Copyright and originality'], project: 'Awareness-poster campaign' },
+      { title: 'Audio and Podcast Lab', topics: ['Script structure', 'Voice generation', 'Sound and disclosure'], project: 'Three-minute learning podcast' },
+      { title: 'Video Communication', topics: ['Storyboard', 'Avatar presenters', 'Captions and accessibility'], project: 'Explainer video for a younger class' },
+      { title: 'No-code Chatbot Thinking', topics: ['Conversation flows', 'Helpful boundaries', 'Testing responses'], project: 'Prototype school-help chatbot' },
+      { title: 'AI for Community', topics: ['Problem discovery', 'Solution design', 'Pitch and reflection'], project: 'Community-improvement AI concept' },
+    ],
+  },
+  8: {
+    level: 'Intermediate',
+    modules: [
+      { title: 'AI Literacy and Models', topics: ['Generative AI concepts', 'Model capabilities', 'Hallucinations'], project: 'Model comparison experiment' },
+      { title: 'Structured Prompt Systems', topics: ['Prompt frameworks', 'Multi-step prompts', 'Evaluation rubrics'], project: 'Prompt playbook for three school subjects' },
+      { title: 'Research and Synthesis', topics: ['Search strategy', 'Conflicting sources', 'Cited summaries'], project: 'Evidence-backed issue explainer' },
+      { title: 'AI, Data and Patterns', topics: ['Clean tabular data', 'Questioning data', 'Chart interpretation'], project: 'Survey analysis findings poster' },
+      { title: 'Multimodal Creation', topics: ['Text-to-image', 'Image-to-text', 'Creative direction'], project: 'Cross-media campaign for a social cause' },
+      { title: 'Voice and Video Production', topics: ['Script revision', 'Synthetic media', 'Disclosure and consent'], project: 'Documentary-style micro video' },
+      { title: 'Workflow Automation', topics: ['Inputs and outputs', 'Repeatable steps', 'No-code workflow maps'], project: 'Student productivity automation prototype' },
+      { title: 'Cyber Safety and Deepfakes', topics: ['Manipulated media', 'Privacy and scams', 'Verification habits'], project: 'Deepfake awareness workshop' },
+      { title: 'Impact Challenge', topics: ['User problem identification', 'Prototyping', 'Testing and pitching'], project: 'AI-for-good solution showcase' },
+    ],
+  },
+  9: {
+    level: 'Applied',
+    modules: [
+      { title: 'AI Systems Foundations', topics: ['Models and datasets', 'Probability intuition', 'Limits and trade-offs'], project: 'AI system concept map' },
+      { title: 'Applied Prompt Engineering', topics: ['Decomposition', 'Few-shot examples', 'Output evaluation'], project: 'Tested prompt system with scorecard' },
+      { title: 'Research, Evidence and Citation', topics: ['Primary vs secondary sources', 'Claim verification', 'Synthesis'], project: 'Cited research report' },
+      { title: 'Data Analysis with AI', topics: ['Data questions', 'Patterns and outliers', 'Responsible conclusions'], project: 'School-community data story' },
+      { title: 'AI Content Studio', topics: ['Campaign strategy', 'Image, voice and video', 'Authenticity'], project: 'Multi-format public-awareness campaign' },
+      { title: 'Chatbots and Knowledge', topics: ['Knowledge boundaries', 'Conversation design', 'Testing and fallback'], project: 'Subject-help assistant prototype' },
+      { title: 'Automation and Agents', topics: ['Workflow logic', 'Human approval points', 'Error handling'], project: 'Mapped and demonstrated agentic workflow' },
+      { title: 'Ethics, Careers and Society', topics: ['Bias and fairness', 'Work and careers', 'Governance basics'], project: 'Student AI policy debate' },
+      { title: 'Innovation Capstone', topics: ['Problem validation', 'Build and test', 'Demo and documentation'], project: 'AI product prototype and pitch' },
+    ],
+  },
+  10: {
+    level: 'Applied',
+    modules: [
+      { title: 'Understanding Modern AI', topics: ['Foundation models', 'Multimodal systems', 'Capability evaluation'], project: 'AI landscape briefing' },
+      { title: 'Advanced Prompt Workflows', topics: ['Planning prompts', 'Rubrics and critics', 'Repeatable templates'], project: 'Reliable multi-step prompt workflow' },
+      { title: 'Deep Research Skills', topics: ['Research questions', 'Evidence quality', 'Citations and uncertainty'], project: 'Academic-style research explainer' },
+      { title: 'AI for Data Decisions', topics: ['Dataset preparation', 'Visual analysis', 'Avoiding false claims'], project: 'Evidence-based decision dashboard concept' },
+      { title: 'Multimodal Media Lab', topics: ['Creative direction', 'Production workflow', 'Rights and disclosure'], project: 'Professional-style explainer campaign' },
+      { title: 'AI Products and Interfaces', topics: ['User needs', 'Feature design', 'Prototype feedback'], project: 'Clickable AI product concept' },
+      { title: 'Automation with Human Control', topics: ['Agent roles', 'Approval and audit', 'Failure-safe design'], project: 'Responsible automation blueprint' },
+      { title: 'Governance, Exams and Careers', topics: ['Academic integrity', 'Privacy and law basics', 'AI career pathways'], project: 'Personal responsible-AI and career plan' },
+      { title: 'Portfolio Capstone', topics: ['Original problem', 'Iterative build', 'Public demonstration'], project: 'Documented AI solution and portfolio presentation' },
+    ],
+  },
+};

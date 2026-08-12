@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="A four-step learning cycle: explain, practise, create and reflect">
+  <defs>
+    <linearGradient id="meBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFDF6"/><stop offset="1" stop-color="#FBEFD0"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="360" rx="28" fill="url(#meBg)"/>
+  <circle cx="58" cy="66" r="36" fill="#C5F1ED" opacity=".6"/>
+  <circle cx="428" cy="300" r="38" fill="#FFD4D4" opacity=".55"/>
+
+  <!-- cycle arrows -->
+  <g fill="none" stroke-width="14" stroke-linecap="round">
+    <path d="M240 76a104 104 0 0 1 96 64" stroke="#FFC93C"/>
+    <path d="M348 196a104 104 0 0 1-84 84" stroke="#4ECDC4"/>
+    <path d="M216 280a104 104 0 0 1-84-84" stroke="#FF6B6B"/>
+    <path d="M144 140a104 104 0 0 1 76-64" stroke="#1E293B"/>
+  </g>
+  <path d="M336 132l16 16-22 8Z" fill="#FFC93C"/>
+  <path d="M266 286l-18 12 2-24Z" fill="#4ECDC4"/>
+  <path d="M132 204l-14-18 24-4Z" fill="#FF6B6B"/>
+  <path d="M212 70l20-12-2 24Z" fill="#1E293B"/>
+
+  <!-- centre -->
+  <circle cx="240" cy="180" r="62" fill="#FFFFFF" stroke="#E2D9BD" stroke-width="5"/>
+  <text x="240" y="172" font-family="Fredoka, Poppins, sans-serif" font-weight="700" font-size="22" text-anchor="middle" fill="#1E293B">Learn</text>
+  <text x="240" y="200" font-family="Poppins, sans-serif" font-weight="700" font-size="16" text-anchor="middle" fill="#64748B">by doing</text>
+
+  <!-- step badges -->
+  <g font-family="Fredoka, Poppins, sans-serif" font-weight="700" font-size="15" text-anchor="middle">
+    <g>
+      <circle cx="240" cy="56" r="34" fill="#FFC93C" stroke="#1E293B" stroke-width="4"/>
+      <text x="240" y="52" fill="#FFF8E7">1</text><text x="240" y="70" fill="#FFF8E7" font-size="12">EXPLAIN</text>
+    </g>
+    <g>
+      <circle cx="380" cy="180" r="34" fill="#4ECDC4" stroke="#1E293B" stroke-width="4"/>
+      <text x="380" y="176" fill="#C5F1ED">2</text><text x="380" y="194" fill="#C5F1ED" font-size="11">PRACTISE</text>
+    </g>
+    <g>
+      <circle cx="240" cy="304" r="34" fill="#FF6B6B" stroke="#1E293B" stroke-width="4"/>
+      <text x="240" y="300" fill="#FFF8E7">3</text><text x="240" y="318" fill="#FFF8E7" font-size="12">CREATE</text>
+    </g>
+    <g>
+      <circle cx="100" cy="180" r="34" fill="#1E293B" stroke="#1E293B" stroke-width="4"/>
+      <text x="100" y="176" fill="#FFF8E7">4</text><text x="100" y="194" fill="#FFF8E7" font-size="11">REFLECT</text>
+    </g>
+  </g>
+</svg>

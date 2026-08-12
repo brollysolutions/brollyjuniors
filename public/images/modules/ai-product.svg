@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="A phone app design with an AI action button and a cursor">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFDF6"/><stop offset="1" stop-color="#FBEFD0"/></linearGradient></defs>
+  <rect width="480" height="360" rx="28" fill="url(#bg)"/>
+
+  <circle cx="58" cy="286" r="40" fill="#C5F1ED" opacity=".65"/>
+  <circle cx="426" cy="72" r="36" fill="#FFD4D4" opacity=".7"/>
+  <g transform="translate(180 178)">
+    <rect x="-96" y="-134" width="192" height="268" rx="30" fill="#FFFFFF" stroke="#1E293B" stroke-width="5"/>
+    <rect x="-78" y="-110" width="156" height="212" rx="14" fill="#FBEFD0"/>
+    <rect x="-24" y="-124" width="48" height="8" rx="4" fill="#E2D9BD"/>
+    <rect x="-60" y="-90" width="80" height="12" rx="6" fill="#2B6CB0"/>
+    <rect x="-60" y="-62" width="120" height="42" rx="12" fill="#FFFFFF"/>
+    <rect x="-60" y="-8" width="120" height="42" rx="12" fill="#FFFFFF"/>
+    <rect x="-60" y="52" width="120" height="36" rx="18" fill="#A78BFA"/>
+    <path d="M-14 70l5 11 11 5-11 5-5 11-5-11-11-5 11-5Z" fill="#FFC93C" transform="translate(14 0)"/>
+  </g>
+  <g transform="translate(316 202)">
+    <path d="M0 0l0 62 15-16 11 24 12-6-11-23h20Z" fill="#FFFFFF" stroke="#1E293B" stroke-width="4" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(360 116)">
+    <rect x="-64" y="-40" width="128" height="80" rx="18" fill="#FFE9A3" stroke="#1E293B" stroke-width="4"/>
+    <rect x="-44" y="-18" width="88" height="10" rx="5" fill="#FFFFFF"/>
+    <rect x="-44" y="0" width="60" height="10" rx="5" fill="#FFFFFF"/>
+    <path d="M-30 40l-4 20 24-20Z" fill="#FFE9A3" stroke="#1E293B" stroke-width="4"/>
+  </g>
+</svg>

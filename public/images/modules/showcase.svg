@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="A presentation board with a chart and a presenting student">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFDF6"/><stop offset="1" stop-color="#FBEFD0"/></linearGradient></defs>
+  <rect width="480" height="360" rx="28" fill="url(#bg)"/>
+
+  <circle cx="58" cy="72" r="36" fill="#FFE9A3" opacity=".8"/>
+  <circle cx="426" cy="290" r="40" fill="#DCD0FB" opacity=".7"/>
+  <g transform="translate(200 150)">
+    <rect x="-152" y="-108" width="304" height="192" rx="18" fill="#FFFFFF" stroke="#1E293B" stroke-width="5"/>
+    <rect x="-124" y="-84" width="130" height="15" rx="7.5" fill="#2B6CB0"/>
+    <path d="M-124 46h240" stroke="#E2D9BD" stroke-width="4" stroke-linecap="round"/>
+    <rect x="-112" y="4" width="38" height="42" rx="6" fill="#C5F1ED"/>
+    <rect x="-62" y="-22" width="38" height="68" rx="6" fill="#4ECDC4"/>
+    <rect x="-12" y="-46" width="38" height="92" rx="6" fill="#FFC93C"/>
+    <rect x="38" y="-8" width="38" height="54" rx="6" fill="#FF6B6B"/>
+    <path d="M92-58l8 17 17 8-17 8-8 17-8-17-17-8 17-8Z" fill="#FFC93C"/>
+    <path d="M-150 84l-16 40h336l-16-40Z" fill="#E2D9BD" stroke="#1E293B" stroke-width="4" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(374 250)">
+    <circle cx="0" cy="-40" r="26" fill="#FFC93C" stroke="#1E293B" stroke-width="5"/>
+    <path d="M-32 60v-34a32 32 0 0 1 64 0v34Z" fill="#4ECDC4" stroke="#1E293B" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M-32 6l-34-24" stroke="#4ECDC4" stroke-width="12" stroke-linecap="round"/>
+  </g>
+</svg>
