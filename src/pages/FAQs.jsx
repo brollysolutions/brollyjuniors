@@ -1,12 +1,10 @@
-import { familyFaqs, aiFaqs, pythonFaqs, phonicsFaqs } from '../data/site.js';
 import { PageHero, FaqList, CtaBand } from '../components/Shared.jsx';
-
-const allFaqs = [
-  ...familyFaqs,
-  ...phonicsFaqs.slice(0, 3), // start age, method, duration
-  ...aiFaqs(6).slice(1), // tools, sessions, safety
-  ...pythonFaqs(6).slice(1), // sessions, projects, laptop
-];
+/* The same array lib/faqs.js hands to the FAQPage structured data. This page
+   used to keep its own copy of the list, which is how it ended up rendering
+   twelve questions while the schema on the same page declared fifteen —
+   Google discards FAQ markup whose questions are not visible. One array, read
+   by both, is the only arrangement where that cannot happen. */
+import { allFaqs } from '../lib/faqs.js';
 
 export default function FAQs() {
   return (

@@ -294,7 +294,7 @@ The data proves it: for `abacus classes in hyderabad`, positions **1, 2 and 3 ar
 
 - [ ] **Claim & verify** your Google Business Profile (video verification is standard in India now).
 - [ ] **Primary category:** `Educational institution`. **Secondary:** `Tutoring service`, `Computer training school`, `After school program`, `Coaching center`.
-- [ ] **Exact NAP** (Name, Address, Phone) — must match your website footer *character for character*. Use `+91 81868 44555` consistently everywhere.
+- [ ] **Exact NAP** (Name, Address, Phone) — must match your website footer *character for character*. Use `+91 70360 44555` consistently everywhere.
 - [ ] **Full opening hours**, including batch times.
 - [ ] **Services:** add all seven programs as individual service entries with descriptions and pricing.
 - [ ] **Photos — 20+ minimum.** Real classroom, real children (with parental consent), the abacus, the whiteboard, the entrance, the street view. Geotagged. **Add new photos weekly** — freshness is a documented ranking factor.
@@ -405,7 +405,7 @@ This is your largest structural deficit and the slowest thing to fix, so start n
 |---|---|
 | `src/entry-server.jsx` | SSR entry: renders a route to HTML and serialises its head tags |
 | `scripts/prerender.mjs` | Writes one HTML file per route, plus `404.html` and `sitemap.xml` |
-| `scripts/audit-seo.mjs` | `npm run audit:seo` — fails the build check on a missing title, description, canonical, H1, structured data, prerendered content, or a duplicate title |
+| `scripts/audit-seo.mjs` | `npm run audit:seo` — fails the build check on a missing title, description, canonical, H1, structured data, prerendered content, or a duplicate title. Also warns on the Google starter-guide items: skipped heading levels, link text that describes nothing, missing or empty `alt`, and pages nothing links to |
 | `scripts/keyword-map.mjs` | Reads the built HTML and reports whether each page's target keyword is in its title, H1 and opening copy → `docs/KEYWORD_MAP.md` |
 | `src/lib/routes.js` | The single route manifest driving prerendering and the sitemap. Throws on duplicates |
 | `src/lib/head.js` | One description of `<head>` per route, shared by the prerenderer and the client |

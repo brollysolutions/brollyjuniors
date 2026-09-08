@@ -2,6 +2,8 @@ import { subjects, moduleHref } from '../data/moduleDetail.js';
 import { infoPages } from '../data/infoPages.js';
 import { publishedLocations, locationPath } from '../data/locations.js';
 import { articles, articlePath } from '../data/articles.js';
+import { apps, appPath } from '../data/apps.js';
+import { catalogRoutes } from '../data/catalog/index.js';
 
 /* Every URL the site can serve, in one list.
  *
@@ -21,12 +23,12 @@ const CORE = [
   '/python-for-kids',
   '/junior-skills',
   '/schools',
-  '/about',
   '/contact',
   '/faqs',
   '/resources',
   '/abacus-worksheet-generator',
   '/my-progress',
+  '/apps',
 ];
 
 /* /junior-skills/*, /schools/*, /resources, /student-projects,
@@ -52,6 +54,16 @@ const LOCATION_ROUTES = publishedLocations.map((l) => locationPath(l.slug));
 
 const ARTICLE_ROUTES = articles.map((a) => articlePath(a.slug));
 
+/* One page per app. These are the only pages on the site that answer a national
+   query rather than a Hyderabad one — see the note in src/data/apps.js. */
+const APP_ROUTES = apps.map((a) => appPath(a.slug));
+
+/* Tuitions, workshops, age groups and the wider programme catalogue — the
+   hubs plus one page per topic. These come straight from data/catalog/, which
+   is the same structure the mega menu is built from, so a link in the navbar
+   and a URL in the sitemap cannot drift apart. */
+const CATALOG_ROUTES = catalogRoutes;
+
 export const routes = [
   ...CORE,
   ...INFO,
@@ -59,6 +71,8 @@ export const routes = [
   ...MODULE_ROUTES,
   ...LOCATION_ROUTES,
   ...ARTICLE_ROUTES,
+  ...APP_ROUTES,
+  ...CATALOG_ROUTES,
 ];
 
 /* Sanity check: a duplicate route would silently overwrite a prerendered file

@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
-import { site, pillars } from '../data/site.js';
+import { site, pillars, address, openingHours, formattedAddress } from '../data/site.js';
+import { publishedLocations, locationPath } from '../data/locations.js';
 import { getModuleDetail, moduleHref } from '../data/moduleDetail.js';
+import { appPath, isLive, developer } from '../data/apps.js';
 import { useProgress, getModuleScore } from '../lib/progress.js';
 
 export function PageHero({ eyebrow, title, subtitle, chips, image, imageAlt, children }) {
@@ -140,7 +142,9 @@ export function Pillars() {
 export function QuickAnswer({ text }) {
   return (
     <div className="quick-answer">
-      <h3>Quick answer</h3>
+      {/* h2, not h3: this block sits directly under the page H1, and a screen
+          reader reading the outline would announce a skipped level. */}
+      <h2>Quick answer</h2>
       <p>{text}</p>
     </div>
   );
@@ -156,10 +160,10 @@ export function FaqList({ items, title = 'What families and schools ask' }) {
         </div>
         <div className="faq-list">
           {items.map((f) => (
-            <details className="faq-item" key={f.q}>
-              <summary>{f.q}</summary>
+            <div className="faq-item" key={f.q}>
+              <h3 className="faq-q">{f.q}</h3>
               <div className="answer">{f.a}</div>
-            </details>
+            </div>
           ))}
         </div>
       </div>
@@ -196,6 +200,116 @@ export function CtaBand({ variant = 'family' }) {
             <a href={site.whatsappHref} className="btn btn-outline" target="_blank" rel="noreferrer">
               WhatsApp us
             </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* The store-listing header: icon, name, who makes it.
+ *
+ * Sits directly above the download row, which is the one place on the page a
+ * parent is deciding whether to trust the thing enough to install it — so the
+ * icon they will see in Play and the company that publishes it belong here
+ * rather than three sections down. The icon is decorative-adjacent but not
+ * decorative: it is how the app is identified in a store search, so it keeps a
+ * real alt text.
+ */
+export function AppIdentity({ app }) {
+  return (
+    <div className="app-identity">
+      <img
+        className="app-identity-icon"
+        src={app.icon}
+        alt={app.iconAlt}
+        width="256"
+        height="256"
+      />
+      <div>
+        <strong>{app.name}</strong>
+        <span>by {developer.name}</span>
+      </div>
+    </div>
+  );
+}
+
+/* The download row for an app, in whichever of its three states applies.
+ *
+ * live               → the Play Store button.
+ * testing + testUrl  → a real "join the test group" button. Recruiting testers
+ *                      is the actual bottleneck during a testing window, so the
+ *                      page should convert for that instead of doing nothing.
+ * testing, no link   → an honest status pill. Never a button: there is nowhere
+ *                      for it to go, and a dead store link spends the one click
+ *                      a parent was willing to give.
+ *
+ * The WhatsApp fallback is always present, because it is the number families
+ * actually reach this business on and it works in every state. */
+export function AppStoreCta({ app, align = 'start' }) {
+  const live = isLive(app);
+  const ask = live
+    ? `Hi Brolly Juniors, I'd like to know about the ${app.name} app.`
+    : `Hi Brolly Juniors, please tell me when the ${app.name} app is available.`;
+  const whatsapp = `${site.whatsappHref}?text=${encodeURIComponent(ask)}`;
+
+  return (
+    <div className="btn-row" style={align === 'center' ? { justifyContent: 'center' } : undefined}>
+      {live && (
+        <a href={app.playUrl} className="btn btn-primary" target="_blank" rel="noreferrer">
+          ▶ Get {app.name} on Google Play
+        </a>
+      )}
+      {!live && app.testUrl && (
+        <a href={app.testUrl} className="btn btn-primary" target="_blank" rel="noreferrer">
+          Join the {app.name} test group
+        </a>
+      )}
+      {!live && !app.testUrl && (
+        <span className="store-pending">
+          <strong>In testing on Google Play</strong>
+          <span>Not publicly downloadable yet.</span>
+        </span>
+      )}
+      <a href={whatsapp} className="btn btn-outline" target="_blank" rel="noreferrer">
+        {live ? `WhatsApp us about ${app.name}` : `WhatsApp us when ${app.name} is live`}
+      </a>
+    </div>
+  );
+}
+
+/* Shown on the program page an app practises — the internal link that matters
+   most, because it reaches a parent at the moment they are already reading
+   about that subject. */
+export function AppCallout({ app }) {
+  return (
+    <section className="section-tight">
+      <div className="container">
+        <div className="panel app-callout">
+          <div className="app-callout-art">
+            <img src={app.image} alt={app.imageAlt} width="480" height="360" loading="lazy" />
+          </div>
+          <div>
+            {/* The real icon instead of a 📱 emoji: same job, and it is the
+                image a parent will be scanning for in the Play search results
+                this callout is trying to send them to. */}
+            <h2 className="app-callout-title">
+              <img
+                src={app.icon}
+                alt=""
+                aria-hidden="true"
+                width="256"
+                height="256"
+                loading="lazy"
+              />
+              Practise between classes with {app.name}
+            </h2>
+            <p>
+              {app.tagline} {app.quickAnswer}
+            </p>
+            <Link to={appPath(app.slug)} className="btn btn-primary">
+              About the {app.name} app
+            </Link>
           </div>
         </div>
       </div>
@@ -333,6 +447,232 @@ export function OutcomeAssessment() {
             <li>Final capstone demonstration</li>
           </ul>
         </div>
+      </div>
+    </section>
+  );
+}
+
+/* Optional content blocks for a data-driven inner page.
+ *
+ * infoPages.js entries used to be limited to a hero, a quick answer, a
+ * curriculum and a list of prose sections, which is why a page with more to
+ * say — the abacus page has age bands, a session rhythm, fee formats, areas
+ * served — had nowhere to put it without growing a bespoke component.
+ *
+ * A block is `{ kind, title, lead, ... }`. The kind picks the layout; every
+ * layout is built from classes that already exist in global.css, so a new
+ * block cannot introduce a new visual language. Any page in infoPages.js or
+ * data/catalog/ can use them — nothing here is abacus-specific.
+ */
+export function PageBlocks({ blocks }) {
+  if (!blocks || blocks.length === 0) return null;
+  return blocks.map((block, i) => (
+    <PageBlock key={block.title || `${block.kind}-${i}`} block={block} index={i} />
+  ));
+}
+
+function PageBlock({ block, index }) {
+  /* Alternate the background so a long page reads as distinct sections
+     rather than one continuous sheet. */
+  const band = index % 2 === 1 ? 'band-soft' : undefined;
+  const head = (
+    <SectionHead eyebrow={block.eyebrow} title={block.title} lead={block.lead} />
+  );
+
+  const body = () => {
+    switch (block.kind) {
+      case 'cards':
+        return (
+          <div className={block.columns === 4 ? 'grid-4' : 'grid-3'}>
+            {block.items.map((it) => {
+              const inner = (
+                <>
+                  {it.icon && <span className="icon">{it.icon}</span>}
+                  <h3>{it.title}</h3>
+                  {it.kv && <p className="kv">{it.kv}</p>}
+                  {it.text && <p>{it.text}</p>}
+                  {it.bullets && (
+                    <ul className="pill-row">
+                      {it.bullets.map((b) => (
+                        <li key={b}>{b}</li>
+                      ))}
+                    </ul>
+                  )}
+                </>
+              );
+              return it.to ? (
+                <Link className="card" to={it.to} key={it.title}>
+                  {inner}
+                </Link>
+              ) : (
+                <div className="card" key={it.title}>
+                  {inner}
+                </div>
+              );
+            })}
+          </div>
+        );
+
+      case 'ages':
+        return (
+          <div className={block.items.length === 4 ? 'grid-4' : 'grid-3'}>
+            {block.items.map((it) => (
+              <div className="age-card" key={it.title}>
+                <h3>{it.title}</h3>
+                {it.kv && <p className="kv">{it.kv}</p>}
+                <p>{it.text}</p>
+                {it.bullets && (
+                  <ul className="pill-row">
+                    {it.bullets.map((b) => (
+                      <li key={b}>{b}</li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ))}
+          </div>
+        );
+
+      case 'steps':
+        return (
+          <div className="steps">
+            {block.items.map((it) => (
+              <div className="step" key={it.title}>
+                <h3>{it.title}</h3>
+                <p>{it.text}</p>
+              </div>
+            ))}
+          </div>
+        );
+
+      case 'rhythm':
+        return (
+          <ol className="rhythm">
+            {block.items.map((it) => (
+              <li key={it.title}>
+                <h3>{it.title}</h3>
+                <p>{it.text}</p>
+              </li>
+            ))}
+          </ol>
+        );
+
+      case 'compare':
+        return (
+          <div className="compare">
+            <div className="compare-col is-us">
+              <h3>{block.us.title}</h3>
+              <ul>
+                {block.us.items.map((t) => (
+                  <li key={t}>{t}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="compare-col is-other">
+              <h3>{block.them.title}</h3>
+              <ul>
+                {block.them.items.map((t) => (
+                  <li key={t}>{t}</li>
+                ))}
+              </ul>
+              {block.them.note && <p className="note-line">{block.them.note}</p>}
+            </div>
+          </div>
+        );
+
+      case 'plans':
+        return (
+          <div className={block.items.length === 3 ? 'grid-3' : 'grid-4'}>
+            {block.items.map((it) => (
+              <div className="plan" key={it.title}>
+                <h3>{it.title}</h3>
+                {it.kv && <p className="kv">{it.kv}</p>}
+                <ul>
+                  {it.items.map((b) => (
+                    <li key={b}>{b}</li>
+                  ))}
+                </ul>
+                {it.cta && (
+                  <Link to={it.cta.to} className="btn btn-outline">
+                    {it.cta.label}
+                  </Link>
+                )}
+              </div>
+            ))}
+          </div>
+        );
+
+      /* Area links resolve against data/locations.js, so a locality can only
+         become a link when a page for it actually exists — the rest stay as
+         plain text. That is the rule in locations.js, applied here rather
+         than restated in every page's data. */
+      case 'areas':
+        return (
+          <div className="split" style={{ alignItems: 'start' }}>
+            <div>
+              <ul className="area-links">
+                {block.items.map((name) => {
+                  const loc = publishedLocations.find(
+                    (l) => l.name.toLowerCase() === name.toLowerCase()
+                  );
+                  return (
+                    <li key={name}>
+                      {loc ? (
+                        <Link to={locationPath(loc.slug)}>
+                          {block.linkPrefix || 'Classes in'} {name}
+                        </Link>
+                      ) : (
+                        <span>{name}</span>
+                      )}
+                    </li>
+                  );
+                })}
+              </ul>
+              {block.note && <p className="note-line">{block.note}</p>}
+            </div>
+            <div className="panel">
+              <h2>Our centre</h2>
+              <p>{formattedAddress()}</p>
+              <p>{address.landmarks}.</p>
+              {openingHours.map((h) => (
+                <p key={h.days}>
+                  <strong>{h.days}:</strong> {h.time}
+                </p>
+              ))}
+              <div className="btn-row">
+                <a href={site.phoneHref} className="btn btn-primary">
+                  Call {site.phone}
+                </a>
+                <Link to="/contact" className="btn btn-outline">
+                  Directions &amp; contact
+                </Link>
+              </div>
+            </div>
+          </div>
+        );
+
+      default:
+        return null;
+    }
+  };
+
+  return (
+    <section className={band}>
+      <div className="container">
+        {(block.title || block.lead) && head}
+        {body()}
+        {block.note && block.kind !== 'areas' && (
+          <p className="note-line center" style={{ marginTop: 24 }}>
+            {block.note}
+          </p>
+        )}
+        {block.cta && (
+          <div className="center" style={{ marginTop: 36 }}>
+            <Link to={block.cta.to} className="btn btn-primary">
+              {block.cta.label}
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );

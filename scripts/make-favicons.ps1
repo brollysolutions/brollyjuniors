@@ -1,43 +1,99 @@
 # =============================================================================
-# Regenerates the favicon set in public/.
+# Regenerates the favicon set in public/ from the Brolly Juniors logo.
 #
 # NOT part of `npm run build` — same reasoning as scripts/make-og-cards.ps1.
-# These are committed assets; run this by hand only if the mark changes.
+# These are committed assets; run this by hand only if the logo changes.
 #
 #   powershell -ExecutionPolicy Bypass -File scripts/make-favicons.ps1
 #
-# Why this exists: the site used to declare an emoji inside an SVG data URI as
-# its only icon. Chrome does not reliably render emoji in SVG favicons, and when
-# the declared icon fails to decode the browser silently falls back to
-# requesting /favicon.ico — which did not exist, producing a 404 on every page
-# load. iOS also requests /apple-touch-icon.png, which 404'd for the same reason.
+# Source: public/images/logo.png — the full lockup (umbrella above the "Brolly"
+# wordmark, yellow on black).
+#
+# Only the umbrella is used. At 16px a favicon is about 250 pixels in total, and
+# a wordmark rendered into that is an illegible smudge — the mark alone is the
+# part that stays recognisable, which is the whole job of a favicon. Pass
+# -Lockup to render the full logo instead and see the difference for yourself.
+#
+# Why this file exists at all: the site used to declare an emoji inside an SVG
+# data URI as its only icon. Chrome does not reliably render emoji in SVG
+# favicons, and when the declared icon fails to decode the browser silently
+# falls back to requesting /favicon.ico — which did not exist, producing a 404
+# on every page load. iOS also requests /apple-touch-icon.png, same problem.
 #
 # Writes:
 #   public/favicon.ico          16 + 32 + 48, PNG-compressed inside the ICO
 #   public/favicon-32.png       modern browsers prefer this over the .ico
+#   public/favicon-192.png      Google's mobile-search icon; Android home screen
 #   public/apple-touch-icon.png 180x180, full-bleed (iOS masks its own corners)
 # =============================================================================
 
+param(
+  # Render the whole logo including the wordmark instead of the umbrella alone.
+  [switch]$Lockup,
+  # Write the files here instead of public/ — used to preview without committing.
+  [string]$OutDir
+)
+
 Add-Type -AssemblyName System.Drawing
 
-$root    = Split-Path -Parent $PSScriptRoot
-$outDir  = Join-Path $root 'public'
-$fontDir = Join-Path ([System.IO.Path]::GetTempPath()) 'brollyjuniors-og-fonts'
-New-Item -ItemType Directory -Force -Path $fontDir | Out-Null
+$root   = Split-Path -Parent $PSScriptRoot
+$srcPath = Join-Path $root 'public/images/logo.png'
+if (-not $OutDir) { $OutDir = Join-Path $root 'public' }
+if (-not (Test-Path $srcPath)) { throw "Logo not found at $srcPath" }
+New-Item -ItemType Directory -Force -Path $OutDir | Out-Null
 
-[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-$fredokaPath = Join-Path $fontDir 'Fredoka-var.ttf'
-if (-not (Test-Path $fredokaPath)) {
-  (New-Object System.Net.WebClient).DownloadFile(
-    'https://raw.githubusercontent.com/google/fonts/main/ofl/fredoka/Fredoka%5Bwdth,wght%5D.ttf', $fredokaPath)
+$src = [System.Drawing.Bitmap]::FromFile($srcPath)
+$SW = $src.Width; $SH = $src.Height
+
+# The logo is drawn on a solid black field, so "ink" is anything meaningfully
+# brighter than the background rather than a specific colour — that keeps this
+# working if the mark is ever recoloured.
+function Test-Ink($p) { ($p.R + $p.G + $p.B) -gt 150 }
+
+# The background colour, sampled from a corner rather than hardcoded, so a
+# re-export on a different field still produces an icon with no seam.
+$BG = $src.GetPixel(2, 2)
+
+<#
+  Where the wordmark starts.
+
+  The umbrella sits in the right half of the canvas; the wordmark is the only
+  element that reaches into the left third. So the first row containing ink to
+  the left of 40% of the width is the top of the wordmark, and everything above
+  it is the mark. Deriving it rather than hardcoding a crop means a re-exported
+  logo at a different size still cuts in the right place.
+#>
+function Get-WordmarkTop {
+  $limit = [int]($SW * 0.40)
+  for ($y = 0; $y -lt $SH; $y++) {
+    for ($x = 0; $x -lt $limit; $x += 2) {
+      if (Test-Ink $src.GetPixel($x, $y)) { return $y }
+    }
+  }
+  return $SH
 }
-$pfc = New-Object System.Drawing.Text.PrivateFontCollection
-$pfc.AddFontFile($fredokaPath)
-$fam = @($pfc.Families) | Where-Object { $_.Name -eq 'Fredoka SemiBold' } | Select-Object -First 1
-if (-not $fam) { $fam = @($pfc.Families)[0] }
 
-$NAVY  = [System.Drawing.ColorTranslator]::FromHtml('#1e293b')
-$CREAM = [System.Drawing.ColorTranslator]::FromHtml('#fff8e7')
+# Tight bounding box of the ink between two rows.
+function Get-InkBounds([int]$top, [int]$bottom) {
+  $minX = $SW; $maxX = -1; $minY = $SH; $maxY = -1
+  for ($y = $top; $y -lt $bottom; $y++) {
+    for ($x = 0; $x -lt $SW; $x++) {
+      if (Test-Ink $src.GetPixel($x, $y)) {
+        if ($x -lt $minX) { $minX = $x }
+        if ($x -gt $maxX) { $maxX = $x }
+        if ($y -lt $minY) { $minY = $y }
+        if ($y -gt $maxY) { $maxY = $y }
+      }
+    }
+  }
+  if ($maxX -lt 0) { throw 'No ink found in the source image.' }
+  New-Object System.Drawing.Rectangle($minX, $minY, ($maxX - $minX + 1), ($maxY - $minY + 1))
+}
+
+$wordTop = Get-WordmarkTop
+$crop = if ($Lockup) { Get-InkBounds 0 $SH } else { Get-InkBounds 0 $wordTop }
+"  source     {0}x{1}, wordmark starts at row {2}" -f $SW, $SH, $wordTop
+"  cropping   {0} at {1},{2} {3}x{4}" -f $(if ($Lockup) { 'full lockup' } else { 'umbrella mark' }), $crop.X, $crop.Y, $crop.Width, $crop.Height
 
 function RoundedPath([double]$x, [double]$y, [double]$w, [double]$h, [double]$r) {
   $p = New-Object System.Drawing.Drawing2D.GraphicsPath
@@ -50,35 +106,46 @@ function RoundedPath([double]$x, [double]$y, [double]$w, [double]$h, [double]$r)
   $p
 }
 
-# Drawn once at 512 and downscaled: text hinted directly at 16px turns to mush.
-function New-Mark([int]$size, [bool]$rounded) {
+<#
+  Composed at 512 and downscaled in one high-quality step. Drawing straight to
+  16px loses the umbrella's thin ribs to aliasing; supersampling keeps them as
+  soft grey rather than dropping them entirely.
+#>
+function New-Icon([int]$size, [bool]$rounded) {
   $S = 512
+  # The mark is wider than it is tall, so the padding is applied to whichever
+  # dimension binds — that keeps it optically the same size in every icon.
+  $pad = if ($rounded) { 0.14 } else { 0.18 }   # full-bleed needs more inset
+  $box = $S * (1 - 2 * $pad)
+  $scale = [Math]::Min($box / $crop.Width, $box / $crop.Height)
+  $w = $crop.Width * $scale
+  $h = $crop.Height * $scale
+
   $bmp = New-Object System.Drawing.Bitmap($S, $S, [System.Drawing.Imaging.PixelFormat]::Format32bppArgb)
   $g = [System.Drawing.Graphics]::FromImage($bmp)
-  $g.SmoothingMode = 'AntiAlias'; $g.TextRenderingHint = 'AntiAlias'
+  $g.SmoothingMode = 'AntiAlias'
+  $g.InterpolationMode = 'HighQualityBicubic'
+  $g.PixelOffsetMode = 'HighQuality'
 
-  $br = New-Object System.Drawing.SolidBrush($NAVY)
+  $br = New-Object System.Drawing.SolidBrush($BG)
   if ($rounded) {
     $p = RoundedPath 0 0 $S $S ($S * 0.22)
     $g.FillPath($br, $p); $p.Dispose()
   } else {
-    $g.FillRectangle($br, 0, 0, $S, $S)   # full bleed: iOS masks its own corners
+    $g.FillRectangle($br, 0, 0, $S, $S)   # iOS masks its own corners
   }
   $br.Dispose()
 
-  $f = New-Object System.Drawing.Font($fam, ($S * 0.62), [System.Drawing.FontStyle]::Regular, 'Pixel')
-  $sf = New-Object System.Drawing.StringFormat
-  $sf.Alignment = 'Center'; $sf.LineAlignment = 'Center'
-  $br = New-Object System.Drawing.SolidBrush($CREAM)
-  # Optical centring: the glyph box sits low, so lift it slightly.
-  $rect = New-Object System.Drawing.RectangleF(0, [single](-$S * 0.045), [single]$S, [single]$S)
-  $g.DrawString('B', $f, $br, $rect, $sf)
-  $br.Dispose(); $f.Dispose(); $sf.Dispose(); $g.Dispose()
+  $dest = New-Object System.Drawing.RectangleF(
+    [single](($S - $w) / 2), [single](($S - $h) / 2), [single]$w, [single]$h)
+  $g.DrawImage($src, $dest, $crop, [System.Drawing.GraphicsUnit]::Pixel)
+  $g.Dispose()
 
   $out = New-Object System.Drawing.Bitmap($size, $size, [System.Drawing.Imaging.PixelFormat]::Format32bppArgb)
   $g2 = [System.Drawing.Graphics]::FromImage($out)
   $g2.InterpolationMode = 'HighQualityBicubic'
   $g2.PixelOffsetMode = 'HighQuality'
+  $g2.SmoothingMode = 'AntiAlias'
   $g2.DrawImage($bmp, 0, 0, $size, $size)
   $g2.Dispose(); $bmp.Dispose()
   $out
@@ -97,7 +164,7 @@ function Save-Png($bmp, [string]$path) {
 function Save-Ico([int[]]$sizes, [string]$path) {
   $pngs = @()
   foreach ($s in $sizes) {
-    $b = New-Mark $s $true
+    $b = New-Icon $s $true
     $ms = New-Object System.IO.MemoryStream
     $b.Save($ms, [System.Drawing.Imaging.ImageFormat]::Png)
     $pngs += ,@($s, $ms.ToArray())
@@ -130,15 +197,15 @@ function Save-Ico([int[]]$sizes, [string]$path) {
   $bw.Dispose(); $fs.Dispose()
 }
 
-Save-Ico @(16, 32, 48) (Join-Path $outDir 'favicon.ico')
+Save-Ico @(16, 32, 48) (Join-Path $OutDir 'favicon.ico')
 
-$b = New-Mark 32 $true;   Save-Png $b (Join-Path $outDir 'favicon-32.png');       $b.Dispose()
-# Google wants a favicon that is a multiple of 48px square for the icon it shows
-# beside a result in mobile search; 192 also serves Android home screens.
-$b = New-Mark 192 $true;  Save-Png $b (Join-Path $outDir 'favicon-192.png');      $b.Dispose()
-$b = New-Mark 180 $false; Save-Png $b (Join-Path $outDir 'apple-touch-icon.png'); $b.Dispose()
+$b = New-Icon 32 $true;   Save-Png $b (Join-Path $OutDir 'favicon-32.png');       $b.Dispose()
+$b = New-Icon 192 $true;  Save-Png $b (Join-Path $OutDir 'favicon-192.png');      $b.Dispose()
+$b = New-Icon 180 $false; Save-Png $b (Join-Path $OutDir 'apple-touch-icon.png'); $b.Dispose()
+
+$src.Dispose()
 
 foreach ($n in 'favicon.ico', 'favicon-32.png', 'favicon-192.png', 'apple-touch-icon.png') {
-  $f = Get-Item (Join-Path $outDir $n)
+  $f = Get-Item (Join-Path $OutDir $n)
   "  {0,-24} {1,6:N0} bytes" -f $f.Name, $f.Length
 }

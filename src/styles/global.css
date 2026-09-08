@@ -189,6 +189,19 @@ section {
   box-shadow: 0 12px 24px rgba(30, 41, 59, 0.15);
 }
 
+/* The navbar CTA. WhatsApp's own dark green rather than the site navy, because
+   the point of the button is that a parent recognises where it goes. */
+.btn-whatsapp {
+  background: #075e54;
+  color: #fff;
+}
+
+.btn-whatsapp:hover {
+  background: #0b7a6d;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(7, 94, 84, 0.25);
+}
+
 .btn-outline {
   background: transparent;
   color: var(--navy);
@@ -235,7 +248,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 18px;
+  gap: 14px;
 }
 
 .logo {
@@ -253,10 +266,13 @@ section {
   font-size: 26px;
 }
 
+/* gap and font-size are tuned so nine items, the logo and the trial button fit
+   inside the 1200px .container. Loosening either pushes the button outside the
+   content column the rest of the page aligns to. */
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 12px;
   list-style: none;
 }
 
@@ -268,10 +284,11 @@ section {
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  white-space: nowrap;
   padding: 8px 2px;
   font-family: var(--font-ui);
   font-weight: 500;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.4;
   color: var(--navy);
   background: none;
@@ -342,14 +359,20 @@ section {
   height: 18px;
 }
 
-.nav-links li.open > .dropdown {
-  display: block;
+/* has-mega items are position: static (see the mega menu section below), so
+   the bridge above is laid out against .navbar — where top: 100% is the
+   panel's own top edge, i.e. below the gap it is meant to cover. Anchor it to
+   the bottom of the navbar instead, so it fills the padding strip between the
+   trigger row and the panel. */
+.has-mega:hover::after,
+.has-mega.open::after {
+  top: auto;
+  bottom: -2px;
+  height: 24px;
 }
 
-@media (hover: hover) and (pointer: fine) {
-  .nav-links li:hover > .dropdown {
-    display: block;
-  }
+.nav-links li.open > .dropdown {
+  display: block;
 }
 
 .dropdown-group {
@@ -412,6 +435,191 @@ span.dropdown-title {
   padding-left: 16px;
 }
 
+
+/* ---------- Mega menu ----------
+   Five of the nav items open a wide panel instead of a narrow list, because a
+   list of sixty programmes in a 300px column is unusable. The panel is
+   positioned against .navbar rather than its own list item — the item is set
+   static for exactly that reason — so it can be centred on the page however
+   near the edge its trigger sits. */
+/* Out-specifies `.nav-links > li { position: relative }` above — without the
+   `.nav-links >` prefix that rule wins and the panel centres on its own
+   trigger, which pushes it off-screen for the leftmost item. */
+.nav-links > li.has-mega {
+  position: static;
+}
+
+.mega-panel {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1140px, calc(100vw - 32px));
+  background: var(--cream);
+  border: var(--line);
+  border-radius: 24px;
+  box-shadow: var(--hard-shadow-sm);
+  padding: 22px;
+  display: none;
+  z-index: 10;
+  /* Programmes is six cards tall on a narrow laptop; scroll inside the panel
+     rather than running off the bottom of the screen. */
+  max-height: calc(100vh - 110px);
+  max-height: calc(100dvh - 110px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: var(--pebble) transparent;
+}
+
+.mega-panel::-webkit-scrollbar {
+  width: 8px;
+}
+
+.mega-panel::-webkit-scrollbar-thumb {
+  background: var(--pebble);
+  border-radius: 100px;
+}
+
+.nav-links li.open > .mega-panel {
+  display: block;
+  animation: megaPop 0.18s ease both;
+}
+
+@keyframes megaPop {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.mega-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+  padding: 0 4px;
+}
+
+.mega-title {
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 11.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--blue);
+}
+
+.mega-all {
+  font-family: var(--font-ui);
+  font-weight: 500;
+  font-size: 13px;
+  color: rgba(30, 41, 59, 0.7);
+  white-space: nowrap;
+  transition: color 0.15s ease;
+}
+
+.mega-all:hover {
+  color: var(--blue);
+}
+
+.mega-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  align-items: start;
+  gap: 14px;
+}
+
+.mega-card {
+  padding: 16px;
+  border-radius: 18px;
+  background: var(--white);
+  border: 1px solid var(--pebble);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.mega-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--hard-shadow-sm);
+  border-color: var(--navy);
+}
+
+.mega-card h4 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 10px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--navy);
+}
+
+.mega-card h4 .mi {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  flex: none;
+  border-radius: 9px;
+  background: var(--cream-deep);
+  font-size: 15px;
+}
+
+.mega-link {
+  display: block;
+  padding: 6px 9px;
+  border-radius: 9px;
+  font-family: var(--font-ui);
+  font-weight: 500;
+  font-size: 13.5px;
+  color: rgba(30, 41, 59, 0.75);
+  transition: background 0.15s ease, color 0.15s ease, padding-left 0.15s ease;
+}
+
+.mega-link:hover,
+.mega-link:focus-visible {
+  background: var(--cream-deep);
+  color: var(--blue);
+  padding-left: 14px;
+}
+
+.mega-link small {
+  display: block;
+  font-size: 11px;
+  color: var(--grey);
+}
+
+/* Age Groups: the whole card is the link, so it needs the hover treatment the
+   individual links get elsewhere. */
+.mega-card-link:hover h4,
+.mega-card-link:focus-visible h4 {
+  color: var(--blue);
+}
+
+.mega-stage {
+  display: block;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 13.5px;
+  color: var(--blue);
+  margin-bottom: 4px;
+}
+
+.mega-summary {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: rgba(30, 41, 59, 0.7);
+}
+
 .nav-cta {
   white-space: nowrap;
   padding: 10px 20px;
@@ -441,15 +649,20 @@ span.dropdown-title {
   overflow: hidden;
 }
 
+/* Near-equal columns. The text used to take 1.3fr against the art's 1fr, which
+   left the illustration reading as a small decoration beside a wall of type.
+   1.1fr is as close to even as the text side can go: the three hero buttons
+   need 562px on one row, and a straight 1fr each leaves 561 — one pixel short,
+   which drops "WhatsApp us" onto a line of its own. */
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  gap: 64px;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 44px;
   align-items: center;
 }
 
 .hero h1 {
-  font-size: clamp(48px, 7vw, 88px);
+  font-size: clamp(40px, 5.6vw, 72px);
   font-weight: 700;
   margin-bottom: 24px;
   letter-spacing: -0.02em;
@@ -506,9 +719,11 @@ span.dropdown-title {
   animation: fadeIn 1s ease-out 0.4s both;
 }
 
+/* Fills its column rather than sitting capped at 520px inside it, so the
+   illustration ends up the same visual size as the text block beside it. */
 .hero-art img {
   width: 100%;
-  max-width: 520px;
+  max-width: 100%;
 }
 
 .hero-umbrella {
@@ -534,9 +749,12 @@ span.dropdown-title {
 
 .floating .emoji { font-size: 18px; }
 
-.float-1 { top: 4%; left: -6%; animation: float 4s ease-in-out infinite; }
-.float-2 { top: 30%; right: -8%; animation: float 5s ease-in-out infinite 0.5s; }
-.float-3 { bottom: 16%; left: -4%; animation: float 4.5s ease-in-out infinite 1s; }
+/* Offsets are a percentage of .hero-art, which is now a wider column, so the
+   old -6/-8% overhang put the right-hand chip 43px past the container and
+   almost off a 1280px screen. Pulled in to keep every chip inside the page. */
+.float-1 { top: 4%; left: -4%; animation: float 4s ease-in-out infinite; }
+.float-2 { top: 30%; right: -3%; animation: float 5s ease-in-out infinite 0.5s; }
+.float-3 { bottom: 16%; left: -2%; animation: float 4.5s ease-in-out infinite 1s; }
 
 @keyframes float {
   0%, 100% { transform: translateY(0); }
@@ -860,7 +1078,7 @@ span.dropdown-title {
   box-shadow: var(--hard-shadow-sm);
 }
 
-.quick-answer h3 {
+.quick-answer h2 {
   font-family: var(--font-ui);
   font-weight: 600;
   color: var(--blue-deep);
@@ -1237,42 +1455,17 @@ a.module-card:hover .module-more {
   padding: 8px 0;
 }
 
-.faq-item summary {
-  list-style: none;
-  cursor: pointer;
-  padding: 20px 0;
+/* Answers are always visible: the accordion hid the very text the FAQPage
+   schema declares, and a parent scanning for one detail had to open every
+   question to find it. */
+.faq-item .faq-q {
+  margin: 0;
+  padding: 20px 0 10px;
   font-family: var(--font-display);
   font-weight: 500;
   font-size: 21px;
+  line-height: 1.35;
   color: var(--navy);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-}
-
-.faq-item summary::-webkit-details-marker { display: none; }
-
-.faq-item summary::after {
-  content: '+';
-  width: 32px;
-  height: 32px;
-  flex-shrink: 0;
-  border-radius: 50%;
-  background: var(--cream-deep);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-ui);
-  font-size: 20px;
-  font-weight: 600;
-  color: var(--navy);
-  transition: transform 0.3s, background 0.3s;
-}
-
-.faq-item[open] summary::after {
-  transform: rotate(45deg);
-  background: var(--yellow);
 }
 
 .faq-item .answer {
@@ -1379,6 +1572,32 @@ a.module-card:hover .module-more {
   opacity: 1;
 }
 
+/* Some lists inside a prose column are not prose lists: a flow strip, a row of
+   pills, a tab-like picker. They carry their own shape, and the tick and the
+   30px indent the rule above adds are wrong for all of them — the tick renders
+   as a stray mark floating beside a pill. Opt them out rather than avoiding
+   .prose, which is what actually sets the column width and rhythm around them. */
+.prose ul.flow-strip li,
+.prose ul.ai-pickbar li,
+.prose ul.tick-row li {
+  padding: 0;
+  opacity: 1;
+}
+
+/* Restated rather than unset: this selector outranks .pill-row li wherever it
+   sits in the file, so dropping the padding here would flatten the pills. */
+.prose ul.pill-row li {
+  padding: 7px 15px;
+  opacity: 1;
+}
+
+.prose ul.flow-strip li::before,
+.prose ul.ai-pickbar li::before,
+.prose ul.pill-row li::before,
+.prose ul.tick-row li::before {
+  content: none;
+}
+
 .prose-card {
   background: var(--cream-deep);
   border: var(--line);
@@ -1426,7 +1645,7 @@ a.module-card:hover .module-more {
   font-weight: 500;
 }
 
-.footer h4 {
+.footer h2 {
   font-family: var(--font-ui);
   font-weight: 600;
   font-size: 14px;
@@ -2456,6 +2675,7 @@ a.module-card:hover .module-more {
   white-space: nowrap;
 }
 
+
 @media (max-width: 1080px) {
   .hero-grid { grid-template-columns: 1fr; gap: 40px; }
   .hero-art { order: -1; }
@@ -2468,8 +2688,11 @@ a.module-card:hover .module-more {
   .float-1, .float-2, .float-3 { display: none; }
 }
 
-/* Tablets — collapse the desktop nav into the drawer menu */
-@media (max-width: 900px) {
+/* Tablets and small laptops — collapse the nav into the drawer.
+   The threshold is 1200px, not 900px: the horizontal bar needs the full
+   container width for nine items and a button, and between 900 and 1200 it
+   used to overflow the viewport with Contact and the CTA cut off. */
+@media (max-width: 1200px) {
   .nav-toggle { display: block; order: 3; }
   .nav-inner { flex-wrap: nowrap; }
 
@@ -2541,6 +2764,50 @@ a.module-card:hover .module-more {
     padding-left: 10px;
   }
 
+  /* The mega panel collapses into the drawer accordion. Everything that made
+     it a floating panel — centring, width, chrome — is undone here. */
+  .nav-links > li.has-mega { position: relative; }
+
+  .mega-panel {
+    position: static;
+    width: auto;
+    max-width: none;
+    transform: none;
+    padding: 4px 0 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    background: transparent;
+    max-height: none;
+    overflow: visible;
+  }
+
+  .nav-links li.open > .mega-panel { animation: none; }
+
+  .mega-head { margin-bottom: 8px; }
+
+  .mega-grid { grid-template-columns: 1fr; gap: 8px; }
+
+  .mega-card {
+    padding: 8px 0;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+  }
+
+  .mega-card + .mega-card {
+    border-top: 1px dashed var(--pebble);
+  }
+
+  .mega-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .mega-link { font-size: 15px; padding: 9px 10px; }
+
+  .mega-link:hover { padding-left: 10px; }
+
   .nav-cta { display: none; }
 
   .nav-mobile-cta {
@@ -2552,7 +2819,9 @@ a.module-card:hover .module-more {
     width: 100%;
     justify-content: center;
   }
+}
 
+@media (max-width: 900px) {
   .media-split { grid-template-columns: 1fr; gap: 32px; }
   .media-split.reverse .media-figure { order: 0; }
   .split { grid-template-columns: 1fr; gap: 32px; }
@@ -2618,7 +2887,7 @@ a.module-card:hover .module-more {
   .quick-answer { padding: 22px 22px; }
   .quick-answer p { font-size: 16px; }
 
-  .faq-item summary { font-size: 18px; padding: 16px 0; }
+  .faq-item .faq-q { font-size: 18px; padding: 16px 0 8px; }
   .faq-item .answer { font-size: 15px; }
 
   .cta-band { padding: 44px 22px; border-radius: 26px; }
@@ -3079,5 +3348,2082 @@ a.module-card:hover .module-more {
 
   .article-lead {
     font-size: 17px;
+  }
+}
+
+/* ---------- Apps ---------- */
+
+/* The download row when the store listing is not yet confirmed live. Styled as
+   a status pill rather than a button, so it never reads as something to click:
+   see the note in src/data/apps.js. */
+.store-pending {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+  padding: 12px 24px;
+  border-radius: 999px;
+  background: var(--tint-mint);
+  border: var(--line);
+  font-family: var(--font-ui);
+}
+
+.store-pending strong {
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--navy);
+}
+
+.store-pending span {
+  font-size: 13px;
+  color: var(--navy);
+  opacity: 0.7;
+}
+
+/* The app listing. Cards are capped rather than stretched to fill the row, so
+   one published app does not render as one enormous card. */
+.app-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 400px));
+  justify-content: center;
+  gap: 24px;
+}
+
+/* The store-listing header above the download row: icon, name, developer. */
+.app-identity {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 26px 0 18px;
+}
+
+.app-identity-icon {
+  width: 72px;
+  height: 72px;
+  flex: none;
+  border-radius: 18px;
+  border: var(--line);
+  box-shadow: var(--hard-shadow-sm);
+  background: var(--cream-deep);
+}
+
+.app-identity div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-family: var(--font-ui);
+  min-width: 0;
+}
+
+.app-identity strong {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.app-identity span {
+  font-size: 14px;
+  color: var(--navy);
+  opacity: 0.7;
+}
+
+/* The icon on an app card, overlapping the artwork like a store listing. The
+   media box needs the positioning context and the card the extra top padding,
+   since the icon hangs below the media's bottom edge. */
+.app-card-media {
+  position: relative;
+}
+
+/* Selector carries two classes on purpose: `.card-media img` sets width:100%
+   for the artwork, and a single-class rule loses to it on specificity — which
+   stretches the icon across the whole card. */
+.app-card-media .app-card-icon {
+  position: absolute;
+  /* 32px matches the card's own padding, so the icon lines up with the app
+     name directly beneath it rather than sitting a few pixels proud of it. */
+  left: 32px;
+  bottom: -26px;
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  border: var(--line);
+  box-shadow: var(--hard-shadow-sm);
+  background: var(--cream-deep);
+}
+
+.app-card-media + h3 {
+  margin-top: 36px;
+}
+
+/* The icon beside the callout heading on a program page. */
+.app-callout-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.app-callout-title img {
+  width: 44px;
+  height: 44px;
+  flex: none;
+  border-radius: 12px;
+  border: var(--line);
+  background: var(--cream-deep);
+}
+
+@media (max-width: 640px) {
+  .app-identity-icon { width: 60px; height: 60px; border-radius: 15px; }
+  .app-identity strong { font-size: 18px; }
+}
+
+/* Real device screenshots on an app page.
+ *
+ * Portrait, at the phone's own 716x1600 ratio, so nothing is cropped or
+ * stretched — the alternative is letterboxing a tall screenshot into the
+ * landscape slot the rest of the site uses, which is what made the old
+ * illustration necessary in the first place. auto-fit rather than a fixed
+ * four-up: at tablet width the row becomes two, then one, without a query.
+ */
+.app-shots {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 28px;
+  align-items: start;
+}
+
+.app-shot {
+  margin: 0;
+}
+
+.app-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 716 / 1600;
+  border: var(--line);
+  border-radius: 22px;
+  background: var(--cream-deep);
+  box-shadow: var(--hard-shadow-sm);
+}
+
+.app-shot figcaption {
+  margin-top: 14px;
+  font-family: var(--font-ui);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--navy);
+  opacity: 0.75;
+}
+
+@media (max-width: 640px) {
+  /* One phone per row would be a very tall column for four screenshots. Two up
+     keeps the whole set inside a thumb-scroll. */
+  .app-shots { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .app-shot figcaption { font-size: 13px; margin-top: 10px; }
+}
+
+/* The app block on a program page. */
+.app-callout {
+  display: grid;
+  grid-template-columns: minmax(0, 260px) minmax(0, 1fr);
+  gap: 30px;
+  align-items: center;
+}
+
+.app-callout-art img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: var(--line);
+  border-radius: 18px;
+}
+
+.app-callout .btn {
+  margin-top: 6px;
+}
+
+@media (max-width: 768px) {
+  .app-callout {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+}
+
+/* =========================================================
+   Home page — the section blocks added from the homepage
+   content brief.
+
+   Everything here is built out of the existing tokens so the
+   new sections sit inside the same design system rather than
+   beside it: same hard shadow, same 1.5px navy line, same
+   cream/tint palette.
+   ========================================================= */
+
+/* ---------- Hero support copy ---------- */
+.hero-micro {
+  margin-top: 18px;
+  font-family: var(--font-ui);
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--navy);
+  opacity: 0.7;
+}
+
+.tick-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 22px;
+  margin-top: 22px;
+  list-style: none;
+}
+
+.tick-row li {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-family: var(--font-ui);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.tick-row .tick {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+  border-radius: 50%;
+  background: var(--mint);
+  color: var(--navy);
+  border: 1.5px solid var(--navy);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* ---------- Program category cards ---------- */
+.progcat {
+  background: var(--white);
+  border: var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--hard-shadow-sm);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.progcat:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--hard-shadow);
+}
+
+.progcat .icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  border: var(--line);
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.progcat:nth-child(6n + 1) .icon { background: var(--tint-mint); }
+.progcat:nth-child(6n + 2) .icon { background: var(--tint-yellow); }
+.progcat:nth-child(6n + 3) .icon { background: var(--tint-lavender); }
+.progcat:nth-child(6n + 4) .icon { background: var(--tint-coral); }
+.progcat:nth-child(6n + 5) .icon { background: var(--tint-mint); }
+.progcat:nth-child(6n) .icon { background: var(--tint-yellow); }
+
+.progcat h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.progcat ul {
+  list-style: none;
+  margin-bottom: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.progcat ul li {
+  font-family: var(--font-ui);
+  font-size: 13px;
+  font-weight: 500;
+  background: var(--cream-deep);
+  border: 1px solid var(--pebble);
+  border-radius: 100px;
+  padding: 5px 12px;
+}
+
+.progcat .txtlink {
+  margin-top: auto;
+}
+
+/* A plain text link with the brand underline, used at the foot of the
+   category, resources and area blocks. */
+.txtlink {
+  display: inline-block;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--blue);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.txtlink:hover {
+  color: var(--blue-deep);
+}
+
+/* ---------- Age bands ---------- */
+.age-card {
+  background: var(--white);
+  border: var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--hard-shadow-sm);
+  padding: 26px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.age-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--hard-shadow);
+}
+
+.age-card h3 {
+  font-family: var(--font-display);
+  font-size: 26px;
+  margin-bottom: 4px;
+}
+
+.age-card .kv {
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--coral);
+  margin-bottom: 10px;
+}
+
+.age-card p {
+  font-size: 15px;
+  opacity: 0.78;
+}
+
+/* ---------- Navy band (skills, schools) ---------- */
+.navy-band {
+  background: var(--navy);
+  color: var(--cream);
+}
+
+.navy-band h2,
+.navy-band h3 {
+  color: var(--cream);
+}
+
+.navy-band p {
+  color: var(--cream);
+  opacity: 0.82;
+  margin-bottom: 14px;
+}
+
+.navy-band .eyebrow {
+  color: var(--yellow);
+}
+
+.skill-tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+.skill-tiles span {
+  background: rgba(255, 248, 231, 0.08);
+  border: 1.5px solid rgba(255, 248, 231, 0.28);
+  border-radius: 14px;
+  padding: 14px 16px;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--cream);
+}
+
+.navy-band .pill-row li {
+  background: rgba(255, 248, 231, 0.1);
+  border-color: rgba(255, 248, 231, 0.3);
+  color: var(--cream);
+}
+
+/* ---------- Numbered steps ---------- */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 24px;
+  counter-reset: step;
+}
+
+.step {
+  background: var(--white);
+  border: var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--hard-shadow-sm);
+  padding: 28px 24px 24px;
+  position: relative;
+}
+
+.step::before {
+  counter-increment: step;
+  content: counter(step);
+  position: absolute;
+  top: -18px;
+  left: 22px;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--yellow);
+  border: var(--line);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 19px;
+  color: var(--navy);
+}
+
+.step h3 {
+  font-size: 19px;
+  margin: 10px 0 8px;
+}
+
+.step p {
+  font-size: 15px;
+  opacity: 0.78;
+}
+
+/* ---------- Two-column comparison ---------- */
+.compare {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.compare-col {
+  border: var(--line);
+  border-radius: var(--radius);
+  padding: 30px;
+  box-shadow: var(--hard-shadow-sm);
+}
+
+.compare-col.is-us {
+  background: var(--tint-mint);
+}
+
+.compare-col.is-other {
+  background: var(--cream-deep);
+}
+
+.compare-col h3 {
+  font-size: 21px;
+  margin-bottom: 16px;
+}
+
+.compare-col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.compare-col li {
+  position: relative;
+  padding-left: 30px;
+  font-size: 15.5px;
+}
+
+.compare-col.is-us li::before {
+  content: '\2713';
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+  color: var(--blue-deep);
+}
+
+.compare-col.is-other li::before {
+  content: '\2013';
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+  opacity: 0.55;
+}
+
+.note-line {
+  margin-top: 16px;
+  font-family: var(--font-ui);
+  font-size: 13px;
+  opacity: 0.65;
+}
+
+/* ---------- Class-rhythm timeline ---------- */
+.rhythm {
+  list-style: none;
+  position: relative;
+  padding-left: 34px;
+  counter-reset: beat;
+}
+
+.rhythm::before {
+  content: '';
+  position: absolute;
+  left: 11px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: var(--pebble);
+}
+
+.rhythm li {
+  position: relative;
+  padding-bottom: 22px;
+}
+
+.rhythm li::before {
+  content: '';
+  position: absolute;
+  left: -29px;
+  top: 5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--yellow);
+  border: var(--line);
+}
+
+.rhythm h3 {
+  font-size: 17px;
+  margin-bottom: 3px;
+}
+
+.rhythm p {
+  font-size: 15px;
+  opacity: 0.78;
+}
+
+/* ---------- Simple pill list ---------- */
+.pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  list-style: none;
+  margin-top: 18px;
+}
+
+.pill-row li {
+  font-family: var(--font-ui);
+  font-weight: 500;
+  font-size: 13.5px;
+  background: var(--cream-deep);
+  border: 1px solid var(--pebble);
+  border-radius: 100px;
+  padding: 7px 15px;
+}
+
+/* ---------- Fee / format options ---------- */
+.plan {
+  background: var(--white);
+  border: var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--hard-shadow-sm);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.plan h3 {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.plan .kv {
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--coral);
+  margin-bottom: 16px;
+}
+
+.plan ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+
+.plan li {
+  position: relative;
+  padding-left: 24px;
+  font-size: 15px;
+  opacity: 0.82;
+}
+
+.plan li::before {
+  content: '\2713';
+  position: absolute;
+  left: 0;
+  color: var(--blue);
+  font-weight: 700;
+}
+
+.plan .btn {
+  margin-top: auto;
+  justify-content: center;
+}
+
+/* ---------- Area links ---------- */
+.area-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+  list-style: none;
+  margin-top: 18px;
+}
+
+.area-links a {
+  display: block;
+  background: var(--white);
+  border: 1.5px solid var(--pebble);
+  border-radius: 14px;
+  padding: 12px 16px;
+  font-family: var(--font-ui);
+  font-weight: 500;
+  font-size: 14.5px;
+  color: var(--navy);
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.area-links a:hover {
+  border-color: var(--navy);
+  transform: translateX(3px);
+}
+
+/* ---------- Answer blocks (the AEO section) ---------- */
+.ansblock {
+  background: var(--white);
+  border: var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--hard-shadow-sm);
+  padding: 28px;
+}
+
+.ansblock h3 {
+  font-size: 19px;
+  margin-bottom: 10px;
+}
+
+.ansblock p {
+  font-size: 15.5px;
+  opacity: 0.8;
+}
+
+/* ---------- Guide cards ---------- */
+.guide-card {
+  background: var(--white);
+  border: var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--hard-shadow-sm);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.guide-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--hard-shadow);
+}
+
+.guide-card .cat {
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--coral);
+  margin-bottom: 8px;
+}
+
+.guide-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.guide-card p {
+  font-size: 14.5px;
+  opacity: 0.78;
+  margin-bottom: 14px;
+}
+
+.guide-card .meta {
+  margin-top: auto;
+  font-family: var(--font-ui);
+  font-size: 12.5px;
+  opacity: 0.6;
+}
+
+@media (max-width: 900px) {
+  .compare {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .tick-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* A soft alternating band, so a long page does not read as one flat sheet.
+   Same treatment .stats-band already uses, without the stat-specific rules. */
+.band-soft {
+  background: var(--cream-deep);
+  border-block: 1px solid var(--pebble);
+}
+
+/* The class names inside a programme category are links, not labels — see the
+   note in pages/Home.jsx. They keep the pill shape and only pick up colour on
+   hover, so the block still reads as a list rather than a wall of blue. */
+.progcat ul li {
+  padding: 0;
+}
+
+.progcat ul li a {
+  display: block;
+  padding: 5px 12px;
+  color: var(--navy);
+  border-radius: 100px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.progcat ul li a:hover {
+  background: var(--navy);
+  color: var(--cream);
+}
+
+.progcat .note-line {
+  margin-top: auto;
+  padding-top: 4px;
+}
+
+/* The small coral qualifier line under a card heading — an age band, a mode,
+   a fee category. Already styled inside .age-card and .plan; this is the same
+   treatment for the generic .card used by PageBlocks. */
+.card .kv {
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--coral);
+  margin-bottom: 10px;
+  opacity: 1;
+}
+
+/* Pills inside a card sit tighter than the standalone .pill-row, which is
+   spaced for use directly under a paragraph of body copy. */
+.card .pill-row {
+  margin-top: 14px;
+}
+
+/* An area with no page of its own is still an area we serve, so it keeps the
+   tile shape and simply reads as inert: dashed border, no hover, muted ink.
+   Without this the linked and unlinked entries sit in the same grid at two
+   completely different visual weights and the row looks broken. */
+.area-links span {
+  display: block;
+  background: transparent;
+  border: 1.5px dashed var(--pebble);
+  border-radius: 14px;
+  padding: 12px 16px;
+  font-family: var(--font-ui);
+  font-weight: 500;
+  font-size: 14.5px;
+  color: var(--navy);
+  opacity: 0.6;
+}
+
+/* =========================================================
+   Abacus programme page — /junior-skills/abacus
+
+   Ported from the standalone abacus-classes-in-hyderabad
+   page. That file shipped its own Poppins-only type scale;
+   nothing here declares a font family, so every heading,
+   label and button on the page inherits the site roles
+   defined at the top of this stylesheet (Fredoka display,
+   Inter body, Poppins UI, Caveat accent).
+   ========================================================= */
+
+/* ---------- Hero: interactive soroban ---------- */
+.ab-demo {
+  background: var(--white);
+  border: var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--hard-shadow);
+  padding: 28px;
+}
+
+.ab-demo h2 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.ab-demo-note {
+  font-family: var(--font-ui);
+  font-size: 13.5px;
+  opacity: 0.7;
+  margin-bottom: 18px;
+}
+
+.ab-soroban {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Beads move rather than jump, so a child watching the demo sees which beads
+   the number actually used. */
+.ab-soroban .bead {
+  transition: transform 0.28s cubic-bezier(0.34, 1.3, 0.64, 1);
+}
+
+.ab-beadrow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.ab-beadbtn {
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 14px;
+  min-width: 46px;
+  padding: 9px 12px;
+  border-radius: 12px;
+  border: var(--line);
+  background: var(--cream);
+  color: var(--navy);
+  cursor: pointer;
+  transition: transform 0.15s, background 0.15s, box-shadow 0.15s;
+}
+
+.ab-beadbtn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--hard-shadow-sm);
+}
+
+.ab-beadbtn[aria-pressed='true'] {
+  background: var(--yellow);
+  box-shadow: var(--hard-shadow-sm);
+}
+
+.ab-readout {
+  margin-top: 14px;
+  font-family: var(--font-ui);
+  font-weight: 500;
+  font-size: 13.5px;
+  opacity: 0.78;
+  min-height: 20px;
+}
+
+/* ---------- "Designed for curious young learners" strip ---------- */
+.ab-statbar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 16px;
+}
+
+.ab-statbar .stat {
+  padding: 22px 18px;
+}
+
+.ab-statbar .stat b {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 17px;
+  margin-bottom: 6px;
+}
+
+.ab-statbar .stat span {
+  font-family: var(--font-ui);
+  font-size: 13px;
+  opacity: 0.72;
+}
+
+.ab-statbar .stat:nth-child(1) { background: var(--tint-yellow); }
+.ab-statbar .stat:nth-child(2) { background: var(--tint-coral); }
+.ab-statbar .stat:nth-child(3) { background: var(--tint-mint); }
+.ab-statbar .stat:nth-child(4) { background: var(--tint-lavender); }
+.ab-statbar .stat:nth-child(5) { background: var(--cream-deep); }
+
+/* ---------- Flow strip: See → move → understand → visualise → calculate,
+     Learn → try → create → improve, and the like. Shared by the abacus and AI
+     programme pages. ---------- */
+.flow-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 26px;
+  list-style: none;
+}
+
+.flow-strip li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.flow-strip span {
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 13.5px;
+  background: var(--cream-deep);
+  border: var(--line);
+  border-radius: 100px;
+  padding: 9px 16px;
+}
+
+.flow-strip b {
+  color: var(--coral);
+  font-size: 18px;
+}
+
+/* ---------- Batch rows ---------- */
+.ab-batch {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  background: var(--white);
+  border: var(--line);
+  border-radius: 18px;
+  box-shadow: var(--hard-shadow-sm);
+  padding: 20px 24px;
+  margin-bottom: 14px;
+}
+
+.ab-batch b {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 18px;
+  flex: 1 1 200px;
+}
+
+.ab-batch .ab-batch-when {
+  font-family: var(--font-ui);
+  font-size: 14px;
+  opacity: 0.72;
+  flex: 1 1 180px;
+}
+
+.ab-batch .ab-pill {
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 12px;
+  background: var(--tint-mint);
+  border: 1.5px solid var(--navy);
+  border-radius: 100px;
+  padding: 5px 12px;
+}
+
+.ab-batch .btn {
+  padding: 11px 20px;
+  font-size: 14px;
+}
+
+/* =========================================================
+   Trial booking form and modal
+
+   One form, three homes: the modal any "Book a free trial"
+   button opens, the /book-free-demo page, and the abacus
+   page's demo section. Nothing here sets a font family —
+   labels and buttons take the Poppins UI role, headings
+   Fredoka, answers Inter, from the roles at the top of the
+   file.
+   ========================================================= */
+
+.trial-panel {
+  background: var(--white);
+  border: var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--hard-shadow);
+  padding: 36px;
+}
+
+.trial-panel > h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.trial-modal-head {
+  margin-bottom: 24px;
+}
+
+.trial-modal-head h2 {
+  font-size: clamp(24px, 3vw, 30px);
+  margin-bottom: 10px;
+}
+
+.trial-modal-head p {
+  font-size: 15px;
+  opacity: 0.75;
+}
+
+/* ---------- Fields ---------- */
+
+/* The course, shown rather than asked. It reads as an answer already filled
+   in — which is exactly what it is — so it is styled as a chip, not as a
+   field a parent might try to type into. */
+.trial-course {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 0 0 18px;
+  padding: 10px 14px;
+  border: var(--line);
+  border-radius: 999px;
+  background: var(--tint-mint);
+  box-shadow: var(--hard-shadow-sm);
+  width: fit-content;
+  max-width: 100%;
+}
+
+.trial-course-label {
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.trial-course-name {
+  font-family: var(--font-display);
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.trial-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.trial-field.is-wide {
+  grid-column: 1 / -1;
+}
+
+.trial-field label {
+  display: block;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.trial-req {
+  color: var(--coral);
+}
+
+.trial-field input,
+.trial-field select,
+.trial-field textarea {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--navy);
+  background: var(--cream);
+  border: var(--line);
+  border-radius: 14px;
+  padding: 12px 14px;
+}
+
+.trial-field textarea {
+  resize: vertical;
+}
+
+.trial-field input:focus,
+.trial-field select:focus,
+.trial-field textarea:focus {
+  outline: 3px solid var(--yellow);
+  outline-offset: 1px;
+}
+
+/* :user-invalid, not :invalid — a required field that is empty because the
+   parent has not reached it yet is not a mistake, and outlining it in red on
+   first paint makes a blank form look like a form they have already failed.
+   :user-invalid waits until they have actually typed in it or submitted. */
+.trial-field input:user-invalid,
+.trial-field select:user-invalid {
+  border-color: var(--coral);
+}
+
+/* The bot trap. Kept in the layout but off-screen: display:none would be
+   ignored by some form-fillers and skipped by the bots worth catching. */
+.trial-trap {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.trial-submit {
+  width: 100%;
+  justify-content: center;
+  margin-top: 22px;
+}
+
+.trial-submit[disabled] {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+.trial-note {
+  margin-top: 12px;
+  font-family: var(--font-ui);
+  font-size: 12.5px;
+  opacity: 0.65;
+}
+
+.trial-error {
+  margin-top: 18px;
+  background: var(--tint-coral);
+  border: var(--line);
+  border-radius: 18px;
+  padding: 20px;
+}
+
+.trial-error p {
+  font-size: 14.5px;
+  margin-bottom: 10px;
+}
+
+/* ---------- Sent ---------- */
+.trial-done {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.trial-done-tick {
+  display: grid;
+  place-items: center;
+  width: 62px;
+  height: 62px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: var(--mint);
+  border: var(--line);
+  box-shadow: var(--hard-shadow-sm);
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.trial-done h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.trial-done p {
+  font-size: 15px;
+  opacity: 0.78;
+  max-width: 460px;
+  margin: 0 auto 22px;
+}
+
+.trial-done .btn-row {
+  justify-content: center;
+}
+
+/* ---------- Modal ---------- */
+.trial-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(30, 41, 59, 0.55);
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  overflow-y: auto;
+  animation: trial-fade 0.16s ease-out;
+}
+
+.trial-modal {
+  position: relative;
+  width: min(680px, 100%);
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+  background: var(--cream);
+  border: var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--hard-shadow);
+  padding: 40px;
+  animation: trial-rise 0.2s cubic-bezier(0.34, 1.2, 0.64, 1);
+}
+
+.trial-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  font-size: 24px;
+  line-height: 1;
+  color: var(--navy);
+  background: var(--cream);
+  border: var(--line);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.trial-close:hover {
+  background: var(--yellow);
+}
+
+.trial-modal-foot {
+  margin-top: 20px;
+  font-family: var(--font-ui);
+  font-size: 13px;
+  opacity: 0.72;
+}
+
+@keyframes trial-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes trial-rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .trial-overlay,
+  .trial-modal {
+    animation: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .trial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trial-modal {
+    padding: 28px 20px;
+  }
+
+  .trial-panel {
+    padding: 24px;
+  }
+}
+
+/* =========================================================
+   AI programme page — /ai-for-kids
+
+   The two interactive pieces carried across from the
+   standalone ai-classes-for-kids build: the everyday-example
+   walkthrough and the topic tabs. As elsewhere, no font
+   family is declared here; the type roles at the top of this
+   file apply.
+   ========================================================= */
+
+/* ---------- "What is AI?" walkthrough ---------- */
+.ai-explain {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.ai-pickbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+  list-style: none;
+}
+
+.ai-pick {
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 14px;
+  padding: 11px 20px;
+  border-radius: 100px;
+  border: var(--line);
+  background: var(--cream);
+  color: var(--navy);
+  cursor: pointer;
+  transition: transform 0.15s, background 0.15s, box-shadow 0.15s;
+}
+
+.ai-pick:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--hard-shadow-sm);
+}
+
+.ai-pick[aria-pressed='true'] {
+  background: var(--yellow);
+  box-shadow: var(--hard-shadow-sm);
+}
+
+.ai-stepstack {
+  background: var(--white);
+  border: var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--hard-shadow-sm);
+  padding: 28px;
+}
+
+.ai-steprow {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.ai-stepnum {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+  border-radius: 50%;
+  background: var(--mint);
+  border: var(--line);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 17px;
+  color: var(--navy);
+}
+
+.ai-steprow b {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 17px;
+  margin-bottom: 4px;
+}
+
+.ai-steprow p {
+  font-size: 15px;
+  opacity: 0.78;
+}
+
+.ai-arrow {
+  margin: 10px 0 10px 17px;
+  font-size: 20px;
+  line-height: 1;
+  color: var(--coral);
+}
+
+/* ---------- Topic tabs ---------- */
+.ai-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+
+.ai-tab {
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 14px;
+  padding: 12px 22px;
+  border-radius: 100px;
+  border: var(--line);
+  background: var(--cream);
+  color: var(--navy);
+  cursor: pointer;
+  transition: transform 0.15s, background 0.15s, box-shadow 0.15s;
+}
+
+.ai-tab:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--hard-shadow-sm);
+}
+
+.ai-tab[aria-selected='true'] {
+  background: var(--navy);
+  color: var(--cream);
+  box-shadow: var(--hard-shadow-sm);
+}
+
+.ai-tabpanel {
+  max-width: 780px;
+  margin: 0 auto;
+  background: var(--white);
+  border: var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--hard-shadow-sm);
+  padding: 36px;
+}
+
+.ai-tabpanel h3 {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.ai-tabpanel p {
+  font-size: 16px;
+  opacity: 0.82;
+  margin-bottom: 12px;
+}
+
+/* An illustrative aside inside a card — set apart from the claim above it, so
+   a skimming parent can take the example instead of the explanation. */
+.ai-eg {
+  margin-top: 14px;
+  padding: 14px 16px;
+  background: var(--cream-deep);
+  border-radius: 14px;
+  font-size: 14px;
+  line-height: 1.55;
+  opacity: 0.85;
+}
+
+.ai-eg b {
+  font-family: var(--font-ui);
+  font-weight: 600;
+}
+
+.ai-tabpanel .ai-eg {
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  .ai-explain {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+/* =========================================================
+   Brain games page — /programs/brain-games
+
+   The worked hero example, the five-challenge quiz, the
+   numbered learning-area rows and the little sequence
+   strips. No font families here; the roles at the top of
+   this file apply throughout.
+   ========================================================= */
+
+/* ---------- Hero: the worked example ---------- */
+.prog-trick {
+  background: var(--white);
+  border: var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--hard-shadow);
+  padding: 32px;
+}
+
+.prog-trick-label {
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 13px;
+  opacity: 0.7;
+  margin-bottom: 14px;
+}
+
+.prog-trick-sum {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(26px, 3.4vw, 34px);
+  margin-bottom: 22px;
+}
+
+.prog-trick-ans {
+  display: grid;
+  place-items: center;
+  min-width: 56px;
+  padding: 4px 14px;
+  border-radius: 16px;
+  border: 2px dashed var(--pebble);
+  background: var(--cream);
+  color: var(--grey);
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.prog-trick-ans.is-shown {
+  border-style: solid;
+  border-color: var(--navy);
+  background: var(--yellow);
+  color: var(--navy);
+}
+
+.prog-trick-steps {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+/* Steps are laid out from the start and only fade in, so revealing them does
+   not shunt the button down the page under the reader's cursor. */
+.prog-trick-steps li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14.5px;
+  line-height: 1.5;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.prog-trick-steps li.is-shown {
+  opacity: 0.85;
+  transform: none;
+}
+
+.prog-trick-steps li:nth-child(2) { transition-delay: 0.06s; }
+.prog-trick-steps li:nth-child(3) { transition-delay: 0.12s; }
+.prog-trick-steps li:nth-child(4) { transition-delay: 0.18s; }
+
+.prog-trick-num {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  flex: 0 0 26px;
+  border-radius: 50%;
+  background: var(--tint-mint);
+  border: 1.5px solid var(--navy);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.prog-trick-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+}
+
+.prog-trick-foot .note-line {
+  margin-top: 0;
+}
+
+/* ---------- The five-challenge quiz ---------- */
+.prog-quiz {
+  max-width: 640px;
+  margin: 0 auto;
+  background: var(--white);
+  border: var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--hard-shadow);
+  padding: 40px 32px;
+}
+
+.prog-quiz-prog {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.prog-quiz-prog span {
+  width: 34px;
+  height: 7px;
+  border-radius: 100px;
+  background: var(--pebble);
+}
+
+.prog-quiz-prog span.is-done { background: var(--mint); }
+.prog-quiz-prog span.is-now { background: var(--yellow); }
+
+.prog-quiz-q {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(20px, 2.8vw, 27px);
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+
+.prog-quiz-hint {
+  font-family: var(--font-ui);
+  font-size: 13.5px;
+  opacity: 0.7;
+  margin-bottom: 24px;
+}
+
+.prog-quiz-opts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.prog-opt {
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 17px;
+  min-width: 88px;
+  padding: 14px 24px;
+  border-radius: 16px;
+  border: var(--line);
+  background: var(--cream);
+  color: var(--navy);
+  cursor: pointer;
+  transition: transform 0.15s, background 0.15s, box-shadow 0.15s;
+}
+
+.prog-opt:hover:not(:disabled) {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--hard-shadow-sm);
+}
+
+.prog-opt:disabled {
+  cursor: default;
+}
+
+.prog-opt.is-right {
+  background: var(--mint);
+  box-shadow: var(--hard-shadow-sm);
+}
+
+.prog-opt.is-wrong {
+  background: var(--tint-coral);
+}
+
+.prog-quiz-fb {
+  font-size: 15px;
+  line-height: 1.55;
+  /* Reserved whether or not there is feedback, so answering does not make the
+     card jump under the reader. */
+  min-height: 48px;
+  margin-bottom: 8px;
+}
+
+.prog-quiz-fb.is-ok { color: var(--blue-deep); }
+.prog-quiz-fb.is-no { color: var(--navy); }
+
+/* ---------- Numbered learning-area rows ---------- */
+.prog-row {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  background: var(--white);
+  border: var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--hard-shadow-sm);
+  padding: 28px;
+  margin-bottom: 18px;
+}
+
+.prog-row-num {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  flex: 0 0 52px;
+  border-radius: 50%;
+  background: var(--tint-yellow);
+  border: var(--line);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.prog-row h3 {
+  font-size: 21px;
+  margin-bottom: 8px;
+}
+
+.prog-row > div > p {
+  font-size: 15.5px;
+  opacity: 0.8;
+}
+
+.prog-row-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.prog-row-meta > div {
+  background: var(--cream-deep);
+  border-radius: 16px;
+  padding: 16px 18px;
+}
+
+.prog-row-meta strong {
+  display: block;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  opacity: 0.6;
+  margin-bottom: 6px;
+}
+
+.prog-row-meta span {
+  font-size: 14.5px;
+  line-height: 1.5;
+}
+
+/* ---------- Little sequence strips on the logic cards ---------- */
+.prog-seq {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 14px 0 16px;
+}
+
+.prog-seq span {
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 14px;
+  background: var(--cream-deep);
+  border: 1.5px solid var(--pebble);
+  border-radius: 12px;
+  padding: 7px 13px;
+}
+
+/* The last item is the one the child has to find, so it is marked as the
+   answer rather than reading as another given. */
+.prog-seq span.is-q {
+  background: var(--yellow);
+  border-color: var(--navy);
+}
+
+@media (max-width: 720px) {
+  .prog-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .prog-row-meta {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Technique cards (Vedic maths) ----------
+   A worked sum, the shortcut applied to it, and the answer — the three things
+   a parent scans before reading the explanation underneath. The sum is the
+   headline, so it gets display type and the answer gets the highlight. */
+.prog-tech {
+  background: var(--white);
+  border: var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--hard-shadow-sm);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.prog-tech:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: var(--hard-shadow);
+}
+
+.prog-tech-top {
+  background: var(--cream-deep);
+  border-bottom: var(--line);
+  padding: 16px 22px;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.prog-tech-body {
+  padding: 22px;
+}
+
+.prog-tech-sum {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.prog-tech-sum b {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.prog-tech-eq {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 20px;
+  opacity: 0.45;
+}
+
+.prog-tech-working {
+  display: inline-block;
+  font-family: var(--font-ui);
+  font-size: 12.5px;
+  opacity: 0.68;
+  background: var(--cream);
+  border: 1.5px solid var(--pebble);
+  border-radius: 100px;
+  padding: 5px 12px;
+  margin-bottom: 16px;
+}
+
+.prog-tech-res {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 22px;
+  background: var(--yellow);
+  border: 1.5px solid var(--navy);
+  border-radius: 12px;
+  padding: 3px 14px;
+}
+
+.prog-tech-body p {
+  font-size: 14.5px;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+/* The stage badge on a numbered row, when one is given: a small word above the
+   number rather than the number alone. */
+.prog-row-num span {
+  display: grid;
+  place-items: center;
+  line-height: 1;
+}
+
+.prog-row-num small {
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 8.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.65;
+}
+
+.prog-row-num b {
+  font-size: 20px;
+}
+
+/* =========================================================
+   Chess page — /programs/chess
+
+   The piece explorer, the knight hunt and the piece
+   reference cards. The board is 5×5 rather than 8×8: on a
+   phone a real board makes each square too small to tap,
+   and a five-square window shows the shape of a move just
+   as well. No font families declared here.
+   ========================================================= */
+
+.chess-explorer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.chess-picks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chess-pick {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  min-width: 74px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  border: var(--line);
+  background: var(--cream);
+  color: var(--navy);
+  cursor: pointer;
+  transition: transform 0.15s, background 0.15s, box-shadow 0.15s;
+}
+
+.chess-pick b {
+  font-size: 26px;
+  line-height: 1;
+}
+
+.chess-pick span {
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 12.5px;
+}
+
+.chess-pick:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--hard-shadow-sm);
+}
+
+.chess-pick[aria-pressed='true'] {
+  background: var(--yellow);
+  box-shadow: var(--hard-shadow-sm);
+}
+
+/* ---------- The board ---------- */
+.chess-board {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  max-width: 400px;
+  margin: 0 auto;
+  border: var(--line);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--hard-shadow-sm);
+}
+
+.chess-sq {
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  font-size: clamp(22px, 4.5vw, 30px);
+  line-height: 1;
+  border: 0;
+  padding: 0;
+  color: var(--navy);
+  transition: background 0.18s;
+}
+
+.chess-sq.is-light { background: #fffdf1; }
+.chess-sq.is-dark  { background: var(--cream-deep); }
+
+/* State beats the checker pattern — where a piece can go is the whole point of
+   the diagram, and the light/dark alternation is only context. */
+.chess-sq.is-move  { background: var(--mint); }
+.chess-sq.is-cap   { background: var(--coral); }
+.chess-sq.is-start { background: var(--yellow); }
+
+button.chess-sq {
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-weight: 700;
+}
+
+button.chess-sq:disabled {
+  cursor: default;
+}
+
+/* Only an untouched square lights up on hover. Without the :not() guards a
+   found square repaints paler under the cursor, which reads as "you have
+   un-found this". */
+button.chess-sq:not(:disabled):not(.is-move):not(.is-cap):hover {
+  background: var(--tint-mint);
+}
+
+.chess-key {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin-top: 16px;
+}
+
+.chess-key span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-ui);
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.chess-key i {
+  width: 16px;
+  height: 16px;
+  border-radius: 5px;
+  border: 1.5px solid var(--navy);
+}
+
+.chess-key i.is-move  { background: var(--mint); }
+.chess-key i.is-cap   { background: var(--coral); }
+.chess-key i.is-start { background: var(--yellow); }
+
+/* ---------- Knight hunt ---------- */
+.chess-hunt {
+  max-width: 460px;
+  margin: 0 auto;
+}
+
+.chess-hunt-score {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 18px;
+}
+
+.chess-hunt-fb {
+  /* Reserved whether or not there is feedback, so tapping a square does not
+     shunt the buttons underneath. */
+  min-height: 52px;
+  margin: 18px 0 8px;
+  font-size: 15px;
+  line-height: 1.55;
+  opacity: 0.85;
+}
+
+/* ---------- Piece reference cards ---------- */
+.chess-pcard {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background: var(--white);
+  border: var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--hard-shadow-sm);
+  padding: 24px;
+}
+
+.chess-pcard-glyph {
+  display: grid;
+  place-items: center;
+  width: 62px;
+  height: 62px;
+  flex: 0 0 62px;
+  border-radius: 18px;
+  background: var(--cream-deep);
+  border: var(--line);
+  font-size: 34px;
+  line-height: 1;
+}
+
+.chess-pcard h3 {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.chess-pcard p {
+  font-size: 14.5px;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+@media (max-width: 900px) {
+  .chess-explorer {
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
 }

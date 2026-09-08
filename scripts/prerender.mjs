@@ -112,6 +112,7 @@ function priorityFor(route, seo) {
   if (route === '/') return '1.0';
   if (seo.course) return '0.9'; // the program pages searches actually land on
   if (seo.location) return '0.8';
+  if (seo.app) return '0.8'; // national reach, and the pages most likely to be linked to
   if (seo.module) return '0.5';
   if (seo.article) return '0.7';
   if (route === '/book-free-demo' || route === '/contact') return '0.8';
@@ -161,9 +162,13 @@ const isClassPage = (r) => /^\/(ai|python)-for-kids\/class-\d+$/.test(r);
 
 /* First matching section wins, so the specific patterns precede the general. */
 const SECTIONS = [
-  ['Programs', (r) => r === '/programs' || /^\/(ai|python)-for-kids$/.test(r) || /^\/junior-skills/.test(r)],
+  ['Programs', (r) => /^\/programs/.test(r) || /^\/(ai|python)-for-kids$/.test(r) || /^\/junior-skills/.test(r)],
   ['Class-wise curricula', isClassPage],
+  ['Academic tuitions', (r) => /^\/tuitions/.test(r)],
+  ['Workshops', (r) => /^\/workshops/.test(r)],
+  ['Classes by age', (r) => /^\/age-groups/.test(r)],
   ['For schools', (r) => /^\/schools/.test(r)],
+  ['Apps', (r) => /^\/apps/.test(r)],
   ['Guides for parents', (r) => /^\/resources/.test(r)],
   ['Areas we serve', (r) => /^\/kids-classes-in-/.test(r)],
   ['About and contact', () => true],
@@ -202,6 +207,27 @@ const facts = [
   `- **Areas served:** ${areasServed.join(', ')} — and online across India`,
 ].filter(Boolean);
 
+/* Section order for llms.txt, with any unlisted section slotted in before
+   Optional so adding a SECTIONS entry cannot quietly drop pages. */
+const LLMS_ORDER = [
+  'Programs',
+  'Academic tuitions',
+  'Workshops',
+  'Classes by age',
+  'Class-wise curricula',
+  'For schools',
+  'Apps',
+  'Guides for parents',
+  'Areas we serve',
+  'About and contact',
+];
+
+function llmsOrder() {
+  const known = new Set([...LLMS_ORDER, 'Optional']);
+  const extra = [...grouped.keys()].filter((name) => !known.has(name));
+  return [...LLMS_ORDER, ...extra, 'Optional'].filter((name) => grouped.has(name));
+}
+
 const llms = [
   '# Brolly Juniors',
   '',
@@ -214,9 +240,12 @@ const llms = [
   '',
   /* Ordered by what a model should read first, not by route order. "Optional"
      is the spec's name for a section that can be dropped when context is
-     tight, so the 90 module pages go there and go last. */
-  ...['Programs', 'Class-wise curricula', 'For schools', 'Guides for parents', 'Areas we serve', 'About and contact', 'Optional']
-    .filter((name) => grouped.has(name))
+     tight, so the 90 module pages go there and go last.
+     LLMS_ORDER is a preference, not a whitelist: anything grouped but not
+     named here is appended before Optional rather than dropped. This used to
+     be a plain filter, which silently omitted every page in a section that had
+     been added to SECTIONS but not to this list. */
+  ...llmsOrder()
     .flatMap((name) => [
       `## ${name}`,
       '',

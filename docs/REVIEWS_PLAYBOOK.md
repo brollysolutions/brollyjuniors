@@ -120,7 +120,7 @@ Rules:
 > Thank you for saying so directly — that is genuinely useful. You are right that the Saturday batch has been running slightly over, and we have changed the timings from this week. Please tell us if it does not improve.
 
 **A 1–2★, whether fair or not**
-> Thank you for telling us, and I am sorry the experience did not match what you expected. I would like to understand what happened properly — could you call me on +91 81868 44555? I will look into it either way.
+> Thank you for telling us, and I am sorry the experience did not match what you expected. I would like to understand what happened properly — could you call me on +91 70360 44555? I will look into it either way.
 
 ### The rules for a bad review
 

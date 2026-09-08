@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { site, familyFaqs } from '../data/site.js';
 import { PageHero, QuickAnswer, FaqList, CtaBand } from '../components/Shared.jsx';
+import TrialForm from '../components/TrialForm.jsx';
 
 export default function BookFreeDemo() {
   return (
@@ -37,13 +38,33 @@ export default function BookFreeDemo() {
         </div>
       </section>
 
+      {/* The same form the modal shows. Every CTA on the site opens that modal
+          instead of navigating here, so this copy is what a parent reaches by
+          typing the URL, following a search result, or arriving with
+          JavaScript unavailable — and it has to work on its own. */}
+      <section className="section-tight" id="trial-form">
+        <div className="container">
+          <div className="trial-panel">
+            <div className="trial-modal-head">
+              <span className="eyebrow">One form, one reply</span>
+              <h2>Book your child&rsquo;s free trial class</h2>
+              <p>
+                Three details, nothing more. We will call you to confirm a suitable batch and timing.
+              </p>
+            </div>
+            <TrialForm />
+          </div>
+        </div>
+      </section>
+
       <section className="section-tight">
         <div className="container split">
           <div className="panel">
-            <h2>📝 What to share</h2>
+            <h2>📝 What we will ask on the call</h2>
             <p>
-              Child&apos;s class and age, program interest, previous experience if any, preferred weekday or
-              weekend timing, and your Hyderabad area.
+              Your child&apos;s class and age, program interest, previous experience if any, preferred weekday
+              or weekend timing, and your Hyderabad area. The form itself only needs your name, number and
+              email.
             </p>
           </div>
           <div className="panel">

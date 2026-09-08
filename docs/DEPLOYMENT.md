@@ -34,7 +34,7 @@ Expected output:
 npm run audit:seo
 ```
 
-Reads the built HTML and fails if any page is missing content, a title, a description, a canonical, an H1 or structured data — or if two pages share a title. A clean run looks like:
+Reads the built HTML and fails if any page is missing content, a title, a description, a canonical, an H1 or structured data — or if two pages share a title. It also warns (without failing) about skipped heading levels, link text that describes nothing, images with missing or empty `alt`, and pages no other page links to. A clean run looks like:
 
 ```
   audit: 136 indexable pages checked

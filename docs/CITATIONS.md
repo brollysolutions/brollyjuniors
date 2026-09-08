@@ -19,7 +19,7 @@ Budget: about four hours total, spread over two weeks. Do Tier 1 first.
 | **State** | `Telangana` |
 | **PIN** | *(→ `address.postalCode`)* |
 | **Country** | `India` |
-| **Phone** | `+91 81868 44555` |
+| **Phone** | `+91 70360 44555` |
 | **Email** | `brollyjuniors.in@gmail.com` |
 | **Website** | `https://brollyjuniors.com` |
 | **Category** | Educational institution / Tutoring service |
@@ -89,7 +89,7 @@ These are worth more per listing than Tier 2, because the audience is exactly ri
 ## The five rules
 
 1. **Copy, never retype.** Every field, every time.
-2. **One phone number everywhere.** `+91 81868 44555`. Not a second mobile, not a landline "for enquiries".
+2. **One phone number everywhere.** `+91 70360 44555`. Not a second mobile, not a landline "for enquiries".
 3. **Website URL with `https://` and no trailing slash**, exactly: `https://brollyjuniors.com`
 4. **Never create a second listing** because you cannot log into the first. Recover the account instead. Duplicates split your signal and both rank worse.
 5. **Fix the source first.** If the address ever changes, change `src/data/site.js`, deploy, update Google, *then* work through this list. Doing it in the other order guarantees a period where the site and the listings disagree.
@@ -117,4 +117,4 @@ Blank entries are skipped, so add them as you go and rebuild.
 
 ## Audit every quarter
 
-Search Google for `"Brolly Juniors" "81868 44555"` and check the top 30 results. Any listing with an old address, a different phone number or a misspelled name is actively working against you. Correct it or get it removed.
+Search Google for `"Brolly Juniors" "70360 44555"` and check the top 30 results. Any listing with an old address, a different phone number or a misspelled name is actively working against you. Correct it or get it removed.

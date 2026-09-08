@@ -8,23 +8,24 @@ has to appear in the title, in the H1 and in the opening copy. This table
 checks all three. A ⚠️ is not automatically wrong — sometimes the natural
 phrasing differs from the search phrasing — but it is worth a look.
 
-Checked 136 indexable pages with a declared target keyword.
+Checked 203 indexable pages with a declared target keyword.
 
 ## Primary pages
 
 | Page | Target keyword | Title | H1 | Opening copy |
 |---|---|:-:|:-:|:-:|
-| `/` | kids classes in hyderabad | ✅ | ✅ | ✅ |
+| `/` | kids activities in hyderabad | ✅ | ✅ | ✅ |
 | `/programs` | learning programs for kids in hyderabad | ✅ | ✅ | ✅ |
 | `/book-free-demo` | free trial class in hyderabad | ✅ | ✅ | ✅ |
 | `/ai-for-kids` | ai classes for kids in hyderabad | ✅ | ✅ | ✅ |
 | `/python-for-kids` | coding classes for kids in hyderabad | ✅ | ✅ | ✅ |
 | `/junior-skills` | classes for kids in hyderabad | ✅ | ✅ | ✅ |
 | `/schools` | coding curriculum for schools in hyderabad | ✅ | ✅ | ✅ |
-| `/about` | about brolly juniors | – | – | – |
 | `/contact` | contact brolly juniors | – | – | – |
 | `/faqs` | kids classes in hyderabad faqs | – | – | – |
 | `/resources` | learning guides for parents | ✅ | ✅ | ✅ |
+| `/abacus-worksheet-generator` | abacus worksheets | ✅ | ✅ | ✅ |
+| `/apps` | learning apps for kids | ✅ | ✅ | ✅ |
 | `/junior-skills/phonics` | phonics classes in hyderabad | ✅ | ✅ | ✅ |
 | `/junior-skills/abacus` | abacus classes in hyderabad | ✅ | ✅ | ✅ |
 | `/junior-skills/vedic-maths` | vedic maths classes in hyderabad | ✅ | ✅ | ✅ |
@@ -49,6 +50,7 @@ Checked 136 indexable pages with a declared target keyword.
 | `/python-for-kids/class-8` | python course for class 8 | ✅ | ✅ | ✅ |
 | `/python-for-kids/class-9` | python course for class 9 | ✅ | ✅ | ✅ |
 | `/python-for-kids/class-10` | python course for class 10 | ✅ | ✅ | ✅ |
+| `/kids-classes-in-nizampet` | kids classes in nizampet | ✅ | ✅ | ✅ |
 | `/kids-classes-in-kondapur` | kids classes in kondapur | ✅ | ✅ | ✅ |
 | `/kids-classes-in-madhapur` | kids classes in madhapur | ✅ | ✅ | ✅ |
 | `/kids-classes-in-gachibowli` | kids classes in gachibowli | ✅ | ✅ | ✅ |
@@ -60,6 +62,71 @@ Checked 136 indexable pages with a declared target keyword.
 | `/resources/python-projects-for-class-8-students` | python projects for class 8 students | ✅ | ✅ | ✅ |
 | `/resources/cbse-ai-curriculum-class-9-explained` | CBSE class 9 AI curriculum | ✅ | ✅ | ✅ |
 | `/resources/abacus-vs-vedic-maths-for-children` | abacus vs vedic maths for children | ✅ | ✅ | ✅ |
+| `/resources/child-can-read-but-does-not-understand` | child can read but does not understand | ✅ | ✅ | ✅ |
+| `/resources/scratch-to-python-when-to-move` | scratch to python | ✅ | ✅ | ✅ |
+| `/apps/spark-phonics` | phonics app for kids | ✅ | ✅ | ✅ |
+| `/tuitions` | tuition classes in hyderabad | ✅ | ✅ | ✅ |
+| `/workshops` | holiday workshops for kids in hyderabad | ✅ | ✅ | ✅ |
+| `/age-groups` | kids classes by age in hyderabad | ✅ | ✅ | ✅ |
+| `/programs/coding` | coding classes for kids in hyderabad | ✅ | ✅ | ✅ |
+| `/programs/robotics` | robotics classes for kids in hyderabad | ✅ | ✅ | ✅ |
+| `/programs/mental-maths` | mental maths classes for kids in hyderabad | ✅ | ✅ | ✅ |
+| `/programs/chess` | chess classes for kids in hyderabad | ✅ | ✅ | ✅ |
+| `/programs/brain-games` | brain games classes for kids in hyderabad | ✅ | ✅ | ✅ |
+| `/programs/spoken-english` | spoken english classes for kids in hyderabad | ✅ | ✅ | ✅ |
+| `/programs/communication-skills` | communication skills classes in hyderabad | ✅ | ✅ | ✅ |
+| `/programs/telugu` | telugu classes for kids in hyderabad | ✅ | ✅ | ✅ |
+| `/programs/english` | english classes for kids in hyderabad | ✅ | ✅ | ✅ |
+| `/programs/foreign-languages` | foreign language classes for kids in hyderabad | ✅ | ✅ | ✅ |
+| `/programs/drawing-and-painting` | drawing classes for kids in hyderabad | ✅ | ✅ | ✅ |
+| `/programs/singing` | singing classes for kids in hyderabad | ✅ | ✅ | ✅ |
+| `/programs/dance` | dance classes for kids in hyderabad | ✅ | ✅ | ✅ |
+| `/programs/music` | music classes for kids in hyderabad | ✅ | ✅ | ✅ |
+| `/programs/drama` | drama classes for kids in hyderabad | ✅ | ✅ | ✅ |
+| `/programs/swimming` | swimming classes for kids in hyderabad | ✅ | ✅ | ✅ |
+| `/programs/indoor-games` | indoor games classes for kids in hyderabad | ✅ | ✅ | ✅ |
+| `/programs/outdoor-games` | outdoor games for kids in hyderabad | ✅ | ✅ | ✅ |
+| `/programs/yoga` | yoga classes for kids in hyderabad | ✅ | ✅ | ✅ |
+| `/programs/financial-literacy` | financial literacy classes for kids in hyderabad | ✅ | ✅ | ✅ |
+| `/programs/confidence-building` | confidence building classes in hyderabad | ✅ | ✅ | ✅ |
+| `/programs/leadership` | leadership classes for kids in hyderabad | ✅ | ✅ | ✅ |
+| `/programs/problem-solving` | problem solving classes for kids in hyderabad | ✅ | ✅ | ✅ |
+| `/tuitions/telugu` | telugu tuition in hyderabad | ✅ | ✅ | ✅ |
+| `/tuitions/english` | english tuition in hyderabad | ✅ | ✅ | ✅ |
+| `/tuitions/hindi` | hindi tuition in hyderabad | ✅ | ✅ | ✅ |
+| `/tuitions/mathematics` | maths tuition in hyderabad | ✅ | ✅ | ✅ |
+| `/tuitions/advanced-maths` | advanced maths classes in hyderabad | ✅ | ✅ | ✅ |
+| `/tuitions/physics` | physics tuition in hyderabad | ✅ | ✅ | ✅ |
+| `/tuitions/chemistry` | chemistry tuition in hyderabad | ✅ | ✅ | ✅ |
+| `/tuitions/biology` | biology tuition in hyderabad | ✅ | ✅ | ✅ |
+| `/tuitions/general-science` | science tuition for class 4 to 7 in hyderabad | ✅ | ✅ | ✅ |
+| `/tuitions/history` | history tuition in hyderabad | ✅ | ✅ | ✅ |
+| `/tuitions/geography` | geography tuition in hyderabad | ✅ | ✅ | ✅ |
+| `/tuitions/civics` | civics tuition in hyderabad | ✅ | ✅ | ✅ |
+| `/tuitions/economics` | economics tuition in hyderabad | ✅ | ✅ | ✅ |
+| `/tuitions/iit-foundation` | iit foundation classes in hyderabad | ✅ | ✅ | ✅ |
+| `/tuitions/jee-foundation` | jee foundation classes in hyderabad | ✅ | ✅ | ✅ |
+| `/tuitions/neet-foundation` | neet foundation classes in hyderabad | ✅ | ✅ | ✅ |
+| `/tuitions/olympiad-foundation` | olympiad foundation classes in hyderabad | ✅ | ✅ | ✅ |
+| `/workshops/ai-workshop` | ai workshop for kids in hyderabad | ✅ | ✅ | ✅ |
+| `/workshops/python-workshop` | python workshop for kids in hyderabad | ✅ | ✅ | ✅ |
+| `/workshops/coding-workshop` | coding workshop for kids in hyderabad | ✅ | ✅ | ✅ |
+| `/workshops/robotics-workshop` | robotics workshop for kids in hyderabad | ✅ | ✅ | ✅ |
+| `/workshops/abacus-workshop` | abacus workshop for kids in hyderabad | ✅ | ✅ | ✅ |
+| `/workshops/vedic-maths-workshop` | vedic maths workshop for kids in hyderabad | ✅ | ✅ | ✅ |
+| `/workshops/chess-workshop` | chess workshop for kids in hyderabad | ✅ | ✅ | ✅ |
+| `/workshops/brain-games-workshop` | brain games workshop for kids in hyderabad | ✅ | ✅ | ✅ |
+| `/workshops/art-workshop` | art workshop for kids in hyderabad | ✅ | ✅ | ✅ |
+| `/workshops/dance-workshop` | dance workshop for kids in hyderabad | ✅ | ✅ | ✅ |
+| `/workshops/music-workshop` | music workshop for kids in hyderabad | ✅ | ✅ | ✅ |
+| `/workshops/drama-workshop` | drama workshop for kids in hyderabad | ✅ | ✅ | ✅ |
+| `/workshops/public-speaking-workshop` | public speaking workshop for kids in hyderabad | ✅ | ✅ | ✅ |
+| `/workshops/spoken-english-workshop` | spoken english workshop for kids in hyderabad | ✅ | ✅ | ✅ |
+| `/workshops/communication-skills-workshop` | communication skills workshop in hyderabad | ✅ | ✅ | ✅ |
+| `/age-groups/ages-3-5` | classes for 3 to 5 year olds in hyderabad | ✅ | ✅ | ✅ |
+| `/age-groups/ages-6-8` | classes for 6 to 8 year olds in hyderabad | ✅ | ✅ | ✅ |
+| `/age-groups/ages-9-12` | classes for 9 to 12 year olds in hyderabad | ✅ | ✅ | ✅ |
+| `/age-groups/ages-13-16` | classes for 13 to 16 year olds in hyderabad | ✅ | ✅ | ✅ |
 
 A `–` marks a navigational page: people reach /about and /contact by name,
 so its heading is not held to the keyword.
@@ -73,17 +140,18 @@ and to be cited by AI search, not to win a commercial search on their own.
 
 ## Titles as they will appear in results
 
-- `/` → Kids Classes in Hyderabad | Brolly Juniors
+- `/` → Kids Activities in Hyderabad | Brolly Juniors
 - `/programs` → Learning Programs for Kids in Hyderabad | Brolly Juniors
 - `/book-free-demo` → Book a Free Trial Class in Hyderabad | Brolly Juniors
 - `/ai-for-kids` → AI Classes for Kids in Hyderabad (Class 6-10) | Brolly Juniors
 - `/python-for-kids` → Coding Classes for Kids in Hyderabad | Python | Brolly Juniors
 - `/junior-skills` → Classes for Kids in Hyderabad, Ages 4-11 | Brolly Juniors
 - `/schools` → AI &amp; Coding Curriculum for Schools in Hyderabad | Brolly Juniors
-- `/about` → About Brolly Juniors | Learning Centre in Hyderabad
 - `/contact` → Contact Brolly Juniors | Kids Classes in Hyderabad
 - `/faqs` → Kids Classes in Hyderabad: FAQs | Brolly Juniors
 - `/resources` → Learning Guides for Parents | Phonics, Abacus, AI &amp; Coding
+- `/abacus-worksheet-generator` → Free Printable Abacus Worksheets Generator | Brolly Juniors
+- `/apps` → Learning Apps for Kids | Brolly Juniors
 - `/junior-skills/phonics` → Phonics Classes in Hyderabad for Kids | Brolly Juniors
 - `/junior-skills/abacus` → Abacus Classes in Hyderabad for Kids | Brolly Juniors
 - `/junior-skills/vedic-maths` → Vedic Maths Classes in Hyderabad for Kids | Brolly Juniors
@@ -108,6 +176,7 @@ and to be cited by AI search, not to win a commercial search on their own.
 - `/python-for-kids/class-8` → Python Course for Class 8 in Hyderabad | Brolly Juniors
 - `/python-for-kids/class-9` → Python Course for Class 9 in Hyderabad | Brolly Juniors
 - `/python-for-kids/class-10` → Python Course for Class 10 in Hyderabad | Brolly Juniors
+- `/kids-classes-in-nizampet` → Kids Classes in Nizampet, Hyderabad | Brolly Juniors
 - `/kids-classes-in-kondapur` → Kids Classes in Kondapur, Hyderabad | Brolly Juniors
 - `/kids-classes-in-madhapur` → Kids Classes in Madhapur, Hyderabad | Brolly Juniors
 - `/kids-classes-in-gachibowli` → Kids Classes in Gachibowli, Hyderabad | Brolly Juniors
@@ -119,3 +188,68 @@ and to be cited by AI search, not to win a commercial search on their own.
 - `/resources/python-projects-for-class-8-students` → Python Projects for Class 8 Students | Brolly Juniors
 - `/resources/cbse-ai-curriculum-class-9-explained` → CBSE Class 9 AI Curriculum (417) Explained | Brolly Juniors
 - `/resources/abacus-vs-vedic-maths-for-children` → Abacus vs Vedic Maths for Children | Brolly Juniors Hyderabad
+- `/resources/child-can-read-but-does-not-understand` → Child Can Read But Does Not Understand? | Brolly Juniors
+- `/resources/scratch-to-python-when-to-move` → Scratch to Python: When Should a Child Move? | Brolly Juniors
+- `/apps/spark-phonics` → Spark Phonics: Free Phonics App for Kids | Brolly Juniors
+- `/tuitions` → Tuition Classes in Hyderabad for Class 4-10 | Brolly Juniors
+- `/workshops` → Holiday Workshops for Kids in Hyderabad | Brolly Juniors
+- `/age-groups` → Kids Classes by Age in Hyderabad (3-16) | Brolly Juniors
+- `/programs/coding` → Coding Classes for Kids in Hyderabad | Brolly Juniors
+- `/programs/robotics` → Robotics Classes for Kids in Hyderabad | Brolly Juniors
+- `/programs/mental-maths` → Mental Maths Classes for Kids in Hyderabad | Brolly Juniors
+- `/programs/chess` → Chess Classes for Kids in Hyderabad | Brolly Juniors
+- `/programs/brain-games` → Brain Games Classes for Kids in Hyderabad | Brolly Juniors
+- `/programs/spoken-english` → Spoken English Classes for Kids in Hyderabad | Brolly Juniors
+- `/programs/communication-skills` → Communication Skills Classes in Hyderabad | Brolly Juniors
+- `/programs/telugu` → Telugu Classes for Kids in Hyderabad | Brolly Juniors
+- `/programs/english` → English Classes for Kids in Hyderabad | Brolly Juniors
+- `/programs/foreign-languages` → Foreign Language Classes for Kids in Hyderabad | Brolly Juniors
+- `/programs/drawing-and-painting` → Drawing Classes for Kids in Hyderabad | Painting | Brolly Juniors
+- `/programs/singing` → Singing Classes for Kids in Hyderabad | Brolly Juniors
+- `/programs/dance` → Dance Classes for Kids in Hyderabad | Brolly Juniors
+- `/programs/music` → Music Classes for Kids in Hyderabad | Brolly Juniors
+- `/programs/drama` → Drama Classes for Kids in Hyderabad | Theatre | Brolly Juniors
+- `/programs/swimming` → Swimming Classes for Kids in Hyderabad | Brolly Juniors
+- `/programs/indoor-games` → Indoor Games Classes for Kids in Hyderabad | Brolly Juniors
+- `/programs/outdoor-games` → Outdoor Games for Kids in Hyderabad | Brolly Juniors
+- `/programs/yoga` → Yoga Classes for Kids in Hyderabad | Brolly Juniors
+- `/programs/financial-literacy` → Financial Literacy Classes for Kids in Hyderabad | Brolly Juniors
+- `/programs/confidence-building` → Confidence Building Classes in Hyderabad | Brolly Juniors
+- `/programs/leadership` → Leadership Classes for Kids in Hyderabad | Brolly Juniors
+- `/programs/problem-solving` → Problem Solving Classes for Kids in Hyderabad | Brolly Juniors
+- `/tuitions/telugu` → Telugu Tuition in Hyderabad | Class 4-10 | Brolly Juniors
+- `/tuitions/english` → English Tuition in Hyderabad | Class 4-10 | Brolly Juniors
+- `/tuitions/hindi` → Hindi Tuition in Hyderabad | Class 4-10 | Brolly Juniors
+- `/tuitions/mathematics` → Maths Tuition in Hyderabad | Class 4-10 | Brolly Juniors
+- `/tuitions/advanced-maths` → Advanced Maths Classes in Hyderabad | Class 7-10 | Brolly Juniors
+- `/tuitions/physics` → Physics Tuition in Hyderabad | Class 8-10 | Brolly Juniors
+- `/tuitions/chemistry` → Chemistry Tuition in Hyderabad | Class 8-10 | Brolly Juniors
+- `/tuitions/biology` → Biology Tuition in Hyderabad | Class 8-10 | Brolly Juniors
+- `/tuitions/general-science` → Science Tuition for Class 4 to 7 in Hyderabad | Brolly Juniors
+- `/tuitions/history` → History Tuition in Hyderabad | Class 6-10 | Brolly Juniors
+- `/tuitions/geography` → Geography Tuition in Hyderabad | Class 6-10 | Brolly Juniors
+- `/tuitions/civics` → Civics Tuition in Hyderabad | Class 6-10 | Brolly Juniors
+- `/tuitions/economics` → Economics Tuition in Hyderabad | Class 9-10 | Brolly Juniors
+- `/tuitions/iit-foundation` → IIT Foundation Classes in Hyderabad | Class 8-10 | Brolly Juniors
+- `/tuitions/jee-foundation` → JEE Foundation Classes in Hyderabad | Class 9-10 | Brolly Juniors
+- `/tuitions/neet-foundation` → NEET Foundation Classes in Hyderabad | Brolly Juniors
+- `/tuitions/olympiad-foundation` → Olympiad Foundation Classes in Hyderabad | Brolly Juniors
+- `/workshops/ai-workshop` → AI Workshop for Kids in Hyderabad | Brolly Juniors
+- `/workshops/python-workshop` → Python Workshop for Kids in Hyderabad | Brolly Juniors
+- `/workshops/coding-workshop` → Coding Workshop for Kids in Hyderabad | Brolly Juniors
+- `/workshops/robotics-workshop` → Robotics Workshop for Kids in Hyderabad | Brolly Juniors
+- `/workshops/abacus-workshop` → Abacus Workshop for Kids in Hyderabad | Brolly Juniors
+- `/workshops/vedic-maths-workshop` → Vedic Maths Workshop for Kids in Hyderabad | Brolly Juniors
+- `/workshops/chess-workshop` → Chess Workshop for Kids in Hyderabad | Brolly Juniors
+- `/workshops/brain-games-workshop` → Brain Games Workshop for Kids in Hyderabad | Brolly Juniors
+- `/workshops/art-workshop` → Art Workshop for Kids in Hyderabad | Painting | Brolly Juniors
+- `/workshops/dance-workshop` → Dance Workshop for Kids in Hyderabad | Brolly Juniors
+- `/workshops/music-workshop` → Music Workshop for Kids in Hyderabad | Brolly Juniors
+- `/workshops/drama-workshop` → Drama Workshop for Kids in Hyderabad | Brolly Juniors
+- `/workshops/public-speaking-workshop` → Public Speaking Workshop for Kids in Hyderabad | Brolly Juniors
+- `/workshops/spoken-english-workshop` → Spoken English Workshop for Kids in Hyderabad | Brolly Juniors
+- `/workshops/communication-skills-workshop` → Communication Skills Workshop in Hyderabad | Brolly Juniors
+- `/age-groups/ages-3-5` → Classes for 3 to 5 Year Olds in Hyderabad | Brolly Juniors
+- `/age-groups/ages-6-8` → Classes for 6 to 8 Year Olds in Hyderabad | Brolly Juniors
+- `/age-groups/ages-9-12` → Classes for 9 to 12 Year Olds in Hyderabad | Brolly Juniors
+- `/age-groups/ages-13-16` → Classes for 13 to 16 Year Olds in Hyderabad | Brolly Juniors

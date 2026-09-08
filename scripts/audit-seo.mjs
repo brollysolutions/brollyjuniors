@@ -28,10 +28,19 @@ const TITLE_MAX = 65;
 const DESC_MIN = 70;
 const DESC_MAX = 165;
 
+/* Link text Google's SEO starter guide names as unhelpful: it describes the act
+   of clicking rather than the page being linked to, so neither a crawler nor
+   somebody tabbing through links learns anything from it. */
+const VAGUE_LINK_TEXT =
+  /^(click here|here|read more|learn more|more|this|link|read|see more|find out more|continue|details|view|go|start)$/i;
+
 const problems = [];
 const warnings = [];
 const titles = new Map();
 const descriptions = new Map();
+/* Every internal path any page links to, accumulated across the whole crawl so
+   orphan pages can be found once the loop finishes. */
+const linkedPaths = new Set();
 
 /* Titles are measured after decoding entities: "&amp;" is four characters in
    the file and one on the results page, and it is the results page that
@@ -56,13 +65,14 @@ for (const url of urls) {
 
   /* Blocker 1: is there real content in the raw HTML, or just the shell? */
   const body = html.match(/<div id="root">([\s\S]*?)<\/body>/);
-  const text = body
-    ? body[1]
-        .replace(/<script[\s\S]*?<\/script>/g, ' ')
-        .replace(/<[^>]+>/g, ' ')
-        .replace(/\s+/g, ' ')
-        .trim()
-    : '';
+  /* Scripts are dropped up front: everything below reads the rendered markup,
+     and a string inside the bundle that happens to look like a tag would
+     otherwise be audited as if it were one. */
+  const markup = body ? body[1].replace(/<script[\s\S]*?<\/script>/g, ' ') : '';
+  const text = markup
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
   if (text.length < 500) {
     note(problems, url, `only ${text.length} characters of rendered text — page did not prerender`);
   }
@@ -72,6 +82,19 @@ for (const url of urls) {
   );
   if (h1s.length === 0) note(problems, url, 'no H1');
   if (h1s.length > 1) note(warnings, url, `${h1s.length} H1 elements — there should be one`);
+
+  /* Heading levels must not skip. Google is explicit that out-of-order headings
+     do not affect Search — this check exists for the screen reader, which
+     announces the outline and gives no way to tell a skipped level from a
+     missing section. Reported once per page; the first jump is always the one
+     worth fixing, and a shared component tends to produce the rest. */
+  const levels = [...markup.matchAll(/<h([1-6])\b/g)].map((m) => Number(m[1]));
+  for (let i = 1; i < levels.length; i += 1) {
+    if (levels[i] > levels[i - 1] + 1) {
+      note(warnings, url, `heading level jumps h${levels[i - 1]} -> h${levels[i]}`);
+      break;
+    }
+  }
 
   /* Blocker 2: a title and description of its own. */
   const rawTitle = (html.match(/<title>([\s\S]*?)<\/title>/) || [])[1];
@@ -106,9 +129,54 @@ for (const url of urls) {
   if (!/application\/ld\+json/.test(html)) note(problems, url, 'no structured data');
 
   /* Images without alt text are both an accessibility failure and a lost
-     ranking signal on a site whose illustrations carry real meaning. */
+     ranking signal on a site whose illustrations carry real meaning. An empty
+     alt="" is counted separately: it is the correct markup for a purely
+     decorative image, but every illustration on this site is doing explanatory
+     work, so an empty one here means the text was forgotten rather than
+     deliberately omitted. */
   const imgsWithoutAlt = [...html.matchAll(/<img(?![^>]*\balt=)[^>]*>/g)].length;
   if (imgsWithoutAlt) note(warnings, url, `${imgsWithoutAlt} image(s) with no alt attribute`);
+
+  /* An empty alt paired with aria-hidden="true" is the standard, deliberate way
+     to mark an image as decorative, and it is not the same mistake. The app
+     launcher icon is the case that forced the distinction: it sits immediately
+     beside the app's name, so giving it alt text makes a screen reader announce
+     the name twice. A bare alt="" with no aria-hidden is still flagged, because
+     that is what a forgotten alt looks like. */
+  const imgsEmptyAlt = [...markup.matchAll(/<img[^>]*\balt=""[^>]*>/g)].filter(
+    (m) => !/aria-hidden="true"/.test(m[0]),
+  ).length;
+  if (imgsEmptyAlt) note(warnings, url, `${imgsEmptyAlt} image(s) with an empty alt=""`);
+
+  /* Link text, and the internal link graph.
+     Anchor text is the description Google is given of the destination page, and
+     the only description a screen reader user gets when listing links. */
+  for (const m of markup.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/g)) {
+    const attrs = m[1];
+    const href = (attrs.match(/href="([^"]*)"/) || [])[1] || '';
+    /* An aria-label replaces the visible text for assistive tech, so an icon-only
+       link that carries one is described perfectly well. */
+    const label = (
+      (attrs.match(/aria-label="([^"]*)"/) || [])[1] ||
+      m[2].replace(/<[^>]+>/g, ' ')
+    )
+      .replace(/\s+/g, ' ')
+      .trim();
+
+    if (!label) note(warnings, url, `link to ${href || '(no href)'} has no text or aria-label`);
+    else if (VAGUE_LINK_TEXT.test(label)) note(warnings, url, `link text "${label}" describes nothing (-> ${href})`);
+
+    if (href.startsWith('/')) linkedPaths.add(href.split(/[?#]/)[0].replace(/\/$/, '') || '/');
+  }
+}
+
+/* Orphan pages. Links are how Google finds most new pages, and a page reachable
+   only from the sitemap is one the crawler has no reason to think matters. */
+for (const url of urls) {
+  const route = url.replace('https://brollyjuniors.com', '') || '/';
+  if (route !== '/' && !linkedPaths.has(route.replace(/\/$/, ''))) {
+    note(warnings, url, 'in the sitemap but no other page links to it');
+  }
 }
 
 /* The 404 must never be indexable — the Apache fallback serves it for every

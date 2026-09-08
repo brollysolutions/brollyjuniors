@@ -1,6 +1,8 @@
 import { getModuleDetail, moduleIndexFromSlug, moduleHref, subjects } from '../data/moduleDetail.js';
 import { getLocation, isCentreArea } from '../data/locations.js';
 import { getArticle } from '../data/articles.js';
+import { getApp } from '../data/apps.js';
+import { getCatalogSeo } from '../data/catalog/index.js';
 import { routes } from './routes.js';
 
 /* Per-route search metadata.
@@ -71,11 +73,17 @@ const DEFAULT = {
 
 /* Static routes. */
 const PAGES = {
+  /* The title carries the target phrase intact, because it is the one place
+     exact wording is worth a little awkwardness — it is what a parent scans in
+     the results list, and docs/KEYWORD_MAP.md holds the title (only the title)
+     to the exact phrase. "Classes" moves into the description, where it still
+     counts and reads better; /programs and /junior-skills carry the
+     class-worded searches as their own targets. */
   '/': {
-    title: 'Kids Classes in Hyderabad | Brolly Juniors',
+    title: 'Kids Activities in Hyderabad | Brolly Juniors',
     description:
-      'AI, Python, Abacus, Phonics, Vedic Maths & Public Speaking classes for children in Hyderabad. Batches of just 8. Trusted by 200+ families. Book a free trial.',
-    keyword: 'kids classes in hyderabad',
+      'Kids activities in Hyderabad that make learning fun: AI, Python, Abacus, Phonics, Vedic Maths, chess and public speaking. Batches of 8. Book a free trial.',
+    keyword: 'kids activities in hyderabad',
     crumb: 'Home',
   },
   '/programs': {
@@ -88,7 +96,7 @@ const PAGES = {
   '/book-free-demo': {
     title: 'Book a Free Trial Class in Hyderabad | Brolly Juniors',
     description:
-      'Book one free trial class at Brolly Juniors Hyderabad. Meet the educator, see the teaching approach, and decide without obligation. Call +91 81868 44555.',
+      'Book one free trial class at Brolly Juniors Hyderabad. Meet the educator, see the teaching approach, and decide without obligation. Call +91 70360 44555.',
     keyword: 'free trial class in hyderabad',
     crumb: 'Book a free trial',
   },
@@ -234,18 +242,10 @@ const PAGES = {
   '/contact': {
     title: 'Contact Brolly Juniors | Kids Classes in Hyderabad',
     description:
-      'Contact Brolly Juniors, Hyderabad. Call +91 81868 44555 or message us on WhatsApp for batch timings, centre directions and free trial class bookings.',
+      'Contact Brolly Juniors, Hyderabad. Call +91 70360 44555 or message us on WhatsApp for batch timings, centre directions and free trial class bookings.',
     keyword: 'contact brolly juniors',
     intent: 'navigational',
     crumb: 'Contact',
-  },
-  '/about': {
-    title: 'About Brolly Juniors | Learning Centre in Hyderabad',
-    description:
-      "Brolly Juniors is Hyderabad's joyful learning home for children aged 4 to Class 10. Small batches of 8, class-wise curricula, and visible outcomes.",
-    keyword: 'about brolly juniors',
-    intent: 'navigational',
-    crumb: 'About',
   },
   '/faqs': {
     title: 'Kids Classes in Hyderabad: FAQs | Brolly Juniors',
@@ -295,6 +295,16 @@ const PAGES = {
     description: 'Track your module scores, badges and learning progress at Brolly Juniors.',
     crumb: 'My Progress',
     noindex: true,
+  },
+  /* The apps hub. Note the keyword carries no city: this is the one part of the
+     site aimed at a national query rather than a Hyderabad one, because an app
+     is not something a parent needs to travel to. See src/data/apps.js. */
+  '/apps': {
+    title: 'Learning Apps for Kids | Brolly Juniors',
+    description:
+      'Free learning apps for kids built by the educators who teach our classes. Starting with Spark Phonics — an offline phonics app for ages 3 to 7, with no ads.',
+    keyword: 'learning apps for kids',
+    crumb: 'Apps',
   },
 };
 
@@ -412,6 +422,27 @@ export function getSeo(pathname) {
     };
   }
 
+  /* --- Catalogue pages: /tuitions/physics, /workshops/ai-workshop,
+         /age-groups/ages-6-8, /programs/chess ---
+     Title, description and keyword are declared next to the page content in
+     data/catalog/, for the same reason the rest of this file exists: the
+     person writing the page is the person who knows what it should rank for. */
+  const catalog = getCatalogSeo(path);
+  if (catalog) {
+    const { crumbTrail, crumb, ...meta } = catalog;
+    return {
+      ...DEFAULT,
+      ...meta,
+      canonical,
+      path,
+      breadcrumbs: [
+        { name: 'Home', path: '/' },
+        ...crumbTrail,
+        ...(crumb ? [{ name: crumb, path }] : []),
+      ],
+    };
+  }
+
   /* --- Neighbourhood pages: /kids-classes-in-kondapur --- */
   const loc = path.match(/^\/kids-classes-in-([a-z0-9-]+)$/);
   if (loc) {
@@ -451,6 +482,28 @@ export function getSeo(pathname) {
           { name: 'Home', path: '/' },
           { name: 'Resources', path: '/resources' },
           { name: article.title, path },
+        ],
+      };
+    }
+  }
+
+  /* --- Apps: /apps/spark-phonics --- */
+  const appMatch = path.match(/^\/apps\/([a-z0-9-]+)$/);
+  if (appMatch) {
+    const app = getApp(appMatch[1]);
+    if (app) {
+      return {
+        title: app.seoTitle,
+        description: clamp(app.seoDescription),
+        keyword: app.keyword,
+        canonical,
+        path,
+        app,
+        ogImage: og(app.ogImage),
+        breadcrumbs: [
+          { name: 'Home', path: '/' },
+          { name: 'Apps', path: '/apps' },
+          { name: app.name, path },
         ],
       };
     }

@@ -61,7 +61,7 @@ export const locations = [
       },
       {
         q: 'Can I just walk in and see the centre?',
-        a: 'Yes. We are open Monday to Saturday, 10:00 am to 7:00 pm. A call first on +91 81868 44555 means someone who teaches the program will be free to talk to you rather than mid-class.',
+        a: 'Yes. We are open Monday to Saturday, 10:00 am to 7:00 pm. A call first on +91 70360 44555 means someone who teaches the program will be free to talk to you rather than mid-class.',
       },
     ],
     voice: null,

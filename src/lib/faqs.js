@@ -1,7 +1,9 @@
-import { familyFaqs, phonicsFaqs, aiFaqs, pythonFaqs } from '../data/site.js';
+import { familyFaqs, phonicsFaqs, abacusFaqs, aiFaqs, pythonFaqs } from '../data/site.js';
 import { infoPages } from '../data/infoPages.js';
+import { catalogPages } from '../data/catalog/index.js';
 import { getArticle } from '../data/articles.js';
 import { getLocation } from '../data/locations.js';
+import { getApp } from '../data/apps.js';
 
 /* Which questions and answers a given route shows.
  *
@@ -33,17 +35,69 @@ export const homeFaqs = [
     q: 'Can my child attend a free trial?',
     a: 'Yes. Every new family can book one free trial class before deciding whether to enrol.',
   },
+  {
+    q: 'What are the best kids activities in Hyderabad?',
+    a: 'It depends on the child. The most requested categories are coding, robotics and AI, abacus and Vedic Maths, chess and brain games, public speaking and communication, and creative activities such as drawing, dance and music. A free trial class in two different categories is the fastest way to find out which one your child actually enjoys.',
+  },
+  {
+    q: 'Are Brolly Juniors classes suitable for beginners?',
+    a: 'Yes. Every program starts from a beginner level and assumes no prior experience. Children are placed by age and current level rather than dropped into an ongoing batch, and the free trial class is used to judge the right starting point.',
+  },
+  {
+    q: 'Do you offer online classes for kids?',
+    a: 'Yes, several programs run as live online batches, which suits families with long travel times or tight weekday schedules. Hands-on programs such as robotics work best in the classroom, so not every program is available online — ask us about the specific class you want.',
+  },
+  {
+    q: 'Are weekend classes available?',
+    a: 'Yes. Weekend batches run alongside weekday after-school slots. Available days and timings vary by program and term, so contact us for the current weekend schedule.',
+  },
+  {
+    q: 'What are the fees for kids classes at Brolly Juniors?',
+    a: 'Fees depend on the program, level, duration and whether you choose classroom or online sessions. We share exact figures on enquiry, so you get the price for your child’s actual plan rather than an average. Call or message us for current fee details.',
+  },
+  {
+    q: 'How do I book a trial class?',
+    a: 'Use the Book a free trial page with your child’s age and the program you are interested in, or message us on WhatsApp or call. We will confirm a slot and let you know whether it will be a classroom or online session.',
+  },
+  {
+    q: 'Where are Brolly Juniors classes available in Hyderabad?',
+    a: 'Classroom sessions run from the centre at Nizampet X Roads, and online batches are open to families across the city — including Kukatpally, Miyapur, Kondapur, Madhapur, Gachibowli, Hitech City, Manikonda and Nallagandla. Contact us to confirm the nearest option for your area.',
+  },
+  {
+    q: 'How can parents track their child’s progress?',
+    a: 'Educators share what improved, attendance and activity completion, the areas to work on and the recommended next step. You can also ask for a review at any point to check whether the current program is still the right fit.',
+  },
+  {
+    q: 'Can my child join more than one program?',
+    a: 'Yes, and many children take one skill-focused program and one creative or physical activity. We usually suggest starting with one, settling into the routine, and adding a second only once the first is comfortable.',
+  },
+  {
+    q: 'Do you run programs for apartments and residential societies?',
+    a: 'Yes. When a group of children in one community wants the same class, we can run weekend batches or holiday camps inside the community’s own activity space. Get in touch with the group size and the age range.',
+  },
 ];
 
 export const allFaqs = [
   ...familyFaqs,
   ...phonicsFaqs.slice(0, 3), // start age, method, duration
+  ...abacusFaqs.slice(1, 4), // start age, beginners, help with maths
   ...aiFaqs(6).slice(1), // tools, sessions, safety
-  ...pythonFaqs(6).slice(1), // sessions, projects, laptop
+  /* The first four only. The Python set now carries a further ten questions
+     for the programme page itself, and repeating all of them here would push
+     everything else off the /faqs page. */
+  ...pythonFaqs(6).slice(1, 4), // sessions, projects, laptop
 ];
 
 const INFO_FAQS = Object.fromEntries(
   infoPages.map((p) => [p.path, p.faqs || familyFaqs])
+);
+
+/* Catalogue topics that carry their own questions. Unlike infoPages these do
+   not fall back to the family set: most catalogue pages have no FAQ block of
+   their own, and emitting the generic questions as this page's FAQPage schema
+   would be markup that is not on the page. */
+const CATALOG_FAQS = Object.fromEntries(
+  catalogPages.filter((p) => p.faqs).map((p) => [p.path, p.faqs])
 );
 
 export function getFaqs(pathname) {
@@ -52,6 +106,7 @@ export function getFaqs(pathname) {
   if (path === '/') return homeFaqs;
   if (path === '/faqs') return allFaqs;
   if (INFO_FAQS[path]) return INFO_FAQS[path];
+  if (CATALOG_FAQS[path]) return CATALOG_FAQS[path];
 
   const cls = path.match(/^\/(ai|python)-for-kids\/class-(\d+)$/);
   if (cls) return cls[1] === 'ai' ? aiFaqs(Number(cls[2])) : pythonFaqs(Number(cls[2]));
@@ -62,13 +117,16 @@ export function getFaqs(pathname) {
   const art = path.match(/^\/resources\/([a-z0-9-]+)$/);
   if (art) return getArticle(art[1])?.faqs || null;
 
+  const app = path.match(/^\/apps\/([a-z0-9-]+)$/);
+  if (app) return getApp(app[1])?.faqs || null;
+
   const loc = path.match(/^\/kids-classes-in-([a-z0-9-]+)$/);
   if (loc) {
     const location = getLocation(loc[1]);
     return location ? [...location.faqs, ...familyFaqs] : null;
   }
 
-  if (['/contact', '/book-free-demo', '/programs', '/junior-skills', '/about'].includes(path)) {
+  if (['/contact', '/book-free-demo', '/programs', '/junior-skills'].includes(path)) {
     return familyFaqs;
   }
 

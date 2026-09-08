@@ -1,5 +1,6 @@
 import { site, address, openingHours, socialProfiles, areasServed, formattedAddress } from '../data/site.js';
 import { publishedLocations, locationPath } from '../data/locations.js';
+import { apps, appPath, developer, isLive } from '../data/apps.js';
 import { SITE_URL, DEFAULT_OG_IMAGE } from './seo.js';
 
 /* JSON-LD structured data.
@@ -270,6 +271,98 @@ function resourceListNode(seo, articles) {
   };
 }
 
+/* The app itself.
+ *
+ * Two deliberate omissions. There is no aggregateRating — the same rule as
+ * everywhere else in this file, and doubly so here, because Google's app rich
+ * result is the one that most visibly rewards a rating and the fastest way to
+ * lose rich results for the whole domain is to publish one that cannot be
+ * traced to real reviews. Add it when the Play listing has genuine ratings, and
+ * take the numbers from there.
+ *
+ * And `installUrl` appears only when the store listing is confirmed live — it
+ * is emitted from playUrl in src/data/apps.js, which stays blank until the
+ * listing exists. Pointing structured data at a 404 is worse than pointing it
+ * nowhere.
+ *
+ * The developer is named as a separate Organization rather than reusing ORG_ID.
+ * Brolly Software Solutions and Brolly Juniors share a name and a team, but
+ * asserting they are one entity is a claim this file has no evidence for.
+ */
+function softwareAppNode(seo) {
+  const app = seo.app;
+  if (!app) return undefined;
+  return {
+    '@type': ['SoftwareApplication', 'MobileApplication'],
+    '@id': `${seo.canonical}#app`,
+    name: app.name,
+    alternateName: app.tagline,
+    description: app.quickAnswer,
+    url: seo.canonical,
+    installUrl: app.playUrl || undefined,
+    sameAs: app.playUrl || undefined,
+    applicationCategory: 'EducationalApplication',
+    applicationSubCategory: 'Phonics and early reading',
+    operatingSystem: app.platform,
+    inLanguage: 'en',
+    /* Two images, both genuinely of this app: the share card, and the launcher
+       icon from the Play listing. The icon is the one a store-style rich result
+       can actually use. */
+    image: [seo.ogImage, SITE_URL + app.icon].filter(Boolean),
+    /* Real device captures only. schema.org means an actual screenshot of the
+       running app, so this stayed empty while the only artwork here was an
+       illustration — publishing a drawing under this property is a small lie a
+       reviewer can check in one click. It is emitted from app.screenshots,
+       which are the same images the Play listing carries. */
+    screenshot: (app.screenshots || []).map((sh) => SITE_URL + sh.src),
+    featureList: app.features.map((f) => f.title),
+    /* Free to download and free to start. The paid unlock is not an in-app
+       purchase and has no published price, so no price is stated for it.
+       `availability` is asserted only once the app is actually downloadable —
+       while an app is in testing the property is dropped rather than downgraded
+       to PreOrder, which would claim an ordering process that does not exist.
+       Spark Phonics is live, so this now resolves to InStock, matching what
+       Play's own listing markup says. */
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'INR',
+      availability: isLive(app) ? 'https://schema.org/InStock' : undefined,
+    },
+    audience: {
+      '@type': 'PeopleAudience',
+      suggestedMinAge: 3,
+      suggestedMaxAge: 7,
+    },
+    author: {
+      '@type': 'Organization',
+      name: developer.name,
+      url: developer.url,
+    },
+    isAccessibleForFree: true,
+    /* The centre that uses it in its classes — the link between this app and the
+       organisation node, stated as a relationship rather than as ownership. */
+    provider: { '@id': ORG_ID },
+  };
+}
+
+/* The apps hub, told it is a hub rather than a thin page — same reasoning as
+   the guides list above. */
+function appListNode(seo) {
+  if (seo.path !== '/apps' || !apps.length) return undefined;
+  return {
+    '@type': 'ItemList',
+    '@id': `${seo.canonical}#apps`,
+    name: 'Learning apps by Brolly Juniors',
+    itemListElement: apps.map((a, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      url: SITE_URL + appPath(a.slug),
+      name: a.name,
+    })),
+  };
+}
+
 function areaListNode(seo) {
   if (seo.path !== '/contact' || !publishedLocations.length) return undefined;
   return {
@@ -298,8 +391,10 @@ export function buildJsonLd(seo, extras = {}) {
     courseNode(seo),
     articleNode(seo),
     locationServiceNode(seo),
-    faqNode(extras.faqs || seo.article?.faqs || seo.location?.faqs, seo.canonical),
+    softwareAppNode(seo),
+    faqNode(extras.faqs || seo.article?.faqs || seo.location?.faqs || seo.app?.faqs, seo.canonical),
     resourceListNode(seo, extras.articles),
+    appListNode(seo),
     areaListNode(seo),
   ].filter(Boolean);
 

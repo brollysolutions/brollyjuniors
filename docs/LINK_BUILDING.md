@@ -29,7 +29,7 @@ For existing partners, ask. This email works because it asks for a specific thin
 > Happy to send a logo in whatever format your web team needs, and to write the paragraph if that is easier. We will of course list [School] on our side as well.
 >
 > Thank you,
-> [Name] · Brolly Juniors · +91 81868 44555
+> [Name] · Brolly Juniors · +91 70360 44555
 
 **Also do the reverse.** Create a partner-schools section on `/schools` naming the schools you work with, with their permission. Reciprocal links between two genuinely related organisations are completely legitimate, and the page becomes a reason for the school to link back.
 
@@ -63,7 +63,7 @@ Then email each one:
 >
 > Happy to send photographs, or to answer anything for the piece. No obligation either way.
 >
-> [Name] · Brolly Juniors · +91 81868 44555
+> [Name] · Brolly Juniors · +91 70360 44555
 
 **Send ten. Expect two or three.** That is a normal rate and it is a good rate.
 
@@ -92,7 +92,7 @@ The pitch is four sentences, not a press release:
 >
 > Happy to put you in touch with parents, or to have you sit in on a session. There are numbers behind it too, if that is useful.
 >
-> [Name] · Brolly Juniors · +91 81868 44555
+> [Name] · Brolly Juniors · +91 70360 44555
 
 ---
 

@@ -30,7 +30,23 @@ if (!existsSync(distDir)) {
 const { getSeo } = await import(pathToFileURL(path.join(root, 'src/lib/seo.js')).href);
 const { routes } = await import(pathToFileURL(path.join(root, 'src/lib/routes.js')).href);
 
-const strip = (html) => html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+/* Turning tags into text, the way a browser would.
+ *
+ * Replacing every tag with a space is wrong for inline elements: a heading
+ * built from per-letter <span>s — the jumbled H1 on the home page — came back
+ * as "K i d s   a c t i v i t i e s" and failed a keyword check that the
+ * rendered page passes. Chrome reports the H1's textContent as the plain
+ * sentence, because inline elements introduce no whitespace of their own.
+ *
+ * So: inline tags close up, everything else becomes a space, which is what
+ * separates two block elements whose text would otherwise run together. */
+const INLINE = /^<\/?(?:span|a|b|strong|i|em|small|sup|sub|mark|abbr|code|u|s|q|cite|time|bdi|bdo|wbr)\b/i;
+
+const strip = (html) =>
+  html
+    .replace(/<[^>]+>/g, (tag) => (INLINE.test(tag) ? '' : ' '))
+    .replace(/\s+/g, ' ')
+    .trim();
 const norm = (s) => s.toLowerCase().replace(/[^a-z0-9 ]+/g, ' ').replace(/\s+/g, ' ').trim();
 
 /* The title is held to the exact phrase — it is the one place where matching

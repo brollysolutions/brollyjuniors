@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { site, address, formattedAddress } from '../data/site.js';
 import { publishedLocations, locationPath } from '../data/locations.js';
 import { articles } from '../data/articles.js';
+import { apps, appPath } from '../data/apps.js';
 
 const columns = [
   {
@@ -28,6 +29,18 @@ const columns = [
     ],
   },
   {
+    heading: 'Tuitions',
+    links: [
+      ['All tuitions · Classes 4–10', '/tuitions'],
+      ['Maths tuition', '/tuitions/mathematics'],
+      ['Physics tuition', '/tuitions/physics'],
+      ['Chemistry tuition', '/tuitions/chemistry'],
+      ['Biology tuition', '/tuitions/biology'],
+      ['English tuition', '/tuitions/english'],
+      ['IIT Foundation', '/tuitions/iit-foundation'],
+    ],
+  },
+  {
     heading: 'Schools',
     links: [
       ['School Partnerships', '/schools/school-partnership-program'],
@@ -40,9 +53,15 @@ const columns = [
   {
     heading: 'Explore',
     links: [
-      ['Our Story', '/about'],
       ['How We Teach', '/teaching-methodology'],
+      ['Holiday Workshops', '/workshops'],
+      ['Classes by Age', '/age-groups'],
       ['Student Projects', '/student-projects'],
+      /* Both the hub and each app: the app pages are the only ones here a
+         parent outside Hyderabad might link to, so they get a link from every
+         page rather than only from the hub. */
+      ['Apps for Kids', '/apps'],
+      ...apps.map((a) => [`${a.name} app`, appPath(a.slug)]),
       ['Guides for Parents', '/resources'],
       ['FAQs', '/faqs'],
       ['Contact', '/contact'],
@@ -89,7 +108,10 @@ export default function Footer() {
           </div>
           {columns.map((col) => (
             <div className="footer-col" key={col.heading}>
-              <h4>{col.heading}</h4>
+              {/* Footer column labels are h2, not h4. They are peers of the page's
+                  own section headings, and as h4 they left every page in the site
+                  with an h2 -> h4 jump in its outline. */}
+              <h2>{col.heading}</h2>
               <ul>
                 {col.links.map(([label, to]) => (
                   <li key={to + label}>
@@ -102,7 +124,7 @@ export default function Footer() {
         </div>
         <div className="footer-strips">
           <div className="footer-strip">
-            <h4>Areas we serve</h4>
+            <h2>Areas we serve</h2>
             <ul>
               {areaLinks.map(([label, to]) => (
                 <li key={to}>
@@ -112,7 +134,7 @@ export default function Footer() {
             </ul>
           </div>
           <div className="footer-strip">
-            <h4>Guides for parents</h4>
+            <h2>Guides for parents</h2>
             <ul>
               {guideLinks.map(([label, to]) => (
                 <li key={to}>

@@ -1,4 +1,5 @@
 import { familyFaqs } from '../data/site.js';
+import { appForProgram } from '../data/apps.js';
 import {
   PageHero,
   QuickAnswer,
@@ -7,10 +8,16 @@ import {
   Pillars,
   FaqList,
   CtaBand,
+  AppCallout,
+  PageBlocks,
 } from '../components/Shared.jsx';
 
 export default function InfoPage({ page }) {
   const [first, ...rest] = page.sections;
+  /* Resolved from the app data rather than declared on the page, so adding an
+     app that practises a program is a one-file change. Most programs have no
+     app, and render exactly as before. */
+  const app = appForProgram(page.path);
 
   return (
     <>
@@ -84,13 +91,21 @@ export default function InfoPage({ page }) {
         </section>
       )}
 
+      {/* Optional extra blocks — age bands, session rhythm, fee formats, areas
+          served. Pages without a `blocks` array render exactly as before. */}
+      <PageBlocks blocks={page.blocks} />
+
+      {app && <AppCallout app={app} />}
+
       <section className="section-tight">
         <div className="container">
           <Pillars />
         </div>
       </section>
 
-      <FaqList items={page.faqs || familyFaqs} />
+      {/* A page with its own FAQ set usually wants its own heading too — the
+          default speaks for the site, not for one programme. */}
+      <FaqList items={page.faqs || familyFaqs} title={page.faqTitle} />
       <CtaBand variant={page.cta} />
     </>
   );

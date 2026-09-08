@@ -8,10 +8,10 @@
 Options -MultiViews
 
 # mod_dir sees /junior-skills/abacus, notices a directory of that name, and
-# 301s to /junior-skills/abacus/ before rule 3 below ever runs — observed live
+# 301s to /junior-skills/abacus/ before rule 4 below ever runs — observed live
 # on this host, which is LiteSpeed reporting itself as Apache. That breaks
 # every canonical: the sitemap and the canonical tag both name the slashless
-# URL, which then never answers 200. Turning it off lets rule 3 serve
+# URL, which then never answers 200. Turning it off lets rule 4 serve
 # .../index.html internally, with no redirect for a crawler to follow.
 #
 # Requires AllowOverride Indexes (cPanel/LiteSpeed hosts set All by default).
@@ -21,7 +21,7 @@ Options -MultiViews
   DirectorySlash Off
 </IfModule>
 
-# DirectorySlash Off means a directory request that somehow slips past rule 3
+# DirectorySlash Off means a directory request that somehow slips past rule 4
 # would otherwise hit mod_autoindex and list its contents. Deny that outright.
 Options -Indexes
 
@@ -30,13 +30,30 @@ RewriteEngine On
 RewriteBase /
 
 # ---------------------------------------------------------------------------
-# 1. Force HTTPS  (mirrors conf/apache/forceHttps.conf)
+# 1. Canonical host: www -> non-www.
+#
+#    cPanel creates the www alias automatically, so without this the whole site
+#    answers 200 on two hostnames. Every canonical tag, the sitemap and llms.txt
+#    name the bare domain, so the www copy is a duplicate of all 140 pages.
+#    Google usually resolves that from the canonical tag alone, but its starter
+#    guide asks for a redirect where one is possible, and here one is.
+#
+#    Rewrites straight to https://, so www + http still costs a single hop.
+#    %1 is the hostname without the "www." captured by the condition.
+#    .well-known is excluded for the same reason as rule 2 — the certificate
+#    challenge for the www name has to be answerable at the www name.
+# ---------------------------------------------------------------------------
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule !^\.well-known($|/) https://%1%{REQUEST_URI} [L,R=301]
+
+# ---------------------------------------------------------------------------
+# 2. Force HTTPS  (mirrors conf/apache/forceHttps.conf)
 # ---------------------------------------------------------------------------
 RewriteCond %{HTTPS} !=on
 RewriteRule !^\.well-known($|/) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # ---------------------------------------------------------------------------
-# 2. Legacy static .html URLs -> SPA routes (301, permanent)
+# 3. Legacy static .html URLs -> SPA routes (301, permanent)
 #    These are the pages currently indexed. Drop any line only once the old
 #    URL has fully dropped out of Search Console.
 # ---------------------------------------------------------------------------
@@ -89,7 +106,7 @@ RewriteRule ^programs/ai[^/]*$                 /ai-for-kids                    [
 RewriteRule ^programs/(python|coding)[^/]*$    /python-for-kids                [R=301,L]
 # Anything else that used to sit under /programs/ reaches the hub, not a 404.
 #
-# The two conditions are load-bearing, not defensive. Rule 3 below rewrites
+# The two conditions are load-bearing, not defensive. Rule 4 below rewrites
 # /programs to /programs/index.html, and because that substitution starts with a
 # slash Apache treats it as a new internal request and runs this file again. On
 # that second pass the bare pattern matched "programs/index.html" and 301'd it
@@ -117,14 +134,16 @@ RewriteRule ^schools-ai-coding-clubs-hyderabad\.html$            /schools/ai-and
 RewriteRule ^schools-teacher-training-hyderabad\.html$           /schools/teacher-training            [R=301,L]
 
 # Company / content
-RewriteRule ^about\.html$            /about           [R=301,L]
+# The About page was retired; its story now lives on the home page.
+RewriteRule ^about\.html$            /                [R=301,L]
+RewriteRule ^about/?$                /                [R=301,L]
 RewriteRule ^contact\.html$          /contact         [R=301,L]
 RewriteRule ^book-free-demo\.html$   /book-free-demo  [R=301,L]
 RewriteRule ^student-projects\.html$ /student-projects [R=301,L]
 RewriteRule ^resources\.html$        /resources       [R=301,L]
 
 # ---------------------------------------------------------------------------
-# 3. Prerendered pages.
+# 4. Prerendered pages.
 #    The build now writes a real HTML file per route: /about becomes
 #    /about/index.html. Serving it internally here means Apache does not issue
 #    its usual "add a trailing slash" 301 first — every URL in the sitemap
@@ -136,7 +155,7 @@ RewriteCond %{REQUEST_FILENAME}/index.html -f
 RewriteRule ^(.*[^/])/?$ /$1/index.html [L]
 
 # ---------------------------------------------------------------------------
-# 4. Everything else that does not exist is genuinely missing.
+# 5. Everything else that does not exist is genuinely missing.
 #    Returning a real 404 rather than quietly serving the home page matters:
 #    a fallback that answers 200 for every mistyped URL is a "soft 404", and
 #    Google treats a site full of them as a site it cannot trust. ErrorDocument
