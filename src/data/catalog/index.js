@@ -17,6 +17,7 @@ import { tuitions } from './tuitions.js';
 import { workshops } from './workshops.js';
 import { ageGroups } from './ageGroups.js';
 import { ownedTopics, topicAsPage, topicPath, topicHref } from './shape.js';
+import { programmeDetails } from '../programmeDetails.js';
 
 export { topicPath, topicHref, ownedTopics } from './shape.js';
 
@@ -151,9 +152,24 @@ export const catalogHubs = [
   },
 ];
 
-/* Every owned topic, as an InfoPage-shaped object with its path attached. */
+/* Every owned topic, as an InfoPage-shaped object with its path attached.
+ *
+ * A topic that also has an entry in data/programmeDetails.js gets it merged in
+ * as `detail`, which is what makes App.jsx render it through the long-form
+ * ProgrammePage instead of the short InfoPage. The FAQ set comes with it, so
+ * lib/faqs.js keeps emitting the same questions the page actually shows. */
 export const catalogPages = catalogSections.flatMap((section) =>
-  ownedTopics(section).map((topic) => topicAsPage(section, topic))
+  ownedTopics(section).map((topic) => {
+    const page = topicAsPage(section, topic);
+    const detail = programmeDetails[page.path];
+    if (!detail) return page;
+    return {
+      ...page,
+      detail,
+      faqs: detail.faqs || page.faqs,
+      faqTitle: detail.faqTitle || page.faqTitle,
+    };
+  })
 );
 
 /* Path -> the section and topic that own it, for lib/seo.js. */

@@ -32,6 +32,7 @@ import PublicSpeakingPage from './pages/PublicSpeakingPage.jsx';
 import SpokenEnglishPage from './pages/SpokenEnglishPage.jsx';
 import CommunicationSkillsPage from './pages/CommunicationSkillsPage.jsx';
 import ForeignLanguagesPage from './pages/ForeignLanguagesPage.jsx';
+import ProgrammePage from './pages/ProgrammePage.jsx';
 import Resources from './pages/Resources.jsx';
 import AbacusWorksheets from './pages/AbacusWorksheets.jsx';
 import Article from './pages/Article.jsx';
@@ -150,7 +151,12 @@ export default function App() {
             <Route key={hub.path} path={hub.path} element={<CatalogHub hub={hub} />} />
           ))}
           {catalogPages.map((page) => {
-            const Custom = CUSTOM_CATALOG_PAGES[page.path];
+            /* A topic renders through its own component if it has one, then
+               through the shared long-form ProgrammePage if data/programmeDetails.js
+               carries a body for it, and otherwise through the short InfoPage.
+               Adding a detail block is therefore all it takes to promote a
+               topic to a full page. */
+            const Custom = CUSTOM_CATALOG_PAGES[page.path] || (page.detail ? ProgrammePage : null);
             return (
               <Route
                 key={page.path}
