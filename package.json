@@ -11,7 +11,8 @@
     "prerender": "node scripts/prerender.mjs",
     "audit:seo": "node scripts/audit-seo.mjs",
     "test:worksheet": "node scripts/test-worksheet.mjs",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "verify:deploy": "node scripts/verify-deployment.mjs"
   },
   "dependencies": {
     "react": "^18.3.1",

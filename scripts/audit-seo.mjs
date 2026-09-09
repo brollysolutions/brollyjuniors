@@ -126,7 +126,58 @@ for (const url of urls) {
     note(problems, url, 'is noindex but appears in the sitemap');
   }
 
-  if (!/application\/ld\+json/.test(html)) note(problems, url, 'no structured data');
+  /* Structured data: parsed, not just present.
+     A JSON-LD block with a syntax error is worse than none at all — Google
+     discards the whole block silently, so the page looks fine in the HTML and
+     wins nothing. Checking only that the string "ld+json" appears (which is
+     what this did before) would not have caught that. */
+  const ldBlocks = [...html.matchAll(/<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)];
+  if (!ldBlocks.length) {
+    note(problems, url, 'no structured data');
+  } else {
+    for (const block of ldBlocks) {
+      let parsed;
+      try {
+        parsed = JSON.parse(block[1]);
+      } catch (e) {
+        note(problems, url, `structured data is not valid JSON: ${e.message}`);
+        continue;
+      }
+      const nodes = Array.isArray(parsed) ? parsed : parsed['@graph'] || [parsed];
+      for (const node of nodes) {
+        const types = [].concat(node['@type'] || []);
+        /* Only the properties Google documents as required for the rich
+           result. Anything beyond that is a matter of taste, and a warning
+           nobody can action is a warning everybody learns to ignore. */
+        const required = {
+          Article: ['headline', 'author', 'datePublished', 'image'],
+          Course: ['name', 'description', 'provider'],
+          VideoObject: ['name', 'description', 'thumbnailUrl', 'uploadDate'],
+          FAQPage: ['mainEntity'],
+          BreadcrumbList: ['itemListElement'],
+        };
+        for (const type of types) {
+          for (const prop of required[type] || []) {
+            if (!node[prop] || (Array.isArray(node[prop]) && !node[prop].length)) {
+              note(problems, url, `${type} structured data is missing ${prop}`);
+            }
+          }
+        }
+        /* A Course with no instance and no offer is ineligible for the course
+           rich result, which is the only reason to emit Course at all. */
+        if (types.includes('Course') && !node.hasCourseInstance && !node.offers) {
+          note(warnings, url, 'Course has neither hasCourseInstance nor offers');
+        }
+      }
+    }
+  }
+
+  /* Share cards. Enquiries for this business arrive over WhatsApp, so a link
+     that previews as a blank rectangle is a real lost enquiry, not a cosmetic
+     problem. */
+  if (!/property="og:title"/.test(html)) note(problems, url, 'no og:title');
+  if (!/property="og:image"/.test(html)) note(problems, url, 'no og:image');
+  if (!/name="twitter:card"/.test(html)) note(warnings, url, 'no twitter:card');
 
   /* Images without alt text are both an accessibility failure and a lost
      ranking signal on a site whose illustrations carry real meaning. An empty
@@ -167,6 +218,94 @@ for (const url of urls) {
     else if (VAGUE_LINK_TEXT.test(label)) note(warnings, url, `link text "${label}" describes nothing (-> ${href})`);
 
     if (href.startsWith('/')) linkedPaths.add(href.split(/[?#]/)[0].replace(/\/$/, '') || '/');
+  }
+}
+
+/* ---------------------------------------------------------------------------
+ * Does every internal link actually go somewhere?
+ *
+ * The crawl above collected every internal href but never checked that any of
+ * them resolve. A link to a route that was renamed costs a real visitor a 404
+ * and hands the crawler a dead end, and nothing in the build fails when it
+ * happens — the page still renders, the link is still blue.
+ *
+ * "Resolves" means one of: a prerendered page, a real file in dist/, or one of
+ * the deliberate non-indexable pages below.
+ * ------------------------------------------------------------------------- */
+
+/* Reachable but intentionally kept out of the sitemap. /my-progress is
+   personalised and Disallow'd in robots.txt; it is linked on purpose. */
+const INTENTIONALLY_UNLISTED = new Set(['/my-progress']);
+
+const sitemapRoutes = new Set(
+  urls.map((u) => u.replace('https://brollyjuniors.com', '').replace(/\/$/, '') || '/')
+);
+
+/** A path resolves if it is a known route or a real file shipped in dist/. */
+function resolves(p) {
+  if (sitemapRoutes.has(p) || INTENTIONALLY_UNLISTED.has(p)) return true;
+  if (existsSync(path.join(distDir, p, 'index.html'))) return true;
+  if (p !== '/' && existsSync(path.join(distDir, p))) return true;
+  return false;
+}
+
+for (const p of linkedPaths) {
+  if (!resolves(p)) problems.push(`${p} — linked from the site but no such page or file exists`);
+}
+
+/* ---------------------------------------------------------------------------
+ * Server routing config.
+ *
+ * This site is served by nginx (see nginx.conf); public/.htaccess is kept for
+ * an Apache host. Both files carry the legacy 301s that preserve the authority
+ * of URLs indexed under the old site, and both are invisible to every other
+ * check here — a redirect pointing at a route that no longer exists produces a
+ * 301 into a 404, which is worse than the 200 it replaced.
+ *
+ * Checked statically rather than by running a server, so it works in CI and on
+ * a machine with no container runtime.
+ * ------------------------------------------------------------------------- */
+async function auditRedirectTargets(file, label, extract) {
+  const full = path.join(root, file);
+  if (!existsSync(full)) {
+    warnings.push(`${label} — ${file} is missing`);
+    return;
+  }
+  const text = await readFile(full, 'utf8');
+  for (const target of extract(text)) {
+    /* Targets with a capture group ($1) depend on the matched URL, so the
+       literal string is not a path that can be checked. */
+    if (target.includes('$')) continue;
+    const clean = target.split(/[?#]/)[0].replace(/\/$/, '') || '/';
+    if (!resolves(clean)) {
+      problems.push(`${label} — redirects to ${target}, which is not a page on this site`);
+    }
+  }
+}
+
+await auditRedirectTargets('nginx.conf', 'nginx.conf', (text) =>
+  [...text.matchAll(/^\s*rewrite\s+\S+\s+(\/\S*)\s+permanent;/gm)].map((m) => m[1])
+);
+await auditRedirectTargets('public/.htaccess', '.htaccess', (text) =>
+  [...text.matchAll(/^\s*RewriteRule\s+\S+\s+(\/\S*)\s+\[[^\]]*R=301[^\]]*\]/gm)].map((m) => m[1])
+);
+
+/* The nginx config and the .htaccess must agree about the legacy URLs, or the
+   site behaves differently depending on which host it is deployed to — which
+   is precisely how the redirect layer came to be silently missing in
+   production after the move from Apache to nginx. */
+if (existsSync(path.join(root, 'nginx.conf')) && existsSync(path.join(root, 'public/.htaccess'))) {
+  const nginxText = await readFile(path.join(root, 'nginx.conf'), 'utf8');
+  const htaccessText = await readFile(path.join(root, 'public/.htaccess'), 'utf8');
+  const legacyHtml = new Set(
+    [...htaccessText.matchAll(/^\s*RewriteRule\s+\^([a-z0-9-]+\\?\.html)\$/gm)].map((m) =>
+      m[1].replace('\\', '')
+    )
+  );
+  for (const page of legacyHtml) {
+    if (!nginxText.includes(page.replace('.', '\\.'))) {
+      warnings.push(`nginx.conf — has no redirect for legacy URL /${page}, but .htaccess does`);
+    }
   }
 }
 

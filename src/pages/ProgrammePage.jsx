@@ -190,6 +190,36 @@ function Extra({ block }) {
           </div>
         );
 
+      /* A comparison table. Reuses the .compare-table styling that
+         pages/Article.jsx already uses, so a table looks the same wherever it
+         appears and inherits the same fonts. .table-scroll keeps a wide table
+         inside its own scroll area rather than making the page scroll
+         sideways on a phone. */
+      case 'table':
+        return (
+          <div className="table-scroll">
+            <table className="compare-table">
+              <thead>
+                <tr>
+                  {block.head.map((h) => (
+                    <th key={h || 'blank'}>{h}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {block.rows.map((row) => (
+                  <tr key={row[0]}>
+                    <th scope="row">{row[0]}</th>
+                    {row.slice(1).map((cell, i) => (
+                      <td key={i}>{cell}</td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        );
+
       case 'quiz':
         return <ChallengeQuiz items={block.items} noun={block.noun} />;
 

@@ -51,9 +51,61 @@ node scripts/keyword-map.mjs      # rewrites docs/KEYWORD_MAP.md
 
 ---
 
+## ⚠️ The server config is part of the SEO, and it is not in `dist/`
+
+The site is served by **nginx** (`nginx.conf`, baked into the image by the
+`Dockerfile`). It used to be served by Apache/LiteSpeed on a shared host, where
+`public/.htaccess` did four jobs that nothing else does:
+
+- redirected `www` to the canonical host
+- 301'd every legacy URL from the old site to its successor
+- served `/programs` from `/programs/index.html` **without** adding a trailing slash
+- returned a real 404 for unknown URLs instead of the home page
+
+**nginx never reads `.htaccess`.** When the deployment moved into a container,
+all four silently stopped applying while the build stayed perfect — so nothing
+in the repository could detect it. Measured on production before `nginx.conf`
+was rewritten to carry the same rules:
+
+| URL | Was | Should be |
+|---|---|---|
+| `/junior-skills/abacus` | `301` → `…/abacus/` | `200` |
+| `/abacus-classes-in-hyderabad.html` | `200`, the home page | `301` → `/junior-skills/abacus` |
+| `/any-mistyped-url` | `200`, indexable home page | `404` |
+| `www.brollyjuniors.com` | `200`, all 204 pages duplicated | `301` |
+
+Every canonical URL in the sitemap redirected rather than answering, which is
+the most expensive of the four: the URL Google was told to index was a URL that
+never served the page.
+
+`public/.htaccess` is kept, because it is what an Apache host would need and it
+documents the same decisions. **If you change the redirects in one file, change
+them in the other** — `npm run audit:seo` warns when they disagree.
+
+---
+
 ## Deploy
 
-Upload the **entire contents** of `dist/` to `/public_html` on the shared host.
+Build the image and restart the container:
+
+```bash
+# 1. Check the config parses, before it reaches anything that serves traffic.
+docker run --rm -v "$PWD/nginx.conf:/etc/nginx/conf.d/default.conf:ro" nginx:1.27-alpine nginx -t
+
+# 2. Build and start.
+docker compose up -d --build
+
+# 3. Prove the server behaves, not just that it started.
+npm run verify:deploy
+```
+
+`nginx.conf` is copied in at build time, so a config change needs `--build`, not
+just a restart. Step 1 matters because a config error makes the container
+crash-loop, which looks like a deploy failure rather than a config typo.
+
+> On a shared/Apache host instead, upload the **entire contents** of `dist/` to
+> `/public_html`. `.htaccess` is a dotfile — most FTP clients hide it, and
+> without it every page except the home page 404s.
 
 Three things people get wrong:
 
@@ -61,21 +113,26 @@ Three things people get wrong:
 2. **Upload the directories.** `dist/about/index.html`, `dist/junior-skills/abacus/index.html` and so on. The directory structure *is* the routing.
 3. **Delete stale files.** Old hashed assets in `assets/` can be left; old HTML files at paths no longer in the sitemap should be removed, or they stay indexed.
 
-### After deploying, check these four things
+### After deploying, run the deployment check
 
 ```bash
-# 1. A deep page returns 200 and contains real content, not an empty div
-curl -s https://brollyjuniors.com/junior-skills/abacus | grep -c "<h1"
-
-# 2. No trailing-slash redirect — this must print 200, not 301
-curl -s -o /dev/null -w "%{http_code}\n" https://brollyjuniors.com/junior-skills/abacus
-
-# 3. An unknown URL returns a real 404, not 200
-curl -s -o /dev/null -w "%{http_code}\n" https://brollyjuniors.com/does-not-exist
-
-# 4. The sitemap is live
-curl -s https://brollyjuniors.com/sitemap.xml | grep -c "<loc>"     # expect 136
+npm run verify:deploy                          # checks https://brollyjuniors.com
+npm run verify:deploy -- http://localhost:8080 # or a staging container
 ```
+
+This is the check whose absence let the Apache→nginx regression run unnoticed.
+It asks the **live server** the questions `audit:seo` cannot, because
+`audit:seo` only ever reads `dist/`:
+
+- do canonical URLs from the sitemap answer `200`, or redirect?
+- does an unknown URL return `404`, or a soft-404 home page?
+- does each legacy URL in `nginx.conf` actually 301 to its successor?
+- does `www` redirect? does `http` redirect?
+- is the HTML compressed, prerendered, and served with an `<h1>`?
+
+It exits non-zero on failure, so it can gate a deploy. Run it **after every
+deploy and after any server or DNS change** — those are the changes no test in
+this repository can see.
 
 Then, in Search Console: **URL Inspection → Test live URL → View tested page → HTML** on `/junior-skills/abacus`. You should see the heading and the body copy. This is the definitive confirmation that Blocker 1 is fixed in production, and it is worth doing once by hand.
 
