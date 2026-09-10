@@ -142,6 +142,53 @@ async function pool(items, limit, fn) {
 }
 
 /* ---------------------------------------------------------------------------
+ * 1c. The same, for the /<path>/index.html twin.
+ *
+ * Rule 5 resolves a clean URL by appending /index.html, so the file also
+ * answered 200 under its own name — a third URL for every page, on top of the
+ * slashed form. Search Console filed 34 of them as "Alternate page with proper
+ * canonical tag": the canonical was obeyed, the duplicate still cost crawl
+ * budget.
+ *
+ * Worth a live check rather than trusting the config, because the rule that
+ * fixes it cannot be written against $uri. nginx re-runs the server rewrite
+ * phase after an internal redirect, so a $uri-based rule also matches the SPA
+ * fallback's own try_files target and 301s unknown module URLs to the home
+ * page. Only $request_uri distinguishes the two, and only a request proves it.
+ * ------------------------------------------------------------------------- */
+{
+  const probes = sampleMode ? canonicalRoutes.slice(0, 4) : canonicalRoutes.slice(0, 25);
+  const dupes = [];
+  await pool(probes, 8, async (route) => {
+    const { status } = await head(`${base}${route === '/' ? '' : route}/index.html`);
+    if (status === 200) dupes.push(route);
+  });
+  record(
+    dupes.length === 0,
+    `/index.html twins redirect (${probes.length} sampled)`,
+    `${dupes.length} answer 200 at both /path and /path/index.html, e.g. ${dupes.slice(0, 3).join(', ')} — a duplicate of every page`
+  );
+}
+
+/* ---------------------------------------------------------------------------
+ * 1d. The SPA fallback must still reach the app, not redirect.
+ *
+ * The guard for the rule above: an unknown module URL has no prerendered file
+ * and is resolved client-side by React Router, so it must answer 200 with the
+ * app shell. A 301 to / here means an index.html rule was written against $uri
+ * and is firing on the internal redirect.
+ * ------------------------------------------------------------------------- */
+{
+  const probe = '/ai-for-kids/class-6/module-3-old-slug-that-does-not-exist';
+  const { status, location } = await head(`${base}${probe}`);
+  record(
+    status === 200,
+    'unknown module URL reaches the app shell',
+    `${probe} answered ${status}${location ? ` -> ${location}` : ''} — the client-side fallback is being redirected away`
+  );
+}
+
+/* ---------------------------------------------------------------------------
  * 2. An unknown URL must be a real 404.
  *
  * Answering 200 with the home page is a soft 404. Google names it explicitly

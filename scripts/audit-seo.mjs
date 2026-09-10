@@ -286,8 +286,12 @@ async function auditRedirectTargets(file, label, extract) {
 await auditRedirectTargets('nginx.conf', 'nginx.conf', (text) =>
   [...text.matchAll(/^\s*rewrite\s+\S+\s+(\/\S*)\s+permanent;/gm)].map((m) => m[1])
 );
+/* Targets built from a back-reference (/%1, /$1) are only known at request
+   time, so there is no literal path to look up in the sitemap. */
 await auditRedirectTargets('public/.htaccess', '.htaccess', (text) =>
-  [...text.matchAll(/^\s*RewriteRule\s+\S+\s+(\/\S*)\s+\[[^\]]*R=301[^\]]*\]/gm)].map((m) => m[1])
+  [...text.matchAll(/^\s*RewriteRule\s+\S+\s+(\/\S*)\s+\[[^\]]*R=301[^\]]*\]/gm)]
+    .map((m) => m[1])
+    .filter((t) => !/[%$]\d/.test(t))
 );
 
 /* ---------------------------------------------------------------------------
@@ -344,13 +348,24 @@ function serverLevelNginxRewrites(text) {
 }
 
 /* Apache rules with no preceding !-f / !-d guard. RewriteCond lines apply to
-   the next RewriteRule only, so the guard state resets after each rule. */
+   the next RewriteRule only, so the guard state resets after each rule.
+
+   A RewriteCond on %{THE_REQUEST} counts as a guard too. Such a rule is not
+   selected by the path at all — it matches the original request line, which is
+   what makes it safe against the internal rewrite in rule 5 — so its
+   RewriteRule pattern is usually the catch-all `^`. Shadow-checking that
+   pattern against every route says only that `^` matches everything, which is
+   true and meaningless. */
 function unguardedHtaccessRules(text) {
   const out = [];
   let guarded = false;
   for (const raw of text.split('\n')) {
     const line = raw.replace(/#.*$/, '');
     if (/^\s*RewriteCond\s+%\{REQUEST_FILENAME\}\s+!-[fd]/.test(line)) {
+      guarded = true;
+      continue;
+    }
+    if (/^\s*RewriteCond\s+%\{THE_REQUEST\}/.test(line)) {
       guarded = true;
       continue;
     }

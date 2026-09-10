@@ -61,6 +61,13 @@ http.createServer(async (req, res) => {
     return res.end();
   }
 
+  // 0b. /<path>/index.html -> /<path>. tryFiles() below would otherwise serve
+  //     the file under its own name, giving every page a second 200 URL.
+  if (uri === '/index.html' || uri.endsWith('/index.html')) {
+    res.writeHead(301, { Location: uri.slice(0, -'/index.html'.length) || '/' });
+    return res.end();
+  }
+
   const file = await tryFiles(uri);
   if (file) {
     const body = await readFile(file);

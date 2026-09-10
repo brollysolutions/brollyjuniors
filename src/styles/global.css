@@ -1684,6 +1684,54 @@ a.module-card:hover .module-more {
   opacity: 0.6;
 }
 
+.footer-legal {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-legal a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+/* ---------- Legal pages (privacy / terms) ---------- */
+
+/* One column at reading width. The rest of the site is built from cards and
+   split grids; a policy is read top to bottom, and a long measure is what
+   makes that tiring. */
+.legal-prose {
+  max-width: 68ch;
+}
+
+.legal-prose section + section {
+  margin-top: 28px;
+}
+
+.legal-prose h2 {
+  font-size: 22px;
+}
+
+/* The checkmark bullet reads as a benefit, which is wrong on a list of things
+   we do not do and on a list of prohibited uses. */
+.legal-prose ul li::before {
+  content: '•';
+  color: var(--navy);
+  opacity: 0.5;
+}
+
+.legal-updated {
+  margin-top: 14px;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.legal-footnote {
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: var(--line);
+  font-size: 15px;
+}
+
 /* ---------- Panels (contact / demo) ---------- */
 .panel {
   background: var(--cream);

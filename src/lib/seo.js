@@ -93,6 +93,23 @@ const PAGES = {
     keyword: 'learning programs for kids in hyderabad',
     crumb: 'Programs',
   },
+  /* The two legal pages. No `keyword`: nobody searches for these, and holding
+     them to a keyword in docs/KEYWORD_MAP.md would be inventing a target that
+     does not exist. They earn their place by being present — a booking site
+     without them looks careless — not by ranking. */
+  '/privacy-policy': {
+    title: 'Privacy Policy | Brolly Juniors',
+    description:
+      'What Brolly Juniors collects when you book a free trial class, where it goes, and what we never ask for. Children are not asked for personal details on this site.',
+    crumb: 'Privacy Policy',
+  },
+  '/terms': {
+    title: 'Terms of Use | Brolly Juniors',
+    description:
+      'The terms for using the Brolly Juniors website, and how trial bookings, enrolment, fees and class schedules work at our Hyderabad centre.',
+    crumb: 'Terms of Use',
+  },
+
   '/book-free-demo': {
     title: 'Book a Free Trial Class in Hyderabad | Brolly Juniors',
     description:

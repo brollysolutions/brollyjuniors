@@ -58,8 +58,18 @@ RewriteRule !^\.well-known($|/) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 #    URL has fully dropped out of Search Console.
 # ---------------------------------------------------------------------------
 
-# Home
-RewriteRule ^index\.html$ / [R=301,L]
+# Home, and every page's /index.html twin.
+#
+# Rule 5 below rewrites a clean URL to <path>/index.html internally, so the
+# file also answers 200 under its own name — a second URL for all 204 pages,
+# which Search Console files as "Alternate page with proper canonical tag".
+#
+# Matched on THE_REQUEST (the original request line) rather than on the rewritten
+# path: the .htaccess ruleset re-runs after each internal rewrite, so a
+# path-matched rule would catch rule 5's own output and loop. %1 is the
+# directory part, empty for a bare /index.html, which yields "/".
+RewriteCond %{THE_REQUEST} \s/+(.*/)?index\.html[\s?]
+RewriteRule ^ /%1 [R=301,L]
 
 # AI + Python hubs
 RewriteRule ^ai-classes-for-kids-in-hyderabad\.html$      /ai-for-kids     [R=301,L]

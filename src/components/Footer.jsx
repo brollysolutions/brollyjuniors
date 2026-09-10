@@ -147,6 +147,12 @@ export default function Footer() {
 
         <div className="footer-bottom">
           <span>{site.copyright}</span>
+          {/* Every page links to both, which is the convention a parent looks
+              for and also the only internal link these two pages get. */}
+          <span className="footer-legal">
+            <Link to="/privacy-policy">Privacy Policy</Link>
+            <Link to="/terms">Terms of Use</Link>
+          </span>
           <span>☂ {site.tagline}</span>
         </div>
       </div>

@@ -4,6 +4,7 @@ import { publishedLocations, locationPath } from '../data/locations.js';
 import { articles, articlePath } from '../data/articles.js';
 import { apps, appPath } from '../data/apps.js';
 import { catalogRoutes } from '../data/catalog/index.js';
+import { legalPagePaths } from '../data/legalPages.js';
 
 /* Every URL the site can serve, in one list.
  *
@@ -64,9 +65,15 @@ const APP_ROUTES = apps.map((a) => appPath(a.slug));
    and a URL in the sitemap cannot drift apart. */
 const CATALOG_ROUTES = catalogRoutes;
 
+/* Privacy policy and terms. Indexable on purpose: they were 404ing, and a
+   business taking bookings is expected to have both — their absence is
+   something a cautious parent notices. */
+const LEGAL_ROUTES = legalPagePaths;
+
 export const routes = [
   ...CORE,
   ...INFO,
+  ...LEGAL_ROUTES,
   ...CLASS_ROUTES,
   ...MODULE_ROUTES,
   ...LOCATION_ROUTES,

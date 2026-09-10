@@ -39,12 +39,14 @@ import Article from './pages/Article.jsx';
 import LocationPage from './pages/LocationPage.jsx';
 import Apps from './pages/Apps.jsx';
 import CatalogHub from './pages/CatalogHub.jsx';
+import LegalPage from './pages/LegalPage.jsx';
 import AppPage from './pages/AppPage.jsx';
 import NotFound from './pages/NotFound.jsx';
 import { infoPages } from './data/infoPages.js';
 import { publishedLocations, locationPath } from './data/locations.js';
 import { apps, appPath } from './data/apps.js';
 import { catalogHubs, catalogPages } from './data/catalog/index.js';
+import { legalPages } from './data/legalPages.js';
 
 /* Programme pages that render through a component of their own. Keyed by path
    so adding one is a single line here, and so a typo shows up as a page that
@@ -100,6 +102,12 @@ export default function App() {
           <Route path="/book-free-demo" element={<BookFreeDemo />} />
           <Route path="/faqs" element={<FAQs />} />
           <Route path="/my-progress" element={<MyProgress />} />
+
+          {/* Privacy policy and terms. Same data-driven shape as the pages
+              above, rendered without the CTA band — see LegalPage.jsx. */}
+          {legalPages.map((page) => (
+            <Route key={page.path} path={page.path} element={<LegalPage page={page} />} />
+          ))}
 
           {/* Guides. The hub lists them; each guide targets one question a
               parent searches before they search for a class. */}
