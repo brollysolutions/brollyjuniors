@@ -7,6 +7,7 @@ import {
   StageTrack,
   Pillars,
   FaqList,
+  QuickAnswers,
   CtaBand,
 } from '../components/Shared.jsx';
 import TrialForm from '../components/TrialForm.jsx';
@@ -1315,23 +1316,12 @@ export default function ChessPage({ page }) {
       <FaqList items={FAQS} title="Chess classes for kids: frequently asked questions" />
 
       {/* ---------- Quick answers ---------- */}
-      <section className="band-soft">
-        <div className="container">
-          <SectionHead
-            eyebrow="Quick answers"
-            title="Chess for kids: quick answers"
-            lead="Short, direct answers to the questions parents ask most."
-          />
-          <div className="grid-3">
-            {QUICK_ANSWERS.map((qa) => (
-              <div className="ansblock" key={qa.q}>
-                <h3>{qa.q}</h3>
-                <p>{qa.a}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <QuickAnswers
+        items={QUICK_ANSWERS}
+        faqs={FAQS}
+        title="Chess for kids: quick answers"
+        lead="Short, direct answers to the questions parents ask most."
+      />
 
       <CtaBand variant={page.cta} />
     </>

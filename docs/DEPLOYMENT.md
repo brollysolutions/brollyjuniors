@@ -124,11 +124,19 @@ This is the check whose absence let the Apache→nginx regression run unnoticed.
 It asks the **live server** the questions `audit:seo` cannot, because
 `audit:seo` only ever reads `dist/`:
 
-- do canonical URLs from the sitemap answer `200`, or redirect?
+- do **all 204** canonical URLs from the sitemap answer `200`, or redirect?
+- does the trailing-slash form of a URL redirect, or serve a duplicate?
 - does an unknown URL return `404`, or a soft-404 home page?
 - does each legacy URL in `nginx.conf` actually 301 to its successor?
 - does `www` redirect? does `http` redirect?
 - is the HTML compressed, prerendered, and served with an `<h1>`?
+
+The first of those checks every sitemap URL, not a sample. It used to sample
+four, and that is exactly how 24 pages — the whole `/programs/<topic>`
+catalogue — sat in production being 301'd away while all four sampled URLs
+answered 200. A redirect rule applies per URL pattern, so it has to be checked
+per URL. Pass `-- --sample` for the old four-URL spot check when you want a
+quick answer.
 
 It exits non-zero on failure, so it can gate a deploy. Run it **after every
 deploy and after any server or DNS change** — those are the changes no test in
@@ -174,6 +182,34 @@ Two things behave differently in dev and are not bugs:
 4. `npm run build && npm run audit:seo`
 
 The audit fails if you skip step 3, which is the point. Skipping step 2 means the page is never prerendered and never appears in the sitemap — the exact failure mode this setup exists to prevent, so `routes.js` also throws on a duplicate route.
+
+**Step 4 also checks that no redirect swallows your new page.** The legacy 301s
+in `nginx.conf` and `.htaccess` match on keyword prefixes (`^/programs/ai[^/]*$`)
+because the retired WordPress slugs were inconsistent — and a pattern broad
+enough to catch every old slug is broad enough to catch a new page. That is not
+hypothetical: adding the programme catalogue silently 301'd all 24 of its pages
+in production. `audit:seo` now fails with
+
+```
+✗ nginx.conf — redirect ^/programs/(python|coding)[^/]*$ -> /python-for-kids
+  shadows /programs/coding, which is a real page in the sitemap
+```
+
+If you see that, the redirect is the thing to change, not the route. Move the
+rule so it runs after `try_files` (nginx: a `location` reached via a named
+fallback; Apache: `RewriteCond %{REQUEST_FILENAME} !-f` and `!-d`), so a real
+page always wins.
+
+To exercise the routing locally before deploying:
+
+```bash
+npm run serve:dist                                    # serves dist/ on :8100 under the nginx rules
+node scripts/verify-deployment.mjs http://127.0.0.1:8100
+```
+
+That stand-in mirrors the serving rules only, so the legacy `.html` redirects,
+gzip and cache-header checks will fail against it — those are verified against
+the real server. It is not a substitute for `nginx -t`.
 
 ---
 

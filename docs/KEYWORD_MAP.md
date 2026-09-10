@@ -8,7 +8,7 @@ has to appear in the title, in the H1 and in the opening copy. This table
 checks all three. A ⚠️ is not automatically wrong — sometimes the natural
 phrasing differs from the search phrasing — but it is worth a look.
 
-Checked 203 indexable pages with a declared target keyword.
+Checked 204 indexable pages with a declared target keyword.
 
 ## Primary pages
 
@@ -76,6 +76,7 @@ Checked 203 indexable pages with a declared target keyword.
 | `/programs/spoken-english` | spoken english classes for kids in hyderabad | ✅ | ✅ | ✅ |
 | `/programs/communication-skills` | communication skills classes in hyderabad | ✅ | ✅ | ✅ |
 | `/programs/telugu` | telugu classes for kids in hyderabad | ✅ | ✅ | ✅ |
+| `/programs/hindi` | hindi classes for kids in hyderabad | ✅ | ✅ | ✅ |
 | `/programs/english` | english classes for kids in hyderabad | ✅ | ✅ | ✅ |
 | `/programs/foreign-languages` | foreign language classes for kids in hyderabad | ✅ | ✅ | ✅ |
 | `/programs/drawing-and-painting` | drawing classes for kids in hyderabad | ✅ | ✅ | ✅ |
@@ -202,6 +203,7 @@ and to be cited by AI search, not to win a commercial search on their own.
 - `/programs/spoken-english` → Spoken English Classes for Kids in Hyderabad | Brolly Juniors
 - `/programs/communication-skills` → Communication Skills Classes in Hyderabad | Brolly Juniors
 - `/programs/telugu` → Telugu Classes for Kids in Hyderabad | Brolly Juniors
+- `/programs/hindi` → Hindi Classes for Kids in Hyderabad | Brolly Juniors
 - `/programs/english` → English Classes for Kids in Hyderabad | Brolly Juniors
 - `/programs/foreign-languages` → Foreign Language Classes for Kids in Hyderabad | Brolly Juniors
 - `/programs/drawing-and-painting` → Drawing Classes for Kids in Hyderabad | Painting | Brolly Juniors

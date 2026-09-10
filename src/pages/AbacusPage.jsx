@@ -8,6 +8,7 @@ import {
   StageTrack,
   Pillars,
   FaqList,
+  QuickAnswers,
   CtaBand,
 } from '../components/Shared.jsx';
 import TrialForm from '../components/TrialForm.jsx';
@@ -1053,23 +1054,12 @@ export default function AbacusPage({ page }) {
       <FaqList items={page.faqs} title={page.faqTitle} />
 
       {/* ---------- Quick answers (the AEO block) ---------- */}
-      <section className="band-soft">
-        <div className="container">
-          <SectionHead
-            eyebrow="Quick answers"
-            title="Abacus classes in Hyderabad — quick answer"
-            lead="Abacus classes in Hyderabad teach children number concepts, calculation and mental maths through structured abacus-based activities. Brolly Juniors runs age-appropriate abacus programmes from its centre at Nizampet X Roads, built around practice, visualisation and skill development. Parents can choose a programme based on the child’s age, current level, location and preferred learning mode, and start with a free demo class."
-          />
-          <div className="grid-3">
-            {QUICK_ANSWERS.map((qa) => (
-              <div className="ansblock" key={qa.q}>
-                <h3>{qa.q}</h3>
-                <p>{qa.a}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <QuickAnswers
+        items={QUICK_ANSWERS}
+        faqs={page.faqs}
+        title="Abacus classes in Hyderabad — quick answer"
+        lead="Abacus classes in Hyderabad teach children number concepts, calculation and mental maths through structured abacus-based activities. Brolly Juniors runs age-appropriate abacus programmes from its centre at Nizampet X Roads, built around practice, visualisation and skill development. Parents can choose a programme based on the child’s age, current level, location and preferred learning mode, and start with a free demo class."
+      />
 
       {/* ---------- About ---------- */}
       <section>

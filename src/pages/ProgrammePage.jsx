@@ -8,6 +8,7 @@ import {
   Curriculum,
   Pillars,
   FaqList,
+  QuickAnswers,
   CtaBand,
 } from '../components/Shared.jsx';
 import TrialForm from '../components/TrialForm.jsx';
@@ -852,25 +853,14 @@ export default function ProgrammePage({ page }) {
       <FaqList items={page.faqs} title={page.faqTitle} />
 
       {/* ---------- Quick answers ---------- */}
-      {d.quickAnswers && (
-        <section className="band-soft">
-          <div className="container">
-            <SectionHead
-              eyebrow="Quick answers"
-              title={d.quickAnswersTitle || 'Quick answers'}
-              lead="Short, direct answers to the questions parents search for most."
-            />
-            <div className="grid-3">
-              {d.quickAnswers.map((qa) => (
-                <div className="ansblock" key={qa.q}>
-                  <h3>{qa.q}</h3>
-                  <p>{qa.a}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
+      {/* No `d.quickAnswers &&` guard: the component renders nothing when the
+          list is absent, and nothing when every entry duplicates an FAQ. */}
+      <QuickAnswers
+        items={d.quickAnswers}
+        faqs={page.faqs}
+        title={d.quickAnswersTitle || 'Quick answers'}
+        lead="Short, direct answers to the questions parents search for most."
+      />
 
       <CtaBand variant={page.cta} />
     </>

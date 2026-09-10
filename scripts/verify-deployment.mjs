@@ -60,26 +60,84 @@ console.log(`\n  Verifying ${base}\n`);
  * that never returns the page — the single most expensive of these faults.
  * ------------------------------------------------------------------------- */
 const sitemapPath = path.join(root, 'dist', 'sitemap.xml');
-let sampleRoutes = ['/programs', '/junior-skills/abacus', '/ai-for-kids', '/contact'];
+let allRoutes = [];
 if (existsSync(sitemapPath)) {
   const xml = await readFile(sitemapPath, 'utf8');
-  const all = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)]
+  allRoutes = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)]
     .map((m) => m[1].replace(/^https?:\/\/[^/]+/, ''))
     .filter((r) => r && r !== '/');
-  /* A spread across the route types rather than the whole sitemap: this runs
-     against production, and 204 requests to prove one server rule is rude. */
-  sampleRoutes = [all[0], all[Math.floor(all.length / 3)], all[Math.floor((all.length * 2) / 3)], all.at(-1)]
-    .filter(Boolean);
+}
+if (!allRoutes.length) allRoutes = ['/programs', '/junior-skills/abacus', '/ai-for-kids', '/contact'];
+
+/* Every sitemap URL, not a spread across route types.
+ *
+ * This used to sample four, on the reasoning that 204 requests to prove one
+ * server rule is rude. It is not rude — they are HEADs against a static nginx —
+ * and the sample is how 24 broken pages sat in production unnoticed. A legacy
+ * redirect written when nothing lived under /programs/ began shadowing the
+ * whole programme catalogue the moment it was added: /programs/coding and 23
+ * siblings answered 301 while all four sampled URLs answered 200.
+ *
+ * A rule that applies per-URL-pattern has to be checked per URL.
+ * Pass --sample for the old four-URL spot check. */
+const sampleMode = process.argv.includes('--sample');
+const canonicalRoutes = sampleMode
+  ? [allRoutes[0], allRoutes[Math.floor(allRoutes.length / 3)],
+     allRoutes[Math.floor((allRoutes.length * 2) / 3)], allRoutes.at(-1)].filter(Boolean)
+  : allRoutes;
+
+/** Runs `fn` over `items` with a bounded number of requests in flight. */
+async function pool(items, limit, fn) {
+  const queue = [...items];
+  await Promise.all(Array.from({ length: Math.min(limit, queue.length) }, async () => {
+    while (queue.length) await fn(queue.shift());
+  }));
 }
 
-for (const route of sampleRoutes) {
-  const { status, location } = await head(`${base}${route}`);
+{
+  const broken = [];
+  await pool(canonicalRoutes, 8, async (route) => {
+    const { status, location } = await head(`${base}${route}`);
+    if (status !== 200) broken.push({ route, status, location });
+  });
+  broken.sort((a, b) => a.route.localeCompare(b.route));
+
+  const label = `all ${canonicalRoutes.length} sitemap URLs return 200`;
+  if (!broken.length) {
+    record(true, label);
+  } else {
+    /* Listed in full rather than summarised: the pattern in which URLs broke is
+       what identifies the rule at fault. */
+    const shown = broken.slice(0, 12)
+      .map((b) => `${b.route} -> ${b.status}${b.location ? ` ${b.location}` : ''}`)
+      .join('; ');
+    record(
+      false,
+      label,
+      `${broken.length} do not: ${shown}${broken.length > 12 ? `; and ${broken.length - 12} more` : ''}` +
+        ' — a sitemap URL that redirects is a URL Google is told is canonical but never serves the page'
+    );
+  }
+}
+
+/* ---------------------------------------------------------------------------
+ * 1b. One URL per page: the trailing-slash form must redirect, not answer 200.
+ *
+ * Serving both /programs and /programs/ gives every page two working URLs.
+ * The canonical tag names the slashless one, but a canonical is a hint —
+ * Google had indexed the slashed variant of the CBSE article in preference.
+ * ------------------------------------------------------------------------- */
+{
+  const probes = sampleMode ? canonicalRoutes.slice(0, 4) : canonicalRoutes.slice(0, 25);
+  const dupes = [];
+  await pool(probes, 8, async (route) => {
+    const { status } = await head(`${base}${route}/`);
+    if (status === 200) dupes.push(route);
+  });
   record(
-    status === 200,
-    `canonical URL ${route} returns 200`,
-    status === 301 || status === 302
-      ? `redirects (${status}) to ${location} — the sitemap URL is not the URL that serves the page`
-      : `returned ${status}`
+    dupes.length === 0,
+    `trailing-slash URLs redirect (${probes.length} sampled)`,
+    `${dupes.length} answer 200 at both /path and /path/, e.g. ${dupes.slice(0, 3).join(', ')} — every page is reachable at two URLs`
   );
 }
 
@@ -182,7 +240,7 @@ for (const file of ['/robots.txt', '/sitemap.xml']) {
  * 6. The served HTML is prerendered, not an empty shell.
  * ------------------------------------------------------------------------- */
 {
-  const route = sampleRoutes[0] || '/';
+  const route = canonicalRoutes[0] || '/';
   const res = await fetch(`${base}${route}`).catch(() => null);
   if (res && res.ok) {
     const body = await res.text();

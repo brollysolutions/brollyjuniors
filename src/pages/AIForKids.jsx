@@ -6,6 +6,7 @@ import {
   QuickAnswer,
   Pillars,
   FaqList,
+  QuickAnswers,
   CtaBand,
   MediaSplit,
   SectionHead,
@@ -1232,23 +1233,12 @@ export default function AIForKids() {
       />
 
       {/* ---------- Quick answers ---------- */}
-      <section className="band-soft">
-        <div className="container">
-          <SectionHead
-            eyebrow="Quick answers"
-            title="AI classes for kids — quick answers"
-            lead="Short, direct answers to what parents ask most often."
-          />
-          <div className="grid-3">
-            {QUICK_ANSWERS.map((qa) => (
-              <div className="ansblock" key={qa.q}>
-                <h3>{qa.q}</h3>
-                <p>{qa.a}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <QuickAnswers
+        items={QUICK_ANSWERS}
+        faqs={aiProgramFaqs}
+        title="AI classes for kids — quick answers"
+        lead="Short, direct answers to what parents ask most often."
+      />
 
       {/* ---------- Hyderabad ---------- */}
       <section>

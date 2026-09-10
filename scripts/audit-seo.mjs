@@ -290,6 +290,107 @@ await auditRedirectTargets('public/.htaccess', '.htaccess', (text) =>
   [...text.matchAll(/^\s*RewriteRule\s+\S+\s+(\/\S*)\s+\[[^\]]*R=301[^\]]*\]/gm)].map((m) => m[1])
 );
 
+/* ---------------------------------------------------------------------------
+ * The reverse check: no redirect may shadow a page that exists.
+ *
+ * `auditRedirectTargets` above asks whether each redirect points somewhere
+ * real. It cannot see the more expensive failure, which is a redirect whose
+ * *source pattern* matches a live URL. The legacy rules match on a keyword
+ * prefix (`^/programs/ai[^/]*$`) because the retired slugs were inconsistent,
+ * and a prefix broad enough to catch every old slug is broad enough to catch a
+ * new page. When the programme catalogue was added, all 24 of its pages —
+ * prerendered, in the sitemap, in the mega menu — answered 301 in production,
+ * and every check in this repository still passed, because none of them
+ * compared the route manifest against the redirect rules.
+ *
+ * nginx applies a server-level `rewrite` before try_files, so those shadow.
+ * A rewrite inside a `location` reached only through a try_files fallback does
+ * not, and neither does an Apache rule guarded by !-f/!-d — a real file wins
+ * in both cases. So the parse has to track context, or it reports the very
+ * arrangement that fixes the bug.
+ * ------------------------------------------------------------------------- */
+
+/* Translates the subset of regex the redirect rules use into a JS RegExp.
+   Returns null for a pattern with anything this cannot faithfully model, so an
+   unparsed rule is skipped rather than silently mis-reported. */
+function toRegExp(pattern) {
+  if (/[(?][?]|\\d|\{|\[\^\/\]\*\*/.test(pattern)) return null;
+  try {
+    return new RegExp(pattern);
+  } catch {
+    return null;
+  }
+}
+
+/* nginx rewrites that run in the server block, i.e. before try_files. Tracks
+   brace depth so a rewrite inside any `location` block is excluded. */
+function serverLevelNginxRewrites(text) {
+  const out = [];
+  let inLocation = 0;
+  let depth = 0;
+  for (const raw of text.split('\n')) {
+    const line = raw.replace(/#.*$/, '');
+    const isLocation = /^\s*location\b/.test(line);
+    if (isLocation) inLocation = depth + 1;
+
+    const m = line.match(/^\s*rewrite\s+(\S+)\s+(\S+)\s+permanent;/);
+    if (m && !inLocation) out.push({ pattern: m[1], target: m[2] });
+
+    depth += (line.match(/\{/g) || []).length;
+    depth -= (line.match(/\}/g) || []).length;
+    if (inLocation && depth < inLocation) inLocation = 0;
+  }
+  return out;
+}
+
+/* Apache rules with no preceding !-f / !-d guard. RewriteCond lines apply to
+   the next RewriteRule only, so the guard state resets after each rule. */
+function unguardedHtaccessRules(text) {
+  const out = [];
+  let guarded = false;
+  for (const raw of text.split('\n')) {
+    const line = raw.replace(/#.*$/, '');
+    if (/^\s*RewriteCond\s+%\{REQUEST_FILENAME\}\s+!-[fd]/.test(line)) {
+      guarded = true;
+      continue;
+    }
+    const m = line.match(/^\s*RewriteRule\s+(\S+)\s+(\S+)\s+\[[^\]]*R=301[^\]]*\]/);
+    if (m) {
+      if (!guarded) out.push({ pattern: m[1], target: m[2] });
+      guarded = false;
+    }
+  }
+  return out;
+}
+
+/* Routes are compared in both the slash-free form the sitemap uses and the
+   Apache form with no leading slash, since .htaccess patterns match the latter. */
+const liveRoutes = urls.map((u) => u.replace('https://brollyjuniors.com', '') || '/');
+
+async function auditRedirectShadowing(file, label, extract, strip) {
+  const full = path.join(root, file);
+  if (!existsSync(full)) return;
+  const rules = extract(await readFile(full, 'utf8'));
+  for (const { pattern, target } of rules) {
+    const re = toRegExp(pattern);
+    if (!re) {
+      warnings.push(`${label} — could not parse redirect pattern ${pattern}; not checked for shadowing`);
+      continue;
+    }
+    for (const route of liveRoutes) {
+      const subject = strip ? route.replace(/^\//, '') : route;
+      if (re.test(subject)) {
+        problems.push(
+          `${label} — redirect ${pattern} -> ${target} shadows ${route}, which is a real page in the sitemap`
+        );
+      }
+    }
+  }
+}
+
+await auditRedirectShadowing('nginx.conf', 'nginx.conf', serverLevelNginxRewrites, false);
+await auditRedirectShadowing('public/.htaccess', '.htaccess', unguardedHtaccessRules, true);
+
 /* The nginx config and the .htaccess must agree about the legacy URLs, or the
    site behaves differently depending on which host it is deployed to — which
    is precisely how the redirect layer came to be silently missing in
@@ -323,6 +424,47 @@ for (const url of urls) {
 const notFound = await readFile(path.join(distDir, '404.html'), 'utf8');
 if (!/<meta name="robots" content="noindex/.test(notFound)) {
   problems.push('404.html — is not marked noindex');
+}
+
+/* ---------------------------------------------------------------------------
+ * JavaScript budget.
+ *
+ * Every page is prerendered and the bundle is `type="module"`, so this is not
+ * blocking LCP — it is hydration cost and mobile data, which is why it is a
+ * warning and not a failure.
+ *
+ * It is checked at all because it grew silently. The September audit measured
+ * the content-data chunk at 915 KB and recorded route-level code splitting as
+ * the fix; by the next audit it was 1,421 KB, because nothing looked. A budget
+ * does not make the bundle smaller, but it means the next 500 KB arrives as a
+ * line in this report rather than as a surprise.
+ *
+ * Raise these deliberately, with a note, or fix the cause. Do not nudge them.
+ * ------------------------------------------------------------------------- */
+const JS_BUDGET_KB = { total: 2600, largestChunk: 1500 };
+
+{
+  const assetsDir = path.join(distDir, 'assets');
+  if (existsSync(assetsDir)) {
+    const { readdir, stat } = await import('node:fs/promises');
+    const files = (await readdir(assetsDir)).filter((f) => f.endsWith('.js'));
+    const sizes = await Promise.all(
+      files.map(async (f) => ({ f, kb: (await stat(path.join(assetsDir, f))).size / 1024 }))
+    );
+    const total = sizes.reduce((n, s) => n + s.kb, 0);
+    const largest = sizes.sort((a, b) => b.kb - a.kb)[0];
+
+    if (total > JS_BUDGET_KB.total) {
+      warnings.push(
+        `JavaScript budget — ${Math.round(total)} KB of JS across ${files.length} chunks, over the ${JS_BUDGET_KB.total} KB budget`
+      );
+    }
+    if (largest && largest.kb > JS_BUDGET_KB.largestChunk) {
+      warnings.push(
+        `JavaScript budget — largest chunk ${largest.f} is ${Math.round(largest.kb)} KB, over the ${JS_BUDGET_KB.largestChunk} KB budget`
+      );
+    }
+  }
 }
 
 if (!existsSync(path.join(distDir, 'robots.txt'))) problems.push('robots.txt is missing from dist/');

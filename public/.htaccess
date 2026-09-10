@@ -94,15 +94,34 @@ RewriteRule ^classes-1-to-5-curriculum-hyderabad\.html$   /junior-skills [R=301,
 # Matched on a keyword prefix rather than the exact slug: the old slugs were
 # inconsistent ("abacus-classes-hyderabad", "ai-classes-for-kids-hyderabad"),
 # and any variant that turns up later should still land somewhere sensible.
-# Verified first that no real route lives under /programs/ — only /programs
-# itself — so the catch-all at the end cannot shadow a live page.
+#
+# Every rule is guarded by !-f/!-d, so a real page always wins over a redirect.
+# The guards used to be on the catch-all only, on the reasoning that no real
+# route lived under /programs/. That stopped being true when the programme
+# catalogue was added, and the keyword rules then shadowed real pages —
+# /programs/coding 301'd to /python-for-kids. A live page must never be
+# redirected away; scripts/audit-seo.mjs now enforces that at build time.
 # ---------------------------------------------------------------------------
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^programs/abacus[^/]*$             /junior-skills/abacus           [R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^programs/phonics[^/]*$            /junior-skills/phonics          [R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^programs/vedic[^/]*$              /junior-skills/vedic-maths      [R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^programs/public-speaking[^/]*$    /junior-skills/public-speaking  [R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^programs/(digital|creative)[^/]*$ /junior-skills/digital-literacy [R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^programs/ai[^/]*$                 /ai-for-kids                    [R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^programs/(python|coding)[^/]*$    /python-for-kids                [R=301,L]
 # Anything else that used to sit under /programs/ reaches the hub, not a 404.
 #

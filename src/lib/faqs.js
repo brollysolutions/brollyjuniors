@@ -100,6 +100,75 @@ const CATALOG_FAQS = Object.fromEntries(
   catalogPages.filter((p) => p.faqs).map((p) => [p.path, p.faqs])
 );
 
+/* ---------------------------------------------------------------------------
+ * Quick answers that are not already an FAQ on the same page.
+ *
+ * Programme pages render a "Quick answers" band directly below the FAQ list.
+ * Measured across the built site, 195 of 346 quick answers (56%, on 43 pages)
+ * restated a question answered a few hundred pixels above — "What age is best
+ * to start abacus?" against "What is the best age to start abacus?" — and on
+ * eleven pages, including /junior-skills/abacus, every single one did.
+ *
+ * That is the repetitive-fragment pattern Google's helpful-content guidance
+ * calls out: it pads the page, gives a reader the same answer twice in two
+ * lengths, and gives a retrieval system two competing passages to cite for one
+ * question. The FAQ copy is the fuller of the two and is what the FAQPage
+ * schema emits, so the FAQ wins and the duplicate quick answer is dropped.
+ *
+ * Filtered at render rather than edited out of the data files: the same
+ * question is worded differently in each of 19 hand-written page components,
+ * and a rule that runs every build also covers whatever is written next.
+ * ------------------------------------------------------------------------- */
+
+/* Content words only. Two questions asking the same thing rarely share word
+   order, so comparison is on the set of words that carry meaning. */
+const STOPWORDS = new Set(
+  ['a','an','the','is','are','do','does','did','my','your','for','of','in','on','to','and','or','can','could','what','how','when','where','which','who','why','i','it','be','at','as','with','there','they','you','we','if','any','some','that','this','from','get','have','has']
+);
+
+function contentWords(question) {
+  return new Set(
+    String(question)
+      .toLowerCase()
+      .replace(/[^a-z0-9\s]/g, ' ')
+      .split(/\s+/)
+      .filter((w) => w && !STOPWORDS.has(w))
+  );
+}
+
+/* Overlap as a share of the shorter question, so the deliberately terse quick
+   answer still matches the longer FAQ it duplicates.
+ *
+ * 0.7 was measured, not guessed. Across the 230 quick answers on catalogue
+ * pages the scores cluster, and the band immediately below 0.7 sits almost
+ * entirely at 0.67 — where real duplicates ("Why is Biology important for
+ * children?" / "Why should children learn Biology?") are mixed in with pairs
+ * that only look alike ("Do children need to be good at drawing to join?" /
+ * "How can drawing help children?", "What do children learn in yoga?" /
+ * "What age can children start yoga?").
+ *
+ * Dropping to 0.65 would remove 27 more, including those. Deleting a question
+ * a parent actually asked is a worse outcome than leaving a near-duplicate, so
+ * the threshold stays where the two classes separate cleanly. Roughly a dozen
+ * 0.67-scoring duplicates survive site-wide; they are better edited in the
+ * source data than caught by loosening this. */
+const DUPLICATE_THRESHOLD = 0.7;
+
+function overlaps(a, b) {
+  const A = contentWords(a);
+  const B = contentWords(b);
+  if (!A.size || !B.size) return false;
+  let shared = 0;
+  for (const w of A) if (B.has(w)) shared += 1;
+  return shared / Math.min(A.size, B.size) >= DUPLICATE_THRESHOLD;
+}
+
+export function distinctQuickAnswers(quickAnswers, faqs) {
+  if (!Array.isArray(quickAnswers)) return [];
+  if (!Array.isArray(faqs) || !faqs.length) return quickAnswers;
+  return quickAnswers.filter((qa) => !faqs.some((faq) => overlaps(qa.q, faq.q)));
+}
+
 export function getFaqs(pathname) {
   const path = pathname !== '/' && pathname.endsWith('/') ? pathname.slice(0, -1) : pathname;
 

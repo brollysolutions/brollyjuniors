@@ -4,6 +4,7 @@ import { publishedLocations, locationPath } from '../data/locations.js';
 import { getModuleDetail, moduleHref } from '../data/moduleDetail.js';
 import { appPath, isLive, developer } from '../data/apps.js';
 import { useProgress, getModuleScore } from '../lib/progress.js';
+import { distinctQuickAnswers } from '../lib/faqs.js';
 
 export function PageHero({ eyebrow, title, subtitle, chips, image, imageAlt, children }) {
   const body = (
@@ -163,6 +164,34 @@ export function FaqList({ items, title = 'What families and schools ask' }) {
             <div className="faq-item" key={f.q}>
               <h3 className="faq-q">{f.q}</h3>
               <div className="answer">{f.a}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* The "Quick answers" band that sits below the FAQ list on programme pages.
+ *
+ * Nineteen pages had hand-rolled this same markup, which is why more than half
+ * of the quick answers across the site had drifted into restating an FAQ from
+ * a few hundred pixels above. Passing `faqs` lets the component drop those —
+ * see distinctQuickAnswers in lib/faqs.js — and the section removes itself
+ * when nothing distinct is left, rather than rendering an empty band. */
+export function QuickAnswers({ items, faqs, title, lead, eyebrow = 'Quick answers' }) {
+  const shown = distinctQuickAnswers(items, faqs);
+  if (!shown.length) return null;
+
+  return (
+    <section className="band-soft">
+      <div className="container">
+        <SectionHead eyebrow={eyebrow} title={title} lead={lead} />
+        <div className="grid-3">
+          {shown.map((qa) => (
+            <div className="ansblock" key={qa.q}>
+              <h3>{qa.q}</h3>
+              <p>{qa.a}</p>
             </div>
           ))}
         </div>

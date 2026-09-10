@@ -12,7 +12,8 @@
     "audit:seo": "node scripts/audit-seo.mjs",
     "test:worksheet": "node scripts/test-worksheet.mjs",
     "preview": "vite preview",
-    "verify:deploy": "node scripts/verify-deployment.mjs"
+    "verify:deploy": "node scripts/verify-deployment.mjs",
+    "serve:dist": "node scripts/serve-like-nginx.mjs dist 8100"
   },
   "dependencies": {
     "react": "^18.3.1",
