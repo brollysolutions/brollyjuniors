@@ -382,6 +382,22 @@ export const abacusFaqs = [
     q: 'How do I book a trial abacus class?',
     a: 'Use the Book a free trial page, call us, or message us on WhatsApp. We will confirm a slot and tell you what to bring.',
   },
+  {
+    q: 'Can abacus help improve concentration?',
+    a: 'Abacus activities ask a child to attend to numbers, bead positions and calculation steps, one sum at a time. Regular practice gives children repeated opportunities to practise staying with a task. That is a learning habit the programme supports, not a medical or psychological claim.',
+  },
+  {
+    q: 'Does abacus replace school maths?',
+    a: 'No. School maths covers arithmetic, geometry, fractions, algebra, measurement and problem-solving. Abacus is a supplementary skill programme that gives children extra, structured practice with numbers, calculation and mental maths alongside it.',
+  },
+  {
+    q: 'Can a child join abacus if they are weak in maths?',
+    a: 'Yes. A child does not need to be good at maths to begin. Beginners start with number recognition and bead values and progress gradually with guidance and regular practice. Children who find written maths hard often benefit most from the hands-on stage, because the beads make an abstract idea concrete.',
+  },
+  {
+    q: 'Why choose Brolly Juniors for abacus classes?',
+    a: 'Children are placed by what they can do, taught through a ten-level pathway in batches capped at eight, and given short practice sets between classes. Parents are told what was covered and where more work is needed. We do not promise results we cannot evidence, and nothing is payable before the free demo class.',
+  },
 ];
 
 /* The AI hub page's FAQ set.

@@ -340,6 +340,138 @@ const HOME_SUPPORT = [
   },
 ];
 
+/* What a child actually practises, depending on level. Listed plainly so a
+   parent can see the programme is calculation practice, not a promise. */
+const PRACTICE_ITEMS = [
+  'Number recognition',
+  'Addition',
+  'Subtraction',
+  'Multiplication',
+  'Division',
+  'Mental calculation',
+  'Calculation speed',
+  'Number visualisation',
+  'Regular revision',
+];
+
+/* Readiness signs. A child does not need to be good at maths to start; these
+   are the things that make the first few classes go well. */
+const READINESS_SIGNS = [
+  'Can recognise basic numbers',
+  'Is interested in trying a new activity',
+  'Can follow simple instructions',
+  'Can stay with one activity for a short period',
+  'Is willing to practise a little, regularly',
+];
+
+/* Abacus and school maths side by side. Neither column is "better" — they do
+   different jobs, which is the point of the table. */
+const VS_SCHOOL_MATHS = [
+  { abacus: 'Uses a bead frame as the learning tool', school: 'Mainly uses numbers, symbols and written methods' },
+  { abacus: 'Focuses strongly on calculation practice', school: 'Covers many areas of mathematics' },
+  { abacus: 'Visual and hands-on learning', school: 'Classroom and textbook-based learning' },
+  { abacus: 'Gradually introduces mental calculation', school: 'Teaches concepts and problem-solving' },
+  { abacus: 'Built on repeated, structured practice', school: 'Practice varies by lesson and curriculum' },
+];
+
+/* Why two children in the same batch progress at different speeds. Stated so
+   parents do not read a slower start as a problem. */
+const PACE_FACTORS = [
+  'Age',
+  'Previous number knowledge',
+  'Attention span',
+  'Interest in the activity',
+  'Regular practice at home',
+  'Individual learning style',
+];
+
+/* The questions worth asking any abacus class — including us — before a
+   rupee changes hands. */
+const FEE_QUESTIONS = [
+  'What age group is the programme designed for?',
+  'How long is the course?',
+  'How many classes are conducted each week?',
+  'Are learning materials and the abacus kit included?',
+  'How is the child’s progress evaluated?',
+  'Is there a demo class before enrolling?',
+  'Are there any additional charges?',
+  'What happens if the child needs extra practice?',
+];
+
+/* How to choose an abacus class. Written to apply to any centre in the city,
+   not only to this one. */
+const CHOOSE_CRITERIA = [
+  {
+    title: 'Check the age group',
+    text: 'A younger child needs simple number activities; an older one may be ready for mental abacus. Make sure the programme is built for where your child is.',
+  },
+  {
+    title: 'Understand the teaching method',
+    text: 'Ask how a new concept is introduced. Children should grasp the idea before they meet difficult calculations, so look for step-by-step teaching.',
+  },
+  {
+    title: 'Look for regular practice',
+    text: 'Abacus is a skill, and skills need repetition. Check how often children revise, solve problems and practise between classes.',
+  },
+  {
+    title: 'Ask about progress',
+    text: 'You should know how your child is doing. Ask whether there is regular feedback, an assessment, or some other way to see development.',
+  },
+  {
+    title: 'Consider class size',
+    text: 'The number of children in a room decides how much individual attention each one gets. Ask how children who need extra explanation are supported.',
+  },
+  {
+    title: 'Check the curriculum',
+    text: 'Ask what will be taught, in what order. A structured programme moves from number basics through the four operations to mental abacus.',
+  },
+  {
+    title: 'Check format and convenience',
+    text: 'Location, timings and mode need to work for your family. Regular attendance matters more than the perfect centre you cannot get to.',
+  },
+  {
+    title: 'Ask for a demo class',
+    text: 'Watch whether your child is comfortable, understands the teacher and enjoys the activity. That tells you more than any brochure.',
+  },
+  {
+    title: 'Look beyond the marketing',
+    text: 'Children learn at different speeds. A good programme talks about learning, practice and gradual progress — not guarantees.',
+  },
+];
+
+const OVERSOLD_CLAIMS = [
+  '“Guaranteed maths genius”',
+  '“Instant mental maths”',
+  '“100% improvement”',
+  '“Every child becomes a fast calculator”',
+];
+
+const PARENT_CHECKLIST = [
+  'Is it suitable for my child’s age?',
+  'Is the teaching method easy to understand?',
+  'Does my child get enough practice?',
+  'Is progress monitored?',
+  'Are the timings convenient?',
+  'Is there a demo class?',
+  'Are the fees and course details clear?',
+];
+
+const DEMO_EXPECTATIONS = [
+  'How the abacus is used to teach numbers',
+  'How the educator explains a concept to children',
+  'The kind of activities children practise',
+  'How the learning progresses level by level',
+  'Whether the programme suits your child’s age and level',
+];
+
+const GET_STARTED = [
+  { title: 'Enquire', text: 'Share your child’s age and a little about where they are with numbers.' },
+  { title: 'Choose a batch', text: 'We tell you which classroom or online batches currently have space, and when.' },
+  { title: 'Attend the demo', text: 'Your child tries the beads in a real session while you watch how it is taught.' },
+  { title: 'Understand the programme', text: 'Curriculum, duration, fees and the level your child would start at — all before you decide.' },
+  { title: 'Enrol', text: 'If it feels right for your child, pick the batch and begin. Nothing is payable before this point.' },
+];
+
 const AREAS = ['Nizampet', 'Bachupally', 'Kukatpally', 'Miyapur', 'Pragathi Nagar', 'Hydernagar'];
 
 /* Every link here resolves against the route manifest — the source file's
@@ -531,8 +663,40 @@ export default function AbacusPage({ page }) {
         </div>
       </section>
 
-      {/* ---------- Why choose abacus ---------- */}
+      {/* ---------- What children practise / why it is different ---------- */}
       <section className="band-soft">
+        <div className="container split">
+          <div className="prose">
+            <h2>What do children practise in abacus classes?</h2>
+            <p>
+              Depending on their level, a child’s practice covers the list below. Nobody meets all of it at
+              once: a five-year-old spends months on the first two items, and multiplication only enters
+              once addition and subtraction are automatic.
+            </p>
+            <ul className="pill-row">
+              {PRACTICE_ITEMS.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
+          <div className="panel">
+            <h2>Why is abacus learning different?</h2>
+            <p>
+              Abacus combines three things school maths rarely puts together: visual learning, hands-on
+              practice and mental calculation. That gives a child a second way to work with numbers
+              alongside their regular school maths, not a replacement for it.
+            </p>
+            <p>
+              The goal at Brolly Juniors is not to have children memorise answers. It is to help them
+              understand the process, practise it regularly and become more confident each time they meet
+              a number.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ---------- Why choose abacus ---------- */}
+      <section>
         <div className="container">
           <SectionHead
             eyebrow="Why it works"
@@ -556,7 +720,7 @@ export default function AbacusPage({ page }) {
       </section>
 
       {/* ---------- Skills ---------- */}
-      <section>
+      <section className="band-soft">
         <div className="container">
           <SectionHead
             eyebrow="Beyond arithmetic"
@@ -575,12 +739,12 @@ export default function AbacusPage({ page }) {
       </section>
 
       {/* ---------- Age groups ---------- */}
-      <section className="band-soft">
+      <section>
         <div className="container">
           <SectionHead
             eyebrow="Starting point"
-            title="Abacus classes for different age groups"
-            lead="Children join at different stages, so the starting point is set by a short assessment during the demo class rather than by age alone. The bands below show how the focus typically shifts as children grow."
+            title="What is the best age to start abacus classes?"
+            lead="There is no single age that is right for every child. Children join at different stages, so the starting point is set by a short assessment during the demo class rather than by age alone. The bands below show how the focus typically shifts as children grow."
           />
           <div className="grid-3">
             {AGE_BANDS.map((a) => (
@@ -596,6 +760,38 @@ export default function AbacusPage({ page }) {
               </div>
             ))}
           </div>
+
+          {/* Readiness. The brief's two questions — can a beginner start, and
+              how does a parent know the child is ready — answered together,
+              because the honest answer to both is "readiness, not marks". */}
+          <div className="split" style={{ marginTop: 36, alignItems: 'start' }}>
+            <div className="panel">
+              <h2>Can a beginner start abacus?</h2>
+              <p>
+                Yes. A child does not need to already be good at maths — or to have ever seen an abacus —
+                to begin. Beginners start with number recognition and bead values, and move on only when
+                each step is comfortable. Children who find school maths hard are often the ones who get
+                the most out of the physical stage, because the beads give them something concrete to hold
+                an idea on.
+              </p>
+            </div>
+            <div className="prose">
+              <h2>How do parents know if their child is ready?</h2>
+              <p>A child is usually ready to try abacus if they:</p>
+              <ul className="tick-row" style={{ flexDirection: 'column', alignItems: 'flex-start' }}>
+                {READINESS_SIGNS.map((s) => (
+                  <li key={s}>
+                    <span className="tick">★</span> {s}
+                  </li>
+                ))}
+              </ul>
+              <p className="note-line">
+                Every child learns differently. The demo class exists so that you can see, rather than
+                guess, whether the programme suits yours.
+              </p>
+            </div>
+          </div>
+
           <div className="center" style={{ marginTop: 36 }}>
             <Link to="/book-free-demo" className="btn btn-primary">
               Find the right starting point
@@ -606,7 +802,7 @@ export default function AbacusPage({ page }) {
 
       {/* ---------- Levels. The real ten-level pathway from data/infoPages.js,
            in place of the source file's placeholder five-name ladder. ---------- */}
-      <section>
+      <section className="band-soft">
         <div className="container">
           <SectionHead
             eyebrow={page.curriculum.eyebrow}
@@ -618,7 +814,7 @@ export default function AbacusPage({ page }) {
       </section>
 
       {/* ---------- Curriculum by theme ---------- */}
-      <section className="band-soft">
+      <section>
         <div className="container">
           <SectionHead
             eyebrow="What gets covered"
@@ -758,6 +954,102 @@ export default function AbacusPage({ page }) {
         </div>
       </section>
 
+      {/* ---------- Abacus vs school maths ---------- */}
+      <section className="band-soft">
+        <div className="container">
+          <SectionHead
+            eyebrow="Side by side"
+            title="Abacus vs regular maths practice: what is the difference?"
+            lead="Both involve numbers and calculation, but they do different jobs. School maths covers a wide range of concepts through textbooks and classroom teaching; abacus uses a physical tool, visualisation and repeated calculation practice."
+          />
+          <div className="table-scroll">
+            <table className="compare-table">
+              <thead>
+                <tr>
+                  <th scope="col">Abacus learning</th>
+                  <th scope="col">Regular school maths</th>
+                </tr>
+              </thead>
+              <tbody>
+                {VS_SCHOOL_MATHS.map((row) => (
+                  <tr key={row.abacus}>
+                    <td>{row.abacus}</td>
+                    <td>{row.school}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="split" style={{ marginTop: 24, alignItems: 'start' }}>
+            <div className="prose">
+              <h2>Can abacus replace school maths?</h2>
+              <p>
+                No. School maths teaches arithmetic, geometry, fractions, algebra, measurement and
+                problem-solving — most of which the abacus never touches. Abacus is a supplementary
+                programme that gives a child extra, structured practice with numbers and calculation. The
+                two work best side by side, and it is not necessary to choose between them.
+              </p>
+            </div>
+            <div className="panel">
+              <h2>How abacus supports maths learning</h2>
+              <p>The same sum, met three ways:</p>
+              <ul className="flow-strip">
+                <li>
+                  <span>School: method on paper</span> <b aria-hidden="true">→</b>
+                </li>
+                <li>
+                  <span>Abacus: beads to practise it</span> <b aria-hidden="true">→</b>
+                </li>
+                <li>
+                  <span>Mental abacus: pictured, not touched</span>
+                </li>
+              </ul>
+              <p>
+                Each stage gives the child a different handle on the same idea, which is why the practice
+                carries back into ordinary school arithmetic.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ---------- Is it useful? ---------- */}
+      <section>
+        <div className="container split">
+          <div className="prose">
+            <h2>Is abacus really useful for kids?</h2>
+            <p>
+              Yes, as a supplementary learning activity — especially for children who enjoy hands-on
+              learning and regular number practice. With structured practice a child can work on number
+              understanding, calculation, mental maths, concentration, memory, visualisation, accuracy and
+              confidence with numbers.
+            </p>
+            <p>
+              It is not a magic shortcut. Abacus does not automatically make every child excellent at
+              maths, and a child should not be expected to be fast at mental calculation after a handful
+              of classes. The results depend on age, starting level, how regularly the child practises and
+              how well the class is taught. Those skills develop gradually, and that is normal.
+            </p>
+          </div>
+          <div className="panel">
+            <h2>Does every child learn at the same speed?</h2>
+            <p>
+              No. Some children pick up abacus concepts quickly; others need more time and repetition.
+              How fast a child moves usually depends on:
+            </p>
+            <ul className="pill-row">
+              {PACE_FACTORS.map((f) => (
+                <li key={f}>{f}</li>
+              ))}
+            </ul>
+            <p className="note-line">
+              A good programme lets each child progress at their own pace instead of measuring them
+              against the child at the next desk.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* ---------- Learning mode ---------- */}
       <section className="band-soft">
         <div className="container">
@@ -872,6 +1164,90 @@ export default function AbacusPage({ page }) {
             Fees vary with programme level, learning mode and duration. Nothing is payable before the demo
             class.
           </p>
+
+          {/* The questions a parent should put to any centre. Kept generic on
+              purpose: it is as much a checklist for judging us as anyone else. */}
+          <div className="panel" style={{ marginTop: 36 }}>
+            <h2>What should parents check before paying any fee?</h2>
+            <p>
+              Compare the whole learning experience, not just the lowest number. Before joining any abacus
+              class — ours included — ask:
+            </p>
+            <ul className="tick-row" style={{ flexDirection: 'column', alignItems: 'flex-start' }}>
+              {FEE_QUESTIONS.map((q) => (
+                <li key={q}>
+                  <span className="tick">?</span> {q}
+                </li>
+              ))}
+            </ul>
+            <p className="note-line">Clear answers to these make the decision much easier.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* ---------- How to choose ---------- */}
+      <section>
+        <div className="container">
+          <SectionHead
+            eyebrow="Choosing well"
+            title="How to choose the right abacus classes for your child in Hyderabad"
+            lead="Fee and distance are the easy things to compare. What matters more is how the programme teaches, how children practise and whether the approach suits your child. Nine things to look at — at any centre."
+          />
+          <div className="grid-3">
+            {CHOOSE_CRITERIA.map((c, i) => (
+              <div className="card" key={c.title}>
+                <h3>
+                  {i + 1}. {c.title}
+                </h3>
+                <p>{c.text}</p>
+              </div>
+            ))}
+          </div>
+          <div className="compare" style={{ marginTop: 36 }}>
+            <div className="compare-col is-us">
+              <h3>A simple checklist for parents</h3>
+              <ul>
+                {PARENT_CHECKLIST.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+              <p className="note-line">
+                The right programme is rarely the cheapest or the most advertised. It is the one where your
+                child learns comfortably and practises consistently.
+              </p>
+            </div>
+            <div className="compare-col is-other">
+              <h3>Claims to be careful with</h3>
+              <ul>
+                {OVERSOLD_CLAIMS.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+              <p className="note-line">
+                Children learn at different speeds. A good programme talks about learning, practice and
+                gradual progress — not guarantees.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ---------- Getting started ---------- */}
+      <section className="band-soft">
+        <div className="container">
+          <SectionHead
+            eyebrow="Five steps"
+            title="How to get started"
+            lead="From first enquiry to first class, this is the whole process. Most families are through it inside a week."
+          />
+          <div className="steps">
+            {GET_STARTED.map((s) => (
+              <div className="step" key={s.title}>
+                <h3>{s.title}</h3>
+                <p>{s.text}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -884,6 +1260,18 @@ export default function AbacusPage({ page }) {
               Not sure whether abacus learning suits your child? Start with a demo session. You will see the
               teaching approach, your child will try the beads, and we will tell you which level they would
               begin at — before you enrol.
+            </p>
+            <p>During the demo you will see:</p>
+            <ul className="tick-row" style={{ flexDirection: 'column', alignItems: 'flex-start', marginTop: 0 }}>
+              {DEMO_EXPECTATIONS.map((d) => (
+                <li key={d}>
+                  <span className="tick">★</span> {d}
+                </li>
+              ))}
+            </ul>
+            <p>
+              Your child gets to experience the way it is taught, rather than you deciding from a web
+              page alone.
             </p>
             <div className="btn-row">
               <a href={site.whatsappHref} className="btn btn-whatsapp" target="_blank" rel="noreferrer">
