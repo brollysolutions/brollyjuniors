@@ -167,10 +167,10 @@ const PAGES = {
   '/junior-skills/abacus': {
     title: 'Abacus Classes in Hyderabad for Kids | Brolly Juniors',
     description:
-      'Abacus classes in Hyderabad for ages 5-11. A 10-level Soroban pathway building focus, memory and mental maths. Batches capped at 8. Book a free trial class.',
+      'Abacus classes for kids in Hyderabad, ages 5-14. Numbers, abacus basics, calculations and mental maths taught step by step over 10 levels. Book a free demo class.',
     keyword: 'abacus classes in hyderabad',
     crumb: 'Abacus',
-    course: { name: 'Abacus Mastery', workload: 'PT1H', weeks: 104, level: 'Beginner to Advanced', ages: 'Ages 5 to 11' },
+    course: { name: 'Abacus Mastery', workload: 'PT1H', weeks: 104, level: 'Beginner to Advanced', ages: 'Ages 5 to 14' },
   },
   '/junior-skills/vedic-maths': {
     title: 'Vedic Maths Classes in Hyderabad for Kids | Brolly Juniors',

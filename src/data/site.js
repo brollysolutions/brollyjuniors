@@ -173,7 +173,7 @@ export const programs = [
     icon: '🧮',
     title: 'Abacus Mastery',
     text: 'A 10-level Soroban pathway that strengthens focus, working memory, mental visualisation and number confidence.',
-    tags: ['Ages 5–11', '10 levels'],
+    tags: ['Ages 5–14', '10 levels'],
     to: '/junior-skills/abacus',
     image: '/images/abacus.svg',
     imageAlt: 'A wooden soroban abacus with colourful beads',
@@ -303,100 +303,80 @@ export const phonicsFaqs = [
  */
 export const abacusFaqs = [
   {
-    q: 'What are abacus classes?',
-    a: 'Abacus classes teach children to calculate on a bead frame, where each rod stands for a place value. Children learn addition and subtraction, then multiplication and division, by moving beads — and gradually learn to picture the abacus mentally and calculate without touching it.',
+    q: 'What are abacus classes for kids?',
+    a: 'Abacus classes teach children how to understand numbers and perform calculations using an abacus. Children start with basic number concepts and gradually learn addition, subtraction, multiplication, division and mental calculation through regular practice.',
   },
   {
-    q: 'What age is best to start abacus?',
-    a: 'Children usually begin once they recognise numbers and can sit with one focused activity for a short while. Starting age matters less than readiness, so we assess where a child should begin during the free trial class rather than going by age alone. At Brolly Juniors the programme runs from ages 5 to 11.',
+    q: 'What is the best age to start abacus classes?',
+    a: 'Many children start abacus between 5 and 14 years, depending on their age, number skills and learning readiness. Younger children usually begin with basic number concepts, while older children can progress towards more advanced calculations and mental abacus practice. Readiness matters more than a specific age, so we assess it in the demo class.',
   },
   {
-    q: 'Are abacus classes suitable for beginners?',
-    a: 'Yes. The pathway starts from bead values and place value, so no prior abacus experience is needed. Beginners are placed at Level 1.',
+    q: 'Is abacus suitable for beginners?',
+    a: 'Yes. Children do not need advanced maths knowledge to start abacus. Beginners can start with simple number concepts and gradually learn how to use the abacus and perform calculations. Beginners are placed at Level 1.',
   },
   {
-    q: 'How do abacus classes help children with maths?',
-    a: 'They build number sense and calculation practice. Children get comfortable with how numbers split and combine, which makes ordinary school arithmetic feel more familiar. Abacus is a skill programme, not a replacement for the school syllabus, and it does not guarantee exam results.',
+    q: 'What do children learn in abacus classes?',
+    a: 'Children may learn number recognition, abacus basics, addition, subtraction, multiplication, division, visualisation, mental abacus, calculation accuracy and speed practice. The curriculum can vary according to the child’s learning level.',
   },
   {
-    q: 'Does abacus improve mental calculation?',
-    a: 'Mental calculation is the point of the programme. After the physical stage, children practise visualising the abacus and calculating from that mental image. How far each child takes it varies with practice and consistency.',
+    q: 'Does abacus improve mental maths?',
+    a: 'Abacus provides regular practice with numbers and calculations. As children progress, they can learn to visualise the abacus and practise calculations mentally. Results vary from child to child and depend on regular practice.',
+  },
+  {
+    q: 'Can abacus help improve concentration?',
+    a: 'Abacus activities require children to focus on numbers, bead positions and calculation steps. Regular practice can give children opportunities to develop and practise concentration.',
   },
   {
     q: 'How long does it take to learn abacus?',
-    a: 'The full Brolly Juniors pathway is ten levels and typically takes 24 to 36 months, but that depends on the starting level, attendance and how regularly a child practises between classes. We give you a realistic estimate for your child after the trial assessment.',
+    a: 'There is no fixed time for every child. Learning depends on the child’s age, starting level, practice routine and the structure of the programme. Children generally progress gradually from basic abacus concepts to more advanced calculations. The full Brolly Juniors pathway is ten levels and typically takes 24 to 36 months.',
+  },
+  {
+    q: 'Does abacus replace school maths?',
+    a: 'No. Abacus does not replace school mathematics. It is a supplementary learning programme that gives children additional practice with numbers, calculations and mental maths.',
+  },
+  {
+    q: 'How much do abacus classes cost in Hyderabad?',
+    a: 'Abacus class fees in Hyderabad can vary based on the child’s level, course duration, number of classes, learning format and materials. Parents should check the current fee and complete programme details before enrolment. Brolly Juniors shares the current fee once we know your child’s starting level and preferred mode.',
+  },
+  {
+    q: 'How do I choose the right abacus class for my child?',
+    a: 'Consider the child’s age, learning level, teaching method, class size, practice support, curriculum, timings, fees and availability of a demo class. A demo can help parents understand whether the programme suits their child.',
+  },
+  {
+    q: 'Why choose Brolly Juniors for abacus classes?',
+    a: 'Brolly Juniors focuses on child-friendly, structured learning. Children can start with basic concepts and gradually progress through abacus, calculation and mental maths practice according to their learning level, in batches capped at eight so the educator can watch each child’s technique.',
+  },
+  {
+    q: 'Does Brolly Juniors offer an abacus demo class?',
+    a: 'Yes. Parents can contact Brolly Juniors to check the current availability of abacus demo classes, batches and enrolment options. Nothing is payable before the demo.',
+  },
+  {
+    q: 'Are abacus classes available for children in Hyderabad?',
+    a: 'Yes. Brolly Juniors runs abacus classes from its centre at Metro Pillar No. A689, Dr Atmaram Estates, 3rd Floor, Nizampet X Roads, Hyderabad 500072 — beside Sri Bhramaramba Theatre, near JNTU Metro Station. Check current class formats and batch availability before enrolling.',
+  },
+  {
+    q: 'Can a child join abacus if they are weak in maths?',
+    a: 'Yes. A child does not need to be excellent at maths to begin learning abacus. Beginners can start with basic concepts and progress gradually with guidance and regular practice.',
+  },
+  {
+    q: 'How can I enrol my child in Brolly Juniors abacus classes?',
+    a: 'Contact Brolly Juniors, share the child’s age and learning requirements, check available batches and ask about a demo, curriculum, fees and timings before enrolment. Use the Book a free demo page, call us, or message us on WhatsApp.',
   },
   {
     q: 'How many levels are there in the abacus course?',
     a: 'Ten, grouped into five stages: Soroban foundations, the small and big friend rules, the mental transition, speed and complexity, and mastery. A child moves up when the current level is comfortable, not on a fixed calendar.',
   },
   {
-    q: 'Are abacus classes available online?',
-    a: 'Ask us about current online availability. For younger children we generally recommend classroom sessions, because the educator can watch and correct finger technique directly — which is difficult to do well over a video call.',
-  },
-  {
-    q: 'Are offline abacus classes available in Hyderabad?',
-    a: 'Yes. Classroom abacus batches run at the Brolly Juniors centre at Nizampet X Roads, Hyderabad. Contact us for the batches currently open.',
-  },
-  {
-    q: 'What is the abacus course fee in Hyderabad?',
-    a: 'Fees vary with the level, the learning mode and the duration enrolled for, so a single number would be misleading. Tell us your child’s age and preferred mode and we will send the current fee for that combination.',
-  },
-  {
     q: 'Are weekend abacus classes available?',
     a: 'Weekend batches are part of the schedule, but availability changes as groups fill. Check current weekend availability before you plan around it.',
   },
   {
-    q: 'Can school students join abacus classes?',
-    a: 'Yes. Most abacus learners at Brolly Juniors attend school and come to classes after school hours or at weekends.',
-  },
-  {
-    q: 'Does my child need prior maths knowledge?',
-    a: 'No. Number recognition and a willingness to sit with a short activity are enough. Everything else is taught from the beginning.',
+    q: 'Are abacus classes available online?',
+    a: 'Ask us about current online availability. For younger children we generally recommend classroom sessions, because the educator can watch and correct finger technique directly — which is difficult to do well over a video call.',
   },
   {
     q: 'How often should children practise abacus?',
     a: 'Short and regular beats long and occasional. Ten to fifteen focused minutes on most days keeps the skill in place far better than one long weekend session.',
-  },
-  {
-    q: 'What happens in a typical abacus class?',
-    a: 'A warm-up, the day’s concept with worked examples, guided practice while the educator watches technique, an interactive activity, mental maths practice at each child’s level, then a recap and a short practice set for home.',
-  },
-  {
-    q: 'Can parents track their child’s progress?',
-    a: 'Yes. We share what has been covered, practice completion and where your child needs more work. At home, watch for willingness to attempt a sum unprompted and the ability to explain the method — both appear well before speed does.',
-  },
-  {
-    q: 'How large are abacus batches?',
-    a: 'Regular centre batches are capped at eight children, so the educator can observe and correct bead technique, hand movement, pacing and accuracy individually.',
-  },
-  {
-    q: 'How do I choose the right abacus class for my child?',
-    a: 'Look at three things: whether the child is placed by ability rather than age, whether the educator watches technique in the early stage, and whether you are told what is happening between classes. Attend a trial class before enrolling anywhere.',
-  },
-  {
-    q: 'Where are abacus classes available in Hyderabad?',
-    a: 'Brolly Juniors runs abacus classes from its centre at Metro Pillar No. A689, Dr Atmaram Estates, 3rd Floor, Nizampet X Roads, Hyderabad 500072 — beside Sri Bhramaramba Theatre, near JNTU Metro Station.',
-  },
-  {
-    q: 'How do I book a trial abacus class?',
-    a: 'Use the Book a free trial page, call us, or message us on WhatsApp. We will confirm a slot and tell you what to bring.',
-  },
-  {
-    q: 'Can abacus help improve concentration?',
-    a: 'Abacus activities ask a child to attend to numbers, bead positions and calculation steps, one sum at a time. Regular practice gives children repeated opportunities to practise staying with a task. That is a learning habit the programme supports, not a medical or psychological claim.',
-  },
-  {
-    q: 'Does abacus replace school maths?',
-    a: 'No. School maths covers arithmetic, geometry, fractions, algebra, measurement and problem-solving. Abacus is a supplementary skill programme that gives children extra, structured practice with numbers, calculation and mental maths alongside it.',
-  },
-  {
-    q: 'Can a child join abacus if they are weak in maths?',
-    a: 'Yes. A child does not need to be good at maths to begin. Beginners start with number recognition and bead values and progress gradually with guidance and regular practice. Children who find written maths hard often benefit most from the hands-on stage, because the beads make an abstract idea concrete.',
-  },
-  {
-    q: 'Why choose Brolly Juniors for abacus classes?',
-    a: 'Children are placed by what they can do, taught through a ten-level pathway in batches capped at eight, and given short practice sets between classes. Parents are told what was covered and where more work is needed. We do not promise results we cannot evidence, and nothing is payable before the free demo class.',
   },
 ];
 

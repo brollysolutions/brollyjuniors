@@ -95,20 +95,20 @@ export const infoPages = [
   },
   {
     path: '/junior-skills/abacus',
-    eyebrow: 'Abacus Mastery · Ages 5–11',
+    eyebrow: 'Abacus Mastery · Ages 5–14',
     title: 'Abacus classes in Hyderabad for focus, memory and number confidence.',
     subtitle:
       'A structured Soroban journey from physical bead movement to mental visualisation, delivered in small, supportive batches.',
     image: '/images/abacus.svg',
     imageAlt: 'A wooden soroban abacus with amber and teal beads',
     chips: [
-      { strong: 'Ages 5–11', span: 'Age range' },
+      { strong: 'Ages 5–14', span: 'Age range' },
       { strong: '10 levels', span: 'Complete pathway' },
       { strong: '24–36 months', span: 'Typical duration' },
       { strong: 'Max 8', span: 'Children per batch' },
     ],
     quickAnswer:
-      'Brolly Juniors runs abacus classes in Hyderabad for ages 5 to 11: a 10-level curriculum completed over two to three years, in batches capped at eight children. Children build calculation fluency, concentration, working memory and mental visualisation through structured practice and close instructor observation.',
+      'Abacus classes teach children how to understand numbers and perform calculations using an abacus. Children first learn to use the beads for simple calculations; with regular practice they gradually learn to visualise the abacus in their mind and solve calculations mentally. At Brolly Juniors in Hyderabad, abacus is introduced step by step — numbers first, then the abacus, then calculations, then visualisation and mental maths — through a 10-level pathway for ages 5 to 14, in batches capped at eight, so children learn at a level that suits their age and current ability.',
     curriculum: {
       eyebrow: 'Level-wise curriculum',
       title: 'Ten levels, grouped into five clear stages',

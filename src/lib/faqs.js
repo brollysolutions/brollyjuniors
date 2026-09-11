@@ -80,7 +80,7 @@ export const homeFaqs = [
 export const allFaqs = [
   ...familyFaqs,
   ...phonicsFaqs.slice(0, 3), // start age, method, duration
-  ...abacusFaqs.slice(1, 4), // start age, beginners, help with maths
+  ...abacusFaqs.slice(1, 4), // start age, beginners, what they learn
   ...aiFaqs(6).slice(1), // tools, sessions, safety
   /* The first four only. The Python set now carries a further ten questions
      for the programme page itself, and repeating all of them here would push

@@ -338,7 +338,7 @@ export const workshops = {
               'Children who are curious about abacus but where a two-year commitment feels like a lot to sign up for on a hunch. A weekend is enough to see whether the child takes to it, and enough to teach a genuinely useful skill either way.',
             nextStep: 'After the workshop',
             nextStepText:
-              'The full Abacus programme runs across eight levels for ages 5 to 11 and takes mental calculation much further. Workshop children who continue usually enter at level two rather than starting again.',
+              'The full Abacus programme runs across ten levels for ages 5 to 14 and takes mental calculation much further. Workshop children who continue usually enter at level two rather than starting again.',
           }),
         },
         {

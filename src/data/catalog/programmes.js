@@ -327,7 +327,7 @@ export const programmes = {
       icon: '🧠',
       blurb: 'Number confidence, focus and the habit of thinking a problem through.',
       items: [
-        { name: 'Abacus', href: '/junior-skills/abacus', note: 'Ages 5–11' },
+        { name: 'Abacus', href: '/junior-skills/abacus', note: 'Ages 5–14' },
         { name: 'Vedic Maths', href: '/junior-skills/vedic-maths', note: 'Ages 8–14' },
         {
           slug: 'mental-maths',
