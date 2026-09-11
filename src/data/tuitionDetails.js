@@ -27,11 +27,18 @@
  *     the subject rather than Brolly Juniors batch groups, because several of
  *     these pages publish a narrower class range in their hero.
  *
+ * The three language tuitions — Telugu, English and Hindi — live in
+ * data/tuitionLanguageDetails.js and are merged in at the bottom; their body
+ * came from the programme pages rather than from a standalone build, and the
+ * header there says how it was reframed.
+ *
  * The claims kept verbatim are the ones that say what these classes are NOT:
  * no promised marks, ranks, selection or admission, no fixed syllabus, and no
  * fee or timing quoted on the page. Those are the first sentences a competitor
  * would drop and the ones a parent most needs.
  */
+
+import { tuitionLanguageDetails } from './tuitionLanguageDetails.js';
 
 export const tuitionDetails = {
   /* ==================================================================
@@ -15288,4 +15295,6 @@ export const tuitionDetails = {
       },
     ],
   },
+
+  ...tuitionLanguageDetails,
 };
