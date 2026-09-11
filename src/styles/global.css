@@ -620,6 +620,13 @@ span.dropdown-title {
   color: rgba(30, 41, 59, 0.7);
 }
 
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
 .nav-cta {
   white-space: nowrap;
   padding: 10px 20px;
@@ -2856,12 +2863,15 @@ a.module-card:hover .module-more {
 
   .mega-link:hover { padding-left: 10px; }
 
+  .nav-actions,
   .nav-cta { display: none; }
 
   .nav-mobile-cta {
     display: block;
     padding: 14px 0 4px;
   }
+
+  .nav-mobile-cta + .nav-mobile-cta { padding-top: 8px; }
 
   .nav-mobile-cta .btn {
     width: 100%;

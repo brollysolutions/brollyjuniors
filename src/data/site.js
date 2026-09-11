@@ -4,6 +4,10 @@ export const site = {
   phoneHref: 'tel:+917036044555',
   whatsappHref: 'https://wa.me/917036044555',
   email: 'brollyjuniors.in@gmail.com',
+  /* The parent/student app. The header's Login button sends people here. */
+  appUrl: 'https://app.brollyjuniors.com',
+  /* The parent/student app. The header's Login button sends people here. */
+  appUrl: 'https://app.brollyjuniors.com',
   tagline: 'Where curiosity finds shelter.',
   footerAbout:
     "Hyderabad's joyful learning home, where children build future-ready skills under one trusted roof.",

@@ -203,6 +203,11 @@ export default function Navbar() {
             </NavLink>
           </li>
           <li className="nav-mobile-cta">
+            <a href={site.appUrl} className="btn btn-outline" onClick={close}>
+              Login
+            </a>
+          </li>
+          <li className="nav-mobile-cta">
             <a
               href={site.whatsappHref}
               className="btn btn-whatsapp"
@@ -215,15 +220,22 @@ export default function Navbar() {
           </li>
         </ul>
 
-        <a
-          href={site.whatsappHref}
-          className="btn btn-whatsapp nav-cta"
-          target="_blank"
-          rel="noreferrer"
-          onClick={close}
-        >
-          <span aria-hidden="true">💬</span> WhatsApp Us
-        </a>
+        {/* Login goes to the app on its own subdomain, so it is a plain anchor
+            rather than a router Link. */}
+        <div className="nav-actions">
+          <a href={site.appUrl} className="btn btn-outline nav-cta" onClick={close}>
+            Login
+          </a>
+          <a
+            href={site.whatsappHref}
+            className="btn btn-whatsapp nav-cta"
+            target="_blank"
+            rel="noreferrer"
+            onClick={close}
+          >
+            <span aria-hidden="true">💬</span> WhatsApp Us
+          </a>
+        </div>
       </div>
     </header>
   );
