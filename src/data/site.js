@@ -1,8 +1,8 @@
 export const site = {
   name: 'Brolly Juniors',
-  phone: '+91 70360 44555',
-  phoneHref: 'tel:+917036044555',
-  whatsappHref: 'https://wa.me/917036044555',
+  phone: '+91 95423 44555',
+  phoneHref: 'tel:+919542344555',
+  whatsappHref: 'https://wa.me/919542344555',
   email: 'brollyjuniors.in@gmail.com',
   /* The parent/student app. The header's Login button sends people here. */
   appUrl: 'https://app.brollyjuniors.com',

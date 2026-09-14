@@ -1,790 +1,790 @@
 {
   "/": {
-    "hash": "8caa05c6abb02abf5c9d34c103d5d7681491998047b0a2743fd970e4c35850e1",
-    "lastmod": "2026-09-11"
+    "hash": "d312c1b64382b35a3d01b443110f6f74367942240b5e03e14907681af8146c58",
+    "lastmod": "2026-09-14"
   },
   "/abacus-worksheet-generator": {
-    "hash": "9c14e54dd9d42d7eef152885b7c9119aa9a8a425c68669aed032a7b00f631f6d",
-    "lastmod": "2026-09-11"
+    "hash": "f5483694533efe6c3784e0a245ac091538860ce0d3b0e6891ad89cd0cac21012",
+    "lastmod": "2026-09-14"
   },
   "/age-groups": {
-    "hash": "206fdaf657140b3c753d4bd4a7d2e31010bd11cf2944b102ca369dc5a85cbe9b",
-    "lastmod": "2026-09-11"
+    "hash": "977f5f276197643f941d84ddf59af3a9b766d4763ee3a75e0d58923e0c379c18",
+    "lastmod": "2026-09-14"
   },
   "/age-groups/ages-13-16": {
-    "hash": "63091492f64c9ba9470311342190b8dc0e2a266604f924f80d3dcc84581420e4",
-    "lastmod": "2026-09-11"
+    "hash": "db3310569ca92ecfae6b11d81b2e55a6e837a66a015d0f2c39f733425e9ecfca",
+    "lastmod": "2026-09-14"
   },
   "/age-groups/ages-3-5": {
-    "hash": "0da29875f05358f3cea108c33d15a54785a429448089029ee796c74995de7fc6",
-    "lastmod": "2026-09-11"
+    "hash": "4ba04afafc2987e0e86aa1a4ab334c258fb2e06be3fcd36140c87596f9669d60",
+    "lastmod": "2026-09-14"
   },
   "/age-groups/ages-6-8": {
-    "hash": "2f931bae598b2aa6b7acf11235436b27144421fd6a7250cb3ca79a678fcc033e",
-    "lastmod": "2026-09-11"
+    "hash": "81a12660625ee97293e47143a2510082c5732cbd9fdf7f417c0f0a4fec1ed48d",
+    "lastmod": "2026-09-14"
   },
   "/age-groups/ages-9-12": {
-    "hash": "cfa75b7a4b63c98d0b5744cf9923b6b065c27676dea82e8157dea3a75842f9ca",
-    "lastmod": "2026-09-11"
+    "hash": "635d1b7d153a5f4b1cba8ae0393100885815624371a7dd4a65b94c6e57d6cebc",
+    "lastmod": "2026-09-14"
   },
   "/ai-for-kids": {
-    "hash": "71dcaedc2eafb807b7d6681d9365e77edea3c9c06f69759958c644ed926d4f56",
-    "lastmod": "2026-09-11"
+    "hash": "eb45606dc28bda04510dfcf8dfb84f124507b29fb07de88728b1a0b2575faf51",
+    "lastmod": "2026-09-14"
   },
   "/ai-for-kids/class-10": {
-    "hash": "50706ad3415a3645bb08e67add38cf10279b6f74f0e01230de375eaf0d620be2",
-    "lastmod": "2026-09-11"
+    "hash": "bfb5367d811fe2b3b26cb14aadd1a9d6eccdfa675e1ce9789f18633df60144da",
+    "lastmod": "2026-09-14"
   },
   "/ai-for-kids/class-10/module-1-understanding-modern-ai": {
-    "hash": "1f4dd5891100598a56629397b96bcc6fee3da77a4516e8b00951706d0547a9f8",
-    "lastmod": "2026-09-11"
+    "hash": "19893cc2363f8bca06233490a7664aa477a6056feeec269903bb34f2c534e912",
+    "lastmod": "2026-09-14"
   },
   "/ai-for-kids/class-10/module-2-advanced-prompt-workflows": {
-    "hash": "2541fb462cdaa60e134380f04540e421423ddd5d87b5f479f86c40a1c70c6fdc",
-    "lastmod": "2026-09-11"
+    "hash": "afc70322fbd380da7fb5a6f371700970d267e4840e612289166d9a311928d170",
+    "lastmod": "2026-09-14"
   },
   "/ai-for-kids/class-10/module-3-deep-research-skills": {
-    "hash": "b7ea2406981f4f8114beecb3750375864247cd94183587be1e5ce5ac0031dbe1",
-    "lastmod": "2026-09-11"
+    "hash": "6ad00c3086253d4ddecdbdf17749f2f2c0361b2c419d3492384733430f2c7dca",
+    "lastmod": "2026-09-14"
   },
   "/ai-for-kids/class-10/module-4-ai-for-data-decisions": {
-    "hash": "89ca021bea9fd29de5294e68ddee618d0be1009c79822a1782feec9cbaa075d3",
-    "lastmod": "2026-09-11"
+    "hash": "08d3f1f0adbb07023f0a2b11dd2b88cd214d93dd10bbe3c133d44890b397d5ef",
+    "lastmod": "2026-09-14"
   },
   "/ai-for-kids/class-10/module-5-multimodal-media-lab": {
-    "hash": "efc8ed14b84ba0db8c3a7385407a31b03e027db27d23e86740918fca6077ddea",
-    "lastmod": "2026-09-11"
+    "hash": "7d704b88996824c70f0b5d09eebdc3ece6bb19f375c6d14da447c756a3f92361",
+    "lastmod": "2026-09-14"
   },
   "/ai-for-kids/class-10/module-6-ai-products-and-interfaces": {
-    "hash": "a993ffb0b672d02ac86cc2120524c7be6eb42d42c11994bb96a8e2ad7e27bed2",
-    "lastmod": "2026-09-11"
+    "hash": "82db2df22dac9352132ba39c14c1b8458e618670f4f2bb7b91d930a709c8a9ad",
+    "lastmod": "2026-09-14"
   },
   "/ai-for-kids/class-10/module-7-automation-with-human-control": {
-    "hash": "b891decebc3911c1d5c04328c072a167df85fb87923d4ee50e819a2c94490e04",
-    "lastmod": "2026-09-11"
+    "hash": "2a3f2c86b355f17f51625d332c1b088f0df9ba13341c19cc20de9528f1aee7d1",
+    "lastmod": "2026-09-14"
   },
   "/ai-for-kids/class-10/module-8-governance-exams-and-careers": {
-    "hash": "7a660048927990af0502b60a1c75afd96e12c894ffa4f98f1f70532e4e802755",
-    "lastmod": "2026-09-11"
+    "hash": "e02a42eb34e0bcb3dd1ade53f86f21fcdeddf5a9b790ce6df91bec3396442052",
+    "lastmod": "2026-09-14"
   },
   "/ai-for-kids/class-10/module-9-portfolio-capstone": {
-    "hash": "eae528debfc58db217b345fb8bd63696e2b0535ef58384d83dc05d4739d284b0",
-    "lastmod": "2026-09-11"
+    "hash": "4f201078f00acbe53ac4dfe2d226cc18291bc14af9be9b176f6a6f3b052e6177",
+    "lastmod": "2026-09-14"
   },
   "/ai-for-kids/class-6": {
-    "hash": "263b7257e8fa80475f266e69982f9a32fbc892328cf426dce323589b0096b890",
-    "lastmod": "2026-09-11"
+    "hash": "94441a94ab6ba06f539ad9b335283c81120df7ee3d91e5562b64585b27c1678f",
+    "lastmod": "2026-09-14"
   },
   "/ai-for-kids/class-6/module-1-meet-artificial-intelligence": {
-    "hash": "59dab24e936b982cdb3944c7283a8c4b8c44135be739e81e1748a04767185855",
-    "lastmod": "2026-09-11"
+    "hash": "2cbb39dd8ceb606bc1090bb5034b317cfe18a1d1c4d3e50ef15bcb2c2c17b4e4",
+    "lastmod": "2026-09-14"
   },
   "/ai-for-kids/class-6/module-2-talking-to-ai-clearly": {
-    "hash": "6c9275ca0ea3296e9f672292a147ead88daa058da3b3de96391fb2c5754fb448",
-    "lastmod": "2026-09-11"
+    "hash": "6be4282c538520f9f418e57f8da81faba8429d78a2a888fd61c4ffca735d4e10",
+    "lastmod": "2026-09-14"
   },
   "/ai-for-kids/class-6/module-3-ai-as-a-learning-buddy": {
-    "hash": "39cbf3332d1414da04a9684c91c5ef9181aff54dfa782513f9ce1223b2184fb4",
-    "lastmod": "2026-09-11"
+    "hash": "fe4203f025862b42a5eb4de288138f3657ecb2fa72ef7abb0bc5123a479f2e0f",
+    "lastmod": "2026-09-14"
   },
   "/ai-for-kids/class-6/module-4-writing-and-story-worlds": {
-    "hash": "6fbc488109d10a3a9f64961a214df5ab6e293f5d26bc0e7d2cbb1acbb978472b",
-    "lastmod": "2026-09-11"
+    "hash": "15077dc18dee5a31f38dd0bcccc222803bef2fd038162ebf506efebcb4c71ac9",
+    "lastmod": "2026-09-14"
   },
   "/ai-for-kids/class-6/module-5-images-and-visual-thinking": {
-    "hash": "23295b1065c260726b4eb1a1aaa35d5b2f7cd85a1bc2e536c0d0b1cd9e9b6a73",
-    "lastmod": "2026-09-11"
+    "hash": "3c3da6cc44077cea5c56d90845cb4e89db39935db188fb4020f86aa71e72c138",
+    "lastmod": "2026-09-14"
   },
   "/ai-for-kids/class-6/module-6-voice-sound-and-expression": {
-    "hash": "a590261bc5076d00840902e25765e156497ae9dfa6d5a2282825b38300c434bd",
-    "lastmod": "2026-09-11"
+    "hash": "b2772a62b21da878c10f33d2ef96b9ad57c764738a023508cc6852c4ef62ec7c",
+    "lastmod": "2026-09-14"
   },
   "/ai-for-kids/class-6/module-7-presentations-and-video": {
-    "hash": "0f9f62a0d2fc3e8ec7ca219bbb58baecf3f4094ac1990a78f73c685d0e9be24d",
-    "lastmod": "2026-09-11"
+    "hash": "cf6bccc92d836f1e4338cc0227c16f137bafbc05282a6041045b894dd595fbbe",
+    "lastmod": "2026-09-14"
   },
   "/ai-for-kids/class-6/module-8-truth-safety-and-kindness": {
-    "hash": "a078fb7badf84896536f74a3d3caa925ca2a658e8afec17605575225f8e8abba",
-    "lastmod": "2026-09-11"
+    "hash": "8169c160fcf210ca5f4624d75eb768543cfe509a8f7b7bd59b571ffbb1351430",
+    "lastmod": "2026-09-14"
   },
   "/ai-for-kids/class-6/module-9-curiosity-showcase": {
-    "hash": "c9bac8594d300d533712b55bc0634e90ad4f3e1e180e60d358ac8c3049a450d3",
-    "lastmod": "2026-09-11"
+    "hash": "af456cedd5501a16a353df2be5b60aa56ee8c563336db6bf7046684ad38f98cd",
+    "lastmod": "2026-09-14"
   },
   "/ai-for-kids/class-7": {
-    "hash": "54d452aac89c413ddb3a6fb787e618c4dad93ef8c0b0ea6aa168fe42903d2fd5",
-    "lastmod": "2026-09-11"
+    "hash": "fed38d632f42c7c78ac37f94341ee191eed3f217537b6b3ef24a2d1be631ea23",
+    "lastmod": "2026-09-14"
   },
   "/ai-for-kids/class-7/module-1-how-generative-ai-works": {
-    "hash": "b3389aea776e6aab95b6ffd20e93c038bc5bb1e5f044f2735b451a7567e8d3fe",
-    "lastmod": "2026-09-11"
+    "hash": "e5caecc53ca55d19a7265410e9e4b23139d309c5747ea55d71718ab19fb9cd8e",
+    "lastmod": "2026-09-14"
   },
   "/ai-for-kids/class-7/module-2-prompt-design-studio": {
-    "hash": "d3ada3e4c7e01b0ec8ceafe6040dbf2334e0104b2c4b854a14a6741e2795b049",
-    "lastmod": "2026-09-11"
+    "hash": "b0cb36c2e03cc302adbcef7b1f46497c3e5654f7beeadfd6ec37f3f9a32fac7d",
+    "lastmod": "2026-09-14"
   },
   "/ai-for-kids/class-7/module-3-research-without-copying": {
-    "hash": "f4c0d3d32675d640edb3365101c486886f367cf499d5ae1e9b912a2f2fb34ed5",
-    "lastmod": "2026-09-11"
+    "hash": "c4fd0ffe0479404ca4b064a97b500676a6c9170470d4de928618b51731945ad6",
+    "lastmod": "2026-09-14"
   },
   "/ai-for-kids/class-7/module-4-smart-study-systems": {
-    "hash": "36c7e087c280ceea4bbca930eedc5359e59aba090e17c9f016d84e1c73c006fd",
-    "lastmod": "2026-09-11"
+    "hash": "642c2d52cde99b0b73085944301ca2e9ef2e7d9ce1fde7819dd206c3cba8383e",
+    "lastmod": "2026-09-14"
   },
   "/ai-for-kids/class-7/module-5-design-and-digital-art": {
-    "hash": "0d21369f882d0260f1aab30c964b12e2dcf110b29a51e4df90fa4f21f74c8aac",
-    "lastmod": "2026-09-11"
+    "hash": "03db10373b15f96e37ab6289f7b1e65b47617726a734635b1d5a4b2f006ed9d7",
+    "lastmod": "2026-09-14"
   },
   "/ai-for-kids/class-7/module-6-audio-and-podcast-lab": {
-    "hash": "be303bfa08e1deced17c2b8bc45a7f41aaf4780fe6a44cb3f561c73e82679092",
-    "lastmod": "2026-09-11"
+    "hash": "58ae950cf0577835a67fc32561fd2a852f80a0c7f8e7579cd5991e01b20b8f91",
+    "lastmod": "2026-09-14"
   },
   "/ai-for-kids/class-7/module-7-video-communication": {
-    "hash": "940fcce2a1f2061b821c88dfe6c4bf36c347f6d2311c1d10f7f79b2d79e13017",
-    "lastmod": "2026-09-11"
+    "hash": "772e83479f686b877ad3dce237609e7e7b4d202344f3c6e5d097bf6b4cfcfff4",
+    "lastmod": "2026-09-14"
   },
   "/ai-for-kids/class-7/module-8-no-code-chatbot-thinking": {
-    "hash": "08c549e486a3fcd554bb8196782a3047cf91cfe5113b1343ea6b4db1efbae072",
-    "lastmod": "2026-09-11"
+    "hash": "5157e0ac375ba47eddf0ad75a57f250425fce50139c9e7ff63e593de60f0f991",
+    "lastmod": "2026-09-14"
   },
   "/ai-for-kids/class-7/module-9-ai-for-community": {
-    "hash": "b6bc5e45a8d98a0605001b4a274bfc757cac1a95835a7b35c9e606749adabe54",
-    "lastmod": "2026-09-11"
+    "hash": "bf0a81d72faa9010ddfbc5deabf0a7138515b0d75414543f85825916b0d255f8",
+    "lastmod": "2026-09-14"
   },
   "/ai-for-kids/class-8": {
-    "hash": "9263cd5946eff3301292af8e5bb790d63939a5d0051495d68b067ac91ed2d208",
-    "lastmod": "2026-09-11"
+    "hash": "3ba5e351d2ee65d8b248c20f018bce48138fc31d19b7c3ee647b7b4a63ddbd49",
+    "lastmod": "2026-09-14"
   },
   "/ai-for-kids/class-8/module-1-ai-literacy-and-models": {
-    "hash": "5d071769e8f6b4a39b232375a28d10c4175a216240efc4781fcfd145b4018bd1",
-    "lastmod": "2026-09-11"
+    "hash": "08895f3b96540e299f19f52e85827ef721026e76d4627486c8a2a56ca53456e3",
+    "lastmod": "2026-09-14"
   },
   "/ai-for-kids/class-8/module-2-structured-prompt-systems": {
-    "hash": "2e47bfb7be0a94328d3a11098718f2ac645fce2357ca0875300de56df07e69dc",
-    "lastmod": "2026-09-11"
+    "hash": "0f340c98253047f9869390395c96b472686673669166a0a561e3c4f0af706713",
+    "lastmod": "2026-09-14"
   },
   "/ai-for-kids/class-8/module-3-research-and-synthesis": {
-    "hash": "62bb6c44830c73dab7ecc8dc30ff9772566a51cc993bc32dab1acadc2da3de5d",
-    "lastmod": "2026-09-11"
+    "hash": "90f90f49feccbecc4ef454953e51137fc0e70349da21dca63628854bb0ca2e2a",
+    "lastmod": "2026-09-14"
   },
   "/ai-for-kids/class-8/module-4-ai-data-and-patterns": {
-    "hash": "a64fec0447e19de28d4f9088a433c4e34fe94cd9f8a918349e48678238080ff4",
-    "lastmod": "2026-09-11"
+    "hash": "6b15c94de9aa0f13a072952684bc02a9f23926f057c25b953544a3234d1f70af",
+    "lastmod": "2026-09-14"
   },
   "/ai-for-kids/class-8/module-5-multimodal-creation": {
-    "hash": "1cddd05f4bf7aa647025e9439ac82db98be39d1212ca9e39d7e1d0358c813145",
-    "lastmod": "2026-09-11"
+    "hash": "8549634c09ee613e76b5c56c611252327eb9af9cefc0b60c17ab25ad2abf2500",
+    "lastmod": "2026-09-14"
   },
   "/ai-for-kids/class-8/module-6-voice-and-video-production": {
-    "hash": "61325b607568447c0a4c15ab8fbe1fdc76634ce32ecd8c518b0f4169d875e4ff",
-    "lastmod": "2026-09-11"
+    "hash": "898f034fba9b5c3b83cd2feaf8bea373cf680e82f6c0245ceec8c5d53c59d03a",
+    "lastmod": "2026-09-14"
   },
   "/ai-for-kids/class-8/module-7-workflow-automation": {
-    "hash": "ea951113b5b0f79158d15392edcdc11b999d80850e556d9ee8dd8e442c8067a8",
-    "lastmod": "2026-09-11"
+    "hash": "967544083a9242452fa3de9a7ba55436b2428ce5ba5cb9665ad4957e3ea14888",
+    "lastmod": "2026-09-14"
   },
   "/ai-for-kids/class-8/module-8-cyber-safety-and-deepfakes": {
-    "hash": "94ce84cab98c00a5a0308ee7c221b83e3b34df01eb92c2a681131303aef5cc54",
-    "lastmod": "2026-09-11"
+    "hash": "2eed3ca3cd178778a4560e4503c7a8c563636c199507f2b454c2c3c539cc3038",
+    "lastmod": "2026-09-14"
   },
   "/ai-for-kids/class-8/module-9-impact-challenge": {
-    "hash": "119cadb720bbcd7dcbf512420d0ba34de1067ade720bda20641596948b9add92",
-    "lastmod": "2026-09-11"
+    "hash": "be41a4770d0e5e82441d36bed3eb87db3da5768ae75733f0394cde2c4fddb508",
+    "lastmod": "2026-09-14"
   },
   "/ai-for-kids/class-9": {
-    "hash": "1a306bc239ae8a2bcd55dddde7c2fe3cc692cb4f09e85f5a9d87b2ae11d26f8f",
-    "lastmod": "2026-09-11"
+    "hash": "0a4332129fd147e091824ab8c2ee2fd071397f45fa3f827e9fbddf297213a7d3",
+    "lastmod": "2026-09-14"
   },
   "/ai-for-kids/class-9/module-1-ai-systems-foundations": {
-    "hash": "b58bbe491afe11d9077fb674c4fc7f584fcdaa3055d9e9b3dc70797423c83c21",
-    "lastmod": "2026-09-11"
+    "hash": "a7f1fce4322a2b1468683542ede161ad72ad975bd6b9a6c3c63d16f38dfb2851",
+    "lastmod": "2026-09-14"
   },
   "/ai-for-kids/class-9/module-2-applied-prompt-engineering": {
-    "hash": "91c06133e4ebabb583c6be168f073b2e2cd532fd3cc1891ecdf1992c5111909b",
-    "lastmod": "2026-09-11"
+    "hash": "147ae4530ea5849cf9e2a91e9ba8a02fb2f618568b86bd42e3e559d17e28e729",
+    "lastmod": "2026-09-14"
   },
   "/ai-for-kids/class-9/module-3-research-evidence-and-citation": {
-    "hash": "2c290f3e47467c5c40a55ad7a15ada989c3c810dc744a191e3bf131798472c79",
-    "lastmod": "2026-09-11"
+    "hash": "46c0885ad513780079e95c6710d2337bec5df66f2afb51521f774c509ed1979e",
+    "lastmod": "2026-09-14"
   },
   "/ai-for-kids/class-9/module-4-data-analysis-with-ai": {
-    "hash": "4060bffcebdbdc0dfad6bf3eb792f9cc162b1f2cc8c5e140a8768e459444ff3b",
-    "lastmod": "2026-09-11"
+    "hash": "7d8067ea87c6f5c5334a2154794e4db979a17c595c1dc8f5ed81d9edafc4a827",
+    "lastmod": "2026-09-14"
   },
   "/ai-for-kids/class-9/module-5-ai-content-studio": {
-    "hash": "1a7389a88bae329004850e34876c76995a792e39f3b2f0d21941a5ff489de964",
-    "lastmod": "2026-09-11"
+    "hash": "8c3cb46365fa39f46316e5ab2932f4873fbc0dc726eac810f5be5f4722b12622",
+    "lastmod": "2026-09-14"
   },
   "/ai-for-kids/class-9/module-6-chatbots-and-knowledge": {
-    "hash": "7437a159eb9803c5e8589794ba6850362a8ab6e9a0cd53ac497f980303d76a7c",
-    "lastmod": "2026-09-11"
+    "hash": "5bebf82cc4ed149dbb32a9348d96be749dab72e099f3c0fe8417b72988da3e78",
+    "lastmod": "2026-09-14"
   },
   "/ai-for-kids/class-9/module-7-automation-and-agents": {
-    "hash": "e63a569bcfb4e7caef1a72aa1910498889593fd39e8ec23c08446f930dea7ca9",
-    "lastmod": "2026-09-11"
+    "hash": "ce92b1dfbd3574f22c32630c960605dc45bb3f3999adf02dad20b819a2f1d3d7",
+    "lastmod": "2026-09-14"
   },
   "/ai-for-kids/class-9/module-8-ethics-careers-and-society": {
-    "hash": "68967d3a65c0b5cc71684c6638c5dbd8eb98a5065fdbafcbe228ec26cf5b5c49",
-    "lastmod": "2026-09-11"
+    "hash": "b8e9f4bf1d464532a63acc285f0f3c1c43ae631197e62f104091e63e5726918e",
+    "lastmod": "2026-09-14"
   },
   "/ai-for-kids/class-9/module-9-innovation-capstone": {
-    "hash": "287bd388e0c6d2ddb2a199550d281aec167864167b3acd014bcd8e9eade01e12",
-    "lastmod": "2026-09-11"
+    "hash": "e35763fa5c607aa2463252c24506ac4caf39bc1388cff990fe0a1ec4659f2c42",
+    "lastmod": "2026-09-14"
   },
   "/apps": {
-    "hash": "2ff44aaf5ecf556b619fed972166b39df750bab73f1bee268523524f1b6208af",
-    "lastmod": "2026-09-11"
+    "hash": "04645a76f2d7dcf06555e3b6106c46b84c2e55a698dcaf35da1648bc36692235",
+    "lastmod": "2026-09-14"
   },
   "/apps/spark-phonics": {
-    "hash": "538a41bcc29e3f891d94bb493c05a3cc858d8788944d3fcef501d8e1fb3b223c",
-    "lastmod": "2026-09-11"
+    "hash": "ac53378db1f7954d1ee98dcf458693f55d884204c0b7e03acd86c7cfd2abbe7a",
+    "lastmod": "2026-09-14"
   },
   "/book-free-demo": {
-    "hash": "8324eb62ef5bf99f0ee19c9c92633d228a6a4dd2a14c4fdc483f2c46cb59949c",
-    "lastmod": "2026-09-11"
+    "hash": "a6c99242b31d8dcf1ca252eb188f1cfe86f10d68603b8e72be533ed0c4c9a5df",
+    "lastmod": "2026-09-14"
   },
   "/contact": {
-    "hash": "6a6f3a4494cc9add6fa2a37b99ec1b3e777054f72ec52d6801fee76dbf206b15",
-    "lastmod": "2026-09-11"
+    "hash": "5866cb67cc7b2db14691f8d183f30bcc06310f984cda85c6f0ada7811badc7e3",
+    "lastmod": "2026-09-14"
   },
   "/faqs": {
-    "hash": "35838f70f202b351de4eeb78b3001b8b8f5ba6948f7e392a9697dc77bce0b9e9",
-    "lastmod": "2026-09-11"
+    "hash": "678bccae7c2b76277d964f1a77d4193e7d9ad132c37d93311e017903ae993503",
+    "lastmod": "2026-09-14"
   },
   "/junior-skills": {
-    "hash": "d9e9644dba939e53b895b98d23dc7fc08e5458cd1274a966feb047783e26584c",
-    "lastmod": "2026-09-11"
+    "hash": "6a863267d9cfdb4d419b1a090d54e5f2c354742b855b2e1fb30d3ff822751a1c",
+    "lastmod": "2026-09-14"
   },
   "/junior-skills/abacus": {
-    "hash": "29547de31c460e14844bb597552ff4870b5349b590cc0b9a152e5628f786fd5c",
-    "lastmod": "2026-09-11"
+    "hash": "bb85e1e70b57162d24329bb42fa27dc2321feb12d35726d2a951bc05d1503fac",
+    "lastmod": "2026-09-14"
   },
   "/junior-skills/digital-literacy": {
-    "hash": "6800ef1fe9a29aaabffba51c12401bf03b997c442ef2ba18cb0dc644cdf405d5",
-    "lastmod": "2026-09-11"
+    "hash": "a893d8e6cb8df3df1d0341d4d387443d580e5ee0a5116e423579e158858893b0",
+    "lastmod": "2026-09-14"
   },
   "/junior-skills/phonics": {
-    "hash": "d4013c2334e7ed9372661ac6df4bf3c3e7fd11841edbb70f90f2e207c61be79d",
-    "lastmod": "2026-09-11"
+    "hash": "7898c9d09742fa857f3a38902b2c001fcf8f91de1a66217ce08b46f29f3b22e8",
+    "lastmod": "2026-09-14"
   },
   "/junior-skills/public-speaking": {
-    "hash": "c8aee4e39d8e66153fb623165825310d44f3523ac35e09ec6aa356b2fa7c4e08",
-    "lastmod": "2026-09-11"
+    "hash": "b12e9735fccb1b65f32e540d471a0227a16e6e0d05c74cf4762c21e86e6ec6a4",
+    "lastmod": "2026-09-14"
   },
   "/junior-skills/vedic-maths": {
-    "hash": "d80b1d752f01f3d012f50364620b04529e229ff6588422de44f01fbbf71ed46d",
-    "lastmod": "2026-09-11"
+    "hash": "3614cb369d2a77e6d299ba7f1b8934ffc124075d6298c5f8fde72917fb7b92d2",
+    "lastmod": "2026-09-14"
   },
   "/kids-classes-in-gachibowli": {
-    "hash": "05eb6085ba9e2387a40760181f4f04221c0cbaeaa7f9efe3757ef56dba57c7c3",
-    "lastmod": "2026-09-11"
+    "hash": "b97cf44bc7388dea9ea33cdac1b77c0d46da56d46849f4d960f2c905fd44686f",
+    "lastmod": "2026-09-14"
   },
   "/kids-classes-in-kondapur": {
-    "hash": "2b391f2ca0aa06ec46938bdc0f8eac9cedddb20f42f0b0d4de7aa930dbb1041c",
-    "lastmod": "2026-09-11"
+    "hash": "a5e21d42bbd5476c5d77e34125860d6bfdc7c76c0a47549172d33b3d2c5c0b61",
+    "lastmod": "2026-09-14"
   },
   "/kids-classes-in-kukatpally": {
-    "hash": "18b3bb7d2746ee8a5bb76e81844fe8ad2480cd80ad39223c731e2362dceaf5a5",
-    "lastmod": "2026-09-11"
+    "hash": "b4bb27554a065bf308fd46febd2de0b21856eba0ddf39b123e5da29952e915b0",
+    "lastmod": "2026-09-14"
   },
   "/kids-classes-in-madhapur": {
-    "hash": "9eb4755741c019145da17bfd3c231f8d17887f91157d24c667464c839769860b",
-    "lastmod": "2026-09-11"
+    "hash": "e097b6e120c920fe410dda49da9095dbb41dc86511a87fca316ba3bdb0cf0302",
+    "lastmod": "2026-09-14"
   },
   "/kids-classes-in-nizampet": {
-    "hash": "4cc794c74c302d01a9ae0c431074dcca1e58612c460014c6128ad4cd4126c6ec",
-    "lastmod": "2026-09-11"
+    "hash": "e22b9867debc9b149f2667c55940a85e9279d29bd54792b5b3f345c6957cb762",
+    "lastmod": "2026-09-14"
   },
   "/privacy-policy": {
-    "hash": "a70f4b6b04b57c57d2b1e2eef34d2979555bd98cd4eaa343caf9b311e0e1caf0",
-    "lastmod": "2026-09-11"
+    "hash": "e3d3f4112dad78625b50f660fbe80b73a5310c9e4bddfd6a911331c0965d90a8",
+    "lastmod": "2026-09-14"
   },
   "/programs": {
-    "hash": "769bcdd0d2717b250de48bd2521b0da2f9627889179d5bc7ba089e6dcb2dbbcd",
-    "lastmod": "2026-09-11"
+    "hash": "05d1338eace1705b8a2e2607de4d503b68340f5c4130d789568c83035ac10cac",
+    "lastmod": "2026-09-14"
   },
   "/programs/brain-games": {
-    "hash": "e8c52f34b091622ad089b314a21bf6c364483b1ab2a12cfedbdd666c19e40a6e",
-    "lastmod": "2026-09-11"
+    "hash": "c233a3f1ff727a8d9f3748b93c3b8077cf7b90bde5297e6321ec2787f900dc49",
+    "lastmod": "2026-09-14"
   },
   "/programs/chess": {
-    "hash": "fddccdd3fdf15dda04c8a7f0b9699f5ea3208048f1ea4fbb40d72439d34600c7",
-    "lastmod": "2026-09-11"
+    "hash": "649e6f560873ecd43c301049b68b2d89e14bd1f99075970e6527dca61b18b42a",
+    "lastmod": "2026-09-14"
   },
   "/programs/coding": {
-    "hash": "b91f997c020757017f46bf9e46aaa1517954a077ccd45d8a0d2ef337e4018c29",
-    "lastmod": "2026-09-11"
+    "hash": "3ae96e2c67432bee8fa6f6a17b71d0c4947b1ef731b09f853117c4b9ff194aec",
+    "lastmod": "2026-09-14"
   },
   "/programs/communication-skills": {
-    "hash": "3d071f298c62ed369643ef2a8a4ca062444b7cb1ecb291dbf92296595efe60ff",
-    "lastmod": "2026-09-11"
+    "hash": "4ce6bd13972bb7531f6daa0665e4569365f2172411c881797832bf28b87a7035",
+    "lastmod": "2026-09-14"
   },
   "/programs/confidence-building": {
-    "hash": "ce687502fd067ad7365f8109a605ed637e8616bf1abc6505aecbb2d0f99480a2",
-    "lastmod": "2026-09-11"
+    "hash": "0c0ab8a1e7065bc6b1d9a7034d2034dfb162460fe2c470581b74a37ff7e983cf",
+    "lastmod": "2026-09-14"
   },
   "/programs/dance": {
-    "hash": "dff0070d9790fbe1f9ce10f5594130b93d610ca47c12af6de1ab5e3efe96e138",
-    "lastmod": "2026-09-11"
+    "hash": "ec66878ced42c8aa9ae0d84cf3b26633e6e99ad9d6818145422ce6c817275152",
+    "lastmod": "2026-09-14"
   },
   "/programs/drama": {
-    "hash": "d90b89dc506421f078d358ef7fe9ea11f52bc54cdb6d2617d84f6089c176e91d",
-    "lastmod": "2026-09-11"
+    "hash": "6a432223d538fb3db1ea44cbbad31fb550776db98355107aadcc3bb2f367dab9",
+    "lastmod": "2026-09-14"
   },
   "/programs/drawing-and-painting": {
-    "hash": "da43d600995c958fb5bedf902243f1e1f27f0df8990233ae524880361d892e45",
-    "lastmod": "2026-09-11"
+    "hash": "91339b7076a0cd69181762d0026846f477610e49e7fd353d28a6c167aba68d14",
+    "lastmod": "2026-09-14"
   },
   "/programs/english": {
-    "hash": "07261091c4ca3cc800b50c185e3f581299306fd96ad0c3fee6cc780caad357ee",
-    "lastmod": "2026-09-11"
+    "hash": "5fc35928340ae65fca47fc442ecd634b7e88eaa45a7d2fd794b8d6fdc7dac4b7",
+    "lastmod": "2026-09-14"
   },
   "/programs/financial-literacy": {
-    "hash": "4d05fd9d986b58e864b93846223ffdccee743f5d493c6ba7778a6cecc3c62215",
-    "lastmod": "2026-09-11"
+    "hash": "0c239d7e77a7701d3f387fef4eeb7f2207bd5498cc7f12969672ffce4717c04c",
+    "lastmod": "2026-09-14"
   },
   "/programs/foreign-languages": {
-    "hash": "2ae6b0c35ae5d27360cd80b4ebb078b539ee8509cca5c755ac873a692c3d80d4",
-    "lastmod": "2026-09-11"
+    "hash": "250d04fd1063fb1038eafe69f48b2f4e14e9801319fad467f697b0b0309227b8",
+    "lastmod": "2026-09-14"
   },
   "/programs/hindi": {
-    "hash": "c2194685ef5568fd4037762d0c059e92fedb5a2e7b8fe5aac412ae4a61c0cbf4",
-    "lastmod": "2026-09-11"
+    "hash": "7ced9640809f9a2dfe296e3da97090c046dcdb800e939e21eb0512a75cdaefd5",
+    "lastmod": "2026-09-14"
   },
   "/programs/indoor-games": {
-    "hash": "491eecbe68635c28f82f3af4f0d3c913fecf9f468bc24c321d1736aae169c0b1",
-    "lastmod": "2026-09-11"
+    "hash": "0d68ab639e37c03716cf2e749c2ecd10df750a52ee962f4de1e0a4ca0b814a1d",
+    "lastmod": "2026-09-14"
   },
   "/programs/leadership": {
-    "hash": "b95fa7762b5c60d9d49bcef6b551a6a86cfa98d27283567a481e0344f3001871",
-    "lastmod": "2026-09-11"
+    "hash": "3dc312991d4eeb545a2e3263db6a39bf984b8bf32cd4c379825da4e9fa7d8c65",
+    "lastmod": "2026-09-14"
   },
   "/programs/mental-maths": {
-    "hash": "7a39d0f2fca26f946c4168141aff6a1ed2794aa9736da9b42d64784f52fecd26",
-    "lastmod": "2026-09-11"
+    "hash": "d2b2da1c6ff9e527ed9d909f8c49dec8a785ccbd73834c92b8973d52b935570f",
+    "lastmod": "2026-09-14"
   },
   "/programs/music": {
-    "hash": "ce4213fc3033b94fe5b971cecd2d8aaa8111f7811a43f9cc97916efd4ce67417",
-    "lastmod": "2026-09-11"
+    "hash": "0505fead6709f477dbfe174809e82d18317596e11794530d454c98dd0dfe64d5",
+    "lastmod": "2026-09-14"
   },
   "/programs/outdoor-games": {
-    "hash": "1861886ceea55e6f85d654084aca8976249bbde9a4a023860fe77380c1184ca2",
-    "lastmod": "2026-09-11"
+    "hash": "f41e914b0ddb2725d503d742f8e9bff33920ea1ce291057622a9ff96de840ab5",
+    "lastmod": "2026-09-14"
   },
   "/programs/problem-solving": {
-    "hash": "04c906399589a961fda354e7b405d36deff398796b509e4cb311b076c8a51e11",
-    "lastmod": "2026-09-11"
+    "hash": "26bd04f2b2857aa7b947186c417c2df8fd5a847588cb15d3aa5eb5ae1e1330aa",
+    "lastmod": "2026-09-14"
   },
   "/programs/robotics": {
-    "hash": "037a0bd1f5193f27e4e0a23eb21ae44c0f9980f480bd46ecfc9c0caff5810cf2",
-    "lastmod": "2026-09-11"
+    "hash": "c0c69c8d9100d8cfe640b5c5a078fd26ab1d506c3b6087e058579fb164f6e300",
+    "lastmod": "2026-09-14"
   },
   "/programs/singing": {
-    "hash": "2d7c519e0e3af8f769ea0a50aa2552a5058234d18fc643a612b953ae56ff07bb",
-    "lastmod": "2026-09-11"
+    "hash": "d6c9b6cd790b8835404436a56e7ad79213a04d95b3097279f991575cb9ddb47e",
+    "lastmod": "2026-09-14"
   },
   "/programs/spoken-english": {
-    "hash": "102ea5a58301972d071aa8b2f6139cb4e7a81c94c74c55d7c3eaafb638df8ff2",
-    "lastmod": "2026-09-11"
+    "hash": "afb650e9a38d2b0eb881561189c3c8d90a51f53c91b225079d9f3acb790f0198",
+    "lastmod": "2026-09-14"
   },
   "/programs/swimming": {
-    "hash": "8f0980d6a66d0b839fe6e9e0b4680feb713df52493b1afbbbf39ab27b9fe46e2",
-    "lastmod": "2026-09-11"
+    "hash": "68f1cfea6afbd2376805d45aa9846e82eee502bdb84a1bf39d9dd269c24255fc",
+    "lastmod": "2026-09-14"
   },
   "/programs/telugu": {
-    "hash": "c9005f2afbb81d9e1b09cc777ec5616c85f4c087c96954d0fbbe14c0d068b358",
-    "lastmod": "2026-09-11"
+    "hash": "52aab38ddcdbb4ceb16ef8dee4df0c3dd14f9152e0588beac76a2b9e83b9f48c",
+    "lastmod": "2026-09-14"
   },
   "/programs/yoga": {
-    "hash": "746ef94dc0048a203838171c118c3fc55b2997169410b4a0e222b57587c37da7",
-    "lastmod": "2026-09-11"
+    "hash": "d65ca406a6b730c8394097f781979dbe0e35820d25b7c6987e6d719c4fab767e",
+    "lastmod": "2026-09-14"
   },
   "/python-for-kids": {
-    "hash": "f9f6ce4e639c9fcfc69077e9484776b61c877812b71462eb966256d2846ba1f3",
-    "lastmod": "2026-09-11"
+    "hash": "5cf2327ca550bf3892c6081b3d5c4e78b5d45cdf66f510e105a39618a48a03ef",
+    "lastmod": "2026-09-14"
   },
   "/python-for-kids/class-10": {
-    "hash": "d409a3396c7ab8d12d84471df0dea12aa83b4be7daf9b1a989f59c6259280857",
-    "lastmod": "2026-09-11"
+    "hash": "3d5456cc5b013035927b0ebbe28bec8eae7358125d19af73519b122cf517c698",
+    "lastmod": "2026-09-14"
   },
   "/python-for-kids/class-10/module-1-python-readiness-sprint": {
-    "hash": "94fc9eef4c291c13e8a0c360e10df5d69201d0d01126e9857a4c7cd541cd6d7b",
-    "lastmod": "2026-09-11"
+    "hash": "ac045117786d50a82c1d939c506136d1f3ff802d5d1bfa3be3c0c3f807e1eb33",
+    "lastmod": "2026-09-14"
   },
   "/python-for-kids/class-10/module-2-algorithms-and-complexity": {
-    "hash": "0b9737ab4ee8cbbb86d5d0037c8669e1b0e052d3b574afb03a4cc53267acc4bf",
-    "lastmod": "2026-09-11"
+    "hash": "d381356453cf7c10ca4fe397c42373bd9d4df6cea7274cbd46f7d55b23832712",
+    "lastmod": "2026-09-14"
   },
   "/python-for-kids/class-10/module-3-object-oriented-design": {
-    "hash": "5d018cadb09be916c0cc7412192ce8fd7d082eaad2ea97c4d22091042b419b98",
-    "lastmod": "2026-09-11"
+    "hash": "bbcaa51dbd78cb69bda8382a9ef32c9b7c05464f481b21590a6eac64bfe7cdff",
+    "lastmod": "2026-09-14"
   },
   "/python-for-kids/class-10/module-4-data-engineering-basics": {
-    "hash": "b7e62121ce52b90cc783541818cca7a62a9837d044d385cbd49f0b03a405dc27",
-    "lastmod": "2026-09-11"
+    "hash": "59c8354164ec33882adf427471bf219781648482118a11e96aee70a700014dd3",
+    "lastmod": "2026-09-14"
   },
   "/python-for-kids/class-10/module-5-database-applications": {
-    "hash": "04f4407676681a212eb31547a9a5ad6e90612dae5f0d3e3077bdd3d53419d4c5",
-    "lastmod": "2026-09-11"
+    "hash": "18595e7d4b67a27443eb76f15c2cc9b6b2d6a0e20a37870b17190b7b7aa975be",
+    "lastmod": "2026-09-14"
   },
   "/python-for-kids/class-10/module-6-web-application-development": {
-    "hash": "d1559fedea0832e9f4ff0711a2fa9609904c79b156fb2bce097a1433b71cfc1b",
-    "lastmod": "2026-09-11"
+    "hash": "70c4d9e4bc006f410e73278ed4ca87f9816eb02a881515526f0824383918ba3a",
+    "lastmod": "2026-09-14"
   },
   "/python-for-kids/class-10/module-7-testing-and-security": {
-    "hash": "617d28216e653e3b86ea79943ba9e8f8ef8906123945c01e06df0af3463692b4",
-    "lastmod": "2026-09-11"
+    "hash": "8c310f12ad6b84f4167fce461ce0c404ed6d4f6a7da087782b2fe96d341a21cf",
+    "lastmod": "2026-09-14"
   },
   "/python-for-kids/class-10/module-8-ai-enabled-python": {
-    "hash": "fb0c96b5f6e83215535e40ef3c4bc778c7bf9b62385437339dd923edf80d5c41",
-    "lastmod": "2026-09-11"
+    "hash": "f8e3851be6ab8243b1ae12a385267a79bb8f19fa4faa6e316ae81ae4c4083ff3",
+    "lastmod": "2026-09-14"
   },
   "/python-for-kids/class-10/module-9-portfolio-and-deployment": {
-    "hash": "480a16da71af41922f4da8eee2be20f31ae752e281dc1691a5ff85f32001e0fa",
-    "lastmod": "2026-09-11"
+    "hash": "2f22ffa6c12c02b0cdc80d98f437997ae8ef295e2c920bbbecf33d8b7f60cba7",
+    "lastmod": "2026-09-14"
   },
   "/python-for-kids/class-6": {
-    "hash": "f19628ac0f8f4d4773be12f7455147b2a4a122dda3ca96fbd87812e6985cf8bd",
-    "lastmod": "2026-09-11"
+    "hash": "3e77109d3d89dd7cef8bfb176750bd77666dcfdd5316f7a00cd9369939f8bf6d",
+    "lastmod": "2026-09-14"
   },
   "/python-for-kids/class-6/module-1-thinking-like-a-programmer": {
-    "hash": "a1a4fc9325307c28483987f0a85b8b824b5a2b8db1c069d475166a821ed00b29",
-    "lastmod": "2026-09-11"
+    "hash": "4131368d6c214f65e5123a26caa2e2415c437610f130a81b3a0e83416800cd58",
+    "lastmod": "2026-09-14"
   },
   "/python-for-kids/class-6/module-2-values-variables-and-input": {
-    "hash": "5e68e94f0ec1fe8a306e52ae5e4d7cfb9fa7917e3781933a45a0aa8efd3f4cc3",
-    "lastmod": "2026-09-11"
+    "hash": "9b6c602ea4cb0427eca72a56016180d89fc153122dc2926a7f60bbc0d76820f9",
+    "lastmod": "2026-09-14"
   },
   "/python-for-kids/class-6/module-3-decisions-with-conditions": {
-    "hash": "99a25b24e4e6fb2da76a018e7002e0e6d461ed0045c5869d1740c4054e5e3f2f",
-    "lastmod": "2026-09-11"
+    "hash": "c837beabd52c77df468546771b5d079f240b910c6f1000f1c5d0ef763e94de85",
+    "lastmod": "2026-09-14"
   },
   "/python-for-kids/class-6/module-4-loops-and-patterns": {
-    "hash": "6b3d3fe65b20307083c3be2113cba0eb0bee9f1c2db8ae9edbab6a555793fe98",
-    "lastmod": "2026-09-11"
+    "hash": "4b3bdb853b7d360738153524872ae93788d3a8b86787b49428f1af1dcb97e002",
+    "lastmod": "2026-09-14"
   },
   "/python-for-kids/class-6/module-5-functions-as-building-blocks": {
-    "hash": "43a303d605ab66e31a87a972aa503871f39b71e4da2f7f915ef7278c295ebdf8",
-    "lastmod": "2026-09-11"
+    "hash": "2bde4d8ff73a98f7a6361d1f2ec76e36169cc3bca70ab45ab0b1769b61d78c13",
+    "lastmod": "2026-09-14"
   },
   "/python-for-kids/class-6/module-6-lists-and-collections": {
-    "hash": "4304cf52760b3c830029fe0e280f496accfc5d5ce88345e601874a99cf82d6a0",
-    "lastmod": "2026-09-11"
+    "hash": "97f832b08b4b9e93f406e23417b58c501db7cf718d3043fcf25599d93326a1d6",
+    "lastmod": "2026-09-14"
   },
   "/python-for-kids/class-6/module-7-turtle-graphics": {
-    "hash": "30fe77822982bed09492761cc9136f1b976901045c76afea3697f499f4701bd0",
-    "lastmod": "2026-09-11"
+    "hash": "64c678121fb16406be2f87694709091810e4f2f0ad97bebb496983ce55211e1c",
+    "lastmod": "2026-09-14"
   },
   "/python-for-kids/class-6/module-8-game-logic": {
-    "hash": "27724b2c7c18a63bc0ea6fc2e0bab1fdca2d37eae6c8875cb3be1ee673264af1",
-    "lastmod": "2026-09-11"
+    "hash": "404ddb14e996495aeb1dad06ab2bc3731375341f642c8afc48c8bd3534d7c281",
+    "lastmod": "2026-09-14"
   },
   "/python-for-kids/class-6/module-9-young-coder-capstone": {
-    "hash": "5b280bc6719ff474cb430ce1dad1d922ba7afe9c238714ce65c10fcb82035534",
-    "lastmod": "2026-09-11"
+    "hash": "0a3183a088ce311220d4dc36c25d6087edb85a81407ae5b6f408afde66c3de45",
+    "lastmod": "2026-09-14"
   },
   "/python-for-kids/class-7": {
-    "hash": "a32b0d900dc89eb49714769ce572ab92b3d21c3b0a248f64d3b6a80098854328",
-    "lastmod": "2026-09-11"
+    "hash": "40e9b8eefe5fa7dbe2034c0f377c82c79a061ca18e013f49faec085942ae7f19",
+    "lastmod": "2026-09-14"
   },
   "/python-for-kids/class-7/module-1-python-foundations-refresh": {
-    "hash": "50c4f4986e0d9aca0972a1917069a4359370b673192dab7b4d79b479f4bc118d",
-    "lastmod": "2026-09-11"
+    "hash": "a81fa1a26ae487d8ef698e0f10837ab86f8b3ff8cba88986c252db387c1aa34d",
+    "lastmod": "2026-09-14"
   },
   "/python-for-kids/class-7/module-2-logic-and-validation": {
-    "hash": "8a15ead46d1904d72fdf2094d500c0f11facd0694119d2f3778a54c906a23c6d",
-    "lastmod": "2026-09-11"
+    "hash": "9116b0c306b0aa15bc30f7368850359de0cfaa28e640039bc5704e622ea4628b",
+    "lastmod": "2026-09-14"
   },
   "/python-for-kids/class-7/module-3-loops-and-simulations": {
-    "hash": "034f779c3a0fc4cd6a9bb47ff8364032e06cb533f23a750d0c5e7bd413c6650d",
-    "lastmod": "2026-09-11"
+    "hash": "8d6fe853cee2236b98a7a9c21d062a57004effa8a424ffb1571596ece2070d2f",
+    "lastmod": "2026-09-14"
   },
   "/python-for-kids/class-7/module-4-functions-and-scope": {
-    "hash": "b4381dbcff552cb95f26932d05f7b17d47be2f2d06235cb679f673c247795f9f",
-    "lastmod": "2026-09-11"
+    "hash": "3864d00ef34bf7c27040eeda9eb05171f273fc60642a41af2e47e19fc08e79db",
+    "lastmod": "2026-09-14"
   },
   "/python-for-kids/class-7/module-5-lists-tuples-and-dictionaries": {
-    "hash": "4bd637cf8c26fa2e7a46baf7226c7facbd0e723b24fc22b9e4135be1a8240c4b",
-    "lastmod": "2026-09-11"
+    "hash": "a171f653e32372148e2e7e02f2bd8219d8a80412a82863b44fd27612e44f9205",
+    "lastmod": "2026-09-14"
   },
   "/python-for-kids/class-7/module-6-text-and-files": {
-    "hash": "7bfa682fd637eb81c0ee1d197c1492dd8d041753be1f4bfec06cbe4363db3dc7",
-    "lastmod": "2026-09-11"
+    "hash": "f2f7aff6f3664424a55a872307d067c6fef677a2219037972a6ca19ff89f5a83",
+    "lastmod": "2026-09-14"
   },
   "/python-for-kids/class-7/module-7-building-better-games": {
-    "hash": "d11db029521726dd64f8af8083ae73eb168ba97083589ecf5b93bca9fb38dac4",
-    "lastmod": "2026-09-11"
+    "hash": "79401775f427cb819bd50f588f41da361c760b01e54108cf39dc1c109baf4ffa",
+    "lastmod": "2026-09-14"
   },
   "/python-for-kids/class-7/module-8-errors-and-testing": {
-    "hash": "7b8aeccf6a49dbb0d865d44ff353e6bf83179cb601db19fde648ce7266de85e6",
-    "lastmod": "2026-09-11"
+    "hash": "ca7d90bbd323be0c54adda3cb50b85fd32c02822b8244c69f597125d029978a2",
+    "lastmod": "2026-09-14"
   },
   "/python-for-kids/class-7/module-9-class-7-capstone": {
-    "hash": "89776de631af6352d56066cec88414dd095b8125c3ec2aab359e81bbcf65dc14",
-    "lastmod": "2026-09-11"
+    "hash": "93e8ab76e532d1ee405e74762166966d473dd755096d5e9cfdbda93a25e25107",
+    "lastmod": "2026-09-14"
   },
   "/python-for-kids/class-8": {
-    "hash": "90f8c22948e9cc6f6f3bb19e5aa73f8f53e2e8ee457a733c1c69f6534b93fa3a",
-    "lastmod": "2026-09-11"
+    "hash": "db6595845b8d55d30e60565ee5e8ca290c82152891d9844844eaa6555507d5bf",
+    "lastmod": "2026-09-14"
   },
   "/python-for-kids/class-8/module-1-confident-python": {
-    "hash": "5c7fe02293825863e9a6e67dd8640443f8a28c9346b2580acaa7116a946716ea",
-    "lastmod": "2026-09-11"
+    "hash": "06ffa5473b06b6448684504d4e210b636ea2363c2517dfbb87dbf1e91653faa7",
+    "lastmod": "2026-09-14"
   },
   "/python-for-kids/class-8/module-2-data-structures": {
-    "hash": "267de73a25ba531e4753dc740b3a83f19529c384c95ba355ce7d4ca55ccab3e6",
-    "lastmod": "2026-09-11"
+    "hash": "c0e305ccb03c6e8ece500ac8ae854521d54dc63739333c54b8353cc3ed1893b7",
+    "lastmod": "2026-09-14"
   },
   "/python-for-kids/class-8/module-3-functions-and-modules": {
-    "hash": "d4f9183e088f77f4eefea53e726cb88bfa28a18fef37a3f98bf58b248885aeed",
-    "lastmod": "2026-09-11"
+    "hash": "b2d0896646405efba11f3f0c488a230abbfa3d45d4ecdb28b3c6e3536e8d0f4f",
+    "lastmod": "2026-09-14"
   },
   "/python-for-kids/class-8/module-4-files-and-structured-data": {
-    "hash": "e92b09a30866d78d2131aac47bb60ec3deaeba63ab92fbed2418e6b3b207f7fb",
-    "lastmod": "2026-09-11"
+    "hash": "271b8fc6284bc7b13e7bf773b4a6e708f9b9cc407bc137ed49be6354ca7d3659",
+    "lastmod": "2026-09-14"
   },
   "/python-for-kids/class-8/module-5-object-oriented-thinking": {
-    "hash": "2b502feaa6ff90bf4c1989e2c05babec7c7998db594b8c330ada1f4df0a79ed2",
-    "lastmod": "2026-09-11"
+    "hash": "60c333991433d687a2ec3385a5b8a246e1bdff5c61eb91ef72c0685ec6fb8b0b",
+    "lastmod": "2026-09-14"
   },
   "/python-for-kids/class-8/module-6-algorithms": {
-    "hash": "4ebaeb07e75b4b8d17e919a4d752acf27af4d5bca9883391e2f2459ee42b6eae",
-    "lastmod": "2026-09-11"
+    "hash": "e6e171b0d78aaa811c08975a7592e0690861135b09f076c4786e6946710ef172",
+    "lastmod": "2026-09-14"
   },
   "/python-for-kids/class-8/module-7-data-visualisation": {
-    "hash": "6cf3c566d42bf2fb9e4c5dab828021d26dd1ec8ff118bfd15115c27c5a5e6c30",
-    "lastmod": "2026-09-11"
+    "hash": "e4e05e345a336885d463b71529567951d488fbc16c51ee31e2e35537ea0c6b18",
+    "lastmod": "2026-09-14"
   },
   "/python-for-kids/class-8/module-8-graphical-game-build": {
-    "hash": "d66c78d5413325c9ede88a1bf30cd3d0a1755af62e1ab7cfe8d5ebeb28ca6b97",
-    "lastmod": "2026-09-11"
+    "hash": "5edc1e381461a273435c53f9f39b97c88b01cbc5d9c7103a51f01f7c72fbcc48",
+    "lastmod": "2026-09-14"
   },
   "/python-for-kids/class-8/module-9-class-8-capstone": {
-    "hash": "eea89f2922cd4d5d1c1703783b723fcc560177ce596fb4ccf079d51220adc008",
-    "lastmod": "2026-09-11"
+    "hash": "ff4c67cddeac92d35bc9db8375e4490f88f04a8b44372d1ff361f71fc091a246",
+    "lastmod": "2026-09-14"
   },
   "/python-for-kids/class-9": {
-    "hash": "8cce9fcb0e44f438db5a3459f8c8fb0aba42c5203961a734a3e839158b5469c1",
-    "lastmod": "2026-09-11"
+    "hash": "a095f9c4b342b87d2be60c5e148b3ffee0f4147490e05f8856ab10fba53f3487",
+    "lastmod": "2026-09-14"
   },
   "/python-for-kids/class-9/module-1-professional-python-foundations": {
-    "hash": "9fd6fef9c2c299d726eab77fe6c2f552190ff72a9e8a52ad405eacda43c33183",
-    "lastmod": "2026-09-11"
+    "hash": "f4d61cf9b418f09537bf0c8b429879947a9b0a8dfb4c6377a5f5329235c6d1f2",
+    "lastmod": "2026-09-14"
   },
   "/python-for-kids/class-9/module-2-advanced-collections": {
-    "hash": "21a95178891469eed680b02c53afc681be9e93571b3eb897d99d2ec2e3bffec8",
-    "lastmod": "2026-09-11"
+    "hash": "9183be87072589bbc8088f3e23a453516df34a59bb13485c5f34708e6672b78f",
+    "lastmod": "2026-09-14"
   },
   "/python-for-kids/class-9/module-3-functions-as-interfaces": {
-    "hash": "a4e6c4cc411edfd772346d5620c1a92343f703a5e757dc049ac451d9778d68b0",
-    "lastmod": "2026-09-11"
+    "hash": "db192f658770485e8d69c00d0a218a5b4f1ae2a027e3e0b29de04159ff8c086d",
+    "lastmod": "2026-09-14"
   },
   "/python-for-kids/class-9/module-4-object-oriented-programming": {
-    "hash": "e9bc5807753f10bf0e4f25b60981a6aa96fe6e2a61ea8afb81ddb784b6a779e1",
-    "lastmod": "2026-09-11"
+    "hash": "f4dd9134d8eca414c37e156f5c6adf74d5bcc0764fa461e1ab3dc255b74bbfaa",
+    "lastmod": "2026-09-14"
   },
   "/python-for-kids/class-9/module-5-files-json-and-apis": {
-    "hash": "53ef1d221fd7b2a57b1bc8a861784490f17e2da3991935065e648b2637daeae9",
-    "lastmod": "2026-09-11"
+    "hash": "31ce279470dfb30228a3c2e5028ad2ac1deaad1a83a10b9b79944f1f54308f8a",
+    "lastmod": "2026-09-14"
   },
   "/python-for-kids/class-9/module-6-databases-with-python": {
-    "hash": "d5193353317380b2ce4955df8239005dc12144afe254fc216a38fed1d02dc27b",
-    "lastmod": "2026-09-11"
+    "hash": "1090b413a820e5067c959969a72a221c0c41a75ffee7f11e5f74717671ec83eb",
+    "lastmod": "2026-09-14"
   },
   "/python-for-kids/class-9/module-7-web-app-foundations": {
-    "hash": "24e8cae4b18d0ef1007c117ef46344a5e60887fa024d63453b41b715fec9180d",
-    "lastmod": "2026-09-11"
+    "hash": "d23dea03c49d21f88c0a205d9c8a41ce2979ebcbc25da433eb8eb220ab48b6bc",
+    "lastmod": "2026-09-14"
   },
   "/python-for-kids/class-9/module-8-python-and-ai-concepts": {
-    "hash": "1e1ecf27f90aaf177874ea14cb9c1a72a940ad1795883765ac8930f2b2e02f06",
-    "lastmod": "2026-09-11"
+    "hash": "755587b626a9c812369438026073784ab22d956da30efda794b777535474e9c9",
+    "lastmod": "2026-09-14"
   },
   "/python-for-kids/class-9/module-9-class-9-capstone": {
-    "hash": "57ed7b6573be0e9605cda449f06618e3b8ebecf0ea607cd32dea12f0f2cde52c",
-    "lastmod": "2026-09-11"
+    "hash": "2e917cd040bcabe63b83bcaf1a05812e7072cda934e69ac69c7421ad09ab78f7",
+    "lastmod": "2026-09-14"
   },
   "/resources": {
-    "hash": "816d76f25cb22d7cca2787932e0c81ee9c872db3219d60b0766695867d396418",
-    "lastmod": "2026-09-11"
+    "hash": "5323c058344c1198c3857b16c72bfcd8e089fad7f5f46295082c8697e844b029",
+    "lastmod": "2026-09-14"
   },
   "/schools": {
-    "hash": "0af5bece036a806f4d78224e7e4f9133e5f1b640334235e1819da92cc2656542",
-    "lastmod": "2026-09-11"
+    "hash": "20f7305b8dd3d8cafbe78356c869c12f86e96c32c5c27d59182a39ba4631142b",
+    "lastmod": "2026-09-14"
   },
   "/schools/ai-and-coding-clubs": {
-    "hash": "2d9353e07685890ed57bc9c67fe4a9be2eb5d796e804043857d59c349871cd92",
-    "lastmod": "2026-09-11"
+    "hash": "73d8b55f5419c6d61ab693ba6b9ec95fc7542c7ae190d0c5433095d48ac89340",
+    "lastmod": "2026-09-14"
   },
   "/schools/ai-curriculum": {
-    "hash": "efdee610d2a5c4173c1b0f61be20ce875e4c04ad05caacf2b34709ca097475bf",
-    "lastmod": "2026-09-11"
+    "hash": "239f537e33ca6d538aaf7acac55f3d3a1d3782c3a215e0bbdcc73cc847c4c4b4",
+    "lastmod": "2026-09-14"
   },
   "/schools/annual-academic-program": {
-    "hash": "5f23da6654ee9c609c5337928f6e67b36e413f16be17a87fdcf6e5cf8bd7a00c",
-    "lastmod": "2026-09-11"
+    "hash": "3d939d0527b126fe2f201dde14a5e8fe857e30e296b373dc5efd521979c9a2ed",
+    "lastmod": "2026-09-14"
   },
   "/schools/python-curriculum": {
-    "hash": "f3bf6940a95111cd92416df81d48c746179c21af69212b98d230b6410a3953fa",
-    "lastmod": "2026-09-11"
+    "hash": "67821148d3cdc1a6b3b75a5058ff63c74947bb3748753f3ea3f35d5981a4878d",
+    "lastmod": "2026-09-14"
   },
   "/schools/request-proposal": {
-    "hash": "857889d71e7c777844d81baf9cb867f554c401f775b406ea799df3ae5d96f757",
-    "lastmod": "2026-09-11"
+    "hash": "cebee234033fce3072634fa4926a552294834b9e016a4bd458bf98ab2b294f39",
+    "lastmod": "2026-09-14"
   },
   "/schools/school-partnership-program": {
-    "hash": "e9ace90ec2e2a97338847b74f8cd8529db8d7d0ba062bbeab3597044c1e91ace",
-    "lastmod": "2026-09-11"
+    "hash": "b9175ff47e131b7ed3a27b8f8d7eb51c089241663f3eef527406c9d69196913d",
+    "lastmod": "2026-09-14"
   },
   "/schools/teacher-training": {
-    "hash": "f7826dcf58a2ca896ff72aef0dd4927681d668a59589ab08d0f49cad0be62659",
-    "lastmod": "2026-09-11"
+    "hash": "c1cd0f3719012d04a223677f42e02d426bb6cda134adeea55b045add162dbd3e",
+    "lastmod": "2026-09-14"
   },
   "/student-projects": {
-    "hash": "be385ef591365f16fa302116b5f14949e2d1486306ed06d135de1078a6ea9406",
-    "lastmod": "2026-09-11"
+    "hash": "563cd1b445edcf63c4d2213f72a91ed5a1daa1c7f85fe5eeaa028d958f9df0f7",
+    "lastmod": "2026-09-14"
   },
   "/teaching-methodology": {
-    "hash": "662c42cd6c80af3d6c4d9fb916926df91fb1e8fe4895996e9887692f03ff7117",
-    "lastmod": "2026-09-11"
+    "hash": "8ac78b959c94933ff66e40473dc575994897c20c1cb8a942d4e35b8b14d6877b",
+    "lastmod": "2026-09-14"
   },
   "/terms": {
-    "hash": "733a03047f1fe671d18be5052067b1408a4fd11c980f3fb7ea865310a7ed1b42",
-    "lastmod": "2026-09-11"
+    "hash": "c7bb2ff2f28840a15fb0d3c5288e0f99dd7d89b3bcac3feb6f8174662e0a6db4",
+    "lastmod": "2026-09-14"
   },
   "/tuitions": {
-    "hash": "345c3156c73325835cc9fd29f80165d8c29530b0a6eb453360d3418e3423d7b2",
-    "lastmod": "2026-09-11"
+    "hash": "6a8d3b487da615166d65b04ac49f8a4f9fe1bc13018674af65d5c992567ec402",
+    "lastmod": "2026-09-14"
   },
   "/tuitions/advanced-maths": {
-    "hash": "d2793332f4d115a54497cc88a72a7ed9b999fd22c192f395c9ad8a6c657ee033",
-    "lastmod": "2026-09-11"
+    "hash": "2284552fa314bac88a912d86ea87ea779197186faa30a1559cd54aec179e4c8f",
+    "lastmod": "2026-09-14"
   },
   "/tuitions/biology": {
-    "hash": "0c1dac40b90a587fb69d8b3d7d255321548cb60bb581a97e199dbcd18446dcb1",
-    "lastmod": "2026-09-11"
+    "hash": "bbef5b00e46f6de43a22dcdc51a12761449aa69062989ecd890b97967a09d45d",
+    "lastmod": "2026-09-14"
   },
   "/tuitions/chemistry": {
-    "hash": "000991f5c6fbf933474a9f3ad1db13c1132ab5f665a7c24e4412e9e67565326a",
-    "lastmod": "2026-09-11"
+    "hash": "491287eeeab7407f0f2a9c4e158a7c19868a1c25584125ea7c71cf9f6a1c8507",
+    "lastmod": "2026-09-14"
   },
   "/tuitions/civics": {
-    "hash": "4f5f1dc62a1f6e1302e21eee04c5f7311d07ee18e618c7e4517efad242b20771",
-    "lastmod": "2026-09-11"
+    "hash": "6fc7445dbb17dd46b0598b677fa76fe4ea6d5f13af9611c1814a525736333ffc",
+    "lastmod": "2026-09-14"
   },
   "/tuitions/economics": {
-    "hash": "259093c572fe87f5bc9699c8a1fb7e373d6e361d62a25acbfad95d424d90bfcf",
-    "lastmod": "2026-09-11"
+    "hash": "6d8cf887bb1fd7f0721fd05146d2b2e0816daffa852e8b36723b8a75e39fc0cf",
+    "lastmod": "2026-09-14"
   },
   "/tuitions/english": {
-    "hash": "0542b393d23d48bac44ba7bb791aa24c65740ab7b4e33ee663d29fd23218e519",
-    "lastmod": "2026-09-11"
+    "hash": "27401df9fcb392f5755f394cb7e8057eadc0fc6cec9d80431cb3eefd962c07d4",
+    "lastmod": "2026-09-14"
   },
   "/tuitions/general-science": {
-    "hash": "d8173ff2685cc6e18152e6ff05f1dc969b9c0a41fa23e1b5fadf864cd990679b",
-    "lastmod": "2026-09-11"
+    "hash": "51de502ecb923e2a4ca99a4bf4bb249d2ff243f0791593e9e987ebf914dd385b",
+    "lastmod": "2026-09-14"
   },
   "/tuitions/geography": {
-    "hash": "1e605f89f422743d83c0e51951ce085742fccc1b2c23f9467bd7bb9dd33c010f",
-    "lastmod": "2026-09-11"
+    "hash": "e8a99ed581bcc9c472c1484ccc3db68d4032ac024d5b35679364b80869c91996",
+    "lastmod": "2026-09-14"
   },
   "/tuitions/hindi": {
-    "hash": "18aea3fc9cc57e97f815ec1910daf5607b1eebd39a5db44c5131061eb4d3d175",
-    "lastmod": "2026-09-11"
+    "hash": "f91208599cd1a54e4d9f92da2bb19e94ada139d8df3d43a943075d6689d1f944",
+    "lastmod": "2026-09-14"
   },
   "/tuitions/history": {
-    "hash": "3890b47d4eff8bbc7da31625281e503011fc3adbfecb4cc667a9238499838d88",
-    "lastmod": "2026-09-11"
+    "hash": "d8a68e5791808672f577e62b82cc706c543d8ea74be75b62dbe27332c714a1bf",
+    "lastmod": "2026-09-14"
   },
   "/tuitions/iit-foundation": {
-    "hash": "262348dd9612f70fa3a3d0acd9f5d75ee01b6436471dae17fd42c3b4a414eb15",
-    "lastmod": "2026-09-11"
+    "hash": "b20b33211300fba5e1a9a16009ba2964f862b46deb6416efce368ec2ec8458ce",
+    "lastmod": "2026-09-14"
   },
   "/tuitions/jee-foundation": {
-    "hash": "34ae9e2827c5f36653cad5bf114eb90d3ad09c812f63151547d4eb31af85c1a5",
-    "lastmod": "2026-09-11"
+    "hash": "9063360c057b8c08d1d080de4907e5da0975f9f963cf998ff167c5c03d69d77d",
+    "lastmod": "2026-09-14"
   },
   "/tuitions/mathematics": {
-    "hash": "92e042635602130f8df0d8f00da5da5993f8591c041d467e13d9bf5ebf713f3d",
-    "lastmod": "2026-09-11"
+    "hash": "3f694d3ac577db44568b748508299e77c410fc85b3cae41f3252fb3d18286a49",
+    "lastmod": "2026-09-14"
   },
   "/tuitions/neet-foundation": {
-    "hash": "74a2067f5c3812e5bdcd87d4e2ff55c935d4b836f0aa2389434390c94277bb72",
-    "lastmod": "2026-09-11"
+    "hash": "3b9d4d64926b5540200e073dc1e58074151fa9adb3a9cc61b2e927b60ddad9ef",
+    "lastmod": "2026-09-14"
   },
   "/tuitions/olympiad-foundation": {
-    "hash": "114019977df28303665a59ce28730cc90d8192bcb1bee0a7592b79394290d568",
-    "lastmod": "2026-09-11"
+    "hash": "bbe2594344c15f2eb2625a14f555268bff63597604da9eb6d1fd294d08a6ba2b",
+    "lastmod": "2026-09-14"
   },
   "/tuitions/physics": {
-    "hash": "f163a580a2383698dfbe81e4c4b9ff96af6bff476b5c8982e20cc8d159afdfec",
-    "lastmod": "2026-09-11"
+    "hash": "f09ffdcc8e1f1b2ec6daed56ae04e6b315f8444574629ab2f97b6488b8fe3499",
+    "lastmod": "2026-09-14"
   },
   "/tuitions/telugu": {
-    "hash": "601efb976146a75d0e740293a7bd43ef233263418db0f1969193e67f475994d7",
-    "lastmod": "2026-09-11"
+    "hash": "630158e9733131f8c13ab6f697287089b41f3ccfd998e7e69d372da9372a814d",
+    "lastmod": "2026-09-14"
   },
   "/workshops": {
-    "hash": "9f993dc2a5c3415ebae44df0fd9db5f4f2c43ea7b9dabcfe448646ed7c2fd51c",
-    "lastmod": "2026-09-11"
+    "hash": "81824e7c4aed427d11bf51c4c608407e8f5689852acc77109bb723b69b1b03bd",
+    "lastmod": "2026-09-14"
   },
   "/workshops/abacus-workshop": {
-    "hash": "3101305d77a1d489b70e714a62958490301e2b2194efd44886cb3cc7f1f49d8a",
-    "lastmod": "2026-09-11"
+    "hash": "fd3dead13af4a68164548e02a5037c271b77a8344fc0fd8cd33f969b9b34090f",
+    "lastmod": "2026-09-14"
   },
   "/workshops/ai-workshop": {
-    "hash": "fd371f368042d8df9acc92e5826f15d2ab585e6a2f71eff2257cf1abc87b697e",
-    "lastmod": "2026-09-11"
+    "hash": "92a34845ce2a5bf84a6e5b34f013741d632646f9dcc4fa841fbf48ecdb214e27",
+    "lastmod": "2026-09-14"
   },
   "/workshops/art-workshop": {
-    "hash": "cdfcfdfe5a7217b4dec831a0b26e8640211c2b03216d19084e062b0cbed609c8",
-    "lastmod": "2026-09-11"
+    "hash": "1a88a0ab5870ae8183c1e1b42bcda2130fa0a6f5ee16706ce9c9d29afe52bce8",
+    "lastmod": "2026-09-14"
   },
   "/workshops/brain-games-workshop": {
-    "hash": "be8b212a93d5ae11396b5845ae3c6162f979547c3a00dd4a2256c94b4e5fc84a",
-    "lastmod": "2026-09-11"
+    "hash": "98153d6d88134251a2564eb6bf38bdca84c1b949452f84d5204cba69903fb3d6",
+    "lastmod": "2026-09-14"
   },
   "/workshops/chess-workshop": {
-    "hash": "56a48ab9f46e98d1dcde9c1e3e33ed74474410156dcee56605fcab60999c66d2",
-    "lastmod": "2026-09-11"
+    "hash": "cd12a1b273c3d7ddd52e63bd447d4427b7c974f44973b11e81067bf170773d1a",
+    "lastmod": "2026-09-14"
   },
   "/workshops/coding-workshop": {
-    "hash": "fa85a6535148b4af87d53451ef0dc6a9dfdd3a4541e10956ebbcc5caab4aae12",
-    "lastmod": "2026-09-11"
+    "hash": "22323763f7909e340a20bd9913013c41e4e3848f0ef729291d76426acc9ddcb2",
+    "lastmod": "2026-09-14"
   },
   "/workshops/communication-skills-workshop": {
-    "hash": "72ceba78fda874d4eab37b853ded1b1cff6161cdf94abd8be6d28ae95ea4e549",
-    "lastmod": "2026-09-11"
+    "hash": "70416afff6c2aea8f15f124166be0a24cf7324be5cfd376c9654fff62c3b76e9",
+    "lastmod": "2026-09-14"
   },
   "/workshops/dance-workshop": {
-    "hash": "7e4803f91910ac38abba46495fbed11d772dbd694bee7eb267f69327c366f7c4",
-    "lastmod": "2026-09-11"
+    "hash": "3602cffef515d41f43e82a0494384f437f6e8eb1a2e9be1e1d3a4fd09e1cbc65",
+    "lastmod": "2026-09-14"
   },
   "/workshops/drama-workshop": {
-    "hash": "6e2bb13355e0e2124a206ce59eacc49a932dc537e8400329783a4ba28f633b07",
-    "lastmod": "2026-09-11"
+    "hash": "26049ff8de403cfca9f93937a70aa200b1af896eb3c7175e4ba897b5c75c02ac",
+    "lastmod": "2026-09-14"
   },
   "/workshops/music-workshop": {
-    "hash": "45aba4e87d31449b7781622f475eadfcc2b29d5f0ea022405e3c9d437d63c1bb",
-    "lastmod": "2026-09-11"
+    "hash": "1d6436cad6a3dc8955124a6804c785d20a259010e178750db014658eaaa4f2e5",
+    "lastmod": "2026-09-14"
   },
   "/workshops/public-speaking-workshop": {
-    "hash": "ba495fe015221e0ef22591cf0e34ee4781595eb94c5a3f6fc11dd1ce82dfba2b",
-    "lastmod": "2026-09-11"
+    "hash": "bc9e51b012c5e54abbd1d1e69a151ffe5797697d62e2e6be940b8bc63a46c674",
+    "lastmod": "2026-09-14"
   },
   "/workshops/python-workshop": {
-    "hash": "a8e073aba70a05ad5f5e1668f656db78e6d35e5dc3a47f246cb6fa71a7d0631f",
-    "lastmod": "2026-09-11"
+    "hash": "325494d176dec16e897eece84b38334843faf2ef6a3a82bb0cb519313aa7b6ac",
+    "lastmod": "2026-09-14"
   },
   "/workshops/robotics-workshop": {
-    "hash": "021f1caac8b745f7425196b8c4670f5a06170e80d0d28c7bbfc4b54d174dc518",
-    "lastmod": "2026-09-11"
+    "hash": "aa1af17bb57a18fbec75a3ab4d164f59910d4799bcf0ba49ba3da716ca6c7a85",
+    "lastmod": "2026-09-14"
   },
   "/workshops/spoken-english-workshop": {
-    "hash": "520ebd427c7294e81d23167fad7ba0b2d200744499e09ae82ef3da0a74923b8e",
-    "lastmod": "2026-09-11"
+    "hash": "7ca6d51f13a4b9eee71a901be5151e06e652b79ae7b7f905d3fc00d53c19ff28",
+    "lastmod": "2026-09-14"
   },
   "/workshops/vedic-maths-workshop": {
-    "hash": "857f92566e3a9970520624bc295731d753187240afc5417954f677170d037cc3",
-    "lastmod": "2026-09-11"
+    "hash": "da8043ab0d22befe320ca13f15f0850525ea675952d5f66b042e3a6db9d31d81",
+    "lastmod": "2026-09-14"
   }
 }

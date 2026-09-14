@@ -113,7 +113,7 @@ const PAGES = {
   '/book-free-demo': {
     title: 'Book a Free Trial Class in Hyderabad | Brolly Juniors',
     description:
-      'Book one free trial class at Brolly Juniors Hyderabad. Meet the educator, see the teaching approach, and decide without obligation. Call +91 70360 44555.',
+      'Book one free trial class at Brolly Juniors Hyderabad. Meet the educator, see the teaching approach, and decide without obligation. Call +91 95423 44555.',
     keyword: 'free trial class in hyderabad',
     crumb: 'Book a free trial',
   },
@@ -259,7 +259,7 @@ const PAGES = {
   '/contact': {
     title: 'Contact Brolly Juniors | Kids Classes in Hyderabad',
     description:
-      'Contact Brolly Juniors, Hyderabad. Call +91 70360 44555 or message us on WhatsApp for batch timings, centre directions and free trial class bookings.',
+      'Contact Brolly Juniors, Hyderabad. Call +91 95423 44555 or message us on WhatsApp for batch timings, centre directions and free trial class bookings.',
     keyword: 'contact brolly juniors',
     intent: 'navigational',
     crumb: 'Contact',

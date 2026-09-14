@@ -3109,7 +3109,7 @@ export const programmeDetails = {
           'Parents are welcome on the viewing side throughout',
         ],
       },
-      note: 'The pool venue is confirmed on enrolment — please call 7036044555 to check the current venue before you plan travel.',
+      note: 'The pool venue is confirmed on enrolment — please call 9542344555 to check the current venue before you plan travel.',
     },
     trust: {
       title: 'What shapes the swimming sessions',
@@ -3436,7 +3436,7 @@ export const programmeDetails = {
         { title: 'Cool down', text: 'Easy swimming or floating before getting out.' },
         { title: 'Parent feedback', text: 'A quick word on what went well and what comes next.' },
       ],
-      note: 'This is an example class flow, not an officially fixed structure, and Brolly Juniors does not publish fixed class durations here. Parents are welcome on the viewing side throughout. Contact us on 7036044555 for current session details.',
+      note: 'This is an example class flow, not an officially fixed structure, and Brolly Juniors does not publish fixed class durations here. Parents are welcome on the viewing side throughout. Contact us on 9542344555 for current session details.',
     },
     activities: {
       title: 'Swimming activities for kids',
@@ -3467,7 +3467,7 @@ export const programmeDetails = {
         { icon: '⚠️', title: 'Safety taught throughout', text: 'Self-rescue and treading water are taught to every child, not only beginners.' },
         { icon: '👨‍👩‍👧', title: 'Parent communication', text: 'Ask what your child is working on and what to encourage next.' },
       ],
-      note: 'Brolly Juniors does not publish student counts, ratings, awards, certifications or partnerships on this page. For anything not listed here, please contact us or call 7036044555.',
+      note: 'Brolly Juniors does not publish student counts, ratings, awards, certifications or partnerships on this page. For anything not listed here, please contact us or call 9542344555.',
     },
     practical: {
       feeTitle: 'Swimming class fees',
@@ -3501,7 +3501,7 @@ export const programmeDetails = {
       title: 'What to ask us, and what to expect',
       lead: 'Swimming runs off-site, so a little checking before you travel saves a wasted trip.',
       items: [
-        { title: 'Ask where the pool is', text: 'The venue is confirmed on enrolment and can change. Call 7036044555 first.' },
+        { title: 'Ask where the pool is', text: 'The venue is confirmed on enrolment and can change. Call 9542344555 first.' },
         { title: 'Ask which level your child is on', text: 'And what they are currently working on within it.' },
         { title: 'Ask what to practise', text: 'The team can tell you what to encourage between sessions.' },
         { title: 'Check the kit list', text: 'Requirements differ by pool and age group. Ask before buying anything.' },
@@ -3518,7 +3518,7 @@ export const programmeDetails = {
         'Brolly Juniors is a children’s learning centre at Nizampet X Roads, Hyderabad, running activity-based skill programmes for ages 3–16. Swimming runs for ages 5–14 at partner pools.',
         'Please note: swimming classes are not held at the centre. They run at partner pools, and the venue is confirmed on enrolment. Parents looking for kids swimming classes in Hyderabad most often reach us from the areas around Nizampet X Roads.',
       ],
-      note: 'Brolly Juniors does not claim swimming facilities or centres in areas where it does not have them. Parents across Hyderabad can contact Brolly Juniors to check current swimming programme availability and the pool venue on 7036044555.',
+      note: 'Brolly Juniors does not claim swimming facilities or centres in areas where it does not have them. Parents across Hyderabad can contact Brolly Juniors to check current swimming programme availability and the pool venue on 9542344555.',
     },
     nearMe: {
       title: 'Looking for swimming classes near me?',
@@ -3564,11 +3564,11 @@ export const programmeDetails = {
       },
       {
         q: 'Where can my child learn swimming in Hyderabad?',
-        a: 'Brolly Juniors runs swimming classes for children aged 5–14 in Hyderabad, held at partner pools. The centre is at Nizampet X Roads, but classes are at the pool, and the venue is confirmed on enrolment. Call 7036044555 to check.',
+        a: 'Brolly Juniors runs swimming classes for children aged 5–14 in Hyderabad, held at partner pools. The centre is at Nizampet X Roads, but classes are at the pool, and the venue is confirmed on enrolment. Call 9542344555 to check.',
       },
       {
         q: 'How can parents book a swimming class demo?',
-        a: 'Use the demo form on this page, call 7036044555, or message Brolly Juniors on WhatsApp. Every new family gets one free trial class.',
+        a: 'Use the demo form on this page, call 9542344555, or message Brolly Juniors on WhatsApp. Every new family gets one free trial class.',
       },
     ],
     faqTitle: 'Swimming classes: frequently asked questions',
@@ -3619,19 +3619,19 @@ export const programmeDetails = {
       },
       {
         q: 'Where are the swimming classes held?',
-        a: 'Swimming runs at partner pools rather than at the Brolly Juniors centre. The pool venue is confirmed on enrolment, so please call 7036044555 to check the current venue before planning travel.',
+        a: 'Swimming runs at partner pools rather than at the Brolly Juniors centre. The pool venue is confirmed on enrolment, so please call 9542344555 to check the current venue before planning travel.',
       },
       {
         q: 'Are swimming classes available in Hyderabad?',
-        a: 'Yes. Brolly Juniors runs swimming classes for kids in Hyderabad for ages 5 to 14, held at partner pools with a lifeguard on deck and a maximum of six children per coach. Call 7036044555 to check current availability.',
+        a: 'Yes. Brolly Juniors runs swimming classes for kids in Hyderabad for ages 5 to 14, held at partner pools with a lifeguard on deck and a maximum of six children per coach. Call 9542344555 to check current availability.',
       },
       {
         q: 'How much do swimming classes for kids cost?',
-        a: 'Swimming class fees may vary based on the current program, schedule, and learning format. Contact Brolly Juniors on 7036044555 for current fee details.',
+        a: 'Swimming class fees may vary based on the current program, schedule, and learning format. Contact Brolly Juniors on 9542344555 for current fee details.',
       },
       {
         q: 'What should children bring to swimming classes?',
-        a: 'Requirements can differ by pool and age group. Please contact Brolly Juniors on 7036044555 for the current list before buying anything, and follow any safety-equipment guidance given by the coach or the pool.',
+        a: 'Requirements can differ by pool and age group. Please contact Brolly Juniors on 9542344555 for the current list before buying anything, and follow any safety-equipment guidance given by the coach or the pool.',
       },
       {
         q: 'Can parents watch the class?',
@@ -3639,7 +3639,7 @@ export const programmeDetails = {
       },
       {
         q: 'How can I book a swimming class demo?',
-        a: 'Every new family can book one free trial class. Fill in the demo form on this page, call 7036044555, or message us on WhatsApp, and the team will confirm a slot and the pool venue.',
+        a: 'Every new family can book one free trial class. Fill in the demo form on this page, call 9542344555, or message us on WhatsApp, and the team will confirm a slot and the pool venue.',
       },
     ],
   },
@@ -3809,7 +3809,7 @@ export const programmeDetails = {
           skill: 'A finished routine, and knowing what to practise next.',
         },
       ],
-      note: 'This is a suggested learning structure, not a fixed syllabus. The exact curriculum may vary based on the child’s age, learning level and programme. Contact Brolly Juniors on 7036044555 for the current programme structure.',
+      note: 'This is a suggested learning structure, not a fixed syllabus. The exact curriculum may vary based on the child’s age, learning level and programme. Contact Brolly Juniors on 9542344555 for the current programme structure.',
     },
     ageBands: {
       title: 'Age-wise dance learning',
@@ -3884,7 +3884,7 @@ export const programmeDetails = {
           { title: 'Repeat', text: 'Again and again, until it stops needing thought.' },
           { title: 'Perform', text: 'The full step or sequence, done for others.' },
         ],
-        note: 'Brolly Juniors does not claim professional or competition-level dance training on this page. Contact us on 7036044555 to ask what level the current programme covers.',
+        note: 'Brolly Juniors does not claim professional or competition-level dance training on this page. Contact us on 9542344555 to ask what level the current programme covers.',
       },
       {
         id: 'beginners',
@@ -3925,7 +3925,7 @@ export const programmeDetails = {
         { title: 'Sequence practice', text: 'Joining the step into the current routine.' },
         { title: 'Review and improvement', text: 'One or two specific things to try next time.' },
       ],
-      note: 'This is an illustrative session flow. Brolly Juniors does not publish fixed class durations here — contact us on 7036044555 for current session details.',
+      note: 'This is an illustrative session flow. Brolly Juniors does not publish fixed class durations here — contact us on 9542344555 for current session details.',
     },
     activities: {
       title: 'Dance activities for kids',
@@ -3955,7 +3955,7 @@ export const programmeDetails = {
         { icon: '✨', title: 'Creative learning', text: 'Children get room to invent their own movements, not only copy.' },
         { icon: '👨‍👩‍👧', title: 'Parent communication', text: 'Parents can ask what their child is working on and what to encourage at home.' },
       ],
-      note: 'Brolly Juniors does not publish student counts, ratings, awards or rankings on this page. For anything not listed here, please contact us or call 7036044555.',
+      note: 'Brolly Juniors does not publish student counts, ratings, awards or rankings on this page. For anything not listed here, please contact us or call 9542344555.',
     },
     practical: {
       feeTitle: 'Dance class fees',
@@ -4005,7 +4005,7 @@ export const programmeDetails = {
         'Brolly Juniors is a children’s learning centre in Hyderabad running activity-based skill programmes for ages 3–16, including dance.',
         'Parents looking for kids dance classes in Hyderabad or children’s dance classes in Hyderabad most often reach us from the areas around Nizampet X Roads. We operate from that one address and do not list branches we do not have.',
       ],
-      note: 'To check whether dance training for kids in Hyderabad is currently running in a format that works for your family, call 7036044555.',
+      note: 'To check whether dance training for kids in Hyderabad is currently running in a format that works for your family, call 9542344555.',
     },
     nearMe: {
       title: 'Looking for dance classes near me?',
@@ -4047,7 +4047,7 @@ export const programmeDetails = {
       },
       {
         q: 'Where can I find dance classes for kids in Hyderabad?',
-        a: 'Brolly Juniors runs dance classes for kids at Nizampet X Roads, Hyderabad. Call 7036044555 for current details.',
+        a: 'Brolly Juniors runs dance classes for kids at Nizampet X Roads, Hyderabad. Call 9542344555 for current details.',
       },
       {
         q: 'How can children improve their dance skills?',
@@ -4082,7 +4082,7 @@ export const programmeDetails = {
       },
       {
         q: 'Are dance classes available in Hyderabad?',
-        a: 'Yes. Brolly Juniors runs dance classes for kids in Hyderabad from its centre at Metro Pillar No. A689, Dr Atmaram Estates, 3rd Floor, Nizampet X Roads, Hyderabad 500072. Call 7036044555 to check current availability.',
+        a: 'Yes. Brolly Juniors runs dance classes for kids in Hyderabad from its centre at Metro Pillar No. A689, Dr Atmaram Estates, 3rd Floor, Nizampet X Roads, Hyderabad 500072. Call 9542344555 to check current availability.',
       },
       {
         q: 'Can beginners join dance classes?',
@@ -4094,7 +4094,7 @@ export const programmeDetails = {
       },
       {
         q: 'What should children wear for dance classes?',
-        a: 'Clothing and footwear requirements can differ by age group and activity. Please contact Brolly Juniors on 7036044555 for the current guidance before buying anything.',
+        a: 'Clothing and footwear requirements can differ by age group and activity. Please contact Brolly Juniors on 9542344555 for the current guidance before buying anything.',
       },
       {
         q: 'How often should children practise dance?',
@@ -4110,11 +4110,11 @@ export const programmeDetails = {
       },
       {
         q: 'How can I know the current fees?',
-        a: 'Dance class fees may vary based on the program and learning format. Contact Brolly Juniors on 7036044555 for current fee details.',
+        a: 'Dance class fees may vary based on the program and learning format. Contact Brolly Juniors on 9542344555 for current fee details.',
       },
       {
         q: 'How can I book a free demo?',
-        a: 'Fill in the demo form on this page, call 7036044555, or message us on WhatsApp. Our team will get in touch to confirm a slot that suits you.',
+        a: 'Fill in the demo form on this page, call 9542344555, or message us on WhatsApp. Our team will get in touch to confirm a slot that suits you.',
       },
     ],
   },
@@ -4282,7 +4282,7 @@ export const programmeDetails = {
           skill: 'Explaining an idea clearly enough that someone else can act on it.',
         },
       ],
-      note: 'These are presented as example learning areas, not an officially verified curriculum. The actual programme may vary by age group and level. Contact Brolly Juniors on 7036044555 for the current structure.',
+      note: 'These are presented as example learning areas, not an officially verified curriculum. The actual programme may vary by age group and level. Contact Brolly Juniors on 9542344555 for the current structure.',
     },
     ageBands: {
       title: 'Age-wise indoor games',
@@ -4507,7 +4507,7 @@ export const programmeDetails = {
         { title: 'Reflection', text: 'What worked, what did not, and what to try next time.' },
         { title: 'Parent feedback', text: 'A quick word on what the child worked on.' },
       ],
-      note: 'This is an example activity flow, not an officially fixed structure, and Brolly Juniors does not publish fixed session durations here. Contact us on 7036044555 for current session details.',
+      note: 'This is an example activity flow, not an officially fixed structure, and Brolly Juniors does not publish fixed session durations here. Contact us on 9542344555 for current session details.',
     },
     whyUs: {
       title: 'Why choose Brolly Juniors for indoor games',
@@ -4523,7 +4523,7 @@ export const programmeDetails = {
         { icon: '🤗', title: 'Supportive environment', text: 'Losing a game is normal and is treated that way.' },
         { icon: '📊', title: 'Age-appropriate', text: 'Activities match the age band and change as the child grows.' },
       ],
-      note: 'Brolly Juniors does not publish student counts, ratings, awards, certifications or partnerships on this page. For anything not listed here, please contact us or call 7036044555.',
+      note: 'Brolly Juniors does not publish student counts, ratings, awards, certifications or partnerships on this page. For anything not listed here, please contact us or call 9542344555.',
     },
     practical: {
       feeTitle: 'Indoor games class fees',
@@ -4573,7 +4573,7 @@ export const programmeDetails = {
         'Brolly Juniors is a children’s learning centre at Nizampet X Roads, Hyderabad, running activity-based skill programmes for ages 3–16.',
         'Parents looking for kids indoor games in Hyderabad or indoor activities for children most often reach us from the areas around Nizampet X Roads.',
       ],
-      note: 'Brolly Juniors does not claim centres or play facilities in areas where it does not have them. Parents across Hyderabad can contact Brolly Juniors to check current indoor games programme availability on 7036044555.',
+      note: 'Brolly Juniors does not claim centres or play facilities in areas where it does not have them. Parents across Hyderabad can contact Brolly Juniors to check current indoor games programme availability on 9542344555.',
     },
     nearMe: {
       title: 'Looking for indoor games near me?',
@@ -4619,7 +4619,7 @@ export const programmeDetails = {
       },
       {
         q: 'How can parents book an indoor games demo?',
-        a: 'Use the demo form on this page, call 7036044555, or message Brolly Juniors on WhatsApp.',
+        a: 'Use the demo form on this page, call 9542344555, or message Brolly Juniors on WhatsApp.',
       },
     ],
     faqTitle: 'Indoor games: frequently asked questions',
@@ -4670,11 +4670,11 @@ export const programmeDetails = {
       },
       {
         q: 'Are indoor games available in Hyderabad?',
-        a: 'Yes. Brolly Juniors runs indoor games sessions for children in Hyderabad from its centre at Metro Pillar No. A689, Dr Atmaram Estates, 3rd Floor, Nizampet X Roads, Hyderabad 500072. Call 7036044555 to check current availability.',
+        a: 'Yes. Brolly Juniors runs indoor games sessions for children in Hyderabad from its centre at Metro Pillar No. A689, Dr Atmaram Estates, 3rd Floor, Nizampet X Roads, Hyderabad 500072. Call 9542344555 to check current availability.',
       },
       {
         q: 'How much do indoor games classes cost?',
-        a: 'Indoor games class fees may vary based on the current program and schedule. Contact Brolly Juniors on 7036044555 for current fee details.',
+        a: 'Indoor games class fees may vary based on the current program and schedule. Contact Brolly Juniors on 9542344555 for current fee details.',
       },
       {
         q: 'What activities are included?',
@@ -4686,7 +4686,7 @@ export const programmeDetails = {
       },
       {
         q: 'How can I book an indoor games demo?',
-        a: 'Fill in the demo form on this page, call 7036044555, or message us on WhatsApp. Our team will get in touch to confirm a slot.',
+        a: 'Fill in the demo form on this page, call 9542344555, or message us on WhatsApp. Our team will get in touch to confirm a slot.',
       },
     ],
   },
@@ -4851,7 +4851,7 @@ export const programmeDetails = {
           skill: 'Playing a part in a group scene from start to end.',
         },
       ],
-      note: 'These are presented as example learning areas, not official fixed modules. The actual curriculum may vary by age group, learning level and programme. Contact Brolly Juniors on 7036044555 for the current programme structure.',
+      note: 'These are presented as example learning areas, not official fixed modules. The actual curriculum may vary by age group, learning level and programme. Contact Brolly Juniors on 9542344555 for the current programme structure.',
     },
     ageBands: {
       title: 'Age-wise drama learning',
@@ -5051,7 +5051,7 @@ export const programmeDetails = {
         { title: 'Performance', text: 'Showing the scene to the rest of the group.' },
         { title: 'Feedback', text: 'One or two specific things to try next time.' },
       ],
-      note: 'This is an example class flow, not an officially fixed structure, and Brolly Juniors does not publish fixed class durations here. Contact us on 7036044555 for current session details.',
+      note: 'This is an example class flow, not an officially fixed structure, and Brolly Juniors does not publish fixed class durations here. Contact us on 9542344555 for current session details.',
     },
     activities: {
       title: 'Drama activities for kids',
@@ -5084,7 +5084,7 @@ export const programmeDetails = {
         { icon: '🤗', title: 'Supportive environment', text: 'Children are encouraged rather than judged, and nobody is forced to perform.' },
         { icon: '📊', title: 'Age-appropriate activities', text: 'Activities match the stage and confidence level, and change as the child grows.' },
       ],
-      note: 'Brolly Juniors does not publish student counts, ratings, awards, certifications or partnerships on this page. For anything not listed here, please contact us or call 7036044555.',
+      note: 'Brolly Juniors does not publish student counts, ratings, awards, certifications or partnerships on this page. For anything not listed here, please contact us or call 9542344555.',
     },
     practical: {
       feeTitle: 'Drama class fees',
@@ -5134,7 +5134,7 @@ export const programmeDetails = {
         'Brolly Juniors is a children’s learning centre in Hyderabad running activity-based skill programmes for ages 3–16, including drama.',
         'Parents looking for kids drama classes in Hyderabad or theatre classes for children most often reach us from the areas around Nizampet X Roads.',
       ],
-      note: 'Brolly Juniors operates from the Nizampet X Roads address. We do not claim centres in areas where we do not have one. Parents across Hyderabad can contact Brolly Juniors to check current availability on 7036044555.',
+      note: 'Brolly Juniors operates from the Nizampet X Roads address. We do not claim centres in areas where we do not have one. Parents across Hyderabad can contact Brolly Juniors to check current availability on 9542344555.',
     },
     nearMe: {
       title: 'Looking for drama classes near me?',
@@ -5180,7 +5180,7 @@ export const programmeDetails = {
       },
       {
         q: 'How can parents book a drama class demo?',
-        a: 'Use the demo form on this page, call 7036044555, or message Brolly Juniors on WhatsApp.',
+        a: 'Use the demo form on this page, call 9542344555, or message Brolly Juniors on WhatsApp.',
       },
     ],
     faqTitle: 'Drama classes: frequently asked questions',
@@ -5235,11 +5235,11 @@ export const programmeDetails = {
       },
       {
         q: 'Are drama classes available in Hyderabad?',
-        a: 'Yes. Brolly Juniors runs drama classes for kids in Hyderabad from its centre at Metro Pillar No. A689, Dr Atmaram Estates, 3rd Floor, Nizampet X Roads, Hyderabad 500072. Call 7036044555 to check current availability.',
+        a: 'Yes. Brolly Juniors runs drama classes for kids in Hyderabad from its centre at Metro Pillar No. A689, Dr Atmaram Estates, 3rd Floor, Nizampet X Roads, Hyderabad 500072. Call 9542344555 to check current availability.',
       },
       {
         q: 'How much do drama classes for kids cost?',
-        a: 'Drama class fees may vary based on the current program and schedule. Contact Brolly Juniors on 7036044555 for current fee details.',
+        a: 'Drama class fees may vary based on the current program and schedule. Contact Brolly Juniors on 9542344555 for current fee details.',
       },
       {
         q: 'Will my child have to perform on stage?',
@@ -5247,7 +5247,7 @@ export const programmeDetails = {
       },
       {
         q: 'How can I book a free demo?',
-        a: 'Fill in the demo form on this page, call 7036044555, or message us on WhatsApp. Our team will get in touch to confirm a slot that suits you.',
+        a: 'Fill in the demo form on this page, call 9542344555, or message us on WhatsApp. Our team will get in touch to confirm a slot that suits you.',
       },
     ],
   },
@@ -5415,7 +5415,7 @@ export const programmeDetails = {
           skill: 'Practising independently, and knowing what to fix next.',
         },
       ],
-      note: 'This is a suggested learning structure, not a fixed syllabus. The exact curriculum may vary based on the child’s age, learning level and programme. Contact Brolly Juniors on 7036044555 for the current programme structure.',
+      note: 'This is a suggested learning structure, not a fixed syllabus. The exact curriculum may vary based on the child’s age, learning level and programme. Contact Brolly Juniors on 9542344555 for the current programme structure.',
     },
     ageBands: {
       title: 'Age-wise music learning',
@@ -5514,7 +5514,7 @@ export const programmeDetails = {
           {
             icon: '🎹',
             title: 'Instrument learning',
-            text: 'Music learning may include instrument-based activities where offered. Brolly Juniors does not list specific instruments on this page, because what is available can change by programme, age group and batch. We would rather you heard the current position from us than plan around something listed here. Call 7036044555 for current instrument and music programme details.',
+            text: 'Music learning may include instrument-based activities where offered. Brolly Juniors does not list specific instruments on this page, because what is available can change by programme, age group and batch. We would rather you heard the current position from us than plan around something listed here. Call 9542344555 for current instrument and music programme details.',
           },
         ],
       },
@@ -5531,7 +5531,7 @@ export const programmeDetails = {
         { title: 'Rhythm or music activity', text: 'Applying the idea in a creative activity.' },
         { title: 'Review and improvement', text: 'One or two specific things to try next time.' },
       ],
-      note: 'This is an illustrative session flow. Brolly Juniors does not publish fixed class durations here — contact us on 7036044555 for current session details.',
+      note: 'This is an illustrative session flow. Brolly Juniors does not publish fixed class durations here — contact us on 9542344555 for current session details.',
     },
     activities: {
       title: 'Musical activities for kids',
@@ -5561,7 +5561,7 @@ export const programmeDetails = {
         { icon: '✨', title: 'Creative learning', text: 'Children get room to create their own patterns, not only copy.' },
         { icon: '👨‍👩‍👧', title: 'Parent communication', text: 'Parents can ask what their child is working on and what to encourage at home.' },
       ],
-      note: 'Brolly Juniors does not publish student counts, ratings, awards or rankings on this page. For anything not listed here, please contact us or call 7036044555.',
+      note: 'Brolly Juniors does not publish student counts, ratings, awards or rankings on this page. For anything not listed here, please contact us or call 9542344555.',
     },
     practical: {
       feeTitle: 'Music class fees',
@@ -5611,7 +5611,7 @@ export const programmeDetails = {
         'Brolly Juniors is a children’s learning centre in Hyderabad running activity-based skill programmes for ages 3–16, including music.',
         'Parents looking for kids music classes in Hyderabad or children’s music classes in Hyderabad most often reach us from the areas around Nizampet X Roads. We operate from that one address and do not list branches we do not have.',
       ],
-      note: 'To check whether music lessons for kids in Hyderabad are currently running in a format that works for your family, call 7036044555.',
+      note: 'To check whether music lessons for kids in Hyderabad are currently running in a format that works for your family, call 9542344555.',
     },
     nearMe: {
       title: 'Looking for music classes near me?',
@@ -5653,7 +5653,7 @@ export const programmeDetails = {
       },
       {
         q: 'Where can I find music classes for kids in Hyderabad?',
-        a: 'Brolly Juniors runs music classes for kids at Nizampet X Roads, Hyderabad. Call 7036044555 for current details.',
+        a: 'Brolly Juniors runs music classes for kids at Nizampet X Roads, Hyderabad. Call 9542344555 for current details.',
       },
       {
         q: 'How can children improve their music skills?',
@@ -5692,7 +5692,7 @@ export const programmeDetails = {
       },
       {
         q: 'Are music classes available in Hyderabad?',
-        a: 'Yes. Brolly Juniors runs music classes for kids in Hyderabad from its centre at Metro Pillar No. A689, Dr Atmaram Estates, 3rd Floor, Nizampet X Roads, Hyderabad 500072. Call 7036044555 to check current availability.',
+        a: 'Yes. Brolly Juniors runs music classes for kids in Hyderabad from its centre at Metro Pillar No. A689, Dr Atmaram Estates, 3rd Floor, Nizampet X Roads, Hyderabad 500072. Call 9542344555 to check current availability.',
       },
       {
         q: 'Can beginners join music classes?',
@@ -5700,7 +5700,7 @@ export const programmeDetails = {
       },
       {
         q: 'Do music classes include instrument learning?',
-        a: 'Music learning may include instrument-based activities where offered. Brolly Juniors does not list specific instruments here, because availability can change by programme and batch. Contact Brolly Juniors on 7036044555 for current instrument and music program details.',
+        a: 'Music learning may include instrument-based activities where offered. Brolly Juniors does not list specific instruments here, because availability can change by programme and batch. Contact Brolly Juniors on 9542344555 for current instrument and music program details.',
       },
       {
         q: 'How can parents support music practice at home?',
@@ -5708,7 +5708,7 @@ export const programmeDetails = {
       },
       {
         q: 'What should children bring to music classes?',
-        a: 'Requirements can differ by age group and activity. Please contact Brolly Juniors on 7036044555 for the current list before buying or arranging anything.',
+        a: 'Requirements can differ by age group and activity. Please contact Brolly Juniors on 9542344555 for the current list before buying or arranging anything.',
       },
       {
         q: 'How often should children practise music?',
@@ -5724,11 +5724,11 @@ export const programmeDetails = {
       },
       {
         q: 'How can I know the current fees?',
-        a: 'Music class fees may vary based on the program and learning format. Contact Brolly Juniors on 7036044555 for current fee details.',
+        a: 'Music class fees may vary based on the program and learning format. Contact Brolly Juniors on 9542344555 for current fee details.',
       },
       {
         q: 'How can I book a free demo?',
-        a: 'Fill in the demo form on this page, call 7036044555, or message us on WhatsApp. Our team will get in touch to confirm a slot that suits you.',
+        a: 'Fill in the demo form on this page, call 9542344555, or message us on WhatsApp. Our team will get in touch to confirm a slot that suits you.',
       },
     ],
   },
@@ -5780,7 +5780,7 @@ export const programmeDetails = {
           'Any activity should stop if a child feels unwell, injured or uncomfortable',
         ],
       },
-      note: 'Ground venues are confirmed on enrolment — please call 7036044555 to check the current ground before planning travel.',
+      note: 'Ground venues are confirmed on enrolment — please call 9542344555 to check the current ground before planning travel.',
     },
     trust: {
       title: 'What shapes the outdoor games sessions',
@@ -6127,7 +6127,7 @@ export const programmeDetails = {
         { title: 'Cool down', text: 'Easy movement and a shade-and-water break to finish.' },
         { title: 'Parent feedback', text: 'A quick word on what your child worked on.' },
       ],
-      note: 'This is an example activity flow, not an officially fixed structure, and Brolly Juniors does not publish fixed session durations here. Scheduled water and shade breaks are built into every session. Contact us on 7036044555 for current session details.',
+      note: 'This is an example activity flow, not an officially fixed structure, and Brolly Juniors does not publish fixed session durations here. Scheduled water and shade breaks are built into every session. Contact us on 9542344555 for current session details.',
     },
     activities: {
       title: 'Creative and group outdoor activities',
@@ -6141,7 +6141,7 @@ export const programmeDetails = {
         { icon: '🧩', title: 'Outdoor puzzle challenge', text: 'Thinking and moving in the same activity.' },
         { icon: '🧭', title: 'Direction-finding game', text: 'Following and giving directions accurately.' },
       ],
-      note: 'These are example activities rather than a confirmed session plan. Contact Brolly Juniors on 7036044555 for the current activity plan.',
+      note: 'These are example activities rather than a confirmed session plan. Contact Brolly Juniors on 9542344555 for the current activity plan.',
     },
     whyUs: {
       title: 'Why choose Brolly Juniors for outdoor games',
@@ -6157,7 +6157,7 @@ export const programmeDetails = {
         { icon: '👨‍👩‍👧', title: 'Parent communication', text: 'Ask what your child worked on and what to practise at home.' },
         { icon: '🤗', title: 'Supportive environment', text: 'Not a trial, not a selection. Children are coached, not ranked.' },
       ],
-      note: 'Brolly Juniors does not publish student counts, ratings, awards, certifications or partnerships on this page, and does not own the grounds it uses. For anything not listed here, please contact us or call 7036044555.',
+      note: 'Brolly Juniors does not publish student counts, ratings, awards, certifications or partnerships on this page, and does not own the grounds it uses. For anything not listed here, please contact us or call 9542344555.',
     },
     practical: {
       feeTitle: 'Outdoor games class fees',
@@ -6191,7 +6191,7 @@ export const programmeDetails = {
       title: 'What to ask us, and what to expect',
       lead: 'Sessions run off-site and early, so a little checking before you travel saves a wasted trip.',
       items: [
-        { title: 'Ask where the ground is', text: 'It is confirmed on enrolment and can change. Call 7036044555 first.' },
+        { title: 'Ask where the ground is', text: 'It is confirmed on enrolment and can change. Call 9542344555 first.' },
         { title: 'Ask which block your child is on', text: 'And what they worked on last session.' },
         { title: 'Ask what to practise', text: 'Usually one thing — a throw, a landing, a turn.' },
         { title: 'Send a water bottle', text: 'Breaks are scheduled, but the bottle is yours to bring.' },
@@ -6208,7 +6208,7 @@ export const programmeDetails = {
         'Brolly Juniors is a children’s learning centre at Nizampet X Roads, Hyderabad, running activity-based skill programmes for ages 3–16. Outdoor games runs for ages 5–14 at partner grounds.',
         'Please note: outdoor games sessions are not held at the centre. They run at partner grounds, and the ground is confirmed on enrolment. Parents looking for kids outdoor games in Hyderabad most often reach us from the areas around Nizampet X Roads.',
       ],
-      note: 'Brolly Juniors does not claim playgrounds, sports facilities or centres in areas where it does not have them. Parents across Hyderabad can contact Brolly Juniors to check current outdoor games programme availability and the ground on 7036044555.',
+      note: 'Brolly Juniors does not claim playgrounds, sports facilities or centres in areas where it does not have them. Parents across Hyderabad can contact Brolly Juniors to check current outdoor games programme availability and the ground on 9542344555.',
     },
     nearMe: {
       title: 'Looking for outdoor games near me?',
@@ -6254,7 +6254,7 @@ export const programmeDetails = {
       },
       {
         q: 'How can parents book an outdoor games demo?',
-        a: 'Use the demo form on this page, call 7036044555, or message Brolly Juniors on WhatsApp. Every new family gets one free trial.',
+        a: 'Use the demo form on this page, call 9542344555, or message Brolly Juniors on WhatsApp. Every new family gets one free trial.',
       },
     ],
     faqTitle: 'Outdoor games: frequently asked questions',
@@ -6309,7 +6309,7 @@ export const programmeDetails = {
       },
       {
         q: 'Where are the outdoor games sessions held?',
-        a: 'Sessions run at partner grounds rather than at the Brolly Juniors centre. The ground is confirmed on enrolment, so please call 7036044555 to check the current venue before planning travel.',
+        a: 'Sessions run at partner grounds rather than at the Brolly Juniors centre. The ground is confirmed on enrolment, so please call 9542344555 to check the current venue before planning travel.',
       },
       {
         q: 'Is this a sports academy or a talent programme?',
@@ -6317,19 +6317,19 @@ export const programmeDetails = {
       },
       {
         q: 'Are outdoor games available in Hyderabad?',
-        a: 'Yes. Brolly Juniors runs outdoor games sessions for kids in Hyderabad for ages 5 to 14, on weekend mornings at partner grounds, with a maximum of twelve children per coach. Call 7036044555 to check current availability.',
+        a: 'Yes. Brolly Juniors runs outdoor games sessions for kids in Hyderabad for ages 5 to 14, on weekend mornings at partner grounds, with a maximum of twelve children per coach. Call 9542344555 to check current availability.',
       },
       {
         q: 'How much do outdoor games classes cost?',
-        a: 'Outdoor games class fees may vary based on the current program and schedule. Contact Brolly Juniors on 7036044555 for current fee details.',
+        a: 'Outdoor games class fees may vary based on the current program and schedule. Contact Brolly Juniors on 9542344555 for current fee details.',
       },
       {
         q: 'What should children bring to outdoor activities?',
-        a: 'Requirements can differ by ground and age group. A water bottle and suitable footwear are sensible starting points. Please contact Brolly Juniors on 7036044555 for the current list, and follow any equipment guidance given by the coach.',
+        a: 'Requirements can differ by ground and age group. A water bottle and suitable footwear are sensible starting points. Please contact Brolly Juniors on 9542344555 for the current list, and follow any equipment guidance given by the coach.',
       },
       {
         q: 'How can I book an outdoor games demo?',
-        a: 'Every new family can book one free trial session. Fill in the demo form on this page, call 7036044555, or message us on WhatsApp, and the team will confirm a slot and the ground.',
+        a: 'Every new family can book one free trial session. Fill in the demo form on this page, call 9542344555, or message us on WhatsApp, and the team will confirm a slot and the ground.',
       },
     ],
   },
@@ -6521,7 +6521,7 @@ export const programmeDetails = {
           skill: 'Outcome: relaxes fully and quietly for ten minutes.',
         },
       ],
-      note: 'These strands describe how Brolly Juniors sessions are structured. They are not officially certified levels or a graded syllabus. Contact Brolly Juniors on 7036044555 for current programme details.',
+      note: 'These strands describe how Brolly Juniors sessions are structured. They are not officially certified levels or a graded syllabus. Contact Brolly Juniors on 9542344555 for current programme details.',
     },
     ageBands: {
       title: 'Age-wise yoga learning',
@@ -6667,7 +6667,7 @@ export const programmeDetails = {
         { title: 'Breathing practice', text: 'Slow, gentle breathing. Never held.' },
         { title: 'Relaxation', text: 'Lying quietly for a guided rest to close.' },
       ],
-      note: 'This is an example class flow, not an officially fixed structure, and Brolly Juniors does not publish fixed session durations here. Contact us on 7036044555 for current session details.',
+      note: 'This is an example class flow, not an officially fixed structure, and Brolly Juniors does not publish fixed session durations here. Contact us on 9542344555 for current session details.',
     },
     activities: {
       title: 'Balance, flexibility and movement activities',
@@ -6699,7 +6699,7 @@ export const programmeDetails = {
         { icon: '🤝', title: 'Fits alongside other activities', text: 'Suitable alongside any other sport or dance class.' },
         { icon: '👨‍👩‍👧', title: 'Parent communication', text: 'Ask what your child worked on and what to practise at home.' },
       ],
-      note: 'Brolly Juniors does not publish student counts, ratings, awards, certifications or partnerships on this page. For anything not listed here, please contact us or call 7036044555.',
+      note: 'Brolly Juniors does not publish student counts, ratings, awards, certifications or partnerships on this page. For anything not listed here, please contact us or call 9542344555.',
     },
     practical: {
       feeTitle: 'Yoga class fees',
@@ -6750,7 +6750,7 @@ export const programmeDetails = {
         'Brolly Juniors is a children’s learning centre at Nizampet X Roads, Hyderabad, running activity-based skill programmes for ages 3–16. Yoga runs for ages 5–15.',
         'Parents looking for kids yoga classes in Hyderabad or yoga for children most often reach us from the areas around Nizampet X Roads.',
       ],
-      note: 'Brolly Juniors does not claim yoga studios, centres or facilities in areas where it does not have them. Parents across Hyderabad can contact Brolly Juniors to check current yoga programme availability on 7036044555.',
+      note: 'Brolly Juniors does not claim yoga studios, centres or facilities in areas where it does not have them. Parents across Hyderabad can contact Brolly Juniors to check current yoga programme availability on 9542344555.',
     },
     nearMe: {
       title: 'Looking for kids yoga near me?',
@@ -6796,7 +6796,7 @@ export const programmeDetails = {
       },
       {
         q: 'How can parents book a yoga demo?',
-        a: 'Use the demo form on this page, call 7036044555, or message Brolly Juniors on WhatsApp.',
+        a: 'Use the demo form on this page, call 9542344555, or message Brolly Juniors on WhatsApp.',
       },
     ],
     faqTitle: 'Yoga classes: frequently asked questions',
@@ -6855,11 +6855,11 @@ export const programmeDetails = {
       },
       {
         q: 'Are yoga classes available in Hyderabad?',
-        a: 'Yes. Brolly Juniors runs yoga classes for kids in Hyderabad for ages 5 to 15, in batches of up to ten children, from its centre at Metro Pillar No. A689, Dr Atmaram Estates, 3rd Floor, Nizampet X Roads, Hyderabad 500072. Call 7036044555 to check current availability.',
+        a: 'Yes. Brolly Juniors runs yoga classes for kids in Hyderabad for ages 5 to 15, in batches of up to ten children, from its centre at Metro Pillar No. A689, Dr Atmaram Estates, 3rd Floor, Nizampet X Roads, Hyderabad 500072. Call 9542344555 to check current availability.',
       },
       {
         q: 'How much do kids yoga classes cost?',
-        a: 'Yoga class fees may vary based on the current program and schedule. Contact Brolly Juniors on 7036044555 for current fee details.',
+        a: 'Yoga class fees may vary based on the current program and schedule. Contact Brolly Juniors on 9542344555 for current fee details.',
       },
       {
         q: 'Can my child do yoga alongside another sport?',
@@ -6867,7 +6867,7 @@ export const programmeDetails = {
       },
       {
         q: 'How can I book a yoga class demo?',
-        a: 'Every new family can book one free trial class. Fill in the demo form on this page, call 7036044555, or message us on WhatsApp, and the team will confirm a slot.',
+        a: 'Every new family can book one free trial class. Fill in the demo form on this page, call 9542344555, or message us on WhatsApp, and the team will confirm a slot.',
       },
     ],
   },

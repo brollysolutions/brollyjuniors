@@ -1138,7 +1138,7 @@ export const tuitionDetails = {
       title: 'Make Economics Easy and Interesting',
       paras: [
         'Want to see how Economics learning can work for your child? Book a free demo and speak with Brolly Juniors.',
-        'Prefer to talk? Call 7036044555 or message us on WhatsApp. Please do not include any financial or bank details in this form.',
+        'Prefer to talk? Call 9542344555 or message us on WhatsApp. Please do not include any financial or bank details in this form.',
         'Help your child understand money, choices, resources, buying, selling and everyday economic ideas through simple learning.',
         'Demo availability may vary. Contact Brolly Juniors for the latest details.',
       ],
@@ -1199,7 +1199,7 @@ export const tuitionDetails = {
         },
         {
           title: 'Who can reach us',
-          text: 'The quickest way to check whether we are convenient for you is to call 7036044555 and ask about current availability. If travel is difficult, ask about available learning formats when you call.',
+          text: 'The quickest way to check whether we are convenient for you is to call 9542344555 and ask about current availability. If travel is difficult, ask about available learning formats when you call.',
         },
       ],
       cols: 4,
@@ -1288,27 +1288,27 @@ export const tuitionDetails = {
       },
       {
         q: 'Are Economics classes available in Hyderabad?',
-        a: "Brolly Juniors is a children's learning centre at Nizampet X Roads, Hyderabad. For current Economics class availability, formats and schedules, please contact Brolly Juniors on 7036044555. We do not publish availability that may change.",
+        a: "Brolly Juniors is a children's learning centre at Nizampet X Roads, Hyderabad. For current Economics class availability, formats and schedules, please contact Brolly Juniors on 9542344555. We do not publish availability that may change.",
       },
       {
         q: 'Are Economics classes available near me?',
-        a: 'Brolly Juniors operates from one centre at Nizampet X Roads, convenient for families in Nizampet, Bachupally, Pragathi Nagar, Kukatpally, Miyapur and Bowrampet. Call 7036044555 to check current availability and formats.',
+        a: 'Brolly Juniors operates from one centre at Nizampet X Roads, convenient for families in Nizampet, Bachupally, Pragathi Nagar, Kukatpally, Miyapur and Bowrampet. Call 9542344555 to check current availability and formats.',
       },
       {
         q: 'How much do Economics classes cost?',
-        a: 'Economics class fees may vary based on the current program. Contact Brolly Juniors for the latest fee details on 7036044555.',
+        a: 'Economics class fees may vary based on the current program. Contact Brolly Juniors for the latest fee details on 9542344555.',
       },
       {
         q: 'What are the class timings?',
-        a: 'Class timings may vary. Contact Brolly Juniors for the latest schedule on 7036044555.',
+        a: 'Class timings may vary. Contact Brolly Juniors for the latest schedule on 9542344555.',
       },
       {
         q: 'Is a free demo available?',
-        a: 'You can request a free demo using the form on this page, or by calling 7036044555. Demo availability may vary, so please contact Brolly Juniors for the latest details before making travel plans.',
+        a: 'You can request a free demo using the form on this page, or by calling 9542344555. Demo availability may vary, so please contact Brolly Juniors for the latest details before making travel plans.',
       },
       {
         q: 'How can I contact Brolly Juniors?',
-        a: 'Call 7036044555, message on WhatsApp, email brollyjuniors.in@gmail.com, or fill in the enquiry form on this page. The centre is at Metro Pillar No. A689, Dr Atmaram Estates, 3rd Floor, Nizampet X Roads, Hyderabad, Telangana 500072.',
+        a: 'Call 9542344555, message on WhatsApp, email brollyjuniors.in@gmail.com, or fill in the enquiry form on this page. The centre is at Metro Pillar No. A689, Dr Atmaram Estates, 3rd Floor, Nizampet X Roads, Hyderabad, Telangana 500072.',
       },
     ],
     quickAnswersTitle: 'Economics in Short',
@@ -1351,11 +1351,11 @@ export const tuitionDetails = {
       },
       {
         q: 'Where in Hyderabad?',
-        a: 'Brolly Juniors, Nizampet X Roads, Hyderabad. Call 7036044555 to book a free demo.',
+        a: 'Brolly Juniors, Nizampet X Roads, Hyderabad. Call 9542344555 to book a free demo.',
       },
       {
         q: '"Where can I find Economics classes for kids in Hyderabad?"',
-        a: "Brolly Juniors is a children's learning centre at Metro Pillar No. A689, Nizampet X Roads, Hyderabad. Call 7036044555 to ask about current Economics class availability.",
+        a: "Brolly Juniors is a children's learning centre at Metro Pillar No. A689, Nizampet X Roads, Hyderabad. Call 9542344555 to ask about current Economics class availability.",
       },
       {
         q: '"What do kids learn in Economics?"',
@@ -1371,7 +1371,7 @@ export const tuitionDetails = {
       },
       {
         q: '"Are there Economics classes near me?"',
-        a: 'Brolly Juniors is at Nizampet X Roads, convenient for Nizampet, Bachupally, Pragathi Nagar, Kukatpally and Miyapur. Call 7036044555 to check availability.',
+        a: 'Brolly Juniors is at Nizampet X Roads, convenient for Nizampet, Bachupally, Pragathi Nagar, Kukatpally and Miyapur. Call 9542344555 to check availability.',
       },
       {
         q: '"Is this about investing?"',
@@ -2497,7 +2497,7 @@ export const tuitionDetails = {
       title: 'Make Civics Easy and Interesting',
       paras: [
         'Want to see how Civics learning can work for your child? Book a free demo and speak with Brolly Juniors.',
-        'Prefer to talk? Call 7036044555 or message us on WhatsApp.',
+        'Prefer to talk? Call 9542344555 or message us on WhatsApp.',
         'Help your child understand communities, rules, government, rights and responsibilities through simple Civics learning.',
         'Demo availability may vary. Contact Brolly Juniors for the latest details.',
       ],
@@ -2564,7 +2564,7 @@ export const tuitionDetails = {
         },
         {
           title: 'Who can reach us',
-          text: 'The quickest way to check whether we are convenient for you is to call 7036044555 and ask about current availability. If travel is difficult, ask about available learning formats when you call.',
+          text: 'The quickest way to check whether we are convenient for you is to call 9542344555 and ask about current availability. If travel is difficult, ask about available learning formats when you call.',
         },
       ],
       cols: 4,
@@ -2653,27 +2653,27 @@ export const tuitionDetails = {
       },
       {
         q: 'Are Civics classes available in Hyderabad?',
-        a: "Brolly Juniors is a children's learning centre at Nizampet X Roads, Hyderabad. For current Civics class availability, formats and schedules, please contact Brolly Juniors on 7036044555. We do not publish availability that may change.",
+        a: "Brolly Juniors is a children's learning centre at Nizampet X Roads, Hyderabad. For current Civics class availability, formats and schedules, please contact Brolly Juniors on 9542344555. We do not publish availability that may change.",
       },
       {
         q: 'Are Civics classes available near me?',
-        a: 'Brolly Juniors operates from one centre at Nizampet X Roads, convenient for families in Nizampet, Bachupally, Pragathi Nagar, Kukatpally, Miyapur and Bowrampet. Call 7036044555 to check current availability and formats.',
+        a: 'Brolly Juniors operates from one centre at Nizampet X Roads, convenient for families in Nizampet, Bachupally, Pragathi Nagar, Kukatpally, Miyapur and Bowrampet. Call 9542344555 to check current availability and formats.',
       },
       {
         q: 'How much do Civics classes cost?',
-        a: 'Civics class fees may vary based on the current program. Contact Brolly Juniors for the latest fee details on 7036044555.',
+        a: 'Civics class fees may vary based on the current program. Contact Brolly Juniors for the latest fee details on 9542344555.',
       },
       {
         q: 'What are the class timings?',
-        a: 'Class timings may vary. Contact Brolly Juniors for the latest schedule on 7036044555.',
+        a: 'Class timings may vary. Contact Brolly Juniors for the latest schedule on 9542344555.',
       },
       {
         q: 'Is a free demo available?',
-        a: 'You can request a free demo using the form on this page, or by calling 7036044555. Demo availability may vary, so please contact Brolly Juniors for the latest details before making travel plans.',
+        a: 'You can request a free demo using the form on this page, or by calling 9542344555. Demo availability may vary, so please contact Brolly Juniors for the latest details before making travel plans.',
       },
       {
         q: 'How can I contact Brolly Juniors?',
-        a: 'Call 7036044555, message on WhatsApp, email brollyjuniors.in@gmail.com, or fill in the enquiry form on this page. The centre is at Metro Pillar No. A689, Dr Atmaram Estates, 3rd Floor, Nizampet X Roads, Hyderabad, Telangana 500072.',
+        a: 'Call 9542344555, message on WhatsApp, email brollyjuniors.in@gmail.com, or fill in the enquiry form on this page. The centre is at Metro Pillar No. A689, Dr Atmaram Estates, 3rd Floor, Nizampet X Roads, Hyderabad, Telangana 500072.',
       },
     ],
     quickAnswersTitle: 'Civics in Short',
@@ -2712,7 +2712,7 @@ export const tuitionDetails = {
       },
       {
         q: '"Where can I find Civics classes for kids in Hyderabad?"',
-        a: "Brolly Juniors is a children's learning centre at Metro Pillar No. A689, Nizampet X Roads, Hyderabad. Call 7036044555 to ask about current Civics class availability.",
+        a: "Brolly Juniors is a children's learning centre at Metro Pillar No. A689, Nizampet X Roads, Hyderabad. Call 9542344555 to ask about current Civics class availability.",
       },
       {
         q: '"What do kids learn in Civics?"',
@@ -2728,7 +2728,7 @@ export const tuitionDetails = {
       },
       {
         q: '"Are there Civics classes near me?"',
-        a: 'Brolly Juniors is at Nizampet X Roads, convenient for Nizampet, Bachupally, Pragathi Nagar, Kukatpally and Miyapur. Call 7036044555 to check availability.',
+        a: 'Brolly Juniors is at Nizampet X Roads, convenient for Nizampet, Bachupally, Pragathi Nagar, Kukatpally and Miyapur. Call 9542344555 to check availability.',
       },
       {
         q: '"Is Civics teaching political?"',
@@ -3717,7 +3717,7 @@ export const tuitionDetails = {
       title: 'Let Your Child Explore Geography',
       paras: [
         'Want to see how Geography learning can work for your child? Book a free demo and speak with Brolly Juniors.',
-        'Prefer to talk? Call 7036044555 or message us on WhatsApp.',
+        'Prefer to talk? Call 9542344555 or message us on WhatsApp.',
         'Help your child explore maps, places, Earth and the world through simple Geography learning.',
         'Demo availability may vary. Contact Brolly Juniors for the latest details.',
       ],
@@ -3781,7 +3781,7 @@ export const tuitionDetails = {
         },
         {
           title: 'Who can reach us',
-          text: 'The quickest way to check whether we are convenient for you is to call 7036044555 and ask about current availability. If travel is difficult, ask about available learning formats when you call.',
+          text: 'The quickest way to check whether we are convenient for you is to call 9542344555 and ask about current availability. If travel is difficult, ask about available learning formats when you call.',
         },
       ],
       cols: 4,
@@ -3866,27 +3866,27 @@ export const tuitionDetails = {
       },
       {
         q: 'Are Geography classes available in Hyderabad?',
-        a: "Brolly Juniors is a children's learning centre at Nizampet X Roads, Hyderabad. For current Geography class availability, formats and schedules, please contact Brolly Juniors on 7036044555. We do not publish availability that may change.",
+        a: "Brolly Juniors is a children's learning centre at Nizampet X Roads, Hyderabad. For current Geography class availability, formats and schedules, please contact Brolly Juniors on 9542344555. We do not publish availability that may change.",
       },
       {
         q: 'Are Geography classes available near me?',
-        a: 'Brolly Juniors operates from one centre at Nizampet X Roads, convenient for families in Nizampet, Bachupally, Pragathi Nagar, Kukatpally, Miyapur and Bowrampet. Call 7036044555 to check current availability and what formats are being offered.',
+        a: 'Brolly Juniors operates from one centre at Nizampet X Roads, convenient for families in Nizampet, Bachupally, Pragathi Nagar, Kukatpally, Miyapur and Bowrampet. Call 9542344555 to check current availability and what formats are being offered.',
       },
       {
         q: 'How much do Geography classes cost?',
-        a: 'Geography class fees may vary based on the current program. Contact Brolly Juniors for the latest fee details on 7036044555.',
+        a: 'Geography class fees may vary based on the current program. Contact Brolly Juniors for the latest fee details on 9542344555.',
       },
       {
         q: 'What are the class timings?',
-        a: 'Class timings may vary. Contact Brolly Juniors for the latest schedule on 7036044555.',
+        a: 'Class timings may vary. Contact Brolly Juniors for the latest schedule on 9542344555.',
       },
       {
         q: 'Is a free demo available?',
-        a: 'You can request a free demo using the form on this page, or by calling 7036044555. Demo availability may vary, so please contact Brolly Juniors for the latest details before making travel plans.',
+        a: 'You can request a free demo using the form on this page, or by calling 9542344555. Demo availability may vary, so please contact Brolly Juniors for the latest details before making travel plans.',
       },
       {
         q: 'How can I contact Brolly Juniors?',
-        a: 'Call 7036044555, message on WhatsApp, email brollyjuniors.in@gmail.com, or fill in the enquiry form on this page. The centre is at Metro Pillar No. A689, Dr Atmaram Estates, 3rd Floor, Nizampet X Roads, Hyderabad, Telangana 500072.',
+        a: 'Call 9542344555, message on WhatsApp, email brollyjuniors.in@gmail.com, or fill in the enquiry form on this page. The centre is at Metro Pillar No. A689, Dr Atmaram Estates, 3rd Floor, Nizampet X Roads, Hyderabad, Telangana 500072.',
       },
       {
         q: 'How is Geography different from History and General Science?',
@@ -3929,7 +3929,7 @@ export const tuitionDetails = {
       },
       {
         q: '"Where can I find Geography classes for kids in Hyderabad?"',
-        a: "Brolly Juniors is a children's learning centre at Metro Pillar No. A689, Nizampet X Roads, Hyderabad. Call 7036044555 to ask about current Geography class availability.",
+        a: "Brolly Juniors is a children's learning centre at Metro Pillar No. A689, Nizampet X Roads, Hyderabad. Call 9542344555 to ask about current Geography class availability.",
       },
       {
         q: '"What do kids learn in Geography?"',
@@ -3945,7 +3945,7 @@ export const tuitionDetails = {
       },
       {
         q: '"Are there Geography classes near me?"',
-        a: 'Brolly Juniors is at Nizampet X Roads, convenient for Nizampet, Bachupally, Pragathi Nagar, Kukatpally and Miyapur. Call 7036044555 to check availability.',
+        a: 'Brolly Juniors is at Nizampet X Roads, convenient for Nizampet, Bachupally, Pragathi Nagar, Kukatpally and Miyapur. Call 9542344555 to check availability.',
       },
       {
         q: '"What is the difference between weather and climate?"',
@@ -4479,7 +4479,7 @@ export const tuitionDetails = {
           { title: 'Earth and space', text: 'The Sun and Moon are the easiest way in.' },
           {
             title: 'Not sure where to start?',
-            text: 'A Free Demo helps us find the right level. Call 7036044555.',
+            text: 'A Free Demo helps us find the right level. Call 9542344555.',
           },
         ],
         note: 'A beginner can start with plants, animals, matter, light, sound, weather, Earth, space and everyday science. No formulas, no laboratory and no technical vocabulary. Just looking carefully and asking why.',
@@ -4869,7 +4869,7 @@ export const tuitionDetails = {
         },
       ],
       cols: 3,
-      note: 'Ask us anything about level, format, safety or fit before you decide. Call 7036044555.',
+      note: 'Ask us anything about level, format, safety or fit before you decide. Call 9542344555.',
     },
     practical: {
       options: ['Contact Brolly Juniors for currently available learning formats.'],
@@ -4883,7 +4883,7 @@ export const tuitionDetails = {
       title: 'Let Your Child Explore the World of Science',
       paras: [
         'A Free Demo is one short session where your child tries a safe science activity and you see how the teaching works. Book a slot, or send an enquiry and we will call you back.',
-        'Prefer to talk? Call 7036044555 or message us on WhatsApp.',
+        'Prefer to talk? Call 9542344555 or message us on WhatsApp.',
         'Every "why?" your child asks already belongs to one of the sciences. Let them explore it through questions, observation, simple concepts, activities and safe learning experiences — and find out which part of it they love. Start with a Free Demo and see how they respond.',
         'Demo availability may vary. Contact Brolly Juniors for current details.',
       ],
@@ -4952,7 +4952,7 @@ export const tuitionDetails = {
         },
         {
           title: 'Who can reach us',
-          text: 'The quickest way to check whether we are convenient for you is to call 7036044555 and ask. If travel is difficult, ask about available learning formats when you call.',
+          text: 'The quickest way to check whether we are convenient for you is to call 9542344555 and ask. If travel is difficult, ask about available learning formats when you call.',
         },
       ],
       cols: 4,
@@ -5009,7 +5009,7 @@ export const tuitionDetails = {
       },
       {
         q: 'What age can children start learning Science?',
-        a: 'Children can begin from around 6 years, sorting living and non-living things, watching shadows and testing magnets. Formulas and equations come much later. Readiness and school level matter more than age alone. Contact Brolly Juniors for current details on 7036044555.',
+        a: 'Children can begin from around 6 years, sorting living and non-living things, watching shadows and testing magnets. Formulas and equations come much later. Readiness and school level matter more than age alone. Contact Brolly Juniors for current details on 9542344555.',
       },
       {
         q: 'What topics are taught in General Science classes?',
@@ -5057,19 +5057,19 @@ export const tuitionDetails = {
       },
       {
         q: 'Should my child take General Science or a single subject?',
-        a: 'General Science suits younger children and anyone who has not yet found a favourite area. A single subject suits a child whose school has already split the subjects, or who is clearly drawn to one of them. If you are unsure, a Free Demo is the quickest way to decide. Call 7036044555.',
+        a: 'General Science suits younger children and anyone who has not yet found a favourite area. A single subject suits a child whose school has already split the subjects, or who is clearly drawn to one of them. If you are unsure, a Free Demo is the quickest way to decide. Call 9542344555.',
       },
       {
         q: 'What are the fees for General Science classes?',
-        a: 'Fees may vary based on the program and learning format. Contact Brolly Juniors for current fee details on 7036044555.',
+        a: 'Fees may vary based on the program and learning format. Contact Brolly Juniors for current fee details on 9542344555.',
       },
       {
         q: 'What are the class timings?',
-        a: 'Class timings may vary. Contact Brolly Juniors for current availability on 7036044555.',
+        a: 'Class timings may vary. Contact Brolly Juniors for current availability on 9542344555.',
       },
       {
         q: 'How can I book a Free Demo?',
-        a: "Fill in the enquiry form on this page, call 7036044555, or message us on WhatsApp. Tell us your child's age and school class, and we will suggest a suitable starting point.",
+        a: "Fill in the enquiry form on this page, call 9542344555, or message us on WhatsApp. Tell us your child's age and school class, and we will suggest a suitable starting point.",
       },
     ],
     quickAnswersTitle: 'General Science in Short',
@@ -5096,7 +5096,7 @@ export const tuitionDetails = {
       },
       {
         q: 'Where in Hyderabad?',
-        a: 'Brolly Juniors, Nizampet X Roads, Hyderabad. Call 7036044555 to book a Free Demo.',
+        a: 'Brolly Juniors, Nizampet X Roads, Hyderabad. Call 9542344555 to book a Free Demo.',
       },
       {
         q: '"What are General Science classes for kids in Hyderabad?"',
@@ -5104,7 +5104,7 @@ export const tuitionDetails = {
       },
       {
         q: '"Where can my child learn Science in Hyderabad?"',
-        a: 'At the Brolly Juniors centre at Metro Pillar No. A689, Nizampet X Roads, Hyderabad. Call 7036044555 to book a Free Demo.',
+        a: 'At the Brolly Juniors centre at Metro Pillar No. A689, Nizampet X Roads, Hyderabad. Call 9542344555 to book a Free Demo.',
       },
       {
         q: '"Is General Science suitable for young children?"',
@@ -5120,7 +5120,7 @@ export const tuitionDetails = {
       },
       {
         q: '"Science classes for kids near me"',
-        a: 'Brolly Juniors is at Nizampet X Roads, convenient for Nizampet, Bachupally, Pragathi Nagar, Kukatpally and Miyapur. Call 7036044555.',
+        a: 'Brolly Juniors is at Nizampet X Roads, convenient for Nizampet, Bachupally, Pragathi Nagar, Kukatpally and Miyapur. Call 9542344555.',
       },
     ],
   },
@@ -5872,7 +5872,7 @@ export const tuitionDetails = {
           },
           {
             title: 'Not sure where to start?',
-            text: 'A Free Demo helps us find the right level. Call 7036044555.',
+            text: 'A Free Demo helps us find the right level. Call 9542344555.',
           },
         ],
         note: 'A beginner can start with "then and now", stories from the past, people, places, a simple timeline, old objects and a few important events. Nothing to memorise. Just noticing that things used to be different, and asking why.',
@@ -6256,7 +6256,7 @@ export const tuitionDetails = {
         },
       ],
       cols: 3,
-      note: 'Ask us anything about level, format or fit before you decide. Call 7036044555.',
+      note: 'Ask us anything about level, format or fit before you decide. Call 9542344555.',
     },
     practical: {
       options: ['Contact Brolly Juniors for currently available learning formats.'],
@@ -6270,7 +6270,7 @@ export const tuitionDetails = {
       title: 'Make History Interesting for Your Child',
       paras: [
         'A Free Demo is one short session where your child hears a real historical story, places it on a timeline and finds it on a map. Book a slot, or send an enquiry and we will call you back.',
-        'Prefer to talk? Call 7036044555 or message us on WhatsApp.',
+        'Prefer to talk? Call 9542344555 or message us on WhatsApp.',
         'History is not a list of dates to be memorised. It is thousands of real stories about real people, and your child already lives a short drive from some of them. Let them explore it through stories, timelines, maps, people, places and meaningful activities. Start with a Free Demo and see how they respond.',
         'Demo availability may vary. Contact Brolly Juniors for current details.',
       ],
@@ -6336,7 +6336,7 @@ export const tuitionDetails = {
         },
         {
           title: 'Who can reach us',
-          text: 'The quickest way to check whether we are convenient for you is to call 7036044555 and ask. If travel is difficult, ask about available learning formats when you call.',
+          text: 'The quickest way to check whether we are convenient for you is to call 9542344555 and ask. If travel is difficult, ask about available learning formats when you call.',
         },
       ],
       cols: 4,
@@ -6393,7 +6393,7 @@ export const tuitionDetails = {
       },
       {
         q: 'What age can children start learning History?',
-        a: 'Children can start from around 6 years, beginning with family photographs, "then and now" comparisons and stories from the past. Dates and periods come later. Readiness and school level matter more than age alone. Contact Brolly Juniors for current details on 7036044555.',
+        a: 'Children can start from around 6 years, beginning with family photographs, "then and now" comparisons and stories from the past. Dates and periods come later. Readiness and school level matter more than age alone. Contact Brolly Juniors for current details on 9542344555.',
       },
       {
         q: 'What topics are taught in History classes?',
@@ -6445,15 +6445,15 @@ export const tuitionDetails = {
       },
       {
         q: 'What are the fees for History classes?',
-        a: 'Fees may vary based on the program and learning format. Contact Brolly Juniors for current fee details on 7036044555.',
+        a: 'Fees may vary based on the program and learning format. Contact Brolly Juniors for current fee details on 9542344555.',
       },
       {
         q: 'What are the class timings?',
-        a: 'Class timings may vary. Contact Brolly Juniors for current availability on 7036044555.',
+        a: 'Class timings may vary. Contact Brolly Juniors for current availability on 9542344555.',
       },
       {
         q: 'How can I book a Free Demo?',
-        a: "Fill in the enquiry form on this page, call 7036044555, or message us on WhatsApp. Tell us your child's age and school class, and we will suggest a suitable starting point.",
+        a: "Fill in the enquiry form on this page, call 9542344555, or message us on WhatsApp. Tell us your child's age and school class, and we will suggest a suitable starting point.",
       },
     ],
     quickAnswersTitle: 'History in Short',
@@ -6480,7 +6480,7 @@ export const tuitionDetails = {
       },
       {
         q: 'Where in Hyderabad?',
-        a: 'Brolly Juniors, Nizampet X Roads, Hyderabad. Call 7036044555 to book a Free Demo.',
+        a: 'Brolly Juniors, Nizampet X Roads, Hyderabad. Call 9542344555 to book a Free Demo.',
       },
       {
         q: '"What are History classes for kids in Hyderabad?"',
@@ -6488,7 +6488,7 @@ export const tuitionDetails = {
       },
       {
         q: '"Where can my child learn History in Hyderabad?"',
-        a: 'At the Brolly Juniors centre at Metro Pillar No. A689, Nizampet X Roads, Hyderabad. Call 7036044555 to book a Free Demo.',
+        a: 'At the Brolly Juniors centre at Metro Pillar No. A689, Nizampet X Roads, Hyderabad. Call 9542344555 to book a Free Demo.',
       },
       {
         q: '"Is History suitable for young children?"',
@@ -6504,7 +6504,7 @@ export const tuitionDetails = {
       },
       {
         q: '"History classes for kids near me"',
-        a: 'Brolly Juniors is at Nizampet X Roads, convenient for Nizampet, Bachupally, Pragathi Nagar, Kukatpally and Miyapur. Call 7036044555.',
+        a: 'Brolly Juniors is at Nizampet X Roads, convenient for Nizampet, Bachupally, Pragathi Nagar, Kukatpally and Miyapur. Call 9542344555.',
       },
     ],
   },
@@ -7177,7 +7177,7 @@ export const tuitionDetails = {
           },
           {
             title: 'Not sure where to start?',
-            text: 'A Free Demo helps us find the right level. Call 7036044555.',
+            text: 'A Free Demo helps us find the right level. Call 9542344555.',
           },
         ],
         note: 'A beginner can start with living things, plants, animals, the human body, nature, life cycles and simple observation. No microscope. No laboratory. No technical vocabulary. Just looking carefully at what is alive nearby and asking what it needs.',
@@ -7595,7 +7595,7 @@ export const tuitionDetails = {
         },
       ],
       cols: 3,
-      note: 'Ask us anything about level, format, safety or fit before you decide. Call 7036044555.',
+      note: 'Ask us anything about level, format, safety or fit before you decide. Call 9542344555.',
     },
     practical: {
       options: ['Contact Brolly Juniors for currently available learning formats.'],
@@ -7609,7 +7609,7 @@ export const tuitionDetails = {
       title: 'Let Your Child Discover the World of Biology',
       paras: [
         'A Free Demo is one short session where your child tries a Biology activity and you see how the teaching works. Book a slot, or send an enquiry and we will call you back.',
-        'Prefer to talk? Call 7036044555 or message us on WhatsApp.',
+        'Prefer to talk? Call 9542344555 or message us on WhatsApp.',
         'There is a whole science growing on your balcony and flying past your window. Let your child explore it through simple concepts, careful observation, their own questions and safe activities that show them how living things grow and survive. Start with a Free Demo and see how they respond.',
         'Demo availability may vary. Contact Brolly Juniors for current details.',
       ],
@@ -7670,7 +7670,7 @@ export const tuitionDetails = {
         },
         {
           title: 'Who can reach us',
-          text: 'The quickest way to check whether we are convenient for you is to call 7036044555 and ask. If travel is difficult, ask about available learning formats when you call.',
+          text: 'The quickest way to check whether we are convenient for you is to call 9542344555 and ask. If travel is difficult, ask about available learning formats when you call.',
         },
       ],
       cols: 4,
@@ -7727,7 +7727,7 @@ export const tuitionDetails = {
       },
       {
         q: 'What age can children start learning Biology?',
-        a: 'Children can begin exploring simple Biology ideas from around 6 years, by sorting living and non-living things and watching a seed sprout. Cells and body systems come later. Readiness and school level matter more than age alone. Contact Brolly Juniors for current details on 7036044555.',
+        a: 'Children can begin exploring simple Biology ideas from around 6 years, by sorting living and non-living things and watching a seed sprout. Cells and body systems come later. Readiness and school level matter more than age alone. Contact Brolly Juniors for current details on 9542344555.',
       },
       {
         q: 'What topics are taught in Biology classes?',
@@ -7779,15 +7779,15 @@ export const tuitionDetails = {
       },
       {
         q: 'What are the fees for Biology classes?',
-        a: 'Fees may vary based on the program and learning format. Contact Brolly Juniors for current fee details on 7036044555.',
+        a: 'Fees may vary based on the program and learning format. Contact Brolly Juniors for current fee details on 9542344555.',
       },
       {
         q: 'What are the class timings?',
-        a: 'Class timings may vary. Contact Brolly Juniors for current availability on 7036044555.',
+        a: 'Class timings may vary. Contact Brolly Juniors for current availability on 9542344555.',
       },
       {
         q: 'How can I book a Free Demo?',
-        a: "Fill in the enquiry form on this page, call 7036044555, or message us on WhatsApp. Tell us your child's age and school class, and we will suggest a suitable starting point.",
+        a: "Fill in the enquiry form on this page, call 9542344555, or message us on WhatsApp. Tell us your child's age and school class, and we will suggest a suitable starting point.",
       },
     ],
     quickAnswersTitle: 'Biology in Short',
@@ -7814,7 +7814,7 @@ export const tuitionDetails = {
       },
       {
         q: 'Where in Hyderabad?',
-        a: 'Brolly Juniors, Nizampet X Roads, Hyderabad. Call 7036044555 to book a Free Demo.',
+        a: 'Brolly Juniors, Nizampet X Roads, Hyderabad. Call 9542344555 to book a Free Demo.',
       },
       {
         q: '"What are Biology classes for kids in Hyderabad?"',
@@ -7822,7 +7822,7 @@ export const tuitionDetails = {
       },
       {
         q: '"Where can my child learn Biology in Hyderabad?"',
-        a: 'At the Brolly Juniors centre at Metro Pillar No. A689, Nizampet X Roads, Hyderabad. Call 7036044555 to book a Free Demo.',
+        a: 'At the Brolly Juniors centre at Metro Pillar No. A689, Nizampet X Roads, Hyderabad. Call 9542344555 to book a Free Demo.',
       },
       {
         q: '"Is Biology suitable for young children?"',
@@ -7838,7 +7838,7 @@ export const tuitionDetails = {
       },
       {
         q: '"Biology classes for kids near me"',
-        a: 'Brolly Juniors is at Nizampet X Roads, convenient for Nizampet, Bachupally, Pragathi Nagar, Kukatpally and Miyapur. Call 7036044555.',
+        a: 'Brolly Juniors is at Nizampet X Roads, convenient for Nizampet, Bachupally, Pragathi Nagar, Kukatpally and Miyapur. Call 9542344555.',
       },
     ],
   },
@@ -8467,7 +8467,7 @@ export const tuitionDetails = {
           },
           {
             title: 'Not sure where to start?',
-            text: 'A Free Demo helps us find the right level. Call 7036044555.',
+            text: 'A Free Demo helps us find the right level. Call 9542344555.',
           },
         ],
         note: 'A beginner can start with materials, solids, liquids and gases, mixtures, simple changes and careful observation. No formulas. No equations. No laboratory. Just looking closely at ordinary things and asking what is going on.',
@@ -8811,7 +8811,7 @@ export const tuitionDetails = {
         {
           title: 'Parent-friendly communication',
           icon: '📞',
-          text: 'Ask us anything about level, format, safety or fit before you decide. Call 7036044555.',
+          text: 'Ask us anything about level, format, safety or fit before you decide. Call 9542344555.',
         },
       ],
       cols: 3,
@@ -8828,7 +8828,7 @@ export const tuitionDetails = {
       title: 'Let Your Child Explore the World of Chemistry',
       paras: [
         'A Free Demo is one short session where your child tries a safe Chemistry activity and you see how the teaching works. Book a slot, or send an enquiry and we will call you back.',
-        'Prefer to talk? Call 7036044555 or message us on WhatsApp.',
+        'Prefer to talk? Call 9542344555 or message us on WhatsApp.',
         'The kitchen is full of Chemistry, and most children walk past it every day. Let them explore simple concepts, ask their own questions, observe carefully and try safe activities that show them why things change. Start with a Free Demo and see how they respond.',
         'Demo availability may vary. Contact Brolly Juniors for current details.',
       ],
@@ -8889,7 +8889,7 @@ export const tuitionDetails = {
         },
         {
           title: 'Who can reach us',
-          text: 'The quickest way to check whether we are convenient for you is to call 7036044555 and ask. If travel is difficult, ask about available learning formats when you call.',
+          text: 'The quickest way to check whether we are convenient for you is to call 9542344555 and ask. If travel is difficult, ask about available learning formats when you call.',
         },
       ],
       cols: 4,
@@ -8946,7 +8946,7 @@ export const tuitionDetails = {
       },
       {
         q: 'What age can children start learning Chemistry?',
-        a: 'Children can begin exploring simple Chemistry ideas from around 6 years, by sorting materials and watching things melt or dissolve. Formulas and equations come much later. Readiness and school level matter more than age alone. Contact Brolly Juniors for current details on 7036044555.',
+        a: 'Children can begin exploring simple Chemistry ideas from around 6 years, by sorting materials and watching things melt or dissolve. Formulas and equations come much later. Readiness and school level matter more than age alone. Contact Brolly Juniors for current details on 9542344555.',
       },
       {
         q: 'What topics are taught in Chemistry classes?',
@@ -8994,15 +8994,15 @@ export const tuitionDetails = {
       },
       {
         q: 'What are the fees for Chemistry classes?',
-        a: 'Fees may vary based on the program and learning format. Contact Brolly Juniors for current fee details on 7036044555.',
+        a: 'Fees may vary based on the program and learning format. Contact Brolly Juniors for current fee details on 9542344555.',
       },
       {
         q: 'What are the class timings?',
-        a: 'Class timings may vary. Contact Brolly Juniors for current availability on 7036044555.',
+        a: 'Class timings may vary. Contact Brolly Juniors for current availability on 9542344555.',
       },
       {
         q: 'How can I book a Free Demo?',
-        a: "Fill in the enquiry form on this page, call 7036044555, or message us on WhatsApp. Tell us your child's age and school class, and we will suggest a suitable starting point.",
+        a: "Fill in the enquiry form on this page, call 9542344555, or message us on WhatsApp. Tell us your child's age and school class, and we will suggest a suitable starting point.",
       },
     ],
     quickAnswersTitle: 'Chemistry in Short',
@@ -9029,7 +9029,7 @@ export const tuitionDetails = {
       },
       {
         q: 'Where in Hyderabad?',
-        a: 'Brolly Juniors, Nizampet X Roads, Hyderabad. Call 7036044555 to book a Free Demo.',
+        a: 'Brolly Juniors, Nizampet X Roads, Hyderabad. Call 9542344555 to book a Free Demo.',
       },
       {
         q: '"What are Chemistry classes for kids in Hyderabad?"',
@@ -9037,7 +9037,7 @@ export const tuitionDetails = {
       },
       {
         q: '"Where can my child learn Chemistry in Hyderabad?"',
-        a: 'At the Brolly Juniors centre at Metro Pillar No. A689, Nizampet X Roads, Hyderabad. Call 7036044555 to book a Free Demo.',
+        a: 'At the Brolly Juniors centre at Metro Pillar No. A689, Nizampet X Roads, Hyderabad. Call 9542344555 to book a Free Demo.',
       },
       {
         q: '"Is Chemistry suitable for young children?"',
@@ -9053,7 +9053,7 @@ export const tuitionDetails = {
       },
       {
         q: '"Chemistry classes for kids near me"',
-        a: 'Brolly Juniors is at Nizampet X Roads, convenient for Nizampet, Bachupally, Pragathi Nagar, Kukatpally and Miyapur. Call 7036044555.',
+        a: 'Brolly Juniors is at Nizampet X Roads, convenient for Nizampet, Bachupally, Pragathi Nagar, Kukatpally and Miyapur. Call 9542344555.',
       },
     ],
   },
@@ -9694,7 +9694,7 @@ export const tuitionDetails = {
           { title: 'No formulas yet', text: 'Numbers come later, once the idea is clear.' },
           {
             title: 'Not sure where to start?',
-            text: 'A Free Demo helps us find the right level. Call 7036044555.',
+            text: 'A Free Demo helps us find the right level. Call 9542344555.',
           },
         ],
         note: 'A beginner can start with push and pull, movement, light, sound, magnets, shadows and simple machines. None of these need formulas. They need a curious child and something to look at.',
@@ -9963,7 +9963,7 @@ export const tuitionDetails = {
         {
           title: 'Parent-friendly communication',
           icon: '📞',
-          text: 'Ask us anything about level, format or fit before you decide. Call 7036044555.',
+          text: 'Ask us anything about level, format or fit before you decide. Call 9542344555.',
         },
       ],
       cols: 3,
@@ -9980,7 +9980,7 @@ export const tuitionDetails = {
       title: 'Let Your Child Explore the World of Physics',
       paras: [
         'A Free Demo is one short session where your child tries a Physics activity and you see how the teaching works. Book a slot, or send an enquiry and we will call you back.',
-        'Prefer to talk? Call 7036044555 or message us on WhatsApp.',
+        'Prefer to talk? Call 9542344555 or message us on WhatsApp.',
         'Every "why?" your child asks is a Physics question waiting for an answer. Let them explore simple concepts, ask their own questions and try safe activities that show them the reason behind everyday things. Start with a Free Demo and see how they respond.',
         'Demo availability may vary. Contact Brolly Juniors for current details.',
       ],
@@ -10042,7 +10042,7 @@ export const tuitionDetails = {
         },
         {
           title: 'Who can reach us',
-          text: 'The quickest way to check whether we are convenient for you is to call 7036044555 and ask. If travel is difficult, ask about available learning formats when you call.',
+          text: 'The quickest way to check whether we are convenient for you is to call 9542344555 and ask. If travel is difficult, ask about available learning formats when you call.',
         },
       ],
       cols: 4,
@@ -10099,7 +10099,7 @@ export const tuitionDetails = {
       },
       {
         q: 'What age can children start learning Physics?',
-        a: 'Children can begin exploring simple Physics ideas from around 6 years, with topics like push and pull, shadows, sound and magnets. Numbers and formulas come much later. Readiness and school level matter more than age alone. Contact Brolly Juniors for current details on 7036044555.',
+        a: 'Children can begin exploring simple Physics ideas from around 6 years, with topics like push and pull, shadows, sound and magnets. Numbers and formulas come much later. Readiness and school level matter more than age alone. Contact Brolly Juniors for current details on 9542344555.',
       },
       {
         q: 'What topics are taught in Physics classes?',
@@ -10147,15 +10147,15 @@ export const tuitionDetails = {
       },
       {
         q: 'What are the fees for Physics classes?',
-        a: 'Fees may vary based on the program and learning format. Contact Brolly Juniors for current fee details on 7036044555.',
+        a: 'Fees may vary based on the program and learning format. Contact Brolly Juniors for current fee details on 9542344555.',
       },
       {
         q: 'What are the class timings?',
-        a: 'Class timings may vary. Contact Brolly Juniors for current availability on 7036044555.',
+        a: 'Class timings may vary. Contact Brolly Juniors for current availability on 9542344555.',
       },
       {
         q: 'How can I book a Free Demo?',
-        a: "Fill in the enquiry form on this page, call 7036044555, or message us on WhatsApp. Tell us your child's age and school class, and we will suggest a suitable starting point.",
+        a: "Fill in the enquiry form on this page, call 9542344555, or message us on WhatsApp. Tell us your child's age and school class, and we will suggest a suitable starting point.",
       },
     ],
     quickAnswersTitle: 'Physics in Short',
@@ -10182,7 +10182,7 @@ export const tuitionDetails = {
       },
       {
         q: 'Where in Hyderabad?',
-        a: 'Brolly Juniors, Nizampet X Roads, Hyderabad. Call 7036044555 to book a Free Demo.',
+        a: 'Brolly Juniors, Nizampet X Roads, Hyderabad. Call 9542344555 to book a Free Demo.',
       },
       {
         q: '"What are Physics classes for kids in Hyderabad?"',
@@ -10190,7 +10190,7 @@ export const tuitionDetails = {
       },
       {
         q: '"Where can my child learn Physics in Hyderabad?"',
-        a: 'At the Brolly Juniors centre at Metro Pillar No. A689, Nizampet X Roads, Hyderabad. Call 7036044555 to book a Free Demo.',
+        a: 'At the Brolly Juniors centre at Metro Pillar No. A689, Nizampet X Roads, Hyderabad. Call 9542344555 to book a Free Demo.',
       },
       {
         q: '"Is Physics suitable for young children?"',
@@ -10206,7 +10206,7 @@ export const tuitionDetails = {
       },
       {
         q: '"Physics classes for kids near me"',
-        a: 'Brolly Juniors is at Nizampet X Roads, convenient for Nizampet, Bachupally, Pragathi Nagar, Kukatpally and Miyapur. Call 7036044555.',
+        a: 'Brolly Juniors is at Nizampet X Roads, convenient for Nizampet, Bachupally, Pragathi Nagar, Kukatpally and Miyapur. Call 9542344555.',
       },
     ],
   },
@@ -10812,7 +10812,7 @@ export const tuitionDetails = {
         paras: [
           'Advanced Maths skills — reasoning, pattern recognition, multi-step problem solving and persistence — are the same skills that challenging competition questions test. In that sense, this kind of practice can be a useful foundation for a child who enjoys difficult Maths problems.',
         ],
-        note: 'What we do not claim: Brolly Juniors does not promise Olympiad selection, competition qualification, guaranteed ranks or guaranteed scores. We do not claim to run preparation for any specific named competition. If you are looking for competition-specific coaching, please contact Brolly Juniors on 7036044555 to ask what is currently offered before you enrol.',
+        note: 'What we do not claim: Brolly Juniors does not promise Olympiad selection, competition qualification, guaranteed ranks or guaranteed scores. We do not claim to run preparation for any specific named competition. If you are looking for competition-specific coaching, please contact Brolly Juniors on 9542344555 to ask what is currently offered before you enrol.',
         band: true,
       },
       {
@@ -10929,7 +10929,7 @@ export const tuitionDetails = {
           'Asks for harder questions when work feels easy',
           'Can explain their thinking, at least roughly',
         ],
-        note: 'These are general indicators for parents, not a formal assessment. If you are unsure, a Free Demo is usually the clearest way to find out. Call 7036044555.',
+        note: 'These are general indicators for parents, not a formal assessment. If you are unsure, a Free Demo is usually the clearest way to find out. Call 9542344555.',
         band: false,
       },
       {
@@ -11011,7 +11011,7 @@ export const tuitionDetails = {
         {
           title: 'Parent-friendly communication',
           icon: '💬',
-          text: 'Ask us anything about level, format or fit before you decide. Call 7036044555.',
+          text: 'Ask us anything about level, format or fit before you decide. Call 9542344555.',
         },
       ],
       cols: 3,
@@ -11028,7 +11028,7 @@ export const tuitionDetails = {
       title: 'Let Your Child Try an Advanced Maths Challenge',
       paras: [
         'The easiest way to know whether advanced Maths suits your child is to let them try one session. Book a Free Demo, or send an enquiry and we will call you back.',
-        'Prefer to talk? Call 7036044555 or message us on WhatsApp.',
+        'Prefer to talk? Call 9542344555 or message us on WhatsApp.',
         'If your child finishes Maths homework and still wants more, advanced Maths may be the right next step. Start with a Free Demo, see how they respond to a harder question, and decide from there. No pressure, no commitment.',
         'Demo availability may vary. Contact Brolly Juniors for current details.',
       ],
@@ -11090,7 +11090,7 @@ export const tuitionDetails = {
         },
         {
           title: 'Who can reach us',
-          text: 'The quickest way to check whether we are convenient for you is to call 7036044555 and ask. If travel is difficult, ask about available learning formats when you call.',
+          text: 'The quickest way to check whether we are convenient for you is to call 9542344555 and ask. If travel is difficult, ask about available learning formats when you call.',
         },
       ],
       cols: 4,
@@ -11147,7 +11147,7 @@ export const tuitionDetails = {
       },
       {
         q: 'What age can children start Advanced Maths?',
-        a: 'Children often begin around 8 years, once basic number work is comfortable. But readiness matters more than age. A younger child who enjoys puzzles may be ready earlier, and an older child may need foundation work first. Contact Brolly Juniors for current details on 7036044555.',
+        a: 'Children often begin around 8 years, once basic number work is comfortable. But readiness matters more than age. A younger child who enjoys puzzles may be ready earlier, and an older child may need foundation work first. Contact Brolly Juniors for current details on 9542344555.',
       },
       {
         q: 'Is Advanced Maths suitable for beginners?',
@@ -11191,15 +11191,15 @@ export const tuitionDetails = {
       },
       {
         q: 'What are the fees for Advanced Maths classes?',
-        a: 'Fees may vary based on the program and learning format. Contact Brolly Juniors for current fee details on 7036044555.',
+        a: 'Fees may vary based on the program and learning format. Contact Brolly Juniors for current fee details on 9542344555.',
       },
       {
         q: 'What are the class timings?',
-        a: 'Class timings may vary. Contact Brolly Juniors for current availability on 7036044555.',
+        a: 'Class timings may vary. Contact Brolly Juniors for current availability on 9542344555.',
       },
       {
         q: 'How can I book a Free Demo?',
-        a: "Fill in the enquiry form on this page, call 7036044555, or message us on WhatsApp. Tell us your child's age and current Maths level, and we will suggest a suitable starting point.",
+        a: "Fill in the enquiry form on this page, call 9542344555, or message us on WhatsApp. Tell us your child's age and current Maths level, and we will suggest a suitable starting point.",
       },
     ],
     quickAnswersTitle: 'Advanced Maths in Short',
@@ -11226,7 +11226,7 @@ export const tuitionDetails = {
       },
       {
         q: 'Where in Hyderabad?',
-        a: 'Brolly Juniors, Nizampet X Roads, Hyderabad. Call 7036044555 to book a Free Demo.',
+        a: 'Brolly Juniors, Nizampet X Roads, Hyderabad. Call 9542344555 to book a Free Demo.',
       },
       {
         q: '"What are Advanced Maths classes for kids in Hyderabad?"',
@@ -11234,7 +11234,7 @@ export const tuitionDetails = {
       },
       {
         q: '"Where can my child learn advanced Maths in Hyderabad?"',
-        a: 'At the Brolly Juniors centre at Metro Pillar No. A689, Nizampet X Roads, Hyderabad. Call 7036044555 to book a Free Demo.',
+        a: 'At the Brolly Juniors centre at Metro Pillar No. A689, Nizampet X Roads, Hyderabad. Call 9542344555 to book a Free Demo.',
       },
       {
         q: '"Is Advanced Maths suitable for my child?"',
@@ -11250,7 +11250,7 @@ export const tuitionDetails = {
       },
       {
         q: '"Advanced Maths classes near me"',
-        a: 'Brolly Juniors is at Nizampet X Roads, convenient for Nizampet, Bachupally, Pragathi Nagar, Kukatpally and Miyapur. Call 7036044555.',
+        a: 'Brolly Juniors is at Nizampet X Roads, convenient for Nizampet, Bachupally, Pragathi Nagar, Kukatpally and Miyapur. Call 9542344555.',
       },
     ],
   },
@@ -11478,7 +11478,7 @@ export const tuitionDetails = {
           ],
         },
       ],
-      note: "The exact curriculum can vary by age and learning level. This is a suggested learning structure, not a fixed syllabus. Contact Brolly Juniors on 7036044555 for the learning plan currently offered for your child's class.",
+      note: "The exact curriculum can vary by age and learning level. This is a suggested learning structure, not a fixed syllabus. Contact Brolly Juniors on 9542344555 for the learning plan currently offered for your child's class.",
     },
     extras: [
       {
@@ -11533,7 +11533,7 @@ export const tuitionDetails = {
             ],
           },
         ],
-        note: 'These age bands are shown as a learning guide for parents. For the age groups and batches currently running, contact Brolly Juniors on 7036044555.',
+        note: 'These age bands are shown as a learning guide for parents. For the age groups and batches currently running, contact Brolly Juniors on 9542344555.',
         band: false,
       },
       {
@@ -11970,7 +11970,7 @@ export const tuitionDetails = {
         kind: 'pills',
         items: [
           'Address: Metro Pillar No. A689, Dr Atmaram Estates, 3rd Floor, Nizampet X Roads, Hyderabad, Telangana 500072',
-          'Phone: 7036044555',
+          'Phone: 9542344555',
           'WhatsApp: 918186844555',
           'Email: brollyjuniors.in@gmail.com',
         ],
@@ -12238,7 +12238,7 @@ export const tuitionDetails = {
       },
       {
         q: 'What age can children start Maths classes?',
-        a: 'Children can begin simple Maths learning from around 5 years, starting with counting, number recognition and basic shapes. Readiness matters more than age. For the age groups currently running, contact Brolly Juniors on 7036044555.',
+        a: 'Children can begin simple Maths learning from around 5 years, starting with counting, number recognition and basic shapes. Readiness matters more than age. For the age groups currently running, contact Brolly Juniors on 9542344555.',
       },
       {
         q: 'What do kids learn in Mathematics classes?',
@@ -12282,11 +12282,11 @@ export const tuitionDetails = {
       },
       {
         q: 'What are the fees for Mathematics classes?',
-        a: 'Fees may vary based on the program and learning format. Contact Brolly Juniors on 7036044555 for current fee details.',
+        a: 'Fees may vary based on the program and learning format. Contact Brolly Juniors on 9542344555 for current fee details.',
       },
       {
         q: 'How can I book a Free Demo?',
-        a: "Fill in the enquiry form on this page, call 7036044555, or message 918186844555 on WhatsApp. Share your child's age and class so a suitable demo session can be arranged.",
+        a: "Fill in the enquiry form on this page, call 9542344555, or message 918186844555 on WhatsApp. Share your child's age and class so a suitable demo session can be arranged.",
       },
     ],
     quickAnswersTitle: 'Quick Answers',
@@ -12313,7 +12313,7 @@ export const tuitionDetails = {
       },
       {
         q: 'Where can I find Maths classes for kids in Hyderabad?',
-        a: 'Brolly Juniors offers Mathematics classes for kids in Hyderabad at Nizampet X Roads. Call 7036044555 or book a Free Demo to see how classes are run.',
+        a: 'Brolly Juniors offers Mathematics classes for kids in Hyderabad at Nizampet X Roads. Call 9542344555 or book a Free Demo to see how classes are run.',
       },
       {
         q: '"What are the best Mathematics classes for kids in Hyderabad?"',
@@ -12321,7 +12321,7 @@ export const tuitionDetails = {
       },
       {
         q: '"Where can my child learn Maths in Hyderabad?"',
-        a: 'Brolly Juniors runs Mathematics classes for children at Metro Pillar No. A689, Dr Atmaram Estates, 3rd Floor, Nizampet X Roads, Hyderabad. Call 7036044555 for current availability.',
+        a: 'Brolly Juniors runs Mathematics classes for children at Metro Pillar No. A689, Dr Atmaram Estates, 3rd Floor, Nizampet X Roads, Hyderabad. Call 9542344555 for current availability.',
       },
       {
         q: '"How can I improve my child\'s Maths skills?"',
@@ -12452,7 +12452,7 @@ export const tuitionDetails = {
       title: 'What will kids learn?',
       lead: 'Four strands run across all three years. Each one builds on the last.',
       items: ['Concept depth', 'Problem solving', 'Accuracy and speed', 'Board alignment'],
-      note: "What the syllabus covers Mathematics foundation · Science foundation (physics and chemistry) · logical reasoning · problem solving · concept-based questions · application-based questions · number sense · patterns and sequences · scientific thinking and estimation. This is a suggested learning structure that reflects how sessions are usually organised. It is not an official published syllabus. For the exact plan being taught in your child's batch, contact Brolly Juniors on 7036044555.",
+      note: "What the syllabus covers Mathematics foundation · Science foundation (physics and chemistry) · logical reasoning · problem solving · concept-based questions · application-based questions · number sense · patterns and sequences · scientific thinking and estimation. This is a suggested learning structure that reflects how sessions are usually organised. It is not an official published syllabus. For the exact plan being taught in your child's batch, contact Brolly Juniors on 9542344555.",
     },
     extras: [
       {
@@ -12652,7 +12652,7 @@ export const tuitionDetails = {
             'Younger students, or anyone wanting reasoning practice early.',
           ],
         ],
-        note: "Not sure which one fits? Tell us your child's class and what they enjoy, and we will suggest the closest fit — including telling you if none of them is right yet. Call 7036044555.",
+        note: "Not sure which one fits? Tell us your child's class and what they enjoy, and we will suggest the closest fit — including telling you if none of them is right yet. Call 9542344555.",
         band: false,
       },
       {
@@ -12886,7 +12886,7 @@ export const tuitionDetails = {
         },
       ],
       cols: 3,
-      note: "Trainers and mentors Sessions are taken by Brolly Juniors educators. For current trainer details, qualifications and who will be teaching your child's batch, contact Brolly Juniors on 7036044555. We publish trainer information only where it can be verified, so you will not find invented profiles on this page.",
+      note: "Trainers and mentors Sessions are taken by Brolly Juniors educators. For current trainer details, qualifications and who will be teaching your child's batch, contact Brolly Juniors on 9542344555. We publish trainer information only where it can be verified, so you will not find invented profiles on this page.",
     },
     practical: {
       options: [
@@ -12986,7 +12986,7 @@ export const tuitionDetails = {
       },
       {
         q: 'What are the fees for IIT Foundation classes?',
-        a: 'Fees vary by class level and batch, and we do not publish figures that could go out of date. Contact Brolly Juniors on 7036044555 for current fee details.',
+        a: 'Fees vary by class level and batch, and we do not publish figures that could go out of date. Contact Brolly Juniors on 9542344555 for current fee details.',
       },
       {
         q: 'What are the batch timings?',
@@ -13170,7 +13170,7 @@ export const tuitionDetails = {
         'Science application',
         'English and exam craft',
       ],
-      note: "What the syllabus covers Mathematics · science · logical reasoning · patterns · number skills · analytical thinking · problem solving · application-based questions · challenge questions · English usage and comprehension. This is a suggested learning structure reflecting how sessions are usually organised. It is not an official published syllabus, and it is not the syllabus of any olympiad body. For the exact plan being taught in your child's batch, contact Brolly Juniors on 7036044555.",
+      note: "What the syllabus covers Mathematics · science · logical reasoning · patterns · number skills · analytical thinking · problem solving · application-based questions · challenge questions · English usage and comprehension. This is a suggested learning structure reflecting how sessions are usually organised. It is not an official published syllabus, and it is not the syllabus of any olympiad body. For the exact plan being taught in your child's batch, contact Brolly Juniors on 9542344555.",
     },
     extras: [
       {
@@ -13630,7 +13630,7 @@ export const tuitionDetails = {
         },
       ],
       cols: 3,
-      note: "Trainers and mentors Sessions are taken by Brolly Juniors educators. For current trainer details, qualifications and who will be teaching your child's batch, contact Brolly Juniors on 7036044555. We publish trainer information only where it can be verified, so you will not find invented profiles or claimed student results on this page.",
+      note: "Trainers and mentors Sessions are taken by Brolly Juniors educators. For current trainer details, qualifications and who will be teaching your child's batch, contact Brolly Juniors on 9542344555. We publish trainer information only where it can be verified, so you will not find invented profiles or claimed student results on this page.",
     },
     practical: {
       options: [
@@ -13758,7 +13758,7 @@ export const tuitionDetails = {
       },
       {
         q: 'What are the fees?',
-        a: "Fees vary by class level and batch, and we do not publish figures that could go out of date. Contact Brolly Juniors on 7036044555 for current fee details. Olympiad exam registration fees are set and collected separately by the conducting bodies, usually through your child's school.",
+        a: "Fees vary by class level and batch, and we do not publish figures that could go out of date. Contact Brolly Juniors on 9542344555 for current fee details. Olympiad exam registration fees are set and collected separately by the conducting bodies, usually through your child's school.",
       },
       {
         q: 'What are the batch timings?',
@@ -13921,7 +13921,7 @@ export const tuitionDetails = {
       title: 'What will kids learn?',
       lead: 'Four strands run across the two years, with biology taking the largest share of the timetable.',
       items: ['Biology depth', 'Chemistry', 'Physics', 'Objective practice and review'],
-      note: "What the syllabus covers Biology basics · chemistry basics · physics basics · scientific reasoning · concept understanding · observation · problem solving · application-based learning. This is a suggested learning structure reflecting how sessions are usually organised. It is not an official published syllabus. For the exact plan being taught in your child's batch, contact Brolly Juniors on 7036044555.",
+      note: "What the syllabus covers Biology basics · chemistry basics · physics basics · scientific reasoning · concept understanding · observation · problem solving · application-based learning. This is a suggested learning structure reflecting how sessions are usually organised. It is not an official published syllabus. For the exact plan being taught in your child's batch, contact Brolly Juniors on 9542344555.",
     },
     extras: [
       {
@@ -14371,7 +14371,7 @@ export const tuitionDetails = {
         },
       ],
       cols: 3,
-      note: "Trainers and mentors Sessions are taken by Brolly Juniors educators. For current trainer details, qualifications and who will be teaching your child's batch, contact Brolly Juniors on 7036044555. We publish trainer information only where it can be verified, so you will not find invented profiles or claimed past results on this page.",
+      note: "Trainers and mentors Sessions are taken by Brolly Juniors educators. For current trainer details, qualifications and who will be teaching your child's batch, contact Brolly Juniors on 9542344555. We publish trainer information only where it can be verified, so you will not find invented profiles or claimed past results on this page.",
     },
     practical: {
       options: [
@@ -14489,7 +14489,7 @@ export const tuitionDetails = {
       },
       {
         q: 'What are the fees for NEET Foundation classes?',
-        a: 'Fees vary by class level and batch, and we do not publish figures that could go out of date. Contact Brolly Juniors on 7036044555 for current fee details.',
+        a: 'Fees vary by class level and batch, and we do not publish figures that could go out of date. Contact Brolly Juniors on 9542344555 for current fee details.',
       },
       {
         q: 'What are the batch timings?',
@@ -14661,7 +14661,7 @@ export const tuitionDetails = {
         'Objective technique',
         'Weekly testing and review',
       ],
-      note: "What the syllabus covers Mathematics · physics · chemistry · logical reasoning · problem solving · concept clarity · application-based questions · numerical thinking and estimation. This is a suggested learning structure reflecting how sessions are usually organised. It is not an official published syllabus. For the exact plan being taught in your child's batch, contact Brolly Juniors on 7036044555.",
+      note: "What the syllabus covers Mathematics · physics · chemistry · logical reasoning · problem solving · concept clarity · application-based questions · numerical thinking and estimation. This is a suggested learning structure reflecting how sessions are usually organised. It is not an official published syllabus. For the exact plan being taught in your child's batch, contact Brolly Juniors on 9542344555.",
     },
     extras: [
       {
@@ -15130,7 +15130,7 @@ export const tuitionDetails = {
         },
       ],
       cols: 3,
-      note: "Trainers and mentors Sessions are taken by Brolly Juniors educators. For current trainer details, qualifications and who will be teaching your child's batch, contact Brolly Juniors on 7036044555. We publish trainer information only where it can be verified, so you will not find invented profiles or claimed past results on this page.",
+      note: "Trainers and mentors Sessions are taken by Brolly Juniors educators. For current trainer details, qualifications and who will be teaching your child's batch, contact Brolly Juniors on 9542344555. We publish trainer information only where it can be verified, so you will not find invented profiles or claimed past results on this page.",
     },
     practical: {
       options: [
@@ -15244,7 +15244,7 @@ export const tuitionDetails = {
       },
       {
         q: 'What are the fees for JEE Foundation classes?',
-        a: 'Fees vary by class level and batch, and we do not publish figures that could go out of date. Contact Brolly Juniors on 7036044555 for current fee details.',
+        a: 'Fees vary by class level and batch, and we do not publish figures that could go out of date. Contact Brolly Juniors on 9542344555 for current fee details.',
       },
       {
         q: 'What are the batch timings?',
